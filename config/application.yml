@@ -1,0 +1,6 @@
+S3_BUCKET: hive-up-test
+S3_KEY: AKIAIGY3ZLKEBUR2YF4A
+S3_REGION: ap-southeast-1
+S3_SECRET: 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
+gmail_username: hiveupnotificationemail@gmail.com
+gmail_password: jyoxiibfvcptuwlb
