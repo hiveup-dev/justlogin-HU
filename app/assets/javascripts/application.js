@@ -12,4 +12,5 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery_nested_form_aaa.js
 //= require_tree .

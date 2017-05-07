@@ -1,0 +1,79 @@
+en:
+  refinery:
+    plugins:
+      product_features_products:
+        title: Product Features Products
+      product_features:
+        title: Product Features
+      products:
+        title: Products
+    products:
+      admin:
+        product_features_products:
+          actions:
+            create_new: Add New Product Features Product
+            reorder: Reorder Product Features Products
+            reorder_done: Done Reordering Product Features Products
+          records:
+            title: Product Features Products
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Product Features Products yet. Click "Add New
+              Product Features Product" to add your first product features product.
+          product_features_product:
+            view_live_html: View this product features product live <br/><em>(opens
+              in a new window)</em>
+            edit: Edit this product features product
+            delete: Remove this product features product forever
+        product_features:
+          actions:
+            create_new: Add New Product Feature
+            reorder: Reorder Product Features
+            reorder_done: Done Reordering Product Features
+          records:
+            title: Product Features
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Product Features yet. Click "Add New Product
+              Feature" to add your first product feature.
+          product_feature:
+            view_live_html: View this product feature live <br/><em>(opens in a new
+              window)</em>
+            edit: Edit this product feature
+            delete: Remove this product feature forever
+        products:
+          actions:
+            create_new: Add New Product
+            reorder: Reorder Products
+            reorder_done: Done Reordering Products
+          records:
+            title: Products
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Products yet. Click "Add New Product" to add
+              your first product.
+          product:
+            view_live_html: View this product live <br/><em>(opens in a new window)</em>
+            edit: Edit this product
+            delete: Remove this product forever
+      product_features_products:
+        show:
+          other: Other Product Features Products
+      product_features:
+        show:
+          other: Other Product Features
+      products:
+        show:
+          other: Other Products
+  activerecord:
+    attributes:
+      refinery/products/product_features_product:
+        product_feature_id: Product Feature
+        product_id: Product
+      refinery/products/product_feature:
+        name: Name
+        value: Value
+        is_in_summary: Is In Summary
+      refinery/products/product:
+        name: Name
+        logo: Logo
+        insurer: Insurer
+        premium: Premium
+        special: Special

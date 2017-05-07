@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170503115439) do
+ActiveRecord::Schema.define(version: 20170507190026) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -146,6 +146,36 @@ ActiveRecord::Schema.define(version: 20170503115439) do
   add_index "refinery_pages", ["lft"], name: "index_refinery_pages_on_lft", using: :btree
   add_index "refinery_pages", ["parent_id"], name: "index_refinery_pages_on_parent_id", using: :btree
   add_index "refinery_pages", ["rgt"], name: "index_refinery_pages_on_rgt", using: :btree
+
+  create_table "refinery_products", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "logo_id"
+    t.string   "insurer"
+    t.decimal  "premium",    precision: 8, scale: 2
+    t.string   "special"
+    t.integer  "position"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "refinery_products_product_features", force: :cascade do |t|
+    t.string   "name"
+    t.boolean  "is_in_summary"
+    t.integer  "position"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "refinery_products_product_features_products", force: :cascade do |t|
+    t.integer  "product_feature_id"
+    t.integer  "product_id"
+    t.string   "value"
+    t.integer  "position"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "refinery_products_product_features_products", ["product_feature_id", "product_id"], name: "product_feature_product_idx", using: :btree
 
   create_table "refinery_resource_translations", force: :cascade do |t|
     t.integer  "refinery_resource_id", null: false

@@ -1,0 +1,78 @@
+ru:
+  refinery:
+    plugins:
+      product_features_products:
+        title: Product Features Products
+      product_features:
+        title: Product Features
+      products:
+        title: Products
+    products:
+      admin:
+        product_features_products:
+          actions:
+            create_new: Добавить Product Features Product
+            reorder: Изменить порядок Product Features Products
+            reorder_done: Закончить изменять порядок Product Features Products
+          records:
+            title: Product Features Products
+            sorry_no_results: Извините, поиск не дал результатов.
+            no_items_yet: Записей "Product Features Products" не найдено. Нажмите
+              "Добавить Product Features Product" чтобы создать product features product.
+          product_features_product:
+            view_live_html: Просмотреть product features product вживую <br/><em>(в
+              новом окне)</em>
+            edit: Редактировать product features product
+            delete: Удалить product features product навсегда
+        product_features:
+          actions:
+            create_new: Добавить Product Feature
+            reorder: Изменить порядок Product Features
+            reorder_done: Закончить изменять порядок Product Features
+          records:
+            title: Product Features
+            sorry_no_results: Извините, поиск не дал результатов.
+            no_items_yet: Записей "Product Features" не найдено. Нажмите "Добавить
+              Product Feature" чтобы создать product feature.
+          product_feature:
+            view_live_html: Просмотреть product feature вживую <br/><em>(в новом окне)</em>
+            edit: Редактировать product feature
+            delete: Удалить product feature навсегда
+        products:
+          actions:
+            create_new: Добавить Product
+            reorder: Изменить порядок Products
+            reorder_done: Закончить изменять порядок Products
+          records:
+            title: Products
+            sorry_no_results: Извините, поиск не дал результатов.
+            no_items_yet: Записей "Products" не найдено. Нажмите "Добавить Product"
+              чтобы создать product.
+          product:
+            view_live_html: Просмотреть product вживую <br/><em>(в новом окне)</em>
+            edit: Редактировать product
+            delete: Удалить product навсегда
+      product_features_products:
+        show:
+          other: Другие Product Features Products
+      product_features:
+        show:
+          other: Другие Product Features
+      products:
+        show:
+          other: Другие Products
+  activerecord:
+    attributes:
+      refinery/products/product_features_product:
+        product_feature_id: Product Feature
+        product_id: Product
+      refinery/products/product_feature:
+        name: Name
+        value: Value
+        is_in_summary: Is In Summary
+      refinery/products/product:
+        name: Name
+        logo: Logo
+        insurer: Insurer
+        premium: Premium
+        special: Special

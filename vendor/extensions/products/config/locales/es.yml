@@ -1,0 +1,81 @@
+es:
+  refinery:
+    plugins:
+      product_features_products:
+        title: Product Features Products
+      product_features:
+        title: Product Features
+      products:
+        title: Products
+    products:
+      admin:
+        product_features_products:
+          actions:
+            create_new: Crear nuevo product features product
+            reorder: Reordenar product features products
+            reorder_done: Reordenación de product features products completada
+          records:
+            title: Product Features Products
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay product features products todavía. Pulsa en "Crear
+              nuevo Product Features Product" para crear tu primer product features
+              product.
+          product_features_product:
+            view_live_html: Ver este product features product como abierto al público
+              <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este product features product
+            delete: Borrar este product features product para siempre
+        product_features:
+          actions:
+            create_new: Crear nuevo product feature
+            reorder: Reordenar product features
+            reorder_done: Reordenación de product features completada
+          records:
+            title: Product Features
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay product features todavía. Pulsa en "Crear nuevo Product
+              Feature" para crear tu primer product feature.
+          product_feature:
+            view_live_html: Ver este product feature como abierto al público <br/><em>(abre
+              en ventana nueva)</em>
+            edit: Editar este product feature
+            delete: Borrar este product feature para siempre
+        products:
+          actions:
+            create_new: Crear nuevo product
+            reorder: Reordenar products
+            reorder_done: Reordenación de products completada
+          records:
+            title: Products
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay products todavía. Pulsa en "Crear nuevo Product"
+              para crear tu primer product.
+          product:
+            view_live_html: Ver este product como abierto al público <br/><em>(abre
+              en ventana nueva)</em>
+            edit: Editar este product
+            delete: Borrar este product para siempre
+      product_features_products:
+        show:
+          other: Otros product features products
+      product_features:
+        show:
+          other: Otros product features
+      products:
+        show:
+          other: Otros products
+  activerecord:
+    attributes:
+      refinery/products/product_features_product:
+        product_feature_id: Product Feature
+        product_id: Product
+      refinery/products/product_feature:
+        name: Name
+        value: Value
+        is_in_summary: Is In Summary
+      refinery/products/product:
+        name: Name
+        logo: Logo
+        insurer: Insurer
+        premium: Premium
+        special: Special

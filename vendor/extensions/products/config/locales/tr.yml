@@ -1,0 +1,81 @@
+tr:
+  refinery:
+    plugins:
+      product_features_products:
+        title: Product Features Products
+      product_features:
+        title: Product Features
+      products:
+        title: Products
+    products:
+      admin:
+        product_features_products:
+          actions:
+            create_new: Yeni Ekle Product Features Product
+            reorder: Tekrar sirala Product Features Products
+            reorder_done: Tekrar siralama tamamlandiProduct Features Products
+          records:
+            title: Product Features Products
+            sorry_no_results: Uzgunum! Herhangi bir sonuc bulunamadi.
+            no_items_yet: Herhangi bir Product Features Products yok henuz.  Tikla
+              "Yeni Ekle Product Features Product" eklemek senin ilk product features
+              product.
+          product_features_product:
+            view_live_html: Bunu canlu product features product goruntule <br/><em>(yeni
+              bir pencerede acar)</em>
+            edit: Bunu Duzenle product features product
+            delete: Bunu Sil product features product sonsuza dek
+        product_features:
+          actions:
+            create_new: Yeni Ekle Product Feature
+            reorder: Tekrar sirala Product Features
+            reorder_done: Tekrar siralama tamamlandiProduct Features
+          records:
+            title: Product Features
+            sorry_no_results: Uzgunum! Herhangi bir sonuc bulunamadi.
+            no_items_yet: Herhangi bir Product Features yok henuz.  Tikla "Yeni Ekle
+              Product Feature" eklemek senin ilk product feature.
+          product_feature:
+            view_live_html: Bunu canlu product feature goruntule <br/><em>(yeni bir
+              pencerede acar)</em>
+            edit: Bunu Duzenle product feature
+            delete: Bunu Sil product feature sonsuza dek
+        products:
+          actions:
+            create_new: Yeni Ekle Product
+            reorder: Tekrar sirala Products
+            reorder_done: Tekrar siralama tamamlandiProducts
+          records:
+            title: Products
+            sorry_no_results: Uzgunum! Herhangi bir sonuc bulunamadi.
+            no_items_yet: Herhangi bir Products yok henuz.  Tikla "Yeni Ekle Product"
+              eklemek senin ilk product.
+          product:
+            view_live_html: Bunu canlu product goruntule <br/><em>(yeni bir pencerede
+              acar)</em>
+            edit: Bunu Duzenle product
+            delete: Bunu Sil product sonsuza dek
+      product_features_products:
+        show:
+          other: Diger Product Features Products
+      product_features:
+        show:
+          other: Diger Product Features
+      products:
+        show:
+          other: Diger Products
+  activerecord:
+    attributes:
+      refinery/products/product_features_product:
+        product_feature_id: Product Feature
+        product_id: Product
+      refinery/products/product_feature:
+        name: Name
+        value: Value
+        is_in_summary: Is In Summary
+      refinery/products/product:
+        name: Name
+        logo: Logo
+        insurer: Insurer
+        premium: Premium
+        special: Special

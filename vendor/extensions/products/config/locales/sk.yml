@@ -1,0 +1,80 @@
+sk:
+  refinery:
+    plugins:
+      product_features_products:
+        title: Product Features Products
+      product_features:
+        title: Product Features
+      products:
+        title: Products
+    products:
+      admin:
+        product_features_products:
+          actions:
+            create_new: Pridať Product Features Product
+            reorder: Preusporiadať Product Features Products
+            reorder_done: Koniec radenia Product Features Products
+          records:
+            title: Product Features Products
+            sorry_no_results: Ľutujeme, ale neboli nájdené žiadne výsledky.
+            no_items_yet: Nie sú vytvorené žiadne Product Features Products. Kliknite
+              na "Pridať Product Features Product" pre pridanie prvého product features
+              product.
+          product_features_product:
+            view_live_html: Zobraziť náhľad product features product<br/><em>(otvorí
+              sa v novom okne)</em>
+            edit: Upraviť product features product
+            delete: Zmazať product features product
+        product_features:
+          actions:
+            create_new: Pridať Product Feature
+            reorder: Preusporiadať Product Features
+            reorder_done: Koniec radenia Product Features
+          records:
+            title: Product Features
+            sorry_no_results: Ľutujeme, ale neboli nájdené žiadne výsledky.
+            no_items_yet: Nie sú vytvorené žiadne Product Features. Kliknite na "Pridať
+              Product Feature" pre pridanie prvého product feature.
+          product_feature:
+            view_live_html: Zobraziť náhľad product feature<br/><em>(otvorí sa v novom
+              okne)</em>
+            edit: Upraviť product feature
+            delete: Zmazať product feature
+        products:
+          actions:
+            create_new: Pridať Product
+            reorder: Preusporiadať Products
+            reorder_done: Koniec radenia Products
+          records:
+            title: Products
+            sorry_no_results: Ľutujeme, ale neboli nájdené žiadne výsledky.
+            no_items_yet: Nie sú vytvorené žiadne Products. Kliknite na "Pridať Product"
+              pre pridanie prvého product.
+          product:
+            view_live_html: Zobraziť náhľad product<br/><em>(otvorí sa v novom okne)</em>
+            edit: Upraviť product
+            delete: Zmazať product
+      product_features_products:
+        show:
+          other: Daľšie Product Features Products
+      product_features:
+        show:
+          other: Daľšie Product Features
+      products:
+        show:
+          other: Daľšie Products
+  activerecord:
+    attributes:
+      refinery/products/product_features_product:
+        product_feature_id: Product Feature
+        product_id: Product
+      refinery/products/product_feature:
+        name: Name
+        value: Value
+        is_in_summary: Is In Summary
+      refinery/products/product:
+        name: Name
+        logo: Logo
+        insurer: Insurer
+        premium: Premium
+        special: Special

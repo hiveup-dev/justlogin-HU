@@ -1,0 +1,76 @@
+zh-CN:
+  refinery:
+    plugins:
+      product_features_products:
+        title: Product Features Products
+      product_features:
+        title: Product Features
+      products:
+        title: Products
+    products:
+      admin:
+        product_features_products:
+          actions:
+            create_new: 建立新的 Product Features Product
+            reorder: 对 Product Features Products 重新排序
+            reorder_done: 对 Product Features Products 的重新排序结束
+          records:
+            title: Product Features Products
+            sorry_no_results: 对不起，未找到结果。
+            no_items_yet: 目前没有 Product Features Products . 点击 "Add New Product Features
+              Product" 创建一个product features product.
+          product_features_product:
+            view_live_html: 查看 product features product 的最新内容.<br/><em>(新窗口中打开)</em>
+            edit: 编辑 product features product
+            delete: 永久删除 product features product
+        product_features:
+          actions:
+            create_new: 建立新的 Product Feature
+            reorder: 对 Product Features 重新排序
+            reorder_done: 对 Product Features 的重新排序结束
+          records:
+            title: Product Features
+            sorry_no_results: 对不起，未找到结果。
+            no_items_yet: 目前没有 Product Features . 点击 "Add New Product Feature" 创建一个product
+              feature.
+          product_feature:
+            view_live_html: 查看 product feature 的最新内容.<br/><em>(新窗口中打开)</em>
+            edit: 编辑 product feature
+            delete: 永久删除 product feature
+        products:
+          actions:
+            create_new: 建立新的 Product
+            reorder: 对 Products 重新排序
+            reorder_done: 对 Products 的重新排序结束
+          records:
+            title: Products
+            sorry_no_results: 对不起，未找到结果。
+            no_items_yet: 目前没有 Products . 点击 "Add New Product" 创建一个product.
+          product:
+            view_live_html: 查看 product 的最新内容.<br/><em>(新窗口中打开)</em>
+            edit: 编辑 product
+            delete: 永久删除 product
+      product_features_products:
+        show:
+          other: 其他 Product Features Products
+      product_features:
+        show:
+          other: 其他 Product Features
+      products:
+        show:
+          other: 其他 Products
+  activerecord:
+    attributes:
+      refinery/products/product_features_product:
+        product_feature_id: Product Feature
+        product_id: Product
+      refinery/products/product_feature:
+        name: Name
+        value: Value
+        is_in_summary: Is In Summary
+      refinery/products/product:
+        name: Name
+        logo: Logo
+        insurer: Insurer
+        premium: Premium
+        special: Special

@@ -1,0 +1,80 @@
+it:
+  refinery:
+    plugins:
+      product_features_products:
+        title: Product Features Products
+      product_features:
+        title: Product Features
+      products:
+        title: Products
+    products:
+      admin:
+        product_features_products:
+          actions:
+            create_new: Aggiungi Nuovo Product Features Product
+            reorder: Riordina Product Features Products
+            reorder_done: Termina il Riordino di Product Features Products
+          records:
+            title: Product Features Products
+            sorry_no_results: Spiacenti! Nessun risultato trovato
+            no_items_yet: Non ci sono ancora Product Features Products. Clicca "Aggiungi
+              Nuovo Product Features Product" per aggiungere il tuo primo product
+              features product.
+          product_features_product:
+            view_live_html: Guarda live questo product features product <br/><em>(apre
+              una nuova finestra)</em>
+            edit: Modifica questo product features product
+            delete: Rimuovi per sempre questo product features product
+        product_features:
+          actions:
+            create_new: Aggiungi Nuovo Product Feature
+            reorder: Riordina Product Features
+            reorder_done: Termina il Riordino di Product Features
+          records:
+            title: Product Features
+            sorry_no_results: Spiacenti! Nessun risultato trovato
+            no_items_yet: Non ci sono ancora Product Features. Clicca "Aggiungi Nuovo
+              Product Feature" per aggiungere il tuo primo product feature.
+          product_feature:
+            view_live_html: Guarda live questo product feature <br/><em>(apre una
+              nuova finestra)</em>
+            edit: Modifica questo product feature
+            delete: Rimuovi per sempre questo product feature
+        products:
+          actions:
+            create_new: Aggiungi Nuovo Product
+            reorder: Riordina Products
+            reorder_done: Termina il Riordino di Products
+          records:
+            title: Products
+            sorry_no_results: Spiacenti! Nessun risultato trovato
+            no_items_yet: Non ci sono ancora Products. Clicca "Aggiungi Nuovo Product"
+              per aggiungere il tuo primo product.
+          product:
+            view_live_html: Guarda live questo product <br/><em>(apre una nuova finestra)</em>
+            edit: Modifica questo product
+            delete: Rimuovi per sempre questo product
+      product_features_products:
+        show:
+          other: Altri Product Features Products
+      product_features:
+        show:
+          other: Altri Product Features
+      products:
+        show:
+          other: Altri Products
+  activerecord:
+    attributes:
+      refinery/products/product_features_product:
+        product_feature_id: Product Feature
+        product_id: Product
+      refinery/products/product_feature:
+        name: Name
+        value: Value
+        is_in_summary: Is In Summary
+      refinery/products/product:
+        name: Name
+        logo: Logo
+        insurer: Insurer
+        premium: Premium
+        special: Special

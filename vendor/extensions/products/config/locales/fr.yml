@@ -1,0 +1,81 @@
+fr:
+  refinery:
+    plugins:
+      product_features_products:
+        title: Product Features Products
+      product_features:
+        title: Product Features
+      products:
+        title: Products
+    products:
+      admin:
+        product_features_products:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Product Features Product
+            reorder: Réordonner les Product Features Products
+            reorder_done: Fin de réordonnancement des Product Features Products
+          records:
+            title: Product Features Products
+            sorry_no_results: Désolé ! Aucun résultat.
+            no_items_yet: Il n'y a actuellement aucun(e) Product Features Product.
+              Cliquer sur "Créer un(e) nouve(au/l/lle) Product Features Product" pour
+              créer votre premi(er/ère) product features product.
+          product_features_product:
+            view_live_html: Voir ce(t/tte) product features product <br/><em>(Ouvre
+              une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) product features product
+            delete: Supprimer définitivement ce(t/tte) product features product
+        product_features:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Product Feature
+            reorder: Réordonner les Product Features
+            reorder_done: Fin de réordonnancement des Product Features
+          records:
+            title: Product Features
+            sorry_no_results: Désolé ! Aucun résultat.
+            no_items_yet: Il n'y a actuellement aucun(e) Product Feature. Cliquer
+              sur "Créer un(e) nouve(au/l/lle) Product Feature" pour créer votre premi(er/ère)
+              product feature.
+          product_feature:
+            view_live_html: Voir ce(t/tte) product feature <br/><em>(Ouvre une nouvelle
+              fenêtre)</em>
+            edit: Modifier ce(t/tte) product feature
+            delete: Supprimer définitivement ce(t/tte) product feature
+        products:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Product
+            reorder: Réordonner les Products
+            reorder_done: Fin de réordonnancement des Products
+          records:
+            title: Products
+            sorry_no_results: Désolé ! Aucun résultat.
+            no_items_yet: Il n'y a actuellement aucun(e) Product. Cliquer sur "Créer
+              un(e) nouve(au/l/lle) Product" pour créer votre premi(er/ère) product.
+          product:
+            view_live_html: Voir ce(t/tte) product <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) product
+            delete: Supprimer définitivement ce(t/tte) product
+      product_features_products:
+        show:
+          other: Autres Product Features Products
+      product_features:
+        show:
+          other: Autres Product Features
+      products:
+        show:
+          other: Autres Products
+  activerecord:
+    attributes:
+      refinery/products/product_features_product:
+        product_feature_id: Product Feature
+        product_id: Product
+      refinery/products/product_feature:
+        name: Name
+        value: Value
+        is_in_summary: Is In Summary
+      refinery/products/product:
+        name: Name
+        logo: Logo
+        insurer: Insurer
+        premium: Premium
+        special: Special

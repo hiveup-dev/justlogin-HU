@@ -1,0 +1,80 @@
+nl:
+  refinery:
+    plugins:
+      product_features_products:
+        title: Product Features Products
+      product_features:
+        title: Product Features
+      products:
+        title: Products
+    products:
+      admin:
+        product_features_products:
+          actions:
+            create_new: Nieuwe Product Features Product toevoegen
+            reorder: De volgorde van de Product Features Products wijzigen
+            reorder_done: Klaar met het wijzingen van de van de Product Features Product-volgorde
+          records:
+            title: Product Features Products
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Product Features Products. Druk op 'Nieuwe
+              Product Features Product toevoegen' om de eerste toe te voegen.
+          product_features_product:
+            view_live_html: Deze product features product op de website bekijken <br/><em>(opent
+              in een nieuw venster)</em>
+            edit: Bewerk deze product features product
+            delete: Deze product features product definitief verwijderen
+        product_features:
+          actions:
+            create_new: Nieuwe Product Feature toevoegen
+            reorder: De volgorde van de Product Features wijzigen
+            reorder_done: Klaar met het wijzingen van de van de Product Feature-volgorde
+          records:
+            title: Product Features
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Product Features. Druk op 'Nieuwe Product
+              Feature toevoegen' om de eerste toe te voegen.
+          product_feature:
+            view_live_html: Deze product feature op de website bekijken <br/><em>(opent
+              in een nieuw venster)</em>
+            edit: Bewerk deze product feature
+            delete: Deze product feature definitief verwijderen
+        products:
+          actions:
+            create_new: Nieuwe Product toevoegen
+            reorder: De volgorde van de Products wijzigen
+            reorder_done: Klaar met het wijzingen van de van de Product-volgorde
+          records:
+            title: Products
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Products. Druk op 'Nieuwe Product toevoegen'
+              om de eerste toe te voegen.
+          product:
+            view_live_html: Deze product op de website bekijken <br/><em>(opent in
+              een nieuw venster)</em>
+            edit: Bewerk deze product
+            delete: Deze product definitief verwijderen
+      product_features_products:
+        show:
+          other: Andere Product Features Products
+      product_features:
+        show:
+          other: Andere Product Features
+      products:
+        show:
+          other: Andere Products
+  activerecord:
+    attributes:
+      refinery/products/product_features_product:
+        product_feature_id: Product Feature
+        product_id: Product
+      refinery/products/product_feature:
+        name: Name
+        value: Value
+        is_in_summary: Is In Summary
+      refinery/products/product:
+        name: Name
+        logo: Logo
+        insurer: Insurer
+        premium: Premium
+        special: Special

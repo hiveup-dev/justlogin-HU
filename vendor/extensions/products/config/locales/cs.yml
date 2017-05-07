@@ -1,0 +1,80 @@
+cs:
+  refinery:
+    plugins:
+      product_features_products:
+        title: Product Features Products
+      product_features:
+        title: Product Features
+      products:
+        title: Products
+    products:
+      admin:
+        product_features_products:
+          actions:
+            create_new: Přidat Product Features Product
+            reorder: Řadit Product Features Products
+            reorder_done: Konec řazení Product Features Products
+          records:
+            title: Product Features Products
+            sorry_no_results: Litujeme, ale nebyly nalezny žádné výsledky.
+            no_items_yet: Zatím nebyly vytvořeny žádné Product Features Products.
+              Zvolte "Přidat Product Features Product" pro přidání prvního product
+              features product.
+          product_features_product:
+            view_live_html: Zobrazit náhled product features product<br/><em>(otevře
+              se v novém okně)</em>
+            edit: Upravit product features product
+            delete: Smazat product features product
+        product_features:
+          actions:
+            create_new: Přidat Product Feature
+            reorder: Řadit Product Features
+            reorder_done: Konec řazení Product Features
+          records:
+            title: Product Features
+            sorry_no_results: Litujeme, ale nebyly nalezny žádné výsledky.
+            no_items_yet: Zatím nebyly vytvořeny žádné Product Features. Zvolte "Přidat
+              Product Feature" pro přidání prvního product feature.
+          product_feature:
+            view_live_html: Zobrazit náhled product feature<br/><em>(otevře se v novém
+              okně)</em>
+            edit: Upravit product feature
+            delete: Smazat product feature
+        products:
+          actions:
+            create_new: Přidat Product
+            reorder: Řadit Products
+            reorder_done: Konec řazení Products
+          records:
+            title: Products
+            sorry_no_results: Litujeme, ale nebyly nalezny žádné výsledky.
+            no_items_yet: Zatím nebyly vytvořeny žádné Products. Zvolte "Přidat Product"
+              pro přidání prvního product.
+          product:
+            view_live_html: Zobrazit náhled product<br/><em>(otevře se v novém okně)</em>
+            edit: Upravit product
+            delete: Smazat product
+      product_features_products:
+        show:
+          other: Další Product Features Products
+      product_features:
+        show:
+          other: Další Product Features
+      products:
+        show:
+          other: Další Products
+  activerecord:
+    attributes:
+      refinery/products/product_features_product:
+        product_feature_id: Product Feature
+        product_id: Product
+      refinery/products/product_feature:
+        name: Name
+        value: Value
+        is_in_summary: Is In Summary
+      refinery/products/product:
+        name: Name
+        logo: Logo
+        insurer: Insurer
+        premium: Premium
+        special: Special

@@ -73,3 +73,5 @@ group :development do
   gem 'spring-commands-rspec'
   gem 'web-console', '~> 2.0'
 end
+
+gem 'refinerycms-products', path: 'vendor/extensions'

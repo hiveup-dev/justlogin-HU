@@ -1,0 +1,81 @@
+nb:
+  refinery:
+    plugins:
+      product_features_products:
+        title: Product Features Products
+      product_features:
+        title: Product Features
+      products:
+        title: Products
+    products:
+      admin:
+        product_features_products:
+          actions:
+            create_new: Lag en ny Product Features Product
+            reorder: Endre rekkefølgen på Product Features Products
+            reorder_done: Ferdig å endre rekkefølgen Product Features Products
+          records:
+            title: Product Features Products
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Product Features Products enda. Klikk på "Lag
+              en ny Product Features Product" for å legge til din første product features
+              product.
+          product_features_product:
+            view_live_html: Vis hvordan denne product features product ser ut offentlig
+              <br/><em>(åpner i et nytt vindu)</em>
+            edit: Rediger denne product features product
+            delete: Fjern denne product features product permanent
+        product_features:
+          actions:
+            create_new: Lag en ny Product Feature
+            reorder: Endre rekkefølgen på Product Features
+            reorder_done: Ferdig å endre rekkefølgen Product Features
+          records:
+            title: Product Features
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Product Features enda. Klikk på "Lag en ny
+              Product Feature" for å legge til din første product feature.
+          product_feature:
+            view_live_html: Vis hvordan denne product feature ser ut offentlig <br/><em>(åpner
+              i et nytt vindu)</em>
+            edit: Rediger denne product feature
+            delete: Fjern denne product feature permanent
+        products:
+          actions:
+            create_new: Lag en ny Product
+            reorder: Endre rekkefølgen på Products
+            reorder_done: Ferdig å endre rekkefølgen Products
+          records:
+            title: Products
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Products enda. Klikk på "Lag en ny Product"
+              for å legge til din første product.
+          product:
+            view_live_html: Vis hvordan denne product ser ut offentlig <br/><em>(åpner
+              i et nytt vindu)</em>
+            edit: Rediger denne product
+            delete: Fjern denne product permanent
+      product_features_products:
+        show:
+          other: Andre Product Features Products
+      product_features:
+        show:
+          other: Andre Product Features
+      products:
+        show:
+          other: Andre Products
+  activerecord:
+    attributes:
+      refinery/products/product_features_product:
+        product_feature_id: Product Feature
+        product_id: Product
+      refinery/products/product_feature:
+        name: Name
+        value: Value
+        is_in_summary: Is In Summary
+      refinery/products/product:
+        name: Name
+        logo: Logo
+        insurer: Insurer
+        premium: Premium
+        special: Special

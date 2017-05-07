@@ -1,0 +1,39 @@
+<% content_for :body_content_title do %>
+  <%= @product_feature.name %>
+<% end %>
+
+<% content_for :body do %>
+  <section>
+    <h1>Name</h1>
+    <p>
+      <%=raw @product_feature.name %>
+    </p>
+  </section>
+  <section>
+    <h1>Value</h1>
+    <p>
+      <%=raw @product_feature.value %>
+    </p>
+  </section>
+  <section>
+    <h1>Is In Summary</h1>
+    <p>
+      <%=raw @product_feature.is_in_summary %>
+    </p>
+  </section>
+<% end %>
+
+<% content_for :side_body do %>
+  <aside>
+    <h2><%= t('.other') %></h2>
+    <ul id="product_features">
+      <% @product_features.each do |product_feature| %>
+        <li>
+          <%= link_to product_feature.name, refinery.products_product_feature_path(product_feature) %>
+        </li>
+      <% end %>
+    </ul>
+  </aside>
+<% end %>
+
+<%= render '/refinery/content_page' %>
