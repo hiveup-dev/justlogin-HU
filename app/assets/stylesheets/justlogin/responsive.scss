@@ -1,0 +1,86 @@
+@media only screen and (max-width: 768px) {
+
+p {
+	font-size: 12px;
+}
+
+a {
+
+}
+
+strong {
+	font-weight: 600;
+}
+
+h2 {
+	font-size: 18px;
+}
+
+h3 {
+	font-size: 16px;
+}
+
+h4 {
+	font-size: 16px;
+}
+
+.logo img {
+	width: 70px;
+}
+
+/* -------------------------------------------------------- SELECTION PAGE */
+
+.selection .umbrella-wrapper {
+	padding: 15px;
+	//border: 1px solid #eeeeee;
+	background-color: #fed9ad;
+	transition: all 0.2s;
+}
+
+.selection .umbrella-wrapper:hover {
+	transform: scale(1.05);
+	transition: all 0.2s;
+}
+
+.selection .umbrella-title {
+	height: 30px;
+}
+
+.selection .umbrella-body {
+	height: 90px;
+}
+
+.selection hr {
+	border-color: #d6a779;
+}
+
+.tab-header {
+	margin-bottom: 15px;
+}
+
+.tab-body {
+	height: auto;
+}
+
+.tab-footer .left,
+.tab-footer .right {
+	text-align: center;
+}
+
+.selection-1-select i,
+.selection-2-select i,
+.selection-3-select i {
+	margin-right: 15px;
+}
+
+label.selection {
+	font-weight: 400;
+	display: block;
+	margin-bottom: 7px;
+}
+
+.confirm-checkbox {
+	font-size: 12px;
+}
+
+}

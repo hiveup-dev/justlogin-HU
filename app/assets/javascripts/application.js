@@ -12,5 +12,40 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require jquery_nested_form_aaa.js
-//= require_tree .
+//= require justlogin/jquery.validate.min
+//= require justlogin/additional-methods.min
+//= require justlogin/jquery.checkbox
+//= require justlogin/bootstrap.min
+//= require justlogin/jquery.mousewheel.min
+//= require justlogin/main
+//= require_self
+
+jQuery(function () {
+    $('#employee-benefits').validate({
+        rules: {
+            fname: {
+                minlength: 2,
+                required: true
+            },
+            lname: {
+                minlength: 2,
+                required: true
+            },
+            email: {
+                required: true,
+                email: true
+            },
+            company: {
+                minlength: 2,
+                required: true
+            }
+        },
+        highlight: function (element) {
+            $(element).closest('.form-group').removeClass('has-success').addClass('has-error');
+        },
+        success: function (element) {
+            element.text('').addClass('.valid')
+                .closest('.form-group').removeClass('has-error').addClass('has-success');
+        }
+    });
+});

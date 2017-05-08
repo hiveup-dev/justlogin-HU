@@ -74,4 +74,5 @@ group :development do
   gem 'web-console', '~> 2.0'
 end
 
+gem 'refinerycms-wymeditor', ['~> 1.0', '>= 1.0.7']
 gem 'refinerycms-products', path: 'vendor/extensions'

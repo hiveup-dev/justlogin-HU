@@ -1,500 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>Hive-Up - JustLogin</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>Hive-Up - JustLogin</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="/static-assets/css/bootstrap.min.css" rel="stylesheet">
+  <%= stylesheet_link_tag('application') %>
 
-    <!-- Custom styles for this template -->
-    <link href="https://fonts.googleapis.com/css?family=Oswald:600|Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+  <link rel="apple-touch-icon" sizes="57x57" href="<%= image_path("favicon/apple-icon-57x57.png") %>">
+  <link rel="apple-touch-icon" sizes="60x60" href="<%= image_path("favicon/apple-icon-60x60.png") %>">
+  <link rel="apple-touch-icon" sizes="72x72" href="<%= image_path("favicon/apple-icon-72x72.png") %>">
+  <link rel="apple-touch-icon" sizes="76x76" href="<%= image_path("favicon/apple-icon-76x76.png") %>">
+  <link rel="apple-touch-icon" sizes="114x114" href="<%= image_path("favicon/apple-icon-114x114.png") %>">
+  <link rel="apple-touch-icon" sizes="120x120" href="<%= image_path("favicon/apple-icon-120x120.png") %>">
+  <link rel="apple-touch-icon" sizes="144x144" href="<%= image_path("favicon/apple-icon-144x144.png") %>">
+  <link rel="apple-touch-icon" sizes="152x152" href="<%= image_path("favicon/apple-icon-152x152.png") %>">
+  <link rel="apple-touch-icon" sizes="180x180" href="<%= image_path("favicon/apple-icon-180x180.png") %>">
+  <link rel="icon" type="image/png" sizes="192x192" href="<%= image_path("favicon/android-icon-192x192.png") %>">
+  <link rel="icon" type="image/png" sizes="32x32" href="<%= image_path("favicon/favicon-32x32.png") %>">
+  <link rel="icon" type="image/png" sizes="96x96" href="<%= image_path("favicon/favicon-96x96.png") %>">
+  <link rel="icon" type="image/png" sizes="16x16" href="<%= image_path("favicon/favicon-16x16.png") %>">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
 
-    <link rel="stylesheet" href="/static-assets/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/static-assets/css/jquery.mCustomScrollbar.min.css" />
-    <link rel="stylesheet" href="/static-assets/css/main.css" />
-    <link rel="stylesheet" href="/static-assets/css/responsive.css" />
-    <link rel="stylesheet" href="/static-assets/css/slide-in.css?v=107" />
-
-    <link rel="apple-touch-icon" sizes="57x57" href="/static-assets/img/favicon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/static-assets/img/favicon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/static-assets/img/favicon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/static-assets/img/favicon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/static-assets/img/favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/static-assets/img/favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/static-assets/img/favicon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/static-assets/img/favicon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/static-assets/img/favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="/static-assets/img/favicon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/static-assets/img/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/static-assets/img/favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/static-assets/img/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
 </head>
 
 <body>
-    <div id="wrapper">
-        <div class="logo">
-            <img src="/static-assets/img/hiveup-logo.svg">
-        </div>
+<div id="wrapper">
 
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          <%= image_tag("hiveup-logo.svg") %>
+        </a>
+      </div>
+      <!-- Brand and toggle get grouped for better mobile display -->
 
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <%= yield :page_buttons%>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
 
-        <div class="container">
-        <div class="row">
-            <div class="wizard col-sm-12">
-                <div class="stepwizard">
-                    <div class="stepwizard-row setup-panel">
-                        <div class="stepwizard-step">
-                            <a href="#step1" type="button" class="btn btn-primary btn-circle">1</a>
-                            <p>Step 1</p>
-                        </div>
-                        <div class="stepwizard-step">
-                            <a href="#step2" type="button" class="btn btn-default btn-circle" disabled="disabled">2</a>
-                            <p>Step 2</p>
-                        </div>
-                        <div class="stepwizard-step">
-                            <a href="#step3" type="button" class="btn btn-default btn-circle" disabled="disabled">3</a>
-                            <p>Step 3</p>
-                        </div>
-                    </div>
-                </div>
+  <%= yield %>
+  <%= render partial: '/shared/footer' %>
+</div>
 
-                <div class="">
-                    <%=form_tag('/contact', method: :post, name: 'employee-benefits', id: 'employee-benefits',  novalidate: true) do %>
-                    <!-- <form method="post" action="/contact.php" name="" id="" ="novalidate"> -->
-
-                    <div class="setup-content" id="step1">
-                        <div class="row tab-header">
-                            <div class="col-sm-12 text-center">
-                                <h2>I would like to find out more about</h2>
-                                <a href="/glossary.html">Learn more about the plans</a>
-                            </div>
-                        </div>
-
-                        <div class="row tab-body">
-                            <div class="col-sm-4">
-                                <label for="selection-1" class="selection selection-1">
-
-                                    <div class="product-wrapper">
-                                        <div class="product-title">
-                                            <div class="product-icon life"></div>
-                                            <h3>Group Term Life</h3>
-                                        </div>
-                                        <hr>
-                                        <div class="product-body">
-                                        <h5>Description</h5>
-                                        <p>Pays out a lump sum benefit to the beneficiaries if a covered employee dies during the coverage period.</p>
-                                        </div>
-                                        <hr>
-                                        <div class="text-center product-footer">
-                                            <input name="findoutmore[]" id="selection-1" type="checkbox" data-related-item="selection-1-select" value='Group Term Life'>
-                                            <strong>Select</strong>
-                                            <!-- <label for="selection-1">Select</label> -->
-                                        </div>
-                                    </div>
-                                </label>
-                            </div>
-
-                            <div class="col-sm-4">
-                                <label for="selection-2" class="selection">
-
-                                    <div class="product-wrapper">
-                                        <div class="product-title">
-                                            <div class="product-icon critical"></div>
-                                            <h3>Group Critical Illness</h3>
-                                        </div>
-                                        <hr>
-                                        <div class="product-body">
-                                        <h5>Description</h5>
-                                        <p>Pays a lump sum if an employee suffers any of a list of defined medical conditions. The medical conditions must be classified as critical illnesses (e.g. cancer, heart attack, stroke) under the policy.</p>
-                                        </div>
-                                        <hr>
-                                        <div class="text-center">
-                                            <input name="findoutmore[]" id="selection-2" type="checkbox" data-related-item="selection-2-select" value='Group Critical Illness'>
-                                            <strong>Select</strong>
-                                            <!-- <label for="selection-2">Select</label> -->
-                                        </div>
-                                    </div>
-                                </label>
-                            </div>
-
-                            <div class="col-sm-4">
-                                <label for="selection-3" class="selection">
-
-                                    <div class="product-wrapper">
-                                        <div class="product-title">
-                                            <div class="product-icon hospital"></div>
-                                            <h3>Group Hospitalization<br>& Surgical</h3>
-                                        </div>
-                                        <hr>
-                                        <div class="product-body">
-                                        <h5>Description</h5>
-                                        <p>Covers the cost of medical treatment and hospitalization due to accidents and sickness.</p>
-                                        </div>
-                                        <hr>
-                                        <div class="text-center product-footer">
-                                            <input name="findoutmore[]" id="selection-3" type="checkbox" data-related-item="selection-3-select" value='Group Hospitalization & Surgical'>
-                                            <strong>Select</strong>
-                                            <!-- <label for="selection-3">Select</label> -->
-                                        </div>
-                                    </div>
-                                </label>
-                            </div>
-
-                            <div class="col-sm-4">
-                                <label for="selection-4" class="selection">
-
-                                    <div class="product-wrapper">
-                                        <div class="product-title">
-                                            <div class="product-icon life"></div>
-                                            <h3>Group Personal<br>Accident</h3>
-                                        </div>
-                                        <hr>
-                                        <div class="product-body">
-                                        <h5>Description</h5>
-                                        <p>A supplementary plan which provides a lump sum benefit in the event of (1) death due to an accident, (2) total & permanent disability due to an accident, or other losses due to an accident as listed in the policy.</p>
-                                        </div>
-                                        <hr>
-                                        <div class="text-center product-footer">
-                                            <input name="findoutmore[]" id="selection-4" type="checkbox" data-related-item="selection-4-select" value='Group Personal Accident'>
-                                            <strong>Select</strong>
-                                            <!-- <label for="selection-3">Select</label> -->
-                                        </div>
-                                    </div>
-                                </label>
-                            </div>
-
-                            <div class="col-sm-4">
-                                <label for="selection-5" class="selection">
-
-                                    <div class="product-wrapper">
-                                        <div class="product-title">
-                                            <div class="product-icon critical"></div>
-                                            <h3>Group Outpatient<br>Specialist</h3>
-                                        </div>
-                                        <hr>
-                                        <div class="product-body">
-                                        <h5>Description</h5>
-                                        <p>A supplementary reimbursement benefit which covers expenses incurred for outpatient specialist consultation, diagnostic x-ray and laboratory tests recommended by a registered medical practitioner.</p>
-                                        </div>
-                                        <hr>
-                                        <div class="text-center product-footer">
-                                            <input name="findoutmore[]" id="selection-5" type="checkbox" data-related-item="selection-5-select" value='Group Outpatient Specialist'>
-                                            <strong>Select</strong>
-                                            <!-- <label for="selection-3">Select</label> -->
-                                        </div>
-                                    </div>
-                                </label>
-                            </div>
-
-                            <div class="col-sm-4">
-                                <label for="selection-6" class="selection">
-
-                                    <div class="product-wrapper">
-                                        <div class="product-title">
-                                            <div class="product-icon hospital"></div>
-                                            <h3>Group Long-Term<br>Disability</h3>
-                                        </div>
-                                        <hr>
-                                        <div class="product-body">
-                                        <h5>Description</h5>
-                                        <p>Pays a monthly benefit in the event they cannot work due to a covered illness or injury.</p>
-                                        </div>
-                                        <hr>
-                                        <div class="text-center product-footer">
-                                            <input name="findoutmore[]" id="selection-6" type="checkbox" data-related-item="selection-6-select" value='Group Long-Term Disability'>
-                                            <strong>Select</strong>
-                                            <!-- <label for="selection-3">Select</label> -->
-                                        </div>
-                                    </div>
-                                </label>
-                            </div>
-
-                            <div class="col-sm-4">
-                                <label for="selection-7" class="selection">
-
-                                    <div class="product-wrapper">
-                                        <div class="product-title">
-                                            <div class="product-icon life"></div>
-                                            <h3>Group Maternity</h3>
-                                        </div>
-                                        <hr>
-                                        <div class="product-body">
-                                        <h5>Description</h5>
-                                        <p>A supplementary reimbursement plan that covers expenses incurred for maternity and obstetrics treatment charged by the hospital and/or a registered medical practitioner.</p>
-                                        </div>
-                                        <hr>
-                                        <div class="text-center product-footer">
-                                            <input name="findoutmore[]" id="selection-7" type="checkbox" data-related-item="selection-7-select" value='Group Maternity'>
-                                            <strong>Select</strong>
-                                            <!-- <label for="selection-3">Select</label> -->
-                                        </div>
-                                    </div>
-                                </label>
-                            </div>
-
-                            <div class="col-sm-4">
-                                <label for="selection-8" class="selection">
-
-                                    <div class="product-wrapper">
-                                        <div class="product-title">
-                                            <div class="product-icon hospital"></div>
-                                            <h3>Group Dental Care</h3>
-                                        </div>
-                                        <hr>
-                                        <div class="product-body">
-                                        <h5>Description</h5>
-                                        <p>Provides reimbursement of eligible dental expenses from a licensed dentist.</p>
-                                        </div>
-                                        <hr>
-                                        <div class="text-center product-footer">
-                                            <input name="findoutmore[]" id="selection-8" type="checkbox" data-related-item="selection-8-select" value='Group Dental Care'>
-                                            <strong>Select</strong>
-                                            <!-- <label for="selection-3">Select</label> -->
-                                        </div>
-                                    </div>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="row tab-footer">
-                            <div class="col-sm-12">
-                                <ul class="list-inline">
-                                    <li><button type="button" class="btn btn-primary btn-lg next-step" id="selection-btn" disabled="disabled">Save and continue</button></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="setup-content" id="step2">
-                        <div class="row tab-header">
-                            <div class="col-sm-12 text-center">
-                                <h2>Please confirm</h2>
-                            </div>
-                        </div>
-
-                        <div class="row tab-body">
-                            <div class="col-sm-8 col-sm-offset-2">
-                                <h3>Selected Benefits</h3>
-                                <div class="row benefits">
-                                    <div class="col-sm-6 selection-1-select"><h4><i class="fa fa-check" aria-hidden="true"></i> Group Term Life</h4></div>
-                                    <div class="col-sm-6 selection-2-select"><h4><i class="fa fa-check" aria-hidden="true"></i> Group Critical Illness</h4></div>
-                                    <div class="col-sm-6 selection-3-select"><h4><i class="fa fa-check" aria-hidden="true"></i> Group Hospitalization & Surgical</h4></div>
-                                    <div class="col-sm-6 selection-4-select"><h4><i class="fa fa-check" aria-hidden="true"></i> Group Personal Accident</h4></div>
-                                    <div class="col-sm-6 selection-5-select"><h4><i class="fa fa-check" aria-hidden="true"></i> Group Outpatient Specialist</h4></div>
-                                    <div class="col-sm-6 selection-6-select"><h4><i class="fa fa-check" aria-hidden="true"></i> Group Long Term Disability</h4></div>
-                                    <div class="col-sm-6 selection-7-select"><h4><i class="fa fa-check" aria-hidden="true"></i> Group Maternity</h4></div>
-                                    <div class="col-sm-6 selection-8-select"><h4><i class="fa fa-check" aria-hidden="true"></i> Group Dental Care</h4></div>
-                                </div>
-                                <div class="eligibility">
-                                    <h3>Eligibility</h3>
-                                    <ul class="lead">
-                                        <li>My staff work on a full-time basis</li>
-                                        <li>My staff are between 16 and 65 years of age</li>
-                                        <li>I have a minimum group size of 3 staff members</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-sm-8 col-sm-offset-2 text-center">
-                                <label class="confirm-checkbox">
-                                    <input type="checkbox" value="" id="confirmation">
-                                    <strong>Yes, I meet all the above criteria!</strong>
-                                </label>
-                            </div>
-                        </div>
-
-                        <div class="row tab-footer">
-                            <div class="col-sm-12">
-                                <ul class="list-inline">
-                                    <li><button type="button" class="btn btn-link btn-lg prev-step">Previous</button></li>
-                                    <li><button type="button" class="btn btn-primary btn-lg next-step" id="confirm-btn" disabled="disabled">Save and continue</button></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="setup-content" id="step3">
-                        <div class="row tab-header">
-                            <div class="col-sm-12 text-center">
-                                <h2>Contact Details</h2>
-                            </div>
-                        </div>
-
-                        <div class="row tab-body">
-                            <div class="form-group with-helper col-sm-4 col-sm-offset-2 col-xs-10 col-xs-offset-1">
-                                <label for="fname" class="control-label">First Name</label>
-                                <input type="text" name="firstname" class="form-control" id="fname" placeholder="First name" required="required">
-                            </div>
-                            <div class="form-group with-helper col-sm-4 col-sm-offset-0 col-xs-10 col-xs-offset-1">
-                                <label for="lname" class="control-label">Last Name</label>
-                                <input type="text" name="lastname" class="form-control" id="lname" placeholder="Last name" required="required">
-                            </div>
-
-                            <div class="form-group with-helper col-sm-4 col-sm-offset-2 col-xs-10 col-xs-offset-1">
-                                <label for="email" class="control-label">Email address</label>
-                                <input type="email" name="email" class="form-control" id="email" placeholder="Email" required="required">
-                            </div>
-                            <div class="form-group with-helper col-sm-4 col-sm-offset-0 col-xs-10 col-xs-offset-1">
-                                <label for="company" class="control-label">Company</label>
-                                <input type="text" name="company" class="form-control" id="company" placeholder="Company" required="required">
-                            </div>
-                            <div class="form-group with-helper col-sm-4 col-sm-offset-2 col-xs-10 col-xs-offset-1">
-                                <label for="company" class="control-label">Contact number</label>
-                                <input type="text" name="contact" class="form-control" id="contact" placeholder="Contact number" required="required">
-                            </div>
-
-                            <div class="form-group col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
-                                <label for="company" class="control-label">Other inquiries</label>
-                                <textarea class="form-control" rows="3" name="your_answer"></textarea>
-                            </div>
-                        </div>
-
-                        <div class="row tab-footer">
-                            <div class="col-sm-12">
-                                <ul class="list-inline">
-                                    <li><button type="button" class="btn btn-link btn-lg prev-step">Previous</button></li>
-                                    <li><button type="submit" class="btn btn-primary btn-lg btn-info-full next-step">Save and continue</button></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- </form> -->
-                    <%end%>
-                    <div class="clearfix"></div>
-                </div>
-
-            </div>
-        </div>
-        </div>
-
-
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12 text-center">
-                    © 2017 HiveUp, Inc. All Rights Reserved.
-                </div>
-            </div>
-        </div>
-    </footer>
-    </div>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="/static-assets/js/jquery.validate.min.js"></script>
-    <script src="/static-assets/js/additional-methods.min.js"></script>
-    <script src="/static-assets/js/jquery.checkbox.js"></script>
-    <script src="/static-assets/js/bootstrap.min.js"></script>
-    <!-- <script src="/static-assets/js/jquery.mCustomScrollbar.concat.min.js"></script> -->
-    <!-- <script src="/static-assets/js/init.js"></script> -->
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.12/jquery.mousewheel.min.js"></script>
-    <script src="/static-assets/js/main.js"></script>
-
-    <script>
-    $('#employee-benefits').validate({
-        rules: {
-            fname: {
-                minlength: 2,
-                required: true
-            },
-            lname: {
-                minlength: 2,
-                required: true
-            },
-            email: {
-                required: true,
-                email: true
-            },
-            company: {
-                minlength: 2,
-                required: true
-            }
-        },
-        highlight: function (element) {
-            $(element).closest('.form-group').removeClass('has-success').addClass('has-error');
-        },
-        success: function (element) {
-            element.text('').addClass('.valid')
-                .closest('.form-group').removeClass('has-error').addClass('has-success');
-        }
-    });
-    </script>
-
-    <!-- <script type="text/javascript">
-        (function($){
-
-            $("label.selection").checkbox({
-                checked: "/static-assets/img/cb1-1.png",
-                check: "/static-assets/img/cb1-0.png"
-            });
-
-
-            $("#example2 label").checkbox({
-                checked: "/static-assets/cb2-1.png",
-                check: "/static-assets/cb2-0.png"
-            });
-
-
-            $("#example3 input").checkbox({
-                checked: "/static-assets/cb3-1.png",
-                check: "/static-assets/cb3-0.png",
-                onChange: function(i) {
-                    if (i.is(":checked")) {
-                        $("#status").html("On")
-                    }
-                    else {
-                        $("#status").html("Off");
-                    }
-                },
-                onLoad: function(i) {
-                    if (i.is(":checked")) {
-                        $("#status").html("On")
-                    }
-                    else {
-                        $("#status").html("Off");
-                    }
-                }
-            });
-
-
-            var example4 = $("#example4 .group").checkbox({
-                checked: "/static-assets/cb2-1.png",
-                check: "/static-assets/cb2-0.png"
-            });
-
-            $("#example4 .decider input").checkbox({
-                checked: "/static-assets/cb3-1.png",
-                check: "/static-assets/cb3-0.png",
-                onChange: function(i) {
-
-                    example4.each(function(index){
-                        var data = $(this)[0].cCheckbox;
-                        if (i.is(":checked")) {
-                            data.activeIt();
-                        }
-                        else {
-                            data.disableIt();
-                        }
-                    });
-
-                }
-            });
-        })(jQuery);
-    </script>  -->
+<%= javascript_include_tag('application') %>
 
 </body>
 </html>

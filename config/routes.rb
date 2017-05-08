@@ -5,9 +5,11 @@ Rails.application.routes.draw do
   # configuration option `mounted_path` to something different in config/initializers/refinery/core.rb
   #
   # We ask that you don't use the :as option here, as Refinery relies on it being the default of "refinery"
-  mount Refinery::Core::Engine, at: Refinery::Core.mounted_path
 
   post '/contact' => 'contact#create'
+  root 'home#index'
+  mount Refinery::Core::Engine, at: Refinery::Core.mounted_path
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
