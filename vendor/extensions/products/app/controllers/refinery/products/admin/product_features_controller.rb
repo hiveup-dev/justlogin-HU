@@ -4,7 +4,8 @@ module Refinery
       class ProductFeaturesController < ::Refinery::AdminController
 
         crudify :'refinery/products/product_feature',
-                :title_attribute => 'name'
+                :title_attribute => 'name',
+                :sortable => true
 
         private
 

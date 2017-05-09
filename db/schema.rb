@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170507190026) do
+ActiveRecord::Schema.define(version: 20170509095720) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -158,6 +158,23 @@ ActiveRecord::Schema.define(version: 20170507190026) do
     t.datetime "updated_at"
   end
 
+  create_table "refinery_products_plans", force: :cascade do |t|
+    t.string   "icon_name"
+    t.string   "name"
+    t.string   "description"
+    t.string   "definition"
+    t.integer  "position"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "refinery_products_plans_user_submissions", force: :cascade do |t|
+    t.integer "plan_id"
+    t.integer "user_submission_id"
+  end
+
+  add_index "refinery_products_plans_user_submissions", ["plan_id", "user_submission_id"], name: "products_plan_id_user_submission_id", using: :btree
+
   create_table "refinery_products_product_features", force: :cascade do |t|
     t.string   "name"
     t.boolean  "is_in_summary"
@@ -176,6 +193,25 @@ ActiveRecord::Schema.define(version: 20170507190026) do
   end
 
   add_index "refinery_products_product_features_products", ["product_feature_id", "product_id"], name: "product_feature_product_idx", using: :btree
+
+  create_table "refinery_products_products_user_submissions", force: :cascade do |t|
+    t.integer "product_id"
+    t.integer "user_submission_id"
+  end
+
+  add_index "refinery_products_products_user_submissions", ["product_id", "user_submission_id"], name: "products_product_id_user_submission_id", using: :btree
+
+  create_table "refinery_products_user_submissions", force: :cascade do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "email"
+    t.string   "company"
+    t.string   "phone_number"
+    t.string   "other_inquiries"
+    t.integer  "position"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "refinery_resource_translations", force: :cascade do |t|
     t.integer  "refinery_resource_id", null: false

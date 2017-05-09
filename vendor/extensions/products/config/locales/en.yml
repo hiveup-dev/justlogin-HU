@@ -1,6 +1,12 @@
 en:
   refinery:
     plugins:
+      user_submissions:
+        title: User Submissions
+      user_submitions:
+        title: User Submitions
+      plans:
+        title: Plans
       product_features_products:
         title: Product Features Products
       product_features:
@@ -9,6 +15,50 @@ en:
         title: Products
     products:
       admin:
+        user_submissions:
+          actions:
+            create_new: Add New User Submission
+            reorder: Reorder User Submissions
+            reorder_done: Done Reordering User Submissions
+          records:
+            title: User Submissions
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no User Submissions yet. Click "Add New User Submission"
+              to add your first user submission.
+          user_submission:
+            view_live_html: View this user submission live <br/><em>(opens in a new
+              window)</em>
+            edit: Edit this user submission
+            delete: Remove this user submission forever
+        user_submitions:
+          actions:
+            create_new: Add New User Submition
+            reorder: Reorder User Submitions
+            reorder_done: Done Reordering User Submitions
+          records:
+            title: User Submitions
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no User Submitions yet. Click "Add New User Submition"
+              to add your first user submition.
+          user_submition:
+            view_live_html: View this user submition live <br/><em>(opens in a new
+              window)</em>
+            edit: Edit this user submition
+            delete: Remove this user submition forever
+        plans:
+          actions:
+            create_new: Add New Plan
+            reorder: Reorder Plans
+            reorder_done: Done Reordering Plans
+          records:
+            title: Plans
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Plans yet. Click "Add New Plan" to add your
+              first plan.
+          plan:
+            view_live_html: View this plan live <br/><em>(opens in a new window)</em>
+            edit: Edit this plan
+            delete: Remove this plan forever
         product_features_products:
           actions:
             create_new: Add New Product Features Product
@@ -53,6 +103,15 @@ en:
             view_live_html: View this product live <br/><em>(opens in a new window)</em>
             edit: Edit this product
             delete: Remove this product forever
+      user_submissions:
+        show:
+          other: Other User Submissions
+      user_submitions:
+        show:
+          other: Other User Submitions
+      plans:
+        show:
+          other: Other Plans
       product_features_products:
         show:
           other: Other Product Features Products
@@ -64,6 +123,17 @@ en:
           other: Other Products
   activerecord:
     attributes:
+      refinery/products/user_submission:
+        first_name: First Name
+        last_name: Last Name
+      refinery/products/user_submition:
+        first_name: First Name
+        last_name: Last Name
+      refinery/products/plan:
+        icon_name: Icon Name
+        name: Name
+        description: Description
+        definition: Definition
       refinery/products/product_features_product:
         product_feature_id: Product Feature
         product_id: Product

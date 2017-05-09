@@ -1,0 +1,20 @@
+<%= form_for [refinery, :products_admin, @user_submission] do |f| -%>
+  <%= render '/refinery/admin/error_messages',
+              :object => @user_submission,
+              :include_object_name => true %>
+
+  <div class='field'>
+    <%= f.label :first_name -%>
+    <%= f.text_field :first_name, :class => 'larger widest' -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :last_name -%>
+    <%= f.text_field :last_name -%>
+  </div>
+
+  <%= render '/refinery/admin/form_actions', :f => f,
+             :continue_editing => false,
+             :delete_title => t('delete', :scope => 'refinery.user_submissions.admin.user_submissions.user_submission'),
+             :delete_confirmation => t('message', :scope => 'refinery.admin.delete', :title => @user_submission.first_name) -%>
+<% end -%>

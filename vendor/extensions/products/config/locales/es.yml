@@ -1,6 +1,12 @@
 es:
   refinery:
     plugins:
+      user_submissions:
+        title: User Submissions
+      user_submitions:
+        title: User Submitions
+      plans:
+        title: Plans
       product_features_products:
         title: Product Features Products
       product_features:
@@ -9,6 +15,51 @@ es:
         title: Products
     products:
       admin:
+        user_submissions:
+          actions:
+            create_new: Crear nuevo user submission
+            reorder: Reordenar user submissions
+            reorder_done: Reordenación de user submissions completada
+          records:
+            title: User Submissions
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay user submissions todavía. Pulsa en "Crear nuevo User
+              Submission" para crear tu primer user submission.
+          user_submission:
+            view_live_html: Ver este user submission como abierto al público <br/><em>(abre
+              en ventana nueva)</em>
+            edit: Editar este user submission
+            delete: Borrar este user submission para siempre
+        user_submitions:
+          actions:
+            create_new: Crear nuevo user submition
+            reorder: Reordenar user submitions
+            reorder_done: Reordenación de user submitions completada
+          records:
+            title: User Submitions
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay user submitions todavía. Pulsa en "Crear nuevo User
+              Submition" para crear tu primer user submition.
+          user_submition:
+            view_live_html: Ver este user submition como abierto al público <br/><em>(abre
+              en ventana nueva)</em>
+            edit: Editar este user submition
+            delete: Borrar este user submition para siempre
+        plans:
+          actions:
+            create_new: Crear nuevo plan
+            reorder: Reordenar plans
+            reorder_done: Reordenación de plans completada
+          records:
+            title: Plans
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay plans todavía. Pulsa en "Crear nuevo Plan" para crear
+              tu primer plan.
+          plan:
+            view_live_html: Ver este plan como abierto al público <br/><em>(abre en
+              ventana nueva)</em>
+            edit: Editar este plan
+            delete: Borrar este plan para siempre
         product_features_products:
           actions:
             create_new: Crear nuevo product features product
@@ -55,6 +106,15 @@ es:
               en ventana nueva)</em>
             edit: Editar este product
             delete: Borrar este product para siempre
+      user_submissions:
+        show:
+          other: Otros user submissions
+      user_submitions:
+        show:
+          other: Otros user submitions
+      plans:
+        show:
+          other: Otros plans
       product_features_products:
         show:
           other: Otros product features products
@@ -66,6 +126,17 @@ es:
           other: Otros products
   activerecord:
     attributes:
+      refinery/products/user_submission:
+        first_name: First Name
+        last_name: Last Name
+      refinery/products/user_submition:
+        first_name: First Name
+        last_name: Last Name
+      refinery/products/plan:
+        icon_name: Icon Name
+        name: Name
+        description: Description
+        definition: Definition
       refinery/products/product_features_product:
         product_feature_id: Product Feature
         product_id: Product

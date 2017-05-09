@@ -1,6 +1,12 @@
 fr:
   refinery:
     plugins:
+      user_submissions:
+        title: User Submissions
+      user_submitions:
+        title: User Submitions
+      plans:
+        title: Plans
       product_features_products:
         title: Product Features Products
       product_features:
@@ -9,6 +15,52 @@ fr:
         title: Products
     products:
       admin:
+        user_submissions:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) User Submission
+            reorder: Réordonner les User Submissions
+            reorder_done: Fin de réordonnancement des User Submissions
+          records:
+            title: User Submissions
+            sorry_no_results: Désolé ! Aucun résultat.
+            no_items_yet: Il n'y a actuellement aucun(e) User Submission. Cliquer
+              sur "Créer un(e) nouve(au/l/lle) User Submission" pour créer votre premi(er/ère)
+              user submission.
+          user_submission:
+            view_live_html: Voir ce(t/tte) user submission <br/><em>(Ouvre une nouvelle
+              fenêtre)</em>
+            edit: Modifier ce(t/tte) user submission
+            delete: Supprimer définitivement ce(t/tte) user submission
+        user_submitions:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) User Submition
+            reorder: Réordonner les User Submitions
+            reorder_done: Fin de réordonnancement des User Submitions
+          records:
+            title: User Submitions
+            sorry_no_results: Désolé ! Aucun résultat.
+            no_items_yet: Il n'y a actuellement aucun(e) User Submition. Cliquer sur
+              "Créer un(e) nouve(au/l/lle) User Submition" pour créer votre premi(er/ère)
+              user submition.
+          user_submition:
+            view_live_html: Voir ce(t/tte) user submition <br/><em>(Ouvre une nouvelle
+              fenêtre)</em>
+            edit: Modifier ce(t/tte) user submition
+            delete: Supprimer définitivement ce(t/tte) user submition
+        plans:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Plan
+            reorder: Réordonner les Plans
+            reorder_done: Fin de réordonnancement des Plans
+          records:
+            title: Plans
+            sorry_no_results: Désolé ! Aucun résultat.
+            no_items_yet: Il n'y a actuellement aucun(e) Plan. Cliquer sur "Créer
+              un(e) nouve(au/l/lle) Plan" pour créer votre premi(er/ère) plan.
+          plan:
+            view_live_html: Voir ce(t/tte) plan <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) plan
+            delete: Supprimer définitivement ce(t/tte) plan
         product_features_products:
           actions:
             create_new: Créer un(e) nouve(au/l/lle) Product Features Product
@@ -55,6 +107,15 @@ fr:
             view_live_html: Voir ce(t/tte) product <br/><em>(Ouvre une nouvelle fenêtre)</em>
             edit: Modifier ce(t/tte) product
             delete: Supprimer définitivement ce(t/tte) product
+      user_submissions:
+        show:
+          other: Autres User Submissions
+      user_submitions:
+        show:
+          other: Autres User Submitions
+      plans:
+        show:
+          other: Autres Plans
       product_features_products:
         show:
           other: Autres Product Features Products
@@ -66,6 +127,17 @@ fr:
           other: Autres Products
   activerecord:
     attributes:
+      refinery/products/user_submission:
+        first_name: First Name
+        last_name: Last Name
+      refinery/products/user_submition:
+        first_name: First Name
+        last_name: Last Name
+      refinery/products/plan:
+        icon_name: Icon Name
+        name: Name
+        description: Description
+        definition: Definition
       refinery/products/product_features_product:
         product_feature_id: Product Feature
         product_id: Product

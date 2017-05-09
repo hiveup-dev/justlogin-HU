@@ -6,68 +6,70 @@
     </ul>
     <ul class="nav navbar-nav navbar-right navbar-justlogin">
       <li>
-        <button class="btn btn-primary" id="confirm-btn" disabled="disabled" onclick="location.href='/contact';">Save
-          and Continue
+        <button class="btn btn-primary submit-button" id="selection-btn" disabled="disabled" data-form-target="step3">
+          Save and Continue
         </button>
       </li>
     </ul>
 <% end %>
 
-<div class="content container">
-  <div class="row">
-    <div class="col-sm-12">
+<%= form_tag('/process/step3', method: :post, id: 'step3') do %>
+    <div class="content container">
+      <div class="row">
+        <div class="col-sm-12">
 
-      <div>
-        <div class="row tab-header">
-          <div class="col-sm-12 text-center">
-            <h2>Please confirm</h2>
-          </div>
-        </div>
-
-        <div class="row tab-body">
-          <div class="col-sm-8 col-sm-offset-2">
-            <h3>Selected Benefits</h3>
-            <div class="row benefits">
-              <div class="col-sm-6 selection-1-select">
-                <h4><i class="fa fa-check" aria-hidden="true"></i> Group Term Life</h4></div>
-              <div class="col-sm-6 selection-2-select">
-                <h4><i class="fa fa-check" aria-hidden="true"></i> Group Critical Illness</h4></div>
-              <div class="col-sm-6 selection-3-select">
-                <h4><i class="fa fa-check" aria-hidden="true"></i> Group Hospitalization & Surgical</h4></div>
-              <div class="col-sm-6 selection-4-select">
-                <h4><i class="fa fa-check" aria-hidden="true"></i> Group Personal Accident</h4></div>
-              <div class="col-sm-6 selection-5-select">
-                <h4><i class="fa fa-check" aria-hidden="true"></i> Group Outpatient Specialist</h4></div>
-              <div class="col-sm-6 selection-6-select">
-                <h4><i class="fa fa-check" aria-hidden="true"></i> Group Long Term Disability</h4></div>
-              <div class="col-sm-6 selection-7-select">
-                <h4><i class="fa fa-check" aria-hidden="true"></i> Group Maternity</h4></div>
-              <div class="col-sm-6 selection-8-select">
-                <h4><i class="fa fa-check" aria-hidden="true"></i> Group Dental Care</h4></div>
+          <div>
+            <div class="row tab-header">
+              <div class="col-sm-12 text-center">
+                <h2>Please confirm</h2>
+              </div>
             </div>
-            <div class="eligibility">
-              <h3>Eligibility</h3>
-              <ul class="lead">
-                <li>My staff work on a full-time basis</li>
-                <li>My staff are between 16 and 65 years of age</li>
-                <li>I have a minimum group size of 3 staff members</li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-sm-8 col-sm-offset-2 text-center">
-            <label class="confirm-checkbox">
-              <input type="checkbox" value="" id="confirmation">
-              <strong>Yes, I meet all the above criteria!</strong>
-            </label>
-          </div>
-        </div>
 
+            <div class="row tab-body">
+              <div class="col-sm-8 col-sm-offset-2">
+                <h3>Selected Benefits</h3>
+                <div class="row benefits">
+                  <div class="col-sm-6 selection-1-select">
+                    <h4><i class="fa fa-check" aria-hidden="true"></i> Group Term Life</h4></div>
+                  <div class="col-sm-6 selection-2-select">
+                    <h4><i class="fa fa-check" aria-hidden="true"></i> Group Critical Illness</h4></div>
+                  <div class="col-sm-6 selection-3-select">
+                    <h4><i class="fa fa-check" aria-hidden="true"></i> Group Hospitalization & Surgical</h4></div>
+                  <div class="col-sm-6 selection-4-select">
+                    <h4><i class="fa fa-check" aria-hidden="true"></i> Group Personal Accident</h4></div>
+                  <div class="col-sm-6 selection-5-select">
+                    <h4><i class="fa fa-check" aria-hidden="true"></i> Group Outpatient Specialist</h4></div>
+                  <div class="col-sm-6 selection-6-select">
+                    <h4><i class="fa fa-check" aria-hidden="true"></i> Group Long Term Disability</h4></div>
+                  <div class="col-sm-6 selection-7-select">
+                    <h4><i class="fa fa-check" aria-hidden="true"></i> Group Maternity</h4></div>
+                  <div class="col-sm-6 selection-8-select">
+                    <h4><i class="fa fa-check" aria-hidden="true"></i> Group Dental Care</h4></div>
+                </div>
+                <div class="eligibility">
+                  <h3>Eligibility</h3>
+                  <ul class="lead">
+                    <li>My staff work on a full-time basis</li>
+                    <li>My staff are between 16 and 65 years of age</li>
+                    <li>I have a minimum group size of 3 staff members</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-sm-8 col-sm-offset-2 text-center">
+                <label class="confirm-checkbox">
+                  <input type="checkbox" value="yes" name='confirmation' class="input-select">
+                  <strong>Yes, I meet all the above criteria!</strong>
+                </label>
+              </div>
+            </div>
+
+
+          </div>
+
+
+          <div class="clearfix"></div>
+        </div>
 
       </div>
-
-
-      <div class="clearfix"></div>
     </div>
-
-  </div>
-</div>
+<% end %>

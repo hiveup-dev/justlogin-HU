@@ -1,6 +1,12 @@
 ru:
   refinery:
     plugins:
+      user_submissions:
+        title: User Submissions
+      user_submitions:
+        title: User Submitions
+      plans:
+        title: Plans
       product_features_products:
         title: Product Features Products
       product_features:
@@ -9,6 +15,48 @@ ru:
         title: Products
     products:
       admin:
+        user_submissions:
+          actions:
+            create_new: Добавить User Submission
+            reorder: Изменить порядок User Submissions
+            reorder_done: Закончить изменять порядок User Submissions
+          records:
+            title: User Submissions
+            sorry_no_results: Извините, поиск не дал результатов.
+            no_items_yet: Записей "User Submissions" не найдено. Нажмите "Добавить
+              User Submission" чтобы создать user submission.
+          user_submission:
+            view_live_html: Просмотреть user submission вживую <br/><em>(в новом окне)</em>
+            edit: Редактировать user submission
+            delete: Удалить user submission навсегда
+        user_submitions:
+          actions:
+            create_new: Добавить User Submition
+            reorder: Изменить порядок User Submitions
+            reorder_done: Закончить изменять порядок User Submitions
+          records:
+            title: User Submitions
+            sorry_no_results: Извините, поиск не дал результатов.
+            no_items_yet: Записей "User Submitions" не найдено. Нажмите "Добавить
+              User Submition" чтобы создать user submition.
+          user_submition:
+            view_live_html: Просмотреть user submition вживую <br/><em>(в новом окне)</em>
+            edit: Редактировать user submition
+            delete: Удалить user submition навсегда
+        plans:
+          actions:
+            create_new: Добавить Plan
+            reorder: Изменить порядок Plans
+            reorder_done: Закончить изменять порядок Plans
+          records:
+            title: Plans
+            sorry_no_results: Извините, поиск не дал результатов.
+            no_items_yet: Записей "Plans" не найдено. Нажмите "Добавить Plan" чтобы
+              создать plan.
+          plan:
+            view_live_html: Просмотреть plan вживую <br/><em>(в новом окне)</em>
+            edit: Редактировать plan
+            delete: Удалить plan навсегда
         product_features_products:
           actions:
             create_new: Добавить Product Features Product
@@ -52,6 +100,15 @@ ru:
             view_live_html: Просмотреть product вживую <br/><em>(в новом окне)</em>
             edit: Редактировать product
             delete: Удалить product навсегда
+      user_submissions:
+        show:
+          other: Другие User Submissions
+      user_submitions:
+        show:
+          other: Другие User Submitions
+      plans:
+        show:
+          other: Другие Plans
       product_features_products:
         show:
           other: Другие Product Features Products
@@ -63,6 +120,17 @@ ru:
           other: Другие Products
   activerecord:
     attributes:
+      refinery/products/user_submission:
+        first_name: First Name
+        last_name: Last Name
+      refinery/products/user_submition:
+        first_name: First Name
+        last_name: Last Name
+      refinery/products/plan:
+        icon_name: Icon Name
+        name: Name
+        description: Description
+        definition: Definition
       refinery/products/product_features_product:
         product_feature_id: Product Feature
         product_id: Product

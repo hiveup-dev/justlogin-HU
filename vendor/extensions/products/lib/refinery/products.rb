@@ -1,5 +1,6 @@
 require 'refinerycms-core'
 require 'nested_form'
+require 'simple_form'
 
 module Refinery
   autoload :ProductsGenerator, 'generators/refinery/products_generator'

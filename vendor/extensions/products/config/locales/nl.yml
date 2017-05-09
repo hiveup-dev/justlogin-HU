@@ -1,6 +1,12 @@
 nl:
   refinery:
     plugins:
+      user_submissions:
+        title: User Submissions
+      user_submitions:
+        title: User Submitions
+      plans:
+        title: Plans
       product_features_products:
         title: Product Features Products
       product_features:
@@ -9,6 +15,51 @@ nl:
         title: Products
     products:
       admin:
+        user_submissions:
+          actions:
+            create_new: Nieuwe User Submission toevoegen
+            reorder: De volgorde van de User Submissions wijzigen
+            reorder_done: Klaar met het wijzingen van de van de User Submission-volgorde
+          records:
+            title: User Submissions
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen User Submissions. Druk op 'Nieuwe User
+              Submission toevoegen' om de eerste toe te voegen.
+          user_submission:
+            view_live_html: Deze user submission op de website bekijken <br/><em>(opent
+              in een nieuw venster)</em>
+            edit: Bewerk deze user submission
+            delete: Deze user submission definitief verwijderen
+        user_submitions:
+          actions:
+            create_new: Nieuwe User Submition toevoegen
+            reorder: De volgorde van de User Submitions wijzigen
+            reorder_done: Klaar met het wijzingen van de van de User Submition-volgorde
+          records:
+            title: User Submitions
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen User Submitions. Druk op 'Nieuwe User Submition
+              toevoegen' om de eerste toe te voegen.
+          user_submition:
+            view_live_html: Deze user submition op de website bekijken <br/><em>(opent
+              in een nieuw venster)</em>
+            edit: Bewerk deze user submition
+            delete: Deze user submition definitief verwijderen
+        plans:
+          actions:
+            create_new: Nieuwe Plan toevoegen
+            reorder: De volgorde van de Plans wijzigen
+            reorder_done: Klaar met het wijzingen van de van de Plan-volgorde
+          records:
+            title: Plans
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Plans. Druk op 'Nieuwe Plan toevoegen'
+              om de eerste toe te voegen.
+          plan:
+            view_live_html: Deze plan op de website bekijken <br/><em>(opent in een
+              nieuw venster)</em>
+            edit: Bewerk deze plan
+            delete: Deze plan definitief verwijderen
         product_features_products:
           actions:
             create_new: Nieuwe Product Features Product toevoegen
@@ -54,6 +105,15 @@ nl:
               een nieuw venster)</em>
             edit: Bewerk deze product
             delete: Deze product definitief verwijderen
+      user_submissions:
+        show:
+          other: Andere User Submissions
+      user_submitions:
+        show:
+          other: Andere User Submitions
+      plans:
+        show:
+          other: Andere Plans
       product_features_products:
         show:
           other: Andere Product Features Products
@@ -65,6 +125,17 @@ nl:
           other: Andere Products
   activerecord:
     attributes:
+      refinery/products/user_submission:
+        first_name: First Name
+        last_name: Last Name
+      refinery/products/user_submition:
+        first_name: First Name
+        last_name: Last Name
+      refinery/products/plan:
+        icon_name: Icon Name
+        name: Name
+        description: Description
+        definition: Definition
       refinery/products/product_features_product:
         product_feature_id: Product Feature
         product_id: Product

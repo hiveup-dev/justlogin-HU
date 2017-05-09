@@ -1,6 +1,12 @@
 sk:
   refinery:
     plugins:
+      user_submissions:
+        title: User Submissions
+      user_submitions:
+        title: User Submitions
+      plans:
+        title: Plans
       product_features_products:
         title: Product Features Products
       product_features:
@@ -9,6 +15,50 @@ sk:
         title: Products
     products:
       admin:
+        user_submissions:
+          actions:
+            create_new: Pridať User Submission
+            reorder: Preusporiadať User Submissions
+            reorder_done: Koniec radenia User Submissions
+          records:
+            title: User Submissions
+            sorry_no_results: Ľutujeme, ale neboli nájdené žiadne výsledky.
+            no_items_yet: Nie sú vytvorené žiadne User Submissions. Kliknite na "Pridať
+              User Submission" pre pridanie prvého user submission.
+          user_submission:
+            view_live_html: Zobraziť náhľad user submission<br/><em>(otvorí sa v novom
+              okne)</em>
+            edit: Upraviť user submission
+            delete: Zmazať user submission
+        user_submitions:
+          actions:
+            create_new: Pridať User Submition
+            reorder: Preusporiadať User Submitions
+            reorder_done: Koniec radenia User Submitions
+          records:
+            title: User Submitions
+            sorry_no_results: Ľutujeme, ale neboli nájdené žiadne výsledky.
+            no_items_yet: Nie sú vytvorené žiadne User Submitions. Kliknite na "Pridať
+              User Submition" pre pridanie prvého user submition.
+          user_submition:
+            view_live_html: Zobraziť náhľad user submition<br/><em>(otvorí sa v novom
+              okne)</em>
+            edit: Upraviť user submition
+            delete: Zmazať user submition
+        plans:
+          actions:
+            create_new: Pridať Plan
+            reorder: Preusporiadať Plans
+            reorder_done: Koniec radenia Plans
+          records:
+            title: Plans
+            sorry_no_results: Ľutujeme, ale neboli nájdené žiadne výsledky.
+            no_items_yet: Nie sú vytvorené žiadne Plans. Kliknite na "Pridať Plan"
+              pre pridanie prvého plan.
+          plan:
+            view_live_html: Zobraziť náhľad plan<br/><em>(otvorí sa v novom okne)</em>
+            edit: Upraviť plan
+            delete: Zmazať plan
         product_features_products:
           actions:
             create_new: Pridať Product Features Product
@@ -54,6 +104,15 @@ sk:
             view_live_html: Zobraziť náhľad product<br/><em>(otvorí sa v novom okne)</em>
             edit: Upraviť product
             delete: Zmazať product
+      user_submissions:
+        show:
+          other: Daľšie User Submissions
+      user_submitions:
+        show:
+          other: Daľšie User Submitions
+      plans:
+        show:
+          other: Daľšie Plans
       product_features_products:
         show:
           other: Daľšie Product Features Products
@@ -65,6 +124,17 @@ sk:
           other: Daľšie Products
   activerecord:
     attributes:
+      refinery/products/user_submission:
+        first_name: First Name
+        last_name: Last Name
+      refinery/products/user_submition:
+        first_name: First Name
+        last_name: Last Name
+      refinery/products/plan:
+        icon_name: Icon Name
+        name: Name
+        description: Description
+        definition: Definition
       refinery/products/product_features_product:
         product_feature_id: Product Feature
         product_id: Product

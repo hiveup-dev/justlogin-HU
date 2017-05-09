@@ -1,6 +1,12 @@
 tr:
   refinery:
     plugins:
+      user_submissions:
+        title: User Submissions
+      user_submitions:
+        title: User Submitions
+      plans:
+        title: Plans
       product_features_products:
         title: Product Features Products
       product_features:
@@ -9,6 +15,51 @@ tr:
         title: Products
     products:
       admin:
+        user_submissions:
+          actions:
+            create_new: Yeni Ekle User Submission
+            reorder: Tekrar sirala User Submissions
+            reorder_done: Tekrar siralama tamamlandiUser Submissions
+          records:
+            title: User Submissions
+            sorry_no_results: Uzgunum! Herhangi bir sonuc bulunamadi.
+            no_items_yet: Herhangi bir User Submissions yok henuz.  Tikla "Yeni Ekle
+              User Submission" eklemek senin ilk user submission.
+          user_submission:
+            view_live_html: Bunu canlu user submission goruntule <br/><em>(yeni bir
+              pencerede acar)</em>
+            edit: Bunu Duzenle user submission
+            delete: Bunu Sil user submission sonsuza dek
+        user_submitions:
+          actions:
+            create_new: Yeni Ekle User Submition
+            reorder: Tekrar sirala User Submitions
+            reorder_done: Tekrar siralama tamamlandiUser Submitions
+          records:
+            title: User Submitions
+            sorry_no_results: Uzgunum! Herhangi bir sonuc bulunamadi.
+            no_items_yet: Herhangi bir User Submitions yok henuz.  Tikla "Yeni Ekle
+              User Submition" eklemek senin ilk user submition.
+          user_submition:
+            view_live_html: Bunu canlu user submition goruntule <br/><em>(yeni bir
+              pencerede acar)</em>
+            edit: Bunu Duzenle user submition
+            delete: Bunu Sil user submition sonsuza dek
+        plans:
+          actions:
+            create_new: Yeni Ekle Plan
+            reorder: Tekrar sirala Plans
+            reorder_done: Tekrar siralama tamamlandiPlans
+          records:
+            title: Plans
+            sorry_no_results: Uzgunum! Herhangi bir sonuc bulunamadi.
+            no_items_yet: Herhangi bir Plans yok henuz.  Tikla "Yeni Ekle Plan" eklemek
+              senin ilk plan.
+          plan:
+            view_live_html: Bunu canlu plan goruntule <br/><em>(yeni bir pencerede
+              acar)</em>
+            edit: Bunu Duzenle plan
+            delete: Bunu Sil plan sonsuza dek
         product_features_products:
           actions:
             create_new: Yeni Ekle Product Features Product
@@ -55,6 +106,15 @@ tr:
               acar)</em>
             edit: Bunu Duzenle product
             delete: Bunu Sil product sonsuza dek
+      user_submissions:
+        show:
+          other: Diger User Submissions
+      user_submitions:
+        show:
+          other: Diger User Submitions
+      plans:
+        show:
+          other: Diger Plans
       product_features_products:
         show:
           other: Diger Product Features Products
@@ -66,6 +126,17 @@ tr:
           other: Diger Products
   activerecord:
     attributes:
+      refinery/products/user_submission:
+        first_name: First Name
+        last_name: Last Name
+      refinery/products/user_submition:
+        first_name: First Name
+        last_name: Last Name
+      refinery/products/plan:
+        icon_name: Icon Name
+        name: Name
+        description: Description
+        definition: Definition
       refinery/products/product_features_product:
         product_feature_id: Product Feature
         product_id: Product

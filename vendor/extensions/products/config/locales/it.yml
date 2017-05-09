@@ -1,6 +1,12 @@
 it:
   refinery:
     plugins:
+      user_submissions:
+        title: User Submissions
+      user_submitions:
+        title: User Submitions
+      plans:
+        title: Plans
       product_features_products:
         title: Product Features Products
       product_features:
@@ -9,6 +15,50 @@ it:
         title: Products
     products:
       admin:
+        user_submissions:
+          actions:
+            create_new: Aggiungi Nuovo User Submission
+            reorder: Riordina User Submissions
+            reorder_done: Termina il Riordino di User Submissions
+          records:
+            title: User Submissions
+            sorry_no_results: Spiacenti! Nessun risultato trovato
+            no_items_yet: Non ci sono ancora User Submissions. Clicca "Aggiungi Nuovo
+              User Submission" per aggiungere il tuo primo user submission.
+          user_submission:
+            view_live_html: Guarda live questo user submission <br/><em>(apre una
+              nuova finestra)</em>
+            edit: Modifica questo user submission
+            delete: Rimuovi per sempre questo user submission
+        user_submitions:
+          actions:
+            create_new: Aggiungi Nuovo User Submition
+            reorder: Riordina User Submitions
+            reorder_done: Termina il Riordino di User Submitions
+          records:
+            title: User Submitions
+            sorry_no_results: Spiacenti! Nessun risultato trovato
+            no_items_yet: Non ci sono ancora User Submitions. Clicca "Aggiungi Nuovo
+              User Submition" per aggiungere il tuo primo user submition.
+          user_submition:
+            view_live_html: Guarda live questo user submition <br/><em>(apre una nuova
+              finestra)</em>
+            edit: Modifica questo user submition
+            delete: Rimuovi per sempre questo user submition
+        plans:
+          actions:
+            create_new: Aggiungi Nuovo Plan
+            reorder: Riordina Plans
+            reorder_done: Termina il Riordino di Plans
+          records:
+            title: Plans
+            sorry_no_results: Spiacenti! Nessun risultato trovato
+            no_items_yet: Non ci sono ancora Plans. Clicca "Aggiungi Nuovo Plan" per
+              aggiungere il tuo primo plan.
+          plan:
+            view_live_html: Guarda live questo plan <br/><em>(apre una nuova finestra)</em>
+            edit: Modifica questo plan
+            delete: Rimuovi per sempre questo plan
         product_features_products:
           actions:
             create_new: Aggiungi Nuovo Product Features Product
@@ -54,6 +104,15 @@ it:
             view_live_html: Guarda live questo product <br/><em>(apre una nuova finestra)</em>
             edit: Modifica questo product
             delete: Rimuovi per sempre questo product
+      user_submissions:
+        show:
+          other: Altri User Submissions
+      user_submitions:
+        show:
+          other: Altri User Submitions
+      plans:
+        show:
+          other: Altri Plans
       product_features_products:
         show:
           other: Altri Product Features Products
@@ -65,6 +124,17 @@ it:
           other: Altri Products
   activerecord:
     attributes:
+      refinery/products/user_submission:
+        first_name: First Name
+        last_name: Last Name
+      refinery/products/user_submition:
+        first_name: First Name
+        last_name: Last Name
+      refinery/products/plan:
+        icon_name: Icon Name
+        name: Name
+        description: Description
+        definition: Definition
       refinery/products/product_features_product:
         product_feature_id: Product Feature
         product_id: Product
