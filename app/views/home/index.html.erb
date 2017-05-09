@@ -1,240 +1,244 @@
 <%= content_for(:page_buttons) do %>
     <ul class="nav navbar-nav navbar-right navbar-justlogin">
       <li>
-        <button class="btn btn-primary" id="selection-btn" disabled="disabled" onclick="location.href='/products';">Save
-          and Continue
+        <button class="btn btn-primary submit-button" id="selection-btn" <%=session[:find_out_more] ? 'disabled="disabled"' : '' %> data-form-target="step1">
+          Save and Continue
         </button>
       </li>
     </ul>
 <% end %>
 
-<div class="content container">
-  <div class="row">
-    <div class="col-sm-12">
+<%= form_tag('/process/step1', method: :post, id: 'step1') do %>
+    <div class="content container">
+      <div class="row">
+        <div class="col-sm-12">
 
-      <div class="">
+          <div class="">
 
-        <div>
-          <div class="row tab-header">
-            <div class="col-sm-12 text-center">
-              <h2>I would like to find out more about</h2>
-              <a href="glossary.html">Learn more about the plans</a>
+            <div>
+              <div class="row tab-header">
+                <div class="col-sm-12 text-center">
+                  <h2>I would like to find out more about</h2>
+                  <a href="glossary">Learn more about the plans</a>
+                </div>
+              </div>
+
+              <div class="row tab-body">
+                <div class="col-sm-4">
+                  <label for="selection-1" class="selection selection-1">
+
+                    <div class="umbrella-wrapper">
+                      <div class="umbrella-title">
+                        <div class="umbrella-icon life"></div>
+                        <h3>Group Term Life</h3>
+                      </div>
+                      <hr>
+                      <div class="umbrella-body">
+                        <h5>Description</h5>
+                        <p>Pays out a lump sum benefit to the beneficiaries if a covered employee dies during the
+                          coverage
+                          period.</p>
+                        <p><b>For as low as $5/month*</b></p>
+                      </div>
+                      <hr>
+                      <div class="text-center umbrella-footer">
+                        <%=find_out_more_input('Group Term Life')%>
+                        <strong>Select</strong>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+
+                <div class="col-sm-4">
+                  <label for="selection-2" class="selection">
+
+                    <div class="umbrella-wrapper">
+                      <div class="umbrella-title">
+                        <div class="umbrella-icon critical"></div>
+                        <h3>Group Critical Illness</h3>
+                      </div>
+                      <hr>
+                      <div class="umbrella-body">
+                        <h5>Description</h5>
+                        <p>Pays a lump sum if an employee suffers any of a list of defined medical conditions. The
+                          medical
+                          conditions must be classified as critical illnesses (e.g. cancer, heart attack, stroke) under
+                          the policy.</p>
+                      </div>
+                      <hr>
+                      <div class="text-center">
+                        <%=find_out_more_input('Group Critical Illness')%>
+                        <strong>Select</strong>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+
+                <div class="col-sm-4">
+                  <label for="selection-3" class="selection">
+
+                    <div class="umbrella-wrapper">
+                      <div class="umbrella-title">
+                        <div class="umbrella-icon hospital"></div>
+                        <h3>Group Hospitalization<br>& Surgical</h3>
+                      </div>
+                      <hr>
+                      <div class="umbrella-body">
+                        <h5>Description</h5>
+                        <p>Covers the cost of medical treatment and hospitalization due to accidents and sickness.</p>
+                      </div>
+                      <hr>
+                      <div class="text-center umbrella-footer">
+                        <%=find_out_more_input('Group Hospitalization & Surgical')%>
+                        <strong>Select</strong>
+
+                      </div>
+                    </div>
+                  </label>
+                </div>
+
+                <div class="col-sm-4">
+                  <label for="selection-4" class="selection">
+
+                    <div class="umbrella-wrapper">
+                      <div class="umbrella-title">
+                        <div class="umbrella-icon life"></div>
+                        <h3>Group Personal<br>Accident</h3>
+                      </div>
+                      <hr>
+                      <div class="umbrella-body">
+                        <h5>Description</h5>
+                        <p>A supplementary plan which provides a lump sum benefit in the event of (1) death due to an
+                          accident, (2) total & permanent disability due to an accident, or other losses due to an
+                          accident as listed in the policy.</p>
+                      </div>
+                      <hr>
+                      <div class="text-center umbrella-footer">
+                        <%=find_out_more_input('Group Personal Accident')%>
+                        <strong>Select</strong>
+                        <!-- <label for="selection-3">Select</label> -->
+                      </div>
+                    </div>
+                  </label>
+                </div>
+
+                <div class="col-sm-4">
+                  <label for="selection-5" class="selection">
+
+                    <div class="umbrella-wrapper">
+                      <div class="umbrella-title">
+                        <div class="umbrella-icon critical"></div>
+                        <h3>Group Outpatient<br>Specialist</h3>
+                      </div>
+                      <hr>
+                      <div class="umbrella-body">
+                        <h5>Description</h5>
+                        <p>A supplementary reimbursement benefit which covers expenses incurred for outpatient
+                          specialist
+                          consultation, diagnostic x-ray and laboratory tests recommended by a registered medical
+                          practitioner.</p>
+                      </div>
+                      <hr>
+                      <div class="text-center umbrella-footer">
+                        <%=find_out_more_input('Group Outpatient Specialist')%>
+                        <strong>Select</strong>
+                        <!-- <label for="selection-3">Select</label> -->
+                      </div>
+                    </div>
+                  </label>
+                </div>
+
+                <div class="col-sm-4">
+                  <label for="selection-6" class="selection">
+
+                    <div class="umbrella-wrapper">
+                      <div class="umbrella-title">
+                        <div class="umbrella-icon hospital"></div>
+                        <h3>Group Long-Term<br>Disability</h3>
+                      </div>
+                      <hr>
+                      <div class="umbrella-body">
+                        <h5>Description</h5>
+                        <p>Pays a monthly benefit in the event they cannot work due to a covered illness or injury.</p>
+                      </div>
+                      <hr>
+                      <div class="text-center umbrella-footer">
+                        <%=find_out_more_input('Group Long-Term Disability')%>
+                        <strong>Select</strong>
+                        <!-- <label for="selection-3">Select</label> -->
+                      </div>
+                    </div>
+                  </label>
+                </div>
+
+                <div class="col-sm-4">
+                  <label for="selection-7" class="selection">
+
+                    <div class="umbrella-wrapper">
+                      <div class="umbrella-title">
+                        <div class="umbrella-icon life"></div>
+                        <h3>Group Maternity</h3>
+                      </div>
+                      <hr>
+                      <div class="umbrella-body">
+                        <h5>Description</h5>
+                        <p>A supplementary reimbursement plan that covers expenses incurred for maternity and obstetrics
+                          treatment charged by the hospital and/or a registered medical practitioner.</p>
+                      </div>
+                      <hr>
+                      <div class="text-center umbrella-footer">
+                        <%=find_out_more_input('Group Maternity')%>
+                        <strong>Select</strong>
+                        <!-- <label for="selection-3">Select</label> -->
+                      </div>
+                    </div>
+                  </label>
+                </div>
+
+                <div class="col-sm-4">
+                  <label for="selection-8" class="selection">
+
+                    <div class="umbrella-wrapper">
+                      <div class="umbrella-title">
+                        <div class="umbrella-icon hospital"></div>
+                        <h3>Group Dental Care</h3>
+                      </div>
+                      <hr>
+                      <div class="umbrella-body">
+                        <h5>Description</h5>
+                        <p>Provides reimbursement of eligible dental expenses from a licensed dentist.</p>
+                      </div>
+                      <hr>
+                      <div class="text-center umbrella-footer">
+                        <%=find_out_more_input('Group Dental Care')%>
+                        <strong>Select</strong>
+                        <!-- <label for="selection-3">Select</label> -->
+                      </div>
+                    </div>
+                  </label>
+                </div>
+              </div>
+              <div class="row tab-footer">
+                <div class="col-sm-6 col-sm-push-6 col-xs-12 right">
+                  <ul class="list-inline">
+                    <li>
+                      <button type="button" class="btn btn-primary btn-lg next-step" id="selection-btn" disabled="disabled">Save
+                        and continue
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-sm-6 col-sm-pull-6 col-xs-12 left">
+                  <small>*Prices vary depending on insurer</small>
+                </div>
+              </div>
             </div>
+
+
+            <div class="clearfix"></div>
           </div>
 
-          <div class="row tab-body">
-            <div class="col-sm-4">
-              <label for="selection-1" class="selection selection-1">
-
-                <div class="umbrella-wrapper">
-                  <div class="umbrella-title">
-                    <div class="umbrella-icon life"></div>
-                    <h3>Group Term Life</h3>
-                  </div>
-                  <hr>
-                  <div class="umbrella-body">
-                    <h5>Description</h5>
-                    <p>Pays out a lump sum benefit to the beneficiaries if a covered employee dies during the coverage
-                      period.</p>
-                    <p><b>For as low as $5/month*</b></p>
-                  </div>
-                  <hr>
-                  <div class="text-center umbrella-footer">
-                    <input name="selection-1" id="selection-1" class='input-select' type="checkbox" data-related-item="selection-1-select">
-                    <strong>Select</strong>
-                  </div>
-                </div>
-              </label>
-            </div>
-
-            <div class="col-sm-4">
-              <label for="selection-2" class="selection">
-
-                <div class="umbrella-wrapper">
-                  <div class="umbrella-title">
-                    <div class="umbrella-icon critical"></div>
-                    <h3>Group Critical Illness</h3>
-                  </div>
-                  <hr>
-                  <div class="umbrella-body">
-                    <h5>Description</h5>
-                    <p>Pays a lump sum if an employee suffers any of a list of defined medical conditions. The medical
-                      conditions must be classified as critical illnesses (e.g. cancer, heart attack, stroke) under
-                      the policy.</p>
-                  </div>
-                  <hr>
-                  <div class="text-center">
-                    <input name="selection-2" id="selection-2" class='input-select' type="checkbox" data-related-item="selection-2-select">
-                    <strong>Select</strong>
-                    <!-- <label for="selection-2">Select</label> -->
-                  </div>
-                </div>
-              </label>
-            </div>
-
-            <div class="col-sm-4">
-              <label for="selection-3" class="selection">
-
-                <div class="umbrella-wrapper">
-                  <div class="umbrella-title">
-                    <div class="umbrella-icon hospital"></div>
-                    <h3>Group Hospitalization<br>& Surgical</h3>
-                  </div>
-                  <hr>
-                  <div class="umbrella-body">
-                    <h5>Description</h5>
-                    <p>Covers the cost of medical treatment and hospitalization due to accidents and sickness.</p>
-                  </div>
-                  <hr>
-                  <div class="text-center umbrella-footer">
-                    <input name="selection-3" id="selection-3" class='input-select' type="checkbox" data-related-item="selection-3-select">
-                    <strong>Select</strong>
-                    <!-- <label for="selection-3">Select</label> -->
-                  </div>
-                </div>
-              </label>
-            </div>
-
-            <div class="col-sm-4">
-              <label for="selection-4" class="selection">
-
-                <div class="umbrella-wrapper">
-                  <div class="umbrella-title">
-                    <div class="umbrella-icon life"></div>
-                    <h3>Group Personal<br>Accident</h3>
-                  </div>
-                  <hr>
-                  <div class="umbrella-body">
-                    <h5>Description</h5>
-                    <p>A supplementary plan which provides a lump sum benefit in the event of (1) death due to an
-                      accident, (2) total & permanent disability due to an accident, or other losses due to an
-                      accident as listed in the policy.</p>
-                  </div>
-                  <hr>
-                  <div class="text-center umbrella-footer">
-                    <input name="selection-4" id="selection-4" class='input-select' type="checkbox" data-related-item="selection-4-select">
-                    <strong>Select</strong>
-                    <!-- <label for="selection-3">Select</label> -->
-                  </div>
-                </div>
-              </label>
-            </div>
-
-            <div class="col-sm-4">
-              <label for="selection-5" class="selection">
-
-                <div class="umbrella-wrapper">
-                  <div class="umbrella-title">
-                    <div class="umbrella-icon critical"></div>
-                    <h3>Group Outpatient<br>Specialist</h3>
-                  </div>
-                  <hr>
-                  <div class="umbrella-body">
-                    <h5>Description</h5>
-                    <p>A supplementary reimbursement benefit which covers expenses incurred for outpatient specialist
-                      consultation, diagnostic x-ray and laboratory tests recommended by a registered medical
-                      practitioner.</p>
-                  </div>
-                  <hr>
-                  <div class="text-center umbrella-footer">
-                    <input name="selection-5" id="selection-5" class='input-select' type="checkbox" data-related-item="selection-5-select">
-                    <strong>Select</strong>
-                    <!-- <label for="selection-3">Select</label> -->
-                  </div>
-                </div>
-              </label>
-            </div>
-
-            <div class="col-sm-4">
-              <label for="selection-6" class="selection">
-
-                <div class="umbrella-wrapper">
-                  <div class="umbrella-title">
-                    <div class="umbrella-icon hospital"></div>
-                    <h3>Group Long-Term<br>Disability</h3>
-                  </div>
-                  <hr>
-                  <div class="umbrella-body">
-                    <h5>Description</h5>
-                    <p>Pays a monthly benefit in the event they cannot work due to a covered illness or injury.</p>
-                  </div>
-                  <hr>
-                  <div class="text-center umbrella-footer">
-                    <input name="selection-6" id="selection-6" class='input-select' type="checkbox" data-related-item="selection-6-select">
-                    <strong>Select</strong>
-                    <!-- <label for="selection-3">Select</label> -->
-                  </div>
-                </div>
-              </label>
-            </div>
-
-            <div class="col-sm-4">
-              <label for="selection-7" class="selection">
-
-                <div class="umbrella-wrapper">
-                  <div class="umbrella-title">
-                    <div class="umbrella-icon life"></div>
-                    <h3>Group Maternity</h3>
-                  </div>
-                  <hr>
-                  <div class="umbrella-body">
-                    <h5>Description</h5>
-                    <p>A supplementary reimbursement plan that covers expenses incurred for maternity and obstetrics
-                      treatment charged by the hospital and/or a registered medical practitioner.</p>
-                  </div>
-                  <hr>
-                  <div class="text-center umbrella-footer">
-                    <input name="selection-7" id="selection-7" class='input-select' type="checkbox" data-related-item="selection-7-select">
-                    <strong>Select</strong>
-                    <!-- <label for="selection-3">Select</label> -->
-                  </div>
-                </div>
-              </label>
-            </div>
-
-            <div class="col-sm-4">
-              <label for="selection-8" class="selection">
-
-                <div class="umbrella-wrapper">
-                  <div class="umbrella-title">
-                    <div class="umbrella-icon hospital"></div>
-                    <h3>Group Dental Care</h3>
-                  </div>
-                  <hr>
-                  <div class="umbrella-body">
-                    <h5>Description</h5>
-                    <p>Provides reimbursement of eligible dental expenses from a licensed dentist.</p>
-                  </div>
-                  <hr>
-                  <div class="text-center umbrella-footer">
-                    <input name="selection-8" id="selection-8" class='input-select' type="checkbox" data-related-item="selection-8-select">
-                    <strong>Select</strong>
-                    <!-- <label for="selection-3">Select</label> -->
-                  </div>
-                </div>
-              </label>
-            </div>
-          </div>
-          <div class="row tab-footer">
-            <div class="col-sm-6 col-sm-push-6 col-xs-12 right">
-              <ul class="list-inline">
-                <li>
-                  <button type="button" class="btn btn-primary btn-lg next-step" id="selection-btn" disabled="disabled">Save
-                    and continue
-                  </button>
-                </li>
-              </ul>
-            </div>
-            <div class="col-sm-6 col-sm-pull-6 col-xs-12 left">
-              <small>*Prices vary depending on insurer</small>
-            </div>
-          </div>
         </div>
-
-
-        <div class="clearfix"></div>
       </div>
-
     </div>
-  </div>
-</div>
+<% end %>

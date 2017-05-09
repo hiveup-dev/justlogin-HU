@@ -11,6 +11,8 @@ Rails.application.routes.draw do
     get "/#{page}" => "home##{page}"
   end
 
+  post '/process/:action', controller: :processing
+
   root 'home#index'
   mount Refinery::Core::Engine, at: Refinery::Core.mounted_path
 

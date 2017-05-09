@@ -1,13 +1,13 @@
 <%= content_for(:page_buttons) do %>
     <ul class="nav navbar-nav navbar-left navbar-justlogin">
       <li>
-        <button class="btn btn-link back-button">Previous</button>
+        <button class="btn btn-link back-button" data-previous-step="/">Previous</button>
       </li>
     </ul>
     <ul class="nav navbar-nav navbar-right navbar-justlogin">
       <li>
-        <button class="btn btn-primary" id="selection-btn" disabled="disabled">Save
-          and Continue
+        <button class="btn btn-primary submit-button" id="selection-btn" <%= session[:product_ids].blank? ? 'disabled="disabled"' : '' %> data-form-target="step2">
+          Save and Continue
         </button>
       </li>
       <li>
@@ -21,28 +21,29 @@
 
 
 
+<%= form_tag('/process/step2', method: :post, id: 'step2') do %>
+    <div class="container products-display">
+      <div class="row">
+        <div class="col-sm-12">
 
-<div class="container products-display">
-  <div class="row">
-    <div class="col-sm-12">
+          <div class="">
 
-      <div class="">
+            <% @products.in_groups_of(3, false) do |group_of_products| %>
+                <div class="row">
+                  <% group_of_products.each do |product| %>
+                      <div class="col-sm-3 col-xs-3">
+                        <%= render partial: 'product', locals: { product: product } %>
+                      </div>
+                  <% end %>
+                </div>
+            <% end %>
+            <div class="clearfix"></div>
+          </div>
 
-        <% @products.in_groups_of(3, false) do |group_of_products| %>
-            <div class="row">
-              <% group_of_products.each do |product| %>
-                  <div class="col-sm-3 col-xs-3">
-                    <%= render partial: 'product', locals: { product: product } %>
-                  </div>
-              <% end %>
-            </div>
-        <% end %>
-        <div class="clearfix"></div>
+        </div>
       </div>
-
     </div>
-  </div>
-</div>
+<% end %>
 
 
 <% if false %>

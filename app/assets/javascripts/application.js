@@ -54,8 +54,9 @@ jQuery(function () {
         $('#selection-btn').removeAttr('disabled');
     }
 
-    $('.back-button').on('click', function () {
-        window.history.back();
+    $('.back-button').on('click', function (event) {
+        var clickButton = $(event.currentTarget);
+        window.location.href = clickButton.data('previous-step');
     });
 
     $('.compare-button').on('click', function () {
@@ -64,6 +65,11 @@ jQuery(function () {
             selectedProducts.push("product_ids[]=" + $(e).val());
         });
         window.location.href = ('/products/compare?' + selectedProducts.join('&'));
+    });
+
+    $('.submit-button').on('click', function (event) {
+        var submitButton = $(event.currentTarget);
+        $("#" + submitButton.data('form-target')).submit();
     })
 
 

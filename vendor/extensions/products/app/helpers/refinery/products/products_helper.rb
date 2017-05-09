@@ -1,6 +1,10 @@
 module Refinery
   module Products
     module ProductsHelper
+      def input_select_product(product, compare=false)
+        checked = (!compare && session[:product_ids] && session[:product_ids].include?(product.id.to_s)) ? "checked=checked" : ''
+        "<input name='product_ids[]' id='product-#{product.id}' value='#{product.id}' type='checkbox' class='input-select' #{checked}>".html_safe
+      end
 
       def group_product_feature(products)
         sql_query = <<-eos
