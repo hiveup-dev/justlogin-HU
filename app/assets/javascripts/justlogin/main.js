@@ -53,83 +53,19 @@ $(document).ready(function () {
 });
 
 
-$(".selection-1-select").hide();
-$(".selection-2-select").hide();
-$(".selection-3-select").hide();
-$(".selection-4-select").hide();
-$(".selection-5-select").hide();
-$(".selection-6-select").hide();
-$(".selection-7-select").hide();
-$(".selection-8-select").hide();
-$("#selection-1").click(function() {
-    if($(this).is(":checked")) {
-        $(".selection-1-select").show();
-    } else {
-        $(".selection-1-select").hide();
-    }
-});
-$("#selection-2").click(function() {
-    if($(this).is(":checked")) {
-        $(".selection-2-select").show();
-    } else {
-        $(".selection-2-select").hide();
-    }
-});
-$("#selection-3").click(function() {
-    if($(this).is(":checked")) {
-        $(".selection-3-select").show();
-    } else {
-        $(".selection-3-select").hide();
-    }
-});
-$("#selection-4").click(function() {
-    if($(this).is(":checked")) {
-        $(".selection-4-select").show();
-    } else {
-        $(".selection-4-select").hide();
-    }
-});
-$("#selection-5").click(function() {
-    if($(this).is(":checked")) {
-        $(".selection-5-select").show();
-    } else {
-        $(".selection-5-select").hide();
-    }
-});
-$("#selection-6").click(function() {
-    if($(this).is(":checked")) {
-        $(".selection-6-select").show();
-    } else {
-        $(".selection-6-select").hide();
-    }
-});
-$("#selection-7").click(function() {
-    if($(this).is(":checked")) {
-        $(".selection-7-select").show();
-    } else {
-        $(".selection-7-select").hide();
-    }
-});
-$("#selection-8").click(function() {
-    if($(this).is(":checked")) {
-        $(".selection-8-select").show();
-    } else {
-        $(".selection-8-select").hide();
-    }
-});
-
-
 $(document).ready(function() {
-    var selection = $("#selection-1, #selection-2, #selection-3, #selection-4, #selection-5, #selection-6, #selection-7, #selection-8");
+    // var selection = $("#selection-1, #selection-2, #selection-3, #selection-4, #selection-5, #selection-6, #selection-7, #selection-8");
     var confirmation = $("#confirmation");
-
-    selection.click(function() {
+    $(".input-select").click(function(){
         if ($(this).is(":checked")) {
             $("#selection-btn").removeAttr("disabled");
         } else {
             $("#selection-btn").attr("disabled", "disabled");
         }
-    }); 
+    })
+    // selection.click(function() {
+    //
+    // });
 
     confirmation.click(function() {
         if ($(this).is(":checked")) {

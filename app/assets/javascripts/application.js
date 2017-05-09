@@ -63,7 +63,7 @@ jQuery(function () {
         $("input[type='checkbox'][id^='product-']:checked").each(function (i, e) {
             selectedProducts.push("product_ids[]=" + $(e).val());
         });
-        window.location.href = ('/compare?' + selectedProducts.join('&'));
+        window.location.href = ('/products/compare?' + selectedProducts.join('&'));
     })
 
 
