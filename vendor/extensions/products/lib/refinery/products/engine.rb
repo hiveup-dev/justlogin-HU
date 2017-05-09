@@ -11,7 +11,6 @@ module Refinery
           plugin.name = "products"
           plugin.url = proc { Refinery::Core::Engine.routes.url_helpers.products_admin_products_path }
           plugin.pathname = root
-          
         end
       end
 

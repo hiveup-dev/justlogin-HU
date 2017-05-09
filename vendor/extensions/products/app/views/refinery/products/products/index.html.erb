@@ -1,11 +1,60 @@
-<% content_for :body do %>
-  <ul id="products">
-    <% @products.each do |product| %>
+<%= content_for(:page_buttons) do %>
+    <ul class="nav navbar-nav navbar-left navbar-justlogin">
       <li>
-        <%= link_to product.name, refinery.products_product_path(product) %>
+        <button class="btn btn-link back-button">Previous</button>
       </li>
-    <% end %>
-  </ul>
+    </ul>
+    <ul class="nav navbar-nav navbar-right navbar-justlogin">
+      <li>
+        <button class="btn btn-primary" id="selection-btn" disabled="disabled">Save
+          and Continue
+        </button>
+      </li>
+      <li>
+        <button class="btn  compare-button">Compare</button>
+      </li>
+      <li>
+        <button class="btn">Clear</button>
+      </li>
+    </ul>
 <% end %>
 
-<%= render '/refinery/content_page' %>
+
+
+
+<div class="container products-display">
+  <div class="row">
+    <div class="col-sm-12">
+
+      <div class="">
+
+        <% @products.in_groups_of(3, false) do |group_of_products| %>
+            <div class="row">
+              <% group_of_products.each do |product| %>
+                  <div class="col-sm-3 col-xs-3">
+                    <%= render partial: 'product', locals: { product: product } %>
+                  </div>
+              <% end %>
+            </div>
+        <% end %>
+        <div class="clearfix"></div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<% if false %>
+    <% content_for :body do %>
+        <ul id="products">
+          <% @products.each do |product| %>
+              <li>
+                <%= link_to product.name, refinery.products_product_path(product) %>
+              </li>
+          <% end %>
+        </ul>
+    <% end %>
+
+    <%= render '/refinery/content_page' %>
+<% end %>

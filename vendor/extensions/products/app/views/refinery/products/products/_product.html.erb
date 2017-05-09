@@ -1,0 +1,38 @@
+<div class="product-wrapper selection">
+  <div class="product-ribbon">
+    50% OFF
+  </div>
+  <div class="product-header">
+    <div class="img">
+      <% if product.logo %>
+          <%= image_tag(product.logo.image.remote_url, with: 80, height: 80) %>
+      <% else %>
+          <img src="http://placehold.it/80x80">
+      <% end %>
+    </div>
+    <div class="name">
+      <h4><%= product.name %></h4>
+      <h4><%= product.insurer %></h4>
+    </div>
+    <div class="clearfix"></div>
+    <h4>
+      <%= number_to_currency(product.premium, unit: '$', precision: 0) %>/month
+    </h4>
+    <hr>
+  </div>
+  <div class="product-body">
+    <ul>
+      <% product.product_summary_feature_products.each do |feature| %>
+          <li>
+            <div class="policy-detail-title"><%= feature.feature_name %></div>
+            <div class="policy-detail-value"><%= feature.value %></div>
+          </li>
+      <% end %>
+    </ul>
+    <hr>
+  </div>
+  <div class="product-footer">
+    <input name="product[]" id="product-<%= product.id %>" value="<%=product.id%>" type="checkbox" data-related-item="selection-1-select">
+    <strong>Select</strong>
+  </div>
+</div>

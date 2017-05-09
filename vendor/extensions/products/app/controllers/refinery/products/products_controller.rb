@@ -11,6 +11,10 @@ module Refinery
         present(@page)
       end
 
+      def compare
+        @products = @products.where(id: params[:product_ids])
+      end
+
       def show
         @product = Product.find(params[:id])
 
@@ -19,10 +23,10 @@ module Refinery
         present(@page)
       end
 
-    protected
+      protected
 
       def find_all_products
-        @products = Product.order('position ASC')
+        @products = Product.order('position ASC').includes(product_feature_products: :product_feature)
       end
 
       def find_page

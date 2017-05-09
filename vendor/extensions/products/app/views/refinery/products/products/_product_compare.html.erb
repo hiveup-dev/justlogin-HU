@@ -1,0 +1,27 @@
+<dd>
+  <div class="product-wrapper selection">
+    <div class="product-header">
+      <div class="img">
+        <% if product.logo %>
+            <%= image_tag(product.logo.image.remote_url, with: 80, height: 80) %>
+        <% else %>
+            <img src="http://placehold.it/80x80">
+        <% end %>
+      </div>
+      <div class="name">
+        <h5><%= product.name %></h5>
+        <h5><%= product.insurer %></h5>
+      </div>
+      <div class="clearfix"></div>
+      <h4>
+        <%= number_to_currency(product.premium, unit: '$', precision: 0) %>/month
+      </h4>
+      <hr>
+    </div>
+    <div class="product-footer">
+      <input name="product[]" id="product-<%= product.id %>" value="<%=product.id%>" type="checkbox" data-related-item="selection-1-select">
+      <strong>Select</strong>
+    </div>
+    <div class="product-close"></div>
+  </div>
+</dd>

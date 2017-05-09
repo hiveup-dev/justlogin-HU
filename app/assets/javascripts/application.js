@@ -48,4 +48,23 @@ jQuery(function () {
                 .closest('.form-group').removeClass('has-error').addClass('has-success');
         }
     });
+
+
+    if ($('input[type="checkbox"]:checked').length > 0) {
+        $('#selection-btn').removeAttr('disabled');
+    }
+
+    $('.back-button').on('click', function () {
+        window.history.back();
+    });
+
+    $('.compare-button').on('click', function () {
+        var selectedProducts = [];
+        $("input[type='checkbox'][id^='product-']:checked").each(function (i, e) {
+            selectedProducts.push("product_ids[]=" + $(e).val());
+        });
+        window.location.href = ('/compare?' + selectedProducts.join('&'));
+    })
+
+
 });
