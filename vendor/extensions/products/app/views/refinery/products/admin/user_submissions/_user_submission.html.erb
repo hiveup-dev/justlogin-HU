@@ -1,15 +1,23 @@
-<li class='clearfix record <%= cycle("on", "on-hover") %>' id="<%= dom_id(user_submission) -%>">
-  <span class='title'>
+<tr class='<%= cycle("on", "on-hover") %>' id="<%= dom_id(user_submission) -%>">
+  <td>
     <%= user_submission.first_name %>
-  </span>
-
-  <span class='preview'></span>
-
-  <span class='actions'>
-    <%= action_icon(:preview, refinery.products_user_submission_path(user_submission), t('.view_live_html')) %>
-    <%= action_icon(:edit,    refinery.edit_products_admin_user_submission_path(user_submission), t('.edit') ) %>
-    <%= action_icon(:delete,  refinery.products_admin_user_submission_path(user_submission), t('.delete'),
-      { class: "cancel confirm-delete",
-        data: {confirm: t('message',  scope: 'refinery.admin.delete', title: user_submission.first_name)}}  ) %>
-  </span>
-</li>
+  </td>
+  <td>
+    <%= user_submission.last_name %>
+  </td>
+  <td>
+    <%= user_submission.email %>
+  </td>
+  <td>
+    <%= user_submission.plan_names.try(:join, ' | ') %>
+  </td>
+  <td>
+    <%= user_submission.product_names %>
+  </td>
+  <td>
+    <%= action_icon(:edit, refinery.edit_products_admin_user_submission_path(user_submission), t('.edit')) %>
+    <%= action_icon(:delete, refinery.products_admin_user_submission_path(user_submission), t('.delete'),
+                    { class: "cancel confirm-delete",
+                      data: { confirm: t('message', scope: 'refinery.admin.delete', title: user_submission.first_name) } }) %>
+  </td>
+</tr>

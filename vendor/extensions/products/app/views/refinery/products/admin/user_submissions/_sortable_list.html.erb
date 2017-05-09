@@ -1,5 +1,18 @@
-<ul id='sortable_list'>
-  <%= render :partial => 'user_submission', :collection => @user_submissions %>
-</ul>
+<table>
+  <thead>
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Email</th>
+    <th>Plans</th>
+    <th>Products</th>
+    <th></th>
+  </tr>
+  </thead>
+  <tbody>
+    <%= render :partial => 'user_submission', :collection => @user_submissions %>
+  </tbody>
+
+</table>
 <%= render '/refinery/admin/sortable_list',
-            :continue_reordering => (local_assigns.keys.include?(:continue_reordering)) ? continue_reordering : true %>
+           :continue_reordering => (local_assigns.keys.include?(:continue_reordering)) ? continue_reordering : true %>

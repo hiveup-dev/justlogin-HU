@@ -4,7 +4,10 @@ module Refinery
       class UserSubmissionsController < ::Refinery::AdminController
 
         crudify :'refinery/products/user_submission',
-                :title_attribute => 'first_name'
+                :title_attribute => 'first_name',
+                :sortable => false,
+                :include => [:products, :plans],
+                :searchable => true
 
         private
 

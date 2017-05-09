@@ -4,7 +4,7 @@ module Refinery
       class PlansController < ::Refinery::AdminController
 
         crudify :'refinery/products/plan',
-                :title_attribute => 'icon_name'
+                :title_attribute => 'name'
 
         private
 

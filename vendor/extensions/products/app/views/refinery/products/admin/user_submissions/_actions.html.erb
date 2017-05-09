@@ -5,7 +5,7 @@
     </li>
   <% end %>
   <li>
-    <%= action_label :add, refinery.new_products_admin_user_submission_path, t('.create_new') %>
+    <%#= action_label :add, refinery.new_products_admin_user_submission_path, t('.create_new') %>
   </li>
 <% if !searching? && ::Refinery::Products::Admin::UserSubmissionsController.sortable? && ::Refinery::Products::UserSubmission.many? %>
   <li>

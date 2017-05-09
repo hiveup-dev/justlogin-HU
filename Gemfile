@@ -75,4 +75,5 @@ group :development do
 end
 
 gem 'refinerycms-wymeditor', ['~> 1.0', '>= 1.0.7']
+gem 'refinerycms-acts-as-indexed', '~> 3.0.0'
 gem 'refinerycms-products', path: 'vendor/extensions'

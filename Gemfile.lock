@@ -304,6 +304,11 @@ GEM
       refinerycms-images (= 3.0.5)
       refinerycms-pages (= 3.0.5)
       refinerycms-resources (= 3.0.5)
+    refinerycms-acts-as-indexed (3.0.0)
+      acts_as_indexed (~> 0.8.0)
+      decorators (~> 2.0)
+      refinerycms-core (>= 3.0.0, < 5.0)
+      stringex (~> 2.5.2)
     refinerycms-authentication-devise (1.0.4)
       actionmailer (~> 4.2, >= 4.2.0)
       devise (~> 3.0, >= 3.2.4)
@@ -408,6 +413,7 @@ GEM
       net-ssh (>= 2.8.0)
     sshkit-interactive (0.2.1)
       sshkit (~> 1.12)
+    stringex (2.5.2)
     temple (0.8.0)
     thor (0.19.4)
     thread_safe (0.3.6)
@@ -464,6 +470,7 @@ DEPENDENCIES
   rb-fsevent
   rb-inotify
   refinerycms (~> 3.0.0)
+  refinerycms-acts-as-indexed (~> 3.0.0)
   refinerycms-authentication-devise (~> 1.0.4)
   refinerycms-products!
   refinerycms-settings
