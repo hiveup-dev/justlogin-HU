@@ -3,7 +3,7 @@
     <div class="product-header">
       <div class="img">
         <% if product.logo %>
-            <%= image_tag(product.logo.image.remote_url, width: 80, height: 80) %>
+            <%= image_tag(product.logo.image.remote_url, width: 45, height: 45) %>
         <% else %>
             <img src="http://placehold.it/80x80">
         <% end %>
@@ -17,6 +17,7 @@
         <%= number_to_currency(product.premium, unit: '$', precision: 0) %>
         <span>/month</span>
       </h2>
+      <hr>
     </div>
     <div class="product-footer">
       <%=input_select_product(product, true)%>
