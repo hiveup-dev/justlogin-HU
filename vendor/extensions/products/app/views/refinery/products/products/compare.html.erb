@@ -1,62 +1,62 @@
 <% content_for(:page_buttons) do %>
     <ul class="pull-left navbar-justlogin">
       <li>
-        <button class="btn btn-link back-button" data-previous-step="/products">Previous</button>
+        <button class="btn btn-link back-button" data-previous-step="<%= previous_confirm_button %>">Previous</button>
       </li>
     </ul>
     <ul class="pull-right navbar-justlogin">
       <li>
-        <%=product_continue_button%>
+        <%= product_continue_button %>
       </li>
     </ul>
 <% end %>
 <%= form_tag('/process/step2', method: :post, id: 'step2') do %>
     <div id="product-listing">
-    <div class="comparison-selection">
-      <div class="container">
-        <div class="logo">
+      <div class="comparison-selection">
+        <div class="container">
+          <div class="logo">
+
+          </div>
+          <dl class="compare-products">
+            <dt>Products</dt>
+
+            <% @products.each do |product| %>
+                <%= render partial: 'product_compare', locals: { product: product } %>
+            <% end %>
+          </dl>
 
         </div>
-        <dl class="compare-products">
-          <dt>Products</dt>
-
-          <% @products.each do |product| %>
-              <%= render partial: 'product_compare', locals: { product: product } %>
-          <% end %>
-        </dl>
-
       </div>
-    </div>
 
-    <div class="container comparison-details">
-      <div class="row">
-        <div class="col-sm-12">
+      <div class="container comparison-details">
+        <div class="row">
+          <div class="col-sm-12">
 
-          <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-            <div class="panel panel-default">
-              <div class="panel-heading" role="tab" id="headingOne">
-                <h4 class="panel-title">
-                  <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="true" aria-controls="collapse1">
-                    Eligibility
-                  </a>
-                </h4>
-              </div>
-              <div id="collapse1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading1">
-                <div class="panel-body">
-                  <% group_product_feature(@products).each do |feature_name, feature_values| %>
-                      <dl>
-                        <dt><%= feature_name %></dt>
-                        <% feature_values.each do |feature_value| %>
-                            <dd><%= feature_value || '-' %></dd>
-                        <% end %>
-                      </dl>
-                  <% end %>
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingOne">
+                  <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                      Eligibility
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading1">
+                  <div class="panel-body">
+                    <% group_product_feature(@products).each do |feature_name, feature_values| %>
+                        <dl>
+                          <dt><%= feature_name %></dt>
+                          <% feature_values.each do |feature_value| %>
+                              <dd><%= feature_value || '-' %></dd>
+                          <% end %>
+                        </dl>
+                    <% end %>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
     </div>
 <% end %>
