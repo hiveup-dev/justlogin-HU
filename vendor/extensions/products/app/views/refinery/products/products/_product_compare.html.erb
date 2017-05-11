@@ -9,14 +9,14 @@
         <% end %>
       </div>
       <div class="name">
-        <h5><%= product.name %></h5>
-        <h5><%= product.insurer %></h5>
+        <h2><%= product.name %></h2>
+        <h3><%= product.insurer %></h3>
       </div>
       <div class="clearfix"></div>
-      <h4>
-        <%= number_to_currency(product.premium, unit: '$', precision: 0) %>/month
-      </h4>
-      <hr>
+      <h2 class="premium">
+        <%= number_to_currency(product.premium, unit: '$', precision: 0) %>
+        <span>/month</span>
+      </h2>
     </div>
     <div class="product-footer">
       <%=input_select_product(product, true)%>

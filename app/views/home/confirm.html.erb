@@ -46,6 +46,16 @@
                   <div class="col-sm-6 selection-8-select">
                     <h4><i class="fa fa-check" aria-hidden="true"></i> Group Dental Care</h4></div>
                 </div>
+
+                <div class="col-sm-8 col-sm-offset-2">
+                    <%= f.input :first_name, placeholder: 'First Name', wrapper_html: { class: 'with-helper col-sm-6 col-sm-offset-0 col-xs-10 col-xs-offset-1' } %>
+                    <%= f.input :last_name, placeholder: 'Last Name', wrapper_html: { class: 'with-helper col-sm-6 col-sm-offset-0 col-xs-10 col-xs-offset-1' } %>
+                    <%= f.input :email, placeholder: 'Email', required: false, wrapper_html: { class: 'with-helper col-sm-6 col-sm-offset-0 col-xs-10 col-xs-offset-1' } %>
+                    <%= f.input :company, placeholder: 'Company', wrapper_html: { class: 'with-helper col-sm-6 col-sm-offset-0 col-xs-10 col-xs-offset-1' } %>
+                    <%= f.input :phone_number, placeholder: 'Contact Number', wrapper_html: { class: 'with-helper col-sm-6 col-sm-offset-0 col-xs-10 col-xs-offset-1' } %>
+                    <%= f.input :other_inquiries, as: :text, row: 3, placeholder: 'Other inquiries', wrapper_html: { class: 'col-sm-12 col-sm-offset-0 col-xs-10 col-xs-offset-1' } %>
+                </div>
+
                 <div class="eligibility">
                   <h3>Eligibility</h3>
                   <ul class="lead">
