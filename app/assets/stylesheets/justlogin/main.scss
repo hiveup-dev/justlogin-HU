@@ -148,7 +148,7 @@ h4, h5, h6 {
 }
 
 .selection .umbrella-body {
-  height: 120px;
+  height: 135px;
 }
 
 .selection .umbrella-footer {
@@ -161,7 +161,7 @@ h4, h5, h6 {
 
 .selection .umbrella-icon {
   display: inline-block;
-  background-image: url('../images/umbrella-icons.svg');
+  background: asset-url('umbrella-icons.svg');
   width: 40px;
   height: 35px;
   margin-right: 7px;
