@@ -20,8 +20,8 @@
           <dl class="compare-products">
             <dt>Products</dt>
 
-            <% @products.each do |product| %>
-                <%= render partial: 'product_compare', locals: { product: product } %>
+            <% @products.each_with_index do |product, index| %>
+                <%= render partial: 'product_compare', locals: { product: product, index: index } %>
             <% end %>
           </dl>
 
@@ -46,8 +46,8 @@
                     <% group_product_feature(@products).each do |feature_name, feature_values| %>
                         <dl>
                           <dt><%= feature_name %></dt>
-                          <% feature_values.each do |feature_value| %>
-                              <dd><%= feature_value || '-' %></dd>
+                          <% feature_values.each_with_index do |feature_value, pi| %>
+                              <dd data-product-column="<%=pi%>"><%= feature_value || '-' %></dd>
                           <% end %>
                         </dl>
                     <% end %>

@@ -79,6 +79,10 @@ jQuery(function () {
     $('.submit-button').on('click', function (event) {
         var submitButton = $(event.currentTarget);
         $("#" + submitButton.data('form-target')).submit();
+    });
+    $('.product-close').on('click', function(event){
+        var hideProductId = $(event.currentTarget).data('product-id');
+        $("[data-product-column='"+hideProductId+"']").hide();
     })
 
 
