@@ -1,6 +1,8 @@
 nb:
   refinery:
     plugins:
+      benefits:
+        title: Benefits
       user_submissions:
         title: User Submissions
       user_submitions:
@@ -15,6 +17,21 @@ nb:
         title: Products
     products:
       admin:
+        benefits:
+          actions:
+            create_new: Lag en ny Benefit
+            reorder: Endre rekkefølgen på Benefits
+            reorder_done: Ferdig å endre rekkefølgen Benefits
+          records:
+            title: Benefits
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Benefits enda. Klikk på "Lag en ny Benefit"
+              for å legge til din første benefit.
+          benefit:
+            view_live_html: Vis hvordan denne benefit ser ut offentlig <br/><em>(åpner
+              i et nytt vindu)</em>
+            edit: Rediger denne benefit
+            delete: Fjern denne benefit permanent
         user_submissions:
           actions:
             create_new: Lag en ny User Submission
@@ -106,6 +123,9 @@ nb:
               i et nytt vindu)</em>
             edit: Rediger denne product
             delete: Fjern denne product permanent
+      benefits:
+        show:
+          other: Andre Benefits
       user_submissions:
         show:
           other: Andre User Submissions
@@ -126,6 +146,12 @@ nb:
           other: Andre Products
   activerecord:
     attributes:
+      refinery/products/benefit:
+        name: Name
+        description: Description
+        source: Source
+        feature_summary: Feature Summary
+        feature: Feature
       refinery/products/user_submission:
         first_name: First Name
         last_name: Last Name

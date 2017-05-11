@@ -1,0 +1,49 @@
+<%= content_for(:page_buttons) do %>
+    <ul class="pull-right navbar-justlogin">
+      <li>
+        <%=benefit_continue_button%>
+      </li>
+    </ul>
+<% end %>
+
+<%= form_tag('/process/step1', method: :post, id: 'step1') do %>
+    <div class="content container">
+      <div class="row">
+        <div class="col-sm-12">
+
+          <div class="">
+
+            <div>
+              <div class="row tab-header">
+                <div class="col-sm-12 text-center">
+                  <h2>I would like to find out more about</h2>
+                  <a href="glossary">Learn more about the plans</a>
+                </div>
+              </div>
+
+              <div class="row tab-body">
+                <%= render partial: 'benefit', collection: @benefits %>
+
+              </div>
+              <div class="row tab-footer">
+                <div class="col-sm-6 col-sm-push-6 col-xs-12 right">
+                  <ul class="list-inline">
+                    <li>
+                      <%=benefit_continue_button%>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-sm-6 col-sm-pull-6 col-xs-12 left">
+                  <small>*Prices vary depending on insurer</small>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="clearfix"></div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+<% end %>

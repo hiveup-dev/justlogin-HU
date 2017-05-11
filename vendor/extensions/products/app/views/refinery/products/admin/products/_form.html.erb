@@ -29,14 +29,14 @@
 
     <div class='field'>
       <%= f.label :special -%>
-      <%= f.text_area :special, :rows => 5, :class => 'visual_editor widest' -%>
+      <%= f.text_field :special -%>
     </div>
 
     <div id="product_feature_products_list">
       <%= f.fields_for :product_feature_products do |product_feature_form| %>
           <div style="flex-direction: row; display: flex;justify-content: space-between;">
             <div class="field" style="flex: 2 1 auto; margin-left: 10px;">
-              <%= product_feature_form.select :product_feature_id, Refinery::Products::ProductFeature.all.map { |pf| [pf.name, pf.id] }, {}, style: 'width:100%' %>
+              <%= product_feature_form.select :product_feature_id, Refinery::Products::ProductFeature.order_by_name.map { |pf| [pf.name, pf.id] }, {}, style: 'width:100%' %>
             </div>
             <div class="field" style="flex: 2 1 auto; margin-left: 10px;">
               <%= product_feature_form.text_field :value, class: 'widest' %>
@@ -48,7 +48,7 @@
 
       <% end %>
     </div>
-    <p><%= f.link_to_add "Add a feature field", :product_feature_products, :class => "add_feature", "data-target" => "#product_feature_products_list"  %></p>
+    <p><%= f.link_to_add "Add a feature field", :product_feature_products, :class => "add_feature", "data-target" => "#product_feature_products_list" %></p>
 
 
     <%= render '/refinery/admin/form_actions', :f => f,

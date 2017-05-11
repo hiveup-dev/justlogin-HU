@@ -1,6 +1,8 @@
 sk:
   refinery:
     plugins:
+      benefits:
+        title: Benefits
       user_submissions:
         title: User Submissions
       user_submitions:
@@ -15,6 +17,20 @@ sk:
         title: Products
     products:
       admin:
+        benefits:
+          actions:
+            create_new: Pridať Benefit
+            reorder: Preusporiadať Benefits
+            reorder_done: Koniec radenia Benefits
+          records:
+            title: Benefits
+            sorry_no_results: Ľutujeme, ale neboli nájdené žiadne výsledky.
+            no_items_yet: Nie sú vytvorené žiadne Benefits. Kliknite na "Pridať Benefit"
+              pre pridanie prvého benefit.
+          benefit:
+            view_live_html: Zobraziť náhľad benefit<br/><em>(otvorí sa v novom okne)</em>
+            edit: Upraviť benefit
+            delete: Zmazať benefit
         user_submissions:
           actions:
             create_new: Pridať User Submission
@@ -104,6 +120,9 @@ sk:
             view_live_html: Zobraziť náhľad product<br/><em>(otvorí sa v novom okne)</em>
             edit: Upraviť product
             delete: Zmazať product
+      benefits:
+        show:
+          other: Daľšie Benefits
       user_submissions:
         show:
           other: Daľšie User Submissions
@@ -124,6 +143,12 @@ sk:
           other: Daľšie Products
   activerecord:
     attributes:
+      refinery/products/benefit:
+        name: Name
+        description: Description
+        source: Source
+        feature_summary: Feature Summary
+        feature: Feature
       refinery/products/user_submission:
         first_name: First Name
         last_name: Last Name

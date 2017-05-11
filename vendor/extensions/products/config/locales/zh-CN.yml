@@ -1,6 +1,8 @@
 zh-CN:
   refinery:
     plugins:
+      benefits:
+        title: Benefits
       user_submissions:
         title: User Submissions
       user_submitions:
@@ -15,6 +17,19 @@ zh-CN:
         title: Products
     products:
       admin:
+        benefits:
+          actions:
+            create_new: 建立新的 Benefit
+            reorder: 对 Benefits 重新排序
+            reorder_done: 对 Benefits 的重新排序结束
+          records:
+            title: Benefits
+            sorry_no_results: 对不起，未找到结果。
+            no_items_yet: 目前没有 Benefits . 点击 "Add New Benefit" 创建一个benefit.
+          benefit:
+            view_live_html: 查看 benefit 的最新内容.<br/><em>(新窗口中打开)</em>
+            edit: 编辑 benefit
+            delete: 永久删除 benefit
         user_submissions:
           actions:
             create_new: 建立新的 User Submission
@@ -97,6 +112,9 @@ zh-CN:
             view_live_html: 查看 product 的最新内容.<br/><em>(新窗口中打开)</em>
             edit: 编辑 product
             delete: 永久删除 product
+      benefits:
+        show:
+          other: 其他 Benefits
       user_submissions:
         show:
           other: 其他 User Submissions
@@ -117,6 +135,12 @@ zh-CN:
           other: 其他 Products
   activerecord:
     attributes:
+      refinery/products/benefit:
+        name: Name
+        description: Description
+        source: Source
+        feature_summary: Feature Summary
+        feature: Feature
       refinery/products/user_submission:
         first_name: First Name
         last_name: Last Name

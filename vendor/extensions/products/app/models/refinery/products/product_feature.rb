@@ -8,6 +8,9 @@ module Refinery
                                            dependent: :destroy
 
       validates :name, :presence => true, :uniqueness => true
+      scope :order_by_name, ->() {
+            unscoped.order(:name)
+      }
       # To enable admin searching, add acts_as_indexed on searchable fields, for example:
       #
       #   acts_as_indexed :fields => [:title]

@@ -1,6 +1,8 @@
 en:
   refinery:
     plugins:
+      benefits:
+        title: Benefits
       user_submissions:
         title: User Submissions
       user_submitions:
@@ -15,6 +17,20 @@ en:
         title: Products
     products:
       admin:
+        benefits:
+          actions:
+            create_new: Add New Benefit
+            reorder: Reorder Benefits
+            reorder_done: Done Reordering Benefits
+          records:
+            title: Benefits
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Benefits yet. Click "Add New Benefit" to add
+              your first benefit.
+          benefit:
+            view_live_html: View this benefit live <br/><em>(opens in a new window)</em>
+            edit: Edit this benefit
+            delete: Remove this benefit forever
         user_submissions:
           actions:
             create_new: Add New User Submission
@@ -103,6 +119,9 @@ en:
             view_live_html: View this product live <br/><em>(opens in a new window)</em>
             edit: Edit this product
             delete: Remove this product forever
+      benefits:
+        show:
+          other: Other Benefits
       user_submissions:
         show:
           other: Other User Submissions
@@ -123,6 +142,12 @@ en:
           other: Other Products
   activerecord:
     attributes:
+      refinery/products/benefit:
+        name: Name
+        description: Description
+        source: Source
+        feature_summary: Feature Summary
+        feature: Feature
       refinery/products/user_submission:
         first_name: First Name
         last_name: Last Name

@@ -1,0 +1,40 @@
+<%= form_for [refinery, :products_admin, @benefit] do |f| -%>
+    <%= render '/refinery/admin/error_messages',
+               :object => @benefit,
+               :include_object_name => true %>
+
+
+    <div class='field'>
+      <%= f.label :name -%>
+      <%= f.text_field :name, :class => 'larger widest' -%>
+    </div>
+    <div class="field">
+      <%= f.label :icon_name -%>
+      <%= f.select :icon_name, ['life', 'critical', 'hospital'] %>
+    </div>
+
+    <div class='field'>
+      <%= f.label :source -%>
+      <%= f.text_field :source -%>
+    </div>
+
+    <div class='field'>
+      <%= render '/refinery/admin/wysiwyg',
+                 :f => f,
+                 :fields => [:description, :feature_summary, :feature],
+                 :object => "products/benefit" -%>
+    </div>
+
+    <%= render '/refinery/admin/form_actions', :f => f,
+               :continue_editing => false,
+               :delete_title => t('delete', :scope => 'refinery.benefits.admin.benefits.benefit'),
+               :delete_confirmation => t('message', :scope => 'refinery.admin.delete', :title => @benefit.name) -%>
+<% end -%>
+
+<% content_for :javascripts do -%>
+    <script>
+        $(document).ready(function () {
+            page_options.init(false, '', '');
+        });
+    </script>
+<% end -%>

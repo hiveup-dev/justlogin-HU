@@ -1,6 +1,8 @@
 es:
   refinery:
     plugins:
+      benefits:
+        title: Benefits
       user_submissions:
         title: User Submissions
       user_submitions:
@@ -15,6 +17,21 @@ es:
         title: Products
     products:
       admin:
+        benefits:
+          actions:
+            create_new: Crear nuevo benefit
+            reorder: Reordenar benefits
+            reorder_done: Reordenación de benefits completada
+          records:
+            title: Benefits
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay benefits todavía. Pulsa en "Crear nuevo Benefit"
+              para crear tu primer benefit.
+          benefit:
+            view_live_html: Ver este benefit como abierto al público <br/><em>(abre
+              en ventana nueva)</em>
+            edit: Editar este benefit
+            delete: Borrar este benefit para siempre
         user_submissions:
           actions:
             create_new: Crear nuevo user submission
@@ -106,6 +123,9 @@ es:
               en ventana nueva)</em>
             edit: Editar este product
             delete: Borrar este product para siempre
+      benefits:
+        show:
+          other: Otros benefits
       user_submissions:
         show:
           other: Otros user submissions
@@ -126,6 +146,12 @@ es:
           other: Otros products
   activerecord:
     attributes:
+      refinery/products/benefit:
+        name: Name
+        description: Description
+        source: Source
+        feature_summary: Feature Summary
+        feature: Feature
       refinery/products/user_submission:
         first_name: First Name
         last_name: Last Name

@@ -1,6 +1,8 @@
 fr:
   refinery:
     plugins:
+      benefits:
+        title: Benefits
       user_submissions:
         title: User Submissions
       user_submitions:
@@ -15,6 +17,20 @@ fr:
         title: Products
     products:
       admin:
+        benefits:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Benefit
+            reorder: Réordonner les Benefits
+            reorder_done: Fin de réordonnancement des Benefits
+          records:
+            title: Benefits
+            sorry_no_results: Désolé ! Aucun résultat.
+            no_items_yet: Il n'y a actuellement aucun(e) Benefit. Cliquer sur "Créer
+              un(e) nouve(au/l/lle) Benefit" pour créer votre premi(er/ère) benefit.
+          benefit:
+            view_live_html: Voir ce(t/tte) benefit <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) benefit
+            delete: Supprimer définitivement ce(t/tte) benefit
         user_submissions:
           actions:
             create_new: Créer un(e) nouve(au/l/lle) User Submission
@@ -107,6 +123,9 @@ fr:
             view_live_html: Voir ce(t/tte) product <br/><em>(Ouvre une nouvelle fenêtre)</em>
             edit: Modifier ce(t/tte) product
             delete: Supprimer définitivement ce(t/tte) product
+      benefits:
+        show:
+          other: Autres Benefits
       user_submissions:
         show:
           other: Autres User Submissions
@@ -127,6 +146,12 @@ fr:
           other: Autres Products
   activerecord:
     attributes:
+      refinery/products/benefit:
+        name: Name
+        description: Description
+        source: Source
+        feature_summary: Feature Summary
+        feature: Feature
       refinery/products/user_submission:
         first_name: First Name
         last_name: Last Name

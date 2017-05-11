@@ -1,6 +1,8 @@
 nl:
   refinery:
     plugins:
+      benefits:
+        title: Benefits
       user_submissions:
         title: User Submissions
       user_submitions:
@@ -15,6 +17,21 @@ nl:
         title: Products
     products:
       admin:
+        benefits:
+          actions:
+            create_new: Nieuwe Benefit toevoegen
+            reorder: De volgorde van de Benefits wijzigen
+            reorder_done: Klaar met het wijzingen van de van de Benefit-volgorde
+          records:
+            title: Benefits
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Benefits. Druk op 'Nieuwe Benefit toevoegen'
+              om de eerste toe te voegen.
+          benefit:
+            view_live_html: Deze benefit op de website bekijken <br/><em>(opent in
+              een nieuw venster)</em>
+            edit: Bewerk deze benefit
+            delete: Deze benefit definitief verwijderen
         user_submissions:
           actions:
             create_new: Nieuwe User Submission toevoegen
@@ -105,6 +122,9 @@ nl:
               een nieuw venster)</em>
             edit: Bewerk deze product
             delete: Deze product definitief verwijderen
+      benefits:
+        show:
+          other: Andere Benefits
       user_submissions:
         show:
           other: Andere User Submissions
@@ -125,6 +145,12 @@ nl:
           other: Andere Products
   activerecord:
     attributes:
+      refinery/products/benefit:
+        name: Name
+        description: Description
+        source: Source
+        feature_summary: Feature Summary
+        feature: Feature
       refinery/products/user_submission:
         first_name: First Name
         last_name: Last Name

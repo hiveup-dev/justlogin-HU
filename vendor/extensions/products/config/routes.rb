@@ -1,5 +1,10 @@
 Refinery::Core::Engine.routes.draw do
 
+
+  # Frontend routes
+  namespace :products do
+    resources :benefits, :only => [:index, :show]
+  end
   # Frontend routes
   namespace :products do
     resources :products, :path => '', :only => [:index, :show] do
@@ -52,6 +57,17 @@ Refinery::Core::Engine.routes.draw do
   namespace :products, :path => '' do
     namespace :admin, :path => "#{Refinery::Core.backend_route}/products" do
       resources :user_submissions, :except => :show do
+        collection do
+          post :update_positions
+        end
+      end
+    end
+  end
+
+  # Admin routes
+  namespace :products, :path => '' do
+    namespace :admin, :path => "#{Refinery::Core.backend_route}/products" do
+      resources :benefits, :except => :show do
         collection do
           post :update_positions
         end

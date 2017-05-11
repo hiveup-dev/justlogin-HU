@@ -1,0 +1,21 @@
+<div class="col-sm-4">
+  <label for="<%= dom_id(benefit) %>" class="selection selection-1">
+    <div class="umbrella-wrapper">
+      <div class="umbrella-title">
+        <div class="umbrella-icon <%= benefit.icon_name %>"></div>
+        <h3><%= benefit.name %></h3>
+      </div>
+      <hr>
+      <div class="umbrella-body">
+        <h5>Description</h5>
+        <%= benefit.description.html_safe %>
+        <p><b>For as low as $5/month*</b></p>
+      </div>
+      <hr>
+      <div class="text-center umbrella-footer">
+        <%= find_out_more_input(benefit) %>
+        <strong>Select</strong>
+      </div>
+    </div>
+  </label>
+</div>

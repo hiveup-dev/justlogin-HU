@@ -1,6 +1,8 @@
 ru:
   refinery:
     plugins:
+      benefits:
+        title: Benefits
       user_submissions:
         title: User Submissions
       user_submitions:
@@ -15,6 +17,20 @@ ru:
         title: Products
     products:
       admin:
+        benefits:
+          actions:
+            create_new: Добавить Benefit
+            reorder: Изменить порядок Benefits
+            reorder_done: Закончить изменять порядок Benefits
+          records:
+            title: Benefits
+            sorry_no_results: Извините, поиск не дал результатов.
+            no_items_yet: Записей "Benefits" не найдено. Нажмите "Добавить Benefit"
+              чтобы создать benefit.
+          benefit:
+            view_live_html: Просмотреть benefit вживую <br/><em>(в новом окне)</em>
+            edit: Редактировать benefit
+            delete: Удалить benefit навсегда
         user_submissions:
           actions:
             create_new: Добавить User Submission
@@ -100,6 +116,9 @@ ru:
             view_live_html: Просмотреть product вживую <br/><em>(в новом окне)</em>
             edit: Редактировать product
             delete: Удалить product навсегда
+      benefits:
+        show:
+          other: Другие Benefits
       user_submissions:
         show:
           other: Другие User Submissions
@@ -120,6 +139,12 @@ ru:
           other: Другие Products
   activerecord:
     attributes:
+      refinery/products/benefit:
+        name: Name
+        description: Description
+        source: Source
+        feature_summary: Feature Summary
+        feature: Feature
       refinery/products/user_submission:
         first_name: First Name
         last_name: Last Name

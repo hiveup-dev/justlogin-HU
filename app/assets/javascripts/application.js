@@ -49,10 +49,17 @@ jQuery(function () {
         }
     });
 
-
-    if ($('input[type="checkbox"]:checked').length > 0) {
-        $('#selection-btn').removeAttr('disabled');
+    if ($(".input-select:checked").length > 0){
+        $('.next-button').removeAttr("disabled");
     }
+
+    $(".input-select").click(function(){
+        if ($(".input-select:checked").length > 0) {
+            $('.next-button').removeAttr("disabled");
+        } else {
+            $('.next-button').attr("disabled", "disabled");
+        }
+    });
 
     $('.back-button').on('click', function (event) {
         var clickButton = $(event.currentTarget);

@@ -1,0 +1,51 @@
+<% content_for :body_content_title do %>
+  <%= @benefit.name %>
+<% end %>
+
+<% content_for :body do %>
+  <section>
+    <h1>Name</h1>
+    <p>
+      <%=raw @benefit.name %>
+    </p>
+  </section>
+  <section>
+    <h1>Description</h1>
+    <p>
+      <%=raw @benefit.description %>
+    </p>
+  </section>
+  <section>
+    <h1>Source</h1>
+    <p>
+      <%=raw @benefit.source %>
+    </p>
+  </section>
+  <section>
+    <h1>Feature Summary</h1>
+    <p>
+      <%=raw @benefit.feature_summary %>
+    </p>
+  </section>
+  <section>
+    <h1>Feature</h1>
+    <p>
+      <%=raw @benefit.feature %>
+    </p>
+  </section>
+<% end %>
+
+<% content_for :side_body do %>
+  <aside>
+    <h2><%= t('.other') %></h2>
+    <ul id="benefits">
+      <% @benefits.each do |benefit| %>
+        <li>
+          <%= link_to benefit.name, refinery.products_benefit_path(benefit) %>
+        </li>
+      <% end %>
+    </ul>
+  </aside>
+<% end %>
+
+<%= render '/refinery/content_page' %>

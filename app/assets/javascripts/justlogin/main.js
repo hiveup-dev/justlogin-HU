@@ -56,13 +56,7 @@ $(document).ready(function () {
 $(document).ready(function() {
     // var selection = $("#selection-1, #selection-2, #selection-3, #selection-4, #selection-5, #selection-6, #selection-7, #selection-8");
     // var confirmation = $("#confirmation");
-    $(".input-select").click(function(){
-        if ($(this).is(":checked")) {
-            $("#selection-btn").removeAttr("disabled");
-        } else {
-            $("#selection-btn").attr("disabled", "disabled");
-        }
-    });
+
     // selection.click(function() {
     //
     // });

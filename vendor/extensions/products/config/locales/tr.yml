@@ -1,6 +1,8 @@
 tr:
   refinery:
     plugins:
+      benefits:
+        title: Benefits
       user_submissions:
         title: User Submissions
       user_submitions:
@@ -15,6 +17,21 @@ tr:
         title: Products
     products:
       admin:
+        benefits:
+          actions:
+            create_new: Yeni Ekle Benefit
+            reorder: Tekrar sirala Benefits
+            reorder_done: Tekrar siralama tamamlandiBenefits
+          records:
+            title: Benefits
+            sorry_no_results: Uzgunum! Herhangi bir sonuc bulunamadi.
+            no_items_yet: Herhangi bir Benefits yok henuz.  Tikla "Yeni Ekle Benefit"
+              eklemek senin ilk benefit.
+          benefit:
+            view_live_html: Bunu canlu benefit goruntule <br/><em>(yeni bir pencerede
+              acar)</em>
+            edit: Bunu Duzenle benefit
+            delete: Bunu Sil benefit sonsuza dek
         user_submissions:
           actions:
             create_new: Yeni Ekle User Submission
@@ -106,6 +123,9 @@ tr:
               acar)</em>
             edit: Bunu Duzenle product
             delete: Bunu Sil product sonsuza dek
+      benefits:
+        show:
+          other: Diger Benefits
       user_submissions:
         show:
           other: Diger User Submissions
@@ -126,6 +146,12 @@ tr:
           other: Diger Products
   activerecord:
     attributes:
+      refinery/products/benefit:
+        name: Name
+        description: Description
+        source: Source
+        feature_summary: Feature Summary
+        feature: Feature
       refinery/products/user_submission:
         first_name: First Name
         last_name: Last Name
