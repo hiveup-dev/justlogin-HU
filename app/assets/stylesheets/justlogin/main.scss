@@ -640,7 +640,7 @@ dl dt {
   line-height: 1.1;
 }
 
-dl:nth-child(even) {
+.panel-body dl:nth-child(even) {
   background: #f2f2f2;
 }
 
