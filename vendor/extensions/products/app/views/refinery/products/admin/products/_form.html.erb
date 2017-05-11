@@ -1,12 +1,10 @@
-<%= nested_form_for [refinery, :products_admin, @product] do |f| -%>
+<%= simple_nested_form_for [refinery, :products_admin, @product] do |f| -%>
     <%= render '/refinery/admin/error_messages',
                :object => @product,
                :include_object_name => true %>
 
-    <div class='field'>
-      <%= f.label :name -%>
-      <%= f.text_field :name, :class => 'larger widest' -%>
-    </div>
+    <%= f.input :name, input_html: { class: 'larger widest' } %>
+
 
     <div class='field'>
       <%= f.label :logo -%>
@@ -17,29 +15,21 @@
                  :toggle_image_display => false -%>
     </div>
 
-    <div class='field'>
-      <%= f.label :insurer -%>
-      <%= f.text_field :insurer -%>
-    </div>
-
-    <div class='field'>
-      <%= f.label :premium -%>
-      <%= f.text_field :premium -%>
-    </div>
-
-    <div class='field'>
-      <%= f.label :special -%>
-      <%= f.text_field :special -%>
-    </div>
+    <%= f.input :benefit_id, collection: Refinery::Products::Benefit.all, input_html: { class: 'larger widest' } %>
+    <%= f.input :insurer, input_html: { class: 'larger widest' } %>
+    <%= f.input :premium, input_html: { class: 'larger widest' } %>
+    <%= f.input :special, input_html: { class: 'larger widest' } %>
+    <br/>
 
     <div id="product_feature_products_list">
       <%= f.fields_for :product_feature_products do |product_feature_form| %>
           <div style="flex-direction: row; display: flex;justify-content: space-between;">
             <div class="field" style="flex: 2 1 auto; margin-left: 10px;">
-              <%= product_feature_form.select :product_feature_id, Refinery::Products::ProductFeature.order_by_name.map { |pf| [pf.name, pf.id] }, {}, style: 'width:100%' %>
+              <%=product_feature_form.input :product_feature_id, collection: Refinery::Products::ProductFeature.order_by_name, label: false%>
+              <%#= product_feature_form.select :product_feature_id, Refinery::Products::ProductFeature.order_by_name.map { |pf| [pf.name, pf.id] }, {}, style: 'width:100%' %>
             </div>
             <div class="field" style="flex: 2 1 auto; margin-left: 10px;">
-              <%= product_feature_form.text_field :value, class: 'widest' %>
+              <%= product_feature_form.input :value , label: false, input_html: { class: 'medium widest' }%>
             </div>
             <div style="flex: 1 1 auto; margin-left: 10px;">
               <%= product_feature_form.link_to_remove "Remove this feature" %>

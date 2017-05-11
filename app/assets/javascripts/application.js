@@ -49,11 +49,13 @@ jQuery(function () {
         }
     });
 
-    if ($(".input-select:checked").length > 0){
+    if ($(".input-select:checked").length > 0) {
         $('.next-button').removeAttr("disabled");
+    } else {
+        $('.next-button').attr("disabled", "disabled");
     }
 
-    $(".input-select").click(function(){
+    $(".input-select").click(function () {
         if ($(".input-select:checked").length > 0) {
             $('.next-button').removeAttr("disabled");
         } else {

@@ -3,11 +3,15 @@ Refinery::Core::Engine.routes.draw do
 
   # Frontend routes
   namespace :products do
-    resources :benefits, :only => [:index, :show]
+    resources :benefits, :only => [:index, :show] do
+      collection do
+        get 'products/*benefits', action: 'products', as: :benefits_products
+      end
+    end
   end
   # Frontend routes
   namespace :products do
-    resources :products, :path => '', :only => [:index, :show] do
+    resources :products, :path => '', :only => [] do
       collection do
         get :compare
       end
@@ -38,9 +42,9 @@ Refinery::Core::Engine.routes.draw do
 
 
   # Frontend routes
-  namespace :products do
-    resources :plans, :only => [:index]
-  end
+  # namespace :products do
+  #   resources :plans, :only => [:index]
+  # end
 
   # Admin routes
   # namespace :products, :path => '' do

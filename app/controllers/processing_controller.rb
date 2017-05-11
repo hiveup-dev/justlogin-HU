@@ -1,7 +1,8 @@
 class ProcessingController < ApplicationController
   def step1
     session[:find_out_more] = params[:findoutmore]
-    redirect_to '/products'
+    @benefits = Refinery::Products::Benefit.where(id: params[:findoutmore])
+    redirect_to refinery.benefits_products_products_benefits_path(benefits: @benefits.map(&:friendly_id))
   end
 
   def step2

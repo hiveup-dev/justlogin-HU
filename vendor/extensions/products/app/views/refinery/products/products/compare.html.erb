@@ -6,9 +6,7 @@
     </ul>
     <ul class="pull-right navbar-justlogin">
       <li>
-        <button class="btn btn-primary submit-button" id="selection-btn" disabled="disabled" <%= session[:product_ids].blank? ? 'disabled="disabled"' : '' %> data-form-target="step2">Save
-          and Continue
-        </button>
+        <%=product_continue_button%>
       </li>
     </ul>
 <% end %>

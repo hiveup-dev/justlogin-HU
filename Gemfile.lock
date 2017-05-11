@@ -3,6 +3,7 @@ PATH
   specs:
     refinerycms-products (1.0)
       acts_as_indexed (~> 0.8.0)
+      friendly_id (~> 5.1.0)
       nested_form (~> 0.3.2)
       refinerycms-core (~> 3.0.5)
       simple_form (~> 3.2.0)

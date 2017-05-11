@@ -1,7 +1,12 @@
 module Refinery
   module Products
     class Benefit < Refinery::Core::BaseModel
+      extend FriendlyId
+      friendly_id :name, use: :slugged
 
+      has_many :products, class_name: 'Refinery::Products::Product',
+                          foreign_key: 'benefit_id',
+                          inverse_of: :benefit
 
       validates :name, :presence => true, :uniqueness => true
 

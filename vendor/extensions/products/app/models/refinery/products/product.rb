@@ -19,8 +19,10 @@ module Refinery
                                                                 .where('refinery_products_product_features.is_in_summary')
                                                               },
                                                   class_name: 'Refinery::Products::ProductFeaturesProduct',
-               foreign_key: 'product_id',
-               inverse_of: :product
+                                                  foreign_key: 'product_id',
+                                                  inverse_of: :product
+
+
 
       has_many :product_features, through: :product_feature_products
 
@@ -29,6 +31,7 @@ module Refinery
       validates :name, :presence => true, :uniqueness => true
 
       belongs_to :logo, :class_name => '::Refinery::Image'
+      belongs_to :benefit, class_name: 'Refinery::Products::Benefit', foreign_key: 'benefit_id', inverse_of: :products
 
       # To enable admin searching, add acts_as_indexed on searchable fields, for example:
       #

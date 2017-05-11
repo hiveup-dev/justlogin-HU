@@ -1,12 +1,12 @@
 <%= content_for(:page_buttons) do %>
     <ul class="pull-left navbar-justlogin">
       <li>
-        <button class="btn btn-link back-button" data-previous-step="/products">Previous</button>
+        <button class="btn btn-link back-button" data-previous-step="<%= previous_confirm_button %>">Previous</button>
       </li>
     </ul>
     <ul class="pull-right navbar-justlogin">
       <li>
-        <button class="btn btn-primary submit-button" id="selection-btn" disabled="disabled" data-form-target="step3">
+        <button class="btn btn-primary submit-button next-button" id="selection-btn" disabled="disabled" data-form-target="step3">
           Save and Continue
         </button>
       </li>
