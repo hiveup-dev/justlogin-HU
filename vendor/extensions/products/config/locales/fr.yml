@@ -1,6 +1,8 @@
 fr:
   refinery:
     plugins:
+      feature_groups:
+        title: Feature Groups
       benefits:
         title: Benefits
       user_submissions:
@@ -17,6 +19,22 @@ fr:
         title: Products
     products:
       admin:
+        feature_groups:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Feature Group
+            reorder: Réordonner les Feature Groups
+            reorder_done: Fin de réordonnancement des Feature Groups
+          records:
+            title: Feature Groups
+            sorry_no_results: Désolé ! Aucun résultat.
+            no_items_yet: Il n'y a actuellement aucun(e) Feature Group. Cliquer sur
+              "Créer un(e) nouve(au/l/lle) Feature Group" pour créer votre premi(er/ère)
+              feature group.
+          feature_group:
+            view_live_html: Voir ce(t/tte) feature group <br/><em>(Ouvre une nouvelle
+              fenêtre)</em>
+            edit: Modifier ce(t/tte) feature group
+            delete: Supprimer définitivement ce(t/tte) feature group
         benefits:
           actions:
             create_new: Créer un(e) nouve(au/l/lle) Benefit
@@ -123,6 +141,9 @@ fr:
             view_live_html: Voir ce(t/tte) product <br/><em>(Ouvre une nouvelle fenêtre)</em>
             edit: Modifier ce(t/tte) product
             delete: Supprimer définitivement ce(t/tte) product
+      feature_groups:
+        show:
+          other: Autres Feature Groups
       benefits:
         show:
           other: Autres Benefits
@@ -146,6 +167,8 @@ fr:
           other: Autres Products
   activerecord:
     attributes:
+      refinery/products/feature_group:
+        name: Name
       refinery/products/benefit:
         name: Name
         description: Description

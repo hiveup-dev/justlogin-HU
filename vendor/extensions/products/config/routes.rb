@@ -79,4 +79,21 @@ Refinery::Core::Engine.routes.draw do
     end
   end
 
+
+  # Frontend routes
+  # namespace :products do
+  #   resources :feature_groups, :only => [:index, :show]
+  # end
+
+  # Admin routes
+  namespace :products, :path => '' do
+    namespace :admin, :path => "#{Refinery::Core.backend_route}/products" do
+      resources :feature_groups, :except => :show do
+        collection do
+          post :update_positions
+        end
+      end
+    end
+  end
+
 end

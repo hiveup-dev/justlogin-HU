@@ -33,27 +33,31 @@
           <div class="col-sm-12">
 
             <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-              <div class="panel panel-default">
-                <div class="panel-heading" role="tab" id="headingOne">
-                  <h4 class="panel-title">
-                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="true" aria-controls="collapse1">
-                      Eligibility
-                    </a>
-                  </h4>
-                </div>
-                <div id="collapse1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading1">
-                  <div class="panel-body">
-                    <% group_product_feature(@products).each do |feature_name, feature_values| %>
-                        <dl>
-                          <dt><%= feature_name %></dt>
-                          <% feature_values.each_with_index do |feature_value, pi| %>
-                              <dd data-product-column="<%=pi%>"><%= feature_value || '-' %></dd>
-                          <% end %>
-                        </dl>
-                    <% end %>
+              <% index = 1 %>
+              <% group_product_feature(@products).each do |feature_group, features| %>
+                  <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="heading<%= index %>">
+                      <h4 class="panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse<%= index %>" aria-expanded="true" aria-controls="collapse<%= index %>">
+                          <%= feature_group %>
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapse<%= index %>" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading<%= index %>">
+                      <div class="panel-body">
+                        <% features.each do |feature_name, feature_values| %>
+                            <dl>
+                              <dt><%= feature_name %></dt>
+                              <% feature_values.each_with_index do |feature_value, pi| %>
+                                  <dd data-product-column="<%= pi %>"><%= feature_value || '-' %></dd>
+                              <% end %>
+                            </dl>
+                        <% end %>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
+                  <% index += 1 %>
+              <% end %>
             </div>
           </div>
         </div>

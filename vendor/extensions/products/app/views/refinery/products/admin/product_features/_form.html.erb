@@ -1,12 +1,11 @@
-<%= form_for [refinery, :products_admin, @product_feature] do |f| -%>
+<%= simple_form_for [refinery, :products_admin, @product_feature] do |f| -%>
   <%= render '/refinery/admin/error_messages',
               :object => @product_feature,
               :include_object_name => true %>
 
-  <div class='field'>
-    <%= f.label :name -%>
-    <%= f.text_field :name, :class => 'larger widest' -%>
-  </div>
+  <%=f.input :name, input_html: { class: 'larger widest'}%>
+  <%=f.association :feature_group,  input_html: { class: 'larger widest'}%>
+
 
   <div class='field'>
     <%= f.label :is_in_summary -%>

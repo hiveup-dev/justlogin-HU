@@ -1,6 +1,8 @@
 zh-CN:
   refinery:
     plugins:
+      feature_groups:
+        title: Feature Groups
       benefits:
         title: Benefits
       user_submissions:
@@ -17,6 +19,20 @@ zh-CN:
         title: Products
     products:
       admin:
+        feature_groups:
+          actions:
+            create_new: 建立新的 Feature Group
+            reorder: 对 Feature Groups 重新排序
+            reorder_done: 对 Feature Groups 的重新排序结束
+          records:
+            title: Feature Groups
+            sorry_no_results: 对不起，未找到结果。
+            no_items_yet: 目前没有 Feature Groups . 点击 "Add New Feature Group" 创建一个feature
+              group.
+          feature_group:
+            view_live_html: 查看 feature group 的最新内容.<br/><em>(新窗口中打开)</em>
+            edit: 编辑 feature group
+            delete: 永久删除 feature group
         benefits:
           actions:
             create_new: 建立新的 Benefit
@@ -112,6 +128,9 @@ zh-CN:
             view_live_html: 查看 product 的最新内容.<br/><em>(新窗口中打开)</em>
             edit: 编辑 product
             delete: 永久删除 product
+      feature_groups:
+        show:
+          other: 其他 Feature Groups
       benefits:
         show:
           other: 其他 Benefits
@@ -135,6 +154,8 @@ zh-CN:
           other: 其他 Products
   activerecord:
     attributes:
+      refinery/products/feature_group:
+        name: Name
       refinery/products/benefit:
         name: Name
         description: Description

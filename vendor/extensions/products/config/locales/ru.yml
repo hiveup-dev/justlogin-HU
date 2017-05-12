@@ -1,6 +1,8 @@
 ru:
   refinery:
     plugins:
+      feature_groups:
+        title: Feature Groups
       benefits:
         title: Benefits
       user_submissions:
@@ -17,6 +19,20 @@ ru:
         title: Products
     products:
       admin:
+        feature_groups:
+          actions:
+            create_new: Добавить Feature Group
+            reorder: Изменить порядок Feature Groups
+            reorder_done: Закончить изменять порядок Feature Groups
+          records:
+            title: Feature Groups
+            sorry_no_results: Извините, поиск не дал результатов.
+            no_items_yet: Записей "Feature Groups" не найдено. Нажмите "Добавить Feature
+              Group" чтобы создать feature group.
+          feature_group:
+            view_live_html: Просмотреть feature group вживую <br/><em>(в новом окне)</em>
+            edit: Редактировать feature group
+            delete: Удалить feature group навсегда
         benefits:
           actions:
             create_new: Добавить Benefit
@@ -116,6 +132,9 @@ ru:
             view_live_html: Просмотреть product вживую <br/><em>(в новом окне)</em>
             edit: Редактировать product
             delete: Удалить product навсегда
+      feature_groups:
+        show:
+          other: Другие Feature Groups
       benefits:
         show:
           other: Другие Benefits
@@ -139,6 +158,8 @@ ru:
           other: Другие Products
   activerecord:
     attributes:
+      refinery/products/feature_group:
+        name: Name
       refinery/products/benefit:
         name: Name
         description: Description

@@ -26,7 +26,7 @@ module Refinery
       protected
 
       def find_all_products
-        @products = Product.order('position ASC').includes(product_feature_products: :product_feature)
+        @products = Product.order('position ASC').includes(product_feature_products: { product_feature: :feature_group })
       end
 
       def find_page

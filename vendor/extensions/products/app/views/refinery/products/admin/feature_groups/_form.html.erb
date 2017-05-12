@@ -1,0 +1,15 @@
+<%= form_for [refinery, :products_admin, @feature_group] do |f| -%>
+  <%= render '/refinery/admin/error_messages',
+              :object => @feature_group,
+              :include_object_name => true %>
+
+  <div class='field'>
+    <%= f.label :name -%>
+    <%= f.text_field :name, :class => 'larger widest' -%>
+  </div>
+
+  <%= render '/refinery/admin/form_actions', :f => f,
+             :continue_editing => false,
+             :delete_title => t('delete', :scope => 'refinery.feature_groups.admin.feature_groups.feature_group'),
+             :delete_confirmation => t('message', :scope => 'refinery.admin.delete', :title => @feature_group.name) -%>
+<% end -%>

@@ -1,6 +1,8 @@
 nb:
   refinery:
     plugins:
+      feature_groups:
+        title: Feature Groups
       benefits:
         title: Benefits
       user_submissions:
@@ -17,6 +19,21 @@ nb:
         title: Products
     products:
       admin:
+        feature_groups:
+          actions:
+            create_new: Lag en ny Feature Group
+            reorder: Endre rekkefølgen på Feature Groups
+            reorder_done: Ferdig å endre rekkefølgen Feature Groups
+          records:
+            title: Feature Groups
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Feature Groups enda. Klikk på "Lag en ny Feature
+              Group" for å legge til din første feature group.
+          feature_group:
+            view_live_html: Vis hvordan denne feature group ser ut offentlig <br/><em>(åpner
+              i et nytt vindu)</em>
+            edit: Rediger denne feature group
+            delete: Fjern denne feature group permanent
         benefits:
           actions:
             create_new: Lag en ny Benefit
@@ -123,6 +140,9 @@ nb:
               i et nytt vindu)</em>
             edit: Rediger denne product
             delete: Fjern denne product permanent
+      feature_groups:
+        show:
+          other: Andre Feature Groups
       benefits:
         show:
           other: Andre Benefits
@@ -146,6 +166,8 @@ nb:
           other: Andre Products
   activerecord:
     attributes:
+      refinery/products/feature_group:
+        name: Name
       refinery/products/benefit:
         name: Name
         description: Description

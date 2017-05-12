@@ -83,7 +83,10 @@ jQuery(function () {
     $('.product-close').on('click', function(event){
         var hideProductId = $(event.currentTarget).data('product-id');
         $("[data-product-column='"+hideProductId+"']").hide();
-    })
+    });
+    $('.clear-selected').on('click', function(_){
+        $(".input-select:checked").removeAttr('checked');
+    });
 
 
 });

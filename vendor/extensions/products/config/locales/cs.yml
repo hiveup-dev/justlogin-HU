@@ -1,6 +1,8 @@
 cs:
   refinery:
     plugins:
+      feature_groups:
+        title: Feature Groups
       benefits:
         title: Benefits
       user_submissions:
@@ -17,6 +19,21 @@ cs:
         title: Products
     products:
       admin:
+        feature_groups:
+          actions:
+            create_new: Přidat Feature Group
+            reorder: Řadit Feature Groups
+            reorder_done: Konec řazení Feature Groups
+          records:
+            title: Feature Groups
+            sorry_no_results: Litujeme, ale nebyly nalezny žádné výsledky.
+            no_items_yet: Zatím nebyly vytvořeny žádné Feature Groups. Zvolte "Přidat
+              Feature Group" pro přidání prvního feature group.
+          feature_group:
+            view_live_html: Zobrazit náhled feature group<br/><em>(otevře se v novém
+              okně)</em>
+            edit: Upravit feature group
+            delete: Smazat feature group
         benefits:
           actions:
             create_new: Přidat Benefit
@@ -120,6 +137,9 @@ cs:
             view_live_html: Zobrazit náhled product<br/><em>(otevře se v novém okně)</em>
             edit: Upravit product
             delete: Smazat product
+      feature_groups:
+        show:
+          other: Další Feature Groups
       benefits:
         show:
           other: Další Benefits
@@ -143,6 +163,8 @@ cs:
           other: Další Products
   activerecord:
     attributes:
+      refinery/products/feature_group:
+        name: Name
       refinery/products/benefit:
         name: Name
         description: Description

@@ -1,6 +1,8 @@
 tr:
   refinery:
     plugins:
+      feature_groups:
+        title: Feature Groups
       benefits:
         title: Benefits
       user_submissions:
@@ -17,6 +19,21 @@ tr:
         title: Products
     products:
       admin:
+        feature_groups:
+          actions:
+            create_new: Yeni Ekle Feature Group
+            reorder: Tekrar sirala Feature Groups
+            reorder_done: Tekrar siralama tamamlandiFeature Groups
+          records:
+            title: Feature Groups
+            sorry_no_results: Uzgunum! Herhangi bir sonuc bulunamadi.
+            no_items_yet: Herhangi bir Feature Groups yok henuz.  Tikla "Yeni Ekle
+              Feature Group" eklemek senin ilk feature group.
+          feature_group:
+            view_live_html: Bunu canlu feature group goruntule <br/><em>(yeni bir
+              pencerede acar)</em>
+            edit: Bunu Duzenle feature group
+            delete: Bunu Sil feature group sonsuza dek
         benefits:
           actions:
             create_new: Yeni Ekle Benefit
@@ -123,6 +140,9 @@ tr:
               acar)</em>
             edit: Bunu Duzenle product
             delete: Bunu Sil product sonsuza dek
+      feature_groups:
+        show:
+          other: Diger Feature Groups
       benefits:
         show:
           other: Diger Benefits
@@ -146,6 +166,8 @@ tr:
           other: Diger Products
   activerecord:
     attributes:
+      refinery/products/feature_group:
+        name: Name
       refinery/products/benefit:
         name: Name
         description: Description

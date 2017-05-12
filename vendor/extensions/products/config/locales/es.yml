@@ -1,6 +1,8 @@
 es:
   refinery:
     plugins:
+      feature_groups:
+        title: Feature Groups
       benefits:
         title: Benefits
       user_submissions:
@@ -17,6 +19,21 @@ es:
         title: Products
     products:
       admin:
+        feature_groups:
+          actions:
+            create_new: Crear nuevo feature group
+            reorder: Reordenar feature groups
+            reorder_done: Reordenación de feature groups completada
+          records:
+            title: Feature Groups
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay feature groups todavía. Pulsa en "Crear nuevo Feature
+              Group" para crear tu primer feature group.
+          feature_group:
+            view_live_html: Ver este feature group como abierto al público <br/><em>(abre
+              en ventana nueva)</em>
+            edit: Editar este feature group
+            delete: Borrar este feature group para siempre
         benefits:
           actions:
             create_new: Crear nuevo benefit
@@ -123,6 +140,9 @@ es:
               en ventana nueva)</em>
             edit: Editar este product
             delete: Borrar este product para siempre
+      feature_groups:
+        show:
+          other: Otros feature groups
       benefits:
         show:
           other: Otros benefits
@@ -146,6 +166,8 @@ es:
           other: Otros products
   activerecord:
     attributes:
+      refinery/products/feature_group:
+        name: Name
       refinery/products/benefit:
         name: Name
         description: Description

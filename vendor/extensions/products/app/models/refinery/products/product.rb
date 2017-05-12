@@ -28,7 +28,7 @@ module Refinery
 
       accepts_nested_attributes_for :product_feature_products, :allow_destroy => true
 
-      validates :name, :presence => true, :uniqueness => true
+      validates :name, :insurer, :presence => true
 
       belongs_to :logo, :class_name => '::Refinery::Image'
       belongs_to :benefit, class_name: 'Refinery::Products::Benefit', foreign_key: 'benefit_id', inverse_of: :products
