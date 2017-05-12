@@ -308,6 +308,10 @@ input[type=checkbox]:checked:after {
   padding: 7px;
 }
 
+.product-wrapper .product-ribbon:empty {
+  display: none;
+}
+
 .product-wrapper .product-close {
   position: absolute;
   top: -8px;
@@ -373,11 +377,17 @@ input[type=checkbox]:checked:after {
 
 .product-wrapper .product-header h3 {
   font-size: 13px;
+  height: 55px;
+  overflow: visible;
   margin: 0;
 }
 
 .product-wrapper .product-header h2 {
   font-size: 22px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 24px;
   margin: 0;
   margin-bottom: 5px;
 }
