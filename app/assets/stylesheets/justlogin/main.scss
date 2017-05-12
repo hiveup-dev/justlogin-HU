@@ -115,8 +115,8 @@ h4, h5, h6 {
 .selection .umbrella-wrapper {
   padding: 15px;
   padding-bottom: 25px;
-  //border: 1px solid #eeeeee;
-  background-color: #fce8d1;
+  border: 1px solid #dddddd;
+  //background-color: #fce8d1;
   transition: all 0.2s;
   margin-bottom: 25px;
 }
@@ -623,6 +623,7 @@ dl.compare-products dd {
 
 dl.compare-products .product-wrapper {
   margin: 5px;
+  background-color: #faf9f7;
 }
 
 .comparison-details {
