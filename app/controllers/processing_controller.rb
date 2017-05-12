@@ -11,22 +11,14 @@ class ProcessingController < ApplicationController
   end
 
   def step3
-    if params[:confirmation] == 'yes'
-      redirect_to '/contact'
-    else
-      redirect_to '/confirm'
-    end
-  end
-
-  def complete
     @user_submission = Refinery::Products::UserSubmission.new(user_submission_params)
     @user_submission.plan_names = session[:find_out_more]
     @user_submission.products = Refinery::Products::Product.where(id: session[:product_ids])
-    if @user_submission.save
+    if params[:confirmation] == 'yes'
       reset_session
       redirect_to '/complete'
     else
-      render '/home/contact'
+      redirect_to '/confirm'
     end
   end
 
