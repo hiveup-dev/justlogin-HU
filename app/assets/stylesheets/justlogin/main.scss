@@ -301,11 +301,13 @@ input[type=checkbox]:checked:after {
 
 .product-wrapper .product-ribbon {
   position: absolute;
-  top: -7px;
-  left: -7px;
+  top: -5px;
+  left: -5px;
   background-color: #eb5f00;
   color: #ffffff;
-  padding: 7px;
+  padding: 2px 5px;
+  font-size: 12px;
+  letter-spacing: 0.5px;
 }
 
 .product-wrapper .product-ribbon:empty {
