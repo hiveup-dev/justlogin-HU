@@ -31,16 +31,6 @@
                 <div class="row benefits">
 
                 </div>
-                <%= simple_form_for @user_submission, url: '/process/complete', method: :post, html: { id: 'complete-step' } do |f| %>
-                <div class="row">
-                <%= f.input :first_name, placeholder: 'First Name', wrapper_html: { class: 'with-helper col-sm-6 col-sm-offset-0 col-xs-10 col-xs-offset-1' } %>
-                <%= f.input :last_name, placeholder: 'Last Name', wrapper_html: { class: 'with-helper col-sm-6 col-sm-offset-0 col-xs-10 col-xs-offset-1' } %>
-                <%= f.input :email, placeholder: 'Email', required: false, wrapper_html: { class: 'with-helper col-sm-6 col-sm-offset-0 col-xs-10 col-xs-offset-1' } %>
-                <%= f.input :company, placeholder: 'Company', wrapper_html: { class: 'with-helper col-sm-6 col-sm-offset-0 col-xs-10 col-xs-offset-1' } %>
-                <%= f.input :phone_number, placeholder: 'Contact Number', wrapper_html: { class: 'with-helper col-sm-6 col-sm-offset-0 col-xs-10 col-xs-offset-1' } %>
-                <%= f.input :other_inquiries, as: :text, row: 3, placeholder: 'Other inquiries', wrapper_html: { class: 'col-sm-12 col-sm-offset-0 col-xs-10 col-xs-offset-1' } %>
-                </div>
-                <% end %>
 
                 <div class="eligibility">
                   <h3>Eligibility</h3>
