@@ -7,7 +7,8 @@ body {
   position: relative;
   margin: 0;
   padding: 0;
-  height: 100%;
+  //height: 100%;
+  height: calc(100% - 95px);
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 14px;
   background-color: #faf9f7;
@@ -68,6 +69,7 @@ h4, h5, h6 {
 
 .navbar-justlogin {
   padding-left: 0;
+  margin-bottom: 0;
 }
 
 .navbar-justlogin li {
@@ -81,7 +83,7 @@ h4, h5, h6 {
 }
 
 .content {
-  margin-top: 100px;
+  margin-top: 95px;
 }
 
 #product-listing .container {
@@ -278,7 +280,7 @@ input[type=checkbox]:checked:after {
 
 /* -------------------------------------------------------- PRODUCTS */
 .products-display {
-  margin-top: 115px;
+  margin-top: 110px;
 }
 
 .product-wrapper {
@@ -629,7 +631,7 @@ address .address-info {
   background: #faf9f7;
   width: 100%;
   border-bottom: 1px solid #dddddd;
-  margin-top: 55px;
+  margin-top: 45px;
 }
 
 .compare-products .product-wrapper .product-header .name {
@@ -651,7 +653,7 @@ dl.compare-products .product-wrapper {
 }
 
 .comparison-details {
-  margin-top: 350px;
+  margin-top: 330px;
 }
 
 dl {
