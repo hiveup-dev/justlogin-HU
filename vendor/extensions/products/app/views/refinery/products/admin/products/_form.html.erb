@@ -22,16 +22,22 @@
     <br/>
 
     <div id="product_feature_products_list">
+
       <%= f.fields_for :product_feature_products do |product_feature_form| %>
-          <div style="flex-direction: row; display: flex;justify-content: space-between;">
-            <div class="field" style="flex: 2 1 auto; margin-left: 10px;">
+          <div style="flex-direction: row; display: flex;align-items: baseline; justify-content: space-between;">
+            <div class="field" style="flex: 2 1 40%; margin-left: 10px;">
               <%=product_feature_form.input :product_feature_id, collection: Refinery::Products::ProductFeature.order_by_name, label: false%>
               <%#= product_feature_form.select :product_feature_id, Refinery::Products::ProductFeature.order_by_name.map { |pf| [pf.name, pf.id] }, {}, style: 'width:100%' %>
             </div>
-            <div class="field" style="flex: 2 1 auto; margin-left: 10px;">
+            <div class="field" style="flex: 2 1 30%; margin-left: 10px;">
               <%= product_feature_form.input :value , label: false, input_html: { class: 'medium widest' }%>
             </div>
-            <div style="flex: 1 1 auto; margin-left: 10px;">
+
+            <div style="flex: 1 1 5%; margin-left: 10px;">
+              <%= product_feature_form.input :is_in_summary, label: false, as: :boolean, input_html: {title: 'In Summary?'} %>
+            </div>
+
+            <div style="flex: 1 1 15%; margin-left: 10px;">
               <%= product_feature_form.link_to_remove "Remove this feature" %>
             </div>
           </div>

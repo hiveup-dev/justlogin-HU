@@ -3,21 +3,15 @@ module Refinery
     class Product < Refinery::Core::BaseModel
       self.table_name = 'refinery_products'
 
-      has_many :product_feature_products,  ->(_) {
-                                                    joins('JOIN refinery_products_product_features on refinery_products_product_features.id = refinery_products_product_features_products.product_feature_id')
-                                                    .order('refinery_products_product_features.is_in_summary desc,
-                                                            refinery_products_product_features_products.position')
-                                                  },
+      has_many :product_feature_products,  ->{ order('refinery_products_product_features_products.position')},
                                           class_name: 'Refinery::Products::ProductFeaturesProduct',
                                           foreign_key: 'product_id',
                                           inverse_of: :product,
                                           dependent: :destroy
 
-      has_many :product_summary_feature_products, ->(_) {
-                                                                order('refinery_products_product_features_products.position')
-                                                                joins('JOIN refinery_products_product_features on refinery_products_product_features.id = refinery_products_product_features_products.product_feature_id')
-                                                                .where('refinery_products_product_features.is_in_summary')
-                                                              },
+      has_many :product_summary_feature_products, ->{ order('refinery_products_product_features_products.position')
+                                                      .where('refinery_products_product_features_products.is_in_summary')
+                                                     },
                                                   class_name: 'Refinery::Products::ProductFeaturesProduct',
                                                   foreign_key: 'product_id',
                                                   inverse_of: :product
@@ -25,6 +19,7 @@ module Refinery
 
 
       has_many :product_features, through: :product_feature_products
+      has_many :summary_features, through: :product_summary_feature_products
 
       accepts_nested_attributes_for :product_feature_products, :allow_destroy => true
 

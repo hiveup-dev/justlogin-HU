@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170512001002) do
+ActiveRecord::Schema.define(version: 20170514124017) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -211,7 +211,6 @@ ActiveRecord::Schema.define(version: 20170512001002) do
 
   create_table "refinery_products_product_features", force: :cascade do |t|
     t.string   "name"
-    t.boolean  "is_in_summary"
     t.integer  "position"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -227,6 +226,7 @@ ActiveRecord::Schema.define(version: 20170512001002) do
     t.integer  "position"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "is_in_summary"
   end
 
   add_index "refinery_products_product_features_products", ["product_feature_id", "product_id"], name: "product_feature_product_idx", using: :btree

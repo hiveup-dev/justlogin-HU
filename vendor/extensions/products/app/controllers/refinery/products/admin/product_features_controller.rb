@@ -11,7 +11,7 @@ module Refinery
 
         # Only allow a trusted parameter "white list" through.
         def product_feature_params
-          params.require(:product_feature).permit(:name, :value, :is_in_summary, :feature_group_id)
+          params.require(:product_feature).permit(:name, :value, :feature_group_id)
         end
       end
     end

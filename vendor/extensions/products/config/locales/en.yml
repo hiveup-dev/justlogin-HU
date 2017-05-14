@@ -184,10 +184,10 @@ en:
       refinery/products/product_features_product:
         product_feature_id: Product Feature
         product_id: Product
+        is_in_summary: Summary Feature?
       refinery/products/product_feature:
         name: Name
         value: Value
-        is_in_summary: Is In Summary
       refinery/products/product:
         name: Name
         logo: Logo

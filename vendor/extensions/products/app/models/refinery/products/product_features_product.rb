@@ -12,6 +12,11 @@ module Refinery
 
       delegate :name, to: :product_feature, prefix: :feature
 
+      scope :in_summary, ->(){
+        where('is_in_summary')
+      }
+
+
       # def title was created automatically because you didn't specify a string field
       # when you ran the refinery:engine generator. <3 <3 Refinery CMS.
       def title

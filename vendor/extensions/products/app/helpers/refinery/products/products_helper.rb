@@ -12,7 +12,7 @@ module Refinery
                 ON "rppfp"."product_feature_id" = "rppf"."id"
              LEFT JOIN "refinery_products_feature_groups" as fg 
                 ON "fg"."id" = "rppf"."feature_group_id"
-          ORDER BY "rppf"."is_in_summary" DESC, "rppf"."position"
+          ORDER BY "rppf"."position"
         eos
         # load product features
         product_with_features = {}
