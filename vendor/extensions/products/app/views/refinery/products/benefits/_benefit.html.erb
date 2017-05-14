@@ -5,13 +5,11 @@
         <div class="umbrella-icon <%= benefit.icon_name %>"></div>
         <h3><%= benefit.name %></h3>
       </div>
-      <hr>
       <div class="umbrella-body">
         <h5>Description</h5>
         <%= benefit.description.html_safe %>
-        <p><b>For as low as $5/month*</b></p>
+        <p class="premium">For as low as $5/month<span>*</span></p>
       </div>
-      <hr>
       <div class="text-center umbrella-footer">
         <%= find_out_more_input(benefit) %>
         <strong>Select</strong>

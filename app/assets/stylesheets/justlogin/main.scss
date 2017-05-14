@@ -7,7 +7,8 @@ body {
   position: relative;
   margin: 0;
   padding: 0;
-  height: 100%;
+  //height: 100%;
+  height: calc(100% - 95px);
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 14px;
   background-color: #faf9f7;
@@ -68,6 +69,7 @@ h4, h5, h6 {
 
 .navbar-justlogin {
   padding-left: 0;
+  margin-bottom: 0;
 }
 
 .navbar-justlogin li {
@@ -81,7 +83,7 @@ h4, h5, h6 {
 }
 
 .content {
-  margin-top: 100px;
+  margin-top: 95px;
 }
 
 #product-listing .container {
@@ -114,9 +116,8 @@ h4, h5, h6 {
 
 .selection .umbrella-wrapper {
   padding: 15px;
-  padding-bottom: 25px;
-  //border: 1px solid #eeeeee;
-  background-color: #fce8d1;
+  border: 1px solid #dddddd;
+  //background-color: #fce8d1;
   transition: all 0.2s;
   margin-bottom: 25px;
 }
@@ -148,7 +149,18 @@ h4, h5, h6 {
 }
 
 .selection .umbrella-body {
-  height: 135px;
+  height: 160px;
+  border-top: 1px solid #d6a779;
+  border-bottom: 1px solid #d6a779;
+  margin: 15px 0;
+}
+
+.selection .umbrella-body .premium {
+  font-weight: 600;
+}
+
+.selection .umbrella-body .premium span {
+  font-weight: 100;
 }
 
 .selection .umbrella-footer {
@@ -186,7 +198,8 @@ h4, h5, h6 {
 
 .selection strong {
   text-transform: uppercase;
-  font-size: 21px;
+  font-size: 18px;
+  font-family: 'Oswald', sans-serif;
 }
 
 .tab-header {
@@ -194,7 +207,7 @@ h4, h5, h6 {
 }
 
 .tab-body {
-  height: 360px;
+  height: auto;
   margin-bottom: 15px;
 }
 
@@ -244,9 +257,9 @@ label.selection {
 
 input[type=checkbox]:before {
   content: '';
-  width: 30px;
-  height: 30px;
-  top: -12px;
+  width: 26px;
+  height: 26px;
+  top: -10px;
   left: -10px;
   border-radius: 2px;
   position: absolute;
@@ -256,9 +269,9 @@ input[type=checkbox]:before {
 
 input[type=checkbox]:checked:after {
   content: '';
-  width: 24px;
-  height: 24px;
-  top: -9px;
+  width: 20px;
+  height: 20px;
+  top: -7px;
   left: -7px;
   position: absolute;
   border-radius: 2px;
@@ -267,7 +280,7 @@ input[type=checkbox]:checked:after {
 
 /* -------------------------------------------------------- PRODUCTS */
 .products-display {
-  margin-top: 115px;
+  margin-top: 110px;
 }
 
 .product-wrapper {
@@ -290,11 +303,17 @@ input[type=checkbox]:checked:after {
 
 .product-wrapper .product-ribbon {
   position: absolute;
-  top: -7px;
-  left: -7px;
+  top: -5px;
+  left: -5px;
   background-color: #eb5f00;
   color: #ffffff;
-  padding: 7px;
+  padding: 2px 5px;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+}
+
+.product-wrapper .product-ribbon:empty {
+  display: none;
 }
 
 .product-wrapper .product-close {
@@ -361,12 +380,19 @@ input[type=checkbox]:checked:after {
 }
 
 .product-wrapper .product-header h3 {
-  font-size: 13px;
+  font-size: 12px;
+  height: 55px;
+  overflow: visible;
+  letter-spacing: normal;
   margin: 0;
 }
 
 .product-wrapper .product-header h2 {
   font-size: 22px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 24px;
   margin: 0;
   margin-bottom: 5px;
 }
@@ -448,6 +474,16 @@ input[type=checkbox]:checked:after {
 .confirm-checkbox input[type=checkbox] {
   position: relative;
   margin-right: 30px;
+}
+
+.confirm-checkbox input[type=checkbox]:before {
+  top: -8px;
+  left: -8px;
+}
+
+.confirm-checkbox input[type=checkbox]:after {
+  top: -5px;
+  left: -5px;
 }
 
 section {
@@ -605,7 +641,7 @@ address .address-info {
   background: #faf9f7;
   width: 100%;
   border-bottom: 1px solid #dddddd;
-  margin-top: 55px;
+  margin-top: 45px;
 }
 
 .compare-products .product-wrapper .product-header .name {
@@ -623,10 +659,11 @@ dl.compare-products dd {
 
 dl.compare-products .product-wrapper {
   margin: 5px;
+  background-color: #faf9f7;
 }
 
 .comparison-details {
-  margin-top: 350px;
+  margin-top: 330px;
 }
 
 dl {
