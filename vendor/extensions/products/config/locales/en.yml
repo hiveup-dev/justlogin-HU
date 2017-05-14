@@ -9,8 +9,6 @@ en:
         title: User Submissions
       user_submitions:
         title: User Submitions
-      plans:
-        title: Plans
       product_features_products:
         title: Product Features Products
       product_features:
@@ -78,20 +76,6 @@ en:
               window)</em>
             edit: Edit this user submition
             delete: Remove this user submition forever
-        plans:
-          actions:
-            create_new: Add New Plan
-            reorder: Reorder Plans
-            reorder_done: Done Reordering Plans
-          records:
-            title: Plans
-            sorry_no_results: Sorry! There are no results found.
-            no_items_yet: There are no Plans yet. Click "Add New Plan" to add your
-              first plan.
-          plan:
-            view_live_html: View this plan live <br/><em>(opens in a new window)</em>
-            edit: Edit this plan
-            delete: Remove this plan forever
         product_features_products:
           actions:
             create_new: Add New Product Features Product

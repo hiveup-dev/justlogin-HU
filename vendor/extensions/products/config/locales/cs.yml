@@ -9,8 +9,6 @@ cs:
         title: User Submissions
       user_submitions:
         title: User Submitions
-      plans:
-        title: Plans
       product_features_products:
         title: Product Features Products
       product_features:
@@ -78,20 +76,6 @@ cs:
               okně)</em>
             edit: Upravit user submition
             delete: Smazat user submition
-        plans:
-          actions:
-            create_new: Přidat Plan
-            reorder: Řadit Plans
-            reorder_done: Konec řazení Plans
-          records:
-            title: Plans
-            sorry_no_results: Litujeme, ale nebyly nalezny žádné výsledky.
-            no_items_yet: Zatím nebyly vytvořeny žádné Plans. Zvolte "Přidat Plan"
-              pro přidání prvního plan.
-          plan:
-            view_live_html: Zobrazit náhled plan<br/><em>(otevře se v novém okně)</em>
-            edit: Upravit plan
-            delete: Smazat plan
         product_features_products:
           actions:
             create_new: Přidat Product Features Product

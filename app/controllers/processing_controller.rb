@@ -20,7 +20,7 @@ class ProcessingController < ApplicationController
 
   def complete
     @user_submission = Refinery::Products::UserSubmission.new(user_submission_params)
-    @user_submission.plan_names = session[:find_out_more]
+    @user_submission.benefits = Refinery::Products::Benefit.where(id: session[:find_out_more])
     @user_submission.products = Refinery::Products::Product.where(id: session[:product_ids])
     if @user_submission.save
       reset_session

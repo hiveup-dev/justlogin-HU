@@ -9,8 +9,6 @@ es:
         title: User Submissions
       user_submitions:
         title: User Submitions
-      plans:
-        title: Plans
       product_features_products:
         title: Product Features Products
       product_features:
@@ -79,21 +77,6 @@ es:
               en ventana nueva)</em>
             edit: Editar este user submition
             delete: Borrar este user submition para siempre
-        plans:
-          actions:
-            create_new: Crear nuevo plan
-            reorder: Reordenar plans
-            reorder_done: Reordenación de plans completada
-          records:
-            title: Plans
-            sorry_no_results: Lo siento, no hay resultados
-            no_items_yet: No hay plans todavía. Pulsa en "Crear nuevo Plan" para crear
-              tu primer plan.
-          plan:
-            view_live_html: Ver este plan como abierto al público <br/><em>(abre en
-              ventana nueva)</em>
-            edit: Editar este plan
-            delete: Borrar este plan para siempre
         product_features_products:
           actions:
             create_new: Crear nuevo product features product

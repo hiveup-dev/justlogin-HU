@@ -41,22 +41,6 @@ Refinery::Core::Engine.routes.draw do
   end
 
 
-  # Frontend routes
-  # namespace :products do
-  #   resources :plans, :only => [:index]
-  # end
-
-  # Admin routes
-  # namespace :products, :path => '' do
-  #   namespace :admin, :path => "#{Refinery::Core.backend_route}/products" do
-  #     resources :plans, :except => :show do
-  #       collection do
-  #         post :update_positions
-  #       end
-  #     end
-  #   end
-  # end
-
   # Admin routes
   namespace :products, :path => '' do
     namespace :admin, :path => "#{Refinery::Core.backend_route}/products" do

@@ -9,8 +9,6 @@ zh-CN:
         title: User Submissions
       user_submitions:
         title: User Submitions
-      plans:
-        title: Plans
       product_features_products:
         title: Product Features Products
       product_features:
@@ -74,19 +72,6 @@ zh-CN:
             view_live_html: 查看 user submition 的最新内容.<br/><em>(新窗口中打开)</em>
             edit: 编辑 user submition
             delete: 永久删除 user submition
-        plans:
-          actions:
-            create_new: 建立新的 Plan
-            reorder: 对 Plans 重新排序
-            reorder_done: 对 Plans 的重新排序结束
-          records:
-            title: Plans
-            sorry_no_results: 对不起，未找到结果。
-            no_items_yet: 目前没有 Plans . 点击 "Add New Plan" 创建一个plan.
-          plan:
-            view_live_html: 查看 plan 的最新内容.<br/><em>(新窗口中打开)</em>
-            edit: 编辑 plan
-            delete: 永久删除 plan
         product_features_products:
           actions:
             create_new: 建立新的 Product Features Product

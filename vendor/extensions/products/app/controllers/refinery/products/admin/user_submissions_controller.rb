@@ -6,7 +6,7 @@ module Refinery
         crudify :'refinery/products/user_submission',
                 :title_attribute => 'first_name',
                 :sortable => false,
-                :include => [:products, :plans],
+                :include => [:products, :benefits],
                 :searchable => true
 
         private
