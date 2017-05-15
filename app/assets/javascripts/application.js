@@ -49,19 +49,30 @@ jQuery(function () {
         }
     });
 
-    if ($(".input-select:checked").length > 0) {
-        $('.next-button').removeAttr("disabled");
-    } else {
-        $('.next-button').attr("disabled", "disabled");
-    }
-
-    $(".input-select").click(function () {
+    function activeButtonDependOnSelect() {
         if ($(".input-select:checked").length > 0) {
             $('.next-button').removeAttr("disabled");
         } else {
             $('.next-button').attr("disabled", "disabled");
         }
-    });
+        if ($('.compare-button').length > 0) {
+            if ($(".input-select:checked").length > 4) {
+                alert("You can select maximum is 4 to compare");
+                return false;
+            }
+            if ($(".input-select:checked").length >= 2) {
+                $('.compare-button').removeAttr("disabled");
+            } else {
+                $('.compare-button').attr("disabled", "disabled");
+            }
+
+        }
+    }
+
+    activeButtonDependOnSelect();
+
+
+    $(".input-select").click(activeButtonDependOnSelect);
 
     $('.back-button').on('click', function (event) {
         var clickButton = $(event.currentTarget);
@@ -80,11 +91,11 @@ jQuery(function () {
         var submitButton = $(event.currentTarget);
         $("#" + submitButton.data('form-target')).submit();
     });
-    $('.product-close').on('click', function(event){
+    $('.product-close').on('click', function (event) {
         var hideProductId = $(event.currentTarget).data('product-id');
-        $("[data-product-column='"+hideProductId+"']").hide();
+        $("[data-product-column='" + hideProductId + "']").hide();
     });
-    $('.clear-selected').on('click', function(_){
+    $('.clear-selected').on('click', function (_) {
         $(".input-select:checked").removeAttr('checked');
     });
 
