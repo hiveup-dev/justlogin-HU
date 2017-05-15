@@ -20,8 +20,13 @@
           <dl class="compare-products">
             <dt>Products</dt>
 
-            <% @products.each_with_index do |product, index| %>
-                <%= render partial: 'product_compare', locals: { product: product, index: index } %>
+            <% @products.each do |product| %>
+                <%= render partial: 'product_compare', locals: { product: product } %>
+            <% end %>
+            <% if (4 - @products.length) > 0 %>
+                <% (4 - @products.length).times do %>
+                    <dd></dd>
+                <% end %>
             <% end %>
           </dl>
 
@@ -45,13 +50,24 @@
                     </div>
                     <div id="collapse<%= index %>" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading<%= index %>">
                       <div class="panel-body">
-                        <% features.each do |feature_name, feature_values| %>
+                        <% features.each do |feature_name, feature_product_values| %>
                             <dl>
                               <dt><%= feature_name %></dt>
-                              <% feature_values.each_with_index do |feature_value, pi| %>
-                                  <dd data-product-column="<%= pi %>"><%= feature_value || '-' %></dd>
+                              <% @products.each do |product| %>
+                                  <dd data-product-column="<%= product.id %>"><%= feature_product_values[product.id] || '-' %></dd>
+                              <% end %>
+                              <% if (4 - @products.length) > 0 %>
+                                  <% (4 - @products.length).times do %>
+                                      <dd></dd>
+                                  <% end %>
                               <% end %>
                             </dl>
+
+                            <%# next if feature_values.size <= 0 %>
+
+                            <%# feature_values.each_with_index do |feature_value, pi| %>
+
+                            <%# end %>
                         <% end %>
                       </div>
                     </div>
