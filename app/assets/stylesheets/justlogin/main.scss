@@ -28,6 +28,7 @@ p {
 
 a {
   color: #F3A81D;
+  cursor: pointer;
 }
 
 a:hover, a:active, a:focus {
@@ -381,7 +382,7 @@ input[type=checkbox]:checked:after {
 
 .product-wrapper .product-header h3 {
   font-size: 12px;
-  height: 55px;
+  height: 45px;
   overflow: visible;
   letter-spacing: normal;
   margin: 0;
@@ -393,7 +394,7 @@ input[type=checkbox]:checked:after {
   overflow: hidden;
   text-overflow: ellipsis;
   height: 24px;
-  margin: 0;
+  margin-top: 5px;
   margin-bottom: 5px;
 }
 
@@ -425,7 +426,7 @@ input[type=checkbox]:checked:after {
 }
 
 .product-wrapper .product-body ul li {
-  height: auto;
+  height: 30px;
   margin-top: 5px;
 }
 
@@ -448,6 +449,7 @@ input[type=checkbox]:checked:after {
   text-align: right;
   display: inline-block;
   font-size: 1.2rem;
+  line-height: 1.1;
   vertical-align: middle;
 }
 
@@ -655,6 +657,7 @@ address .address-info {
 
 dl.compare-products dd {
   text-align: left;
+  width: 228px;
 }
 
 dl.compare-products .product-wrapper {
