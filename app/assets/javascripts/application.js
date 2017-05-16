@@ -88,8 +88,7 @@ jQuery(function () {
     });
 
     $('.more-details').on('click', function () {
-        var thisProduct = ("product_ids[]=" + $(e).val());
-        window.location.href = ('/products/compare?' + thisProduct);
+        window.location.href = ('/products/compare?' + 'product_ids[]=' + $(e).val());
     });
 
     $('.submit-button').on('click', function (event) {
