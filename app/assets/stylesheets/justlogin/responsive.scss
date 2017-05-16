@@ -57,7 +57,7 @@ h4 {
 .selection .umbrella-wrapper {
 	padding: 15px;
 	//border: 1px solid #eeeeee;
-	background-color: #fed9ad;
+	//background-color: #fed9ad;
 	transition: all 0.2s;
 }
 
@@ -71,7 +71,8 @@ h4 {
 }
 
 .selection .umbrella-body {
-	height: 90px;
+	min-height: 145px;
+    height: auto;
 }
 
 .selection hr {
