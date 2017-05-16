@@ -88,7 +88,7 @@ jQuery(function () {
     });
 
     $('.more-details').on('click', function () {
-        var thisProduct = $(event.currentTarget).data('product-id');
+        var thisProduct = ("product_ids[]=" + $(e).val());
         window.location.href = ('/products/compare?' + thisProduct);
     });
 
