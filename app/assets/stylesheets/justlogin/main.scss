@@ -606,7 +606,7 @@ address .address-info {
   transition: all 0.2s;
 }
 
-.btn-primary[disabled]:hover
+.btn-primary[disabled]:hover,
 .btn-primary:hover,
 .btn-primary:focus,
 .btn-primary:active {
