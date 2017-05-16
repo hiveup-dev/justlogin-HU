@@ -88,7 +88,7 @@ jQuery(function () {
     });
 
     $('.more-details').on('click', function () {
-        var parentId = $(this).closest("div.pull-right").find("input[name='product_ids[]']").val();
+        var parentId = $(this).closest("div.pull-right").find("input[name='product_ids[]'").val();
         window.location.href = ('/products/compare?' + 'product_ids[]=' + parentId);
     });
 
