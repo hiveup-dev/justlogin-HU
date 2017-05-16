@@ -13,34 +13,10 @@
 
   <div class="row">
     <div class="col-sm-8 col-sm-offset-2">
-
-      <h3>Group Critical Illness</h3>
-      <p>This lump sum payout can be used however the covered employee wishes, such as for therapy or making home
-        improvements.</p>
-
-      <h3>Group Hospitalization</h3>
-      <p>This usually covers certain outpatient and inpatient benefits. Outpatient benefits may include
-        pre-hospitalization and pre-surgical diagnostic services, post-hospitalization treatment and pre-hospitalization
-        specialist fees. Inpatient benefits may include hospital room and board, intensive care unit, in-hospital
-        physician visit and surgeon fees.</p>
-
-      <h3>Group Term Life</h3>
-      <p>Often a key component in employee benefit packages. Employees may opt to add supplemental coverage for
-        themselves or their families.</p>
-
-      <h3>Group Personal Accident</h3>
-      <p>Optional benefits may include temporary total disablement, temporary partial disablement, hospital income and
-        medical treatment.</p>
-
-      <h3>Group Long Term Disability</h3>
-      <p>This benefit replaces a part of the income, effectively helping an employee meet financial needs. This is
-        especially useful when an employee is unable to work (and thus earn an income) for an extended period of
-        time.</p>
-
-      <h3>Group Maternity</h3>
-      <p>This benefit typically covers pre- and post-natal medical treatments. There usually is a buffer period where
-        benefits are only paid out if the employee does not give birth or terminate pregnancy prematurely within a
-        certain period of the effective date of coverage.</p>
+      <% Refinery::Products::Benefit.order('name').each do |benefit| %>
+          <h3><%= benefit.name %></h3>
+          <p><%= benefit.feature.html_safe %></p>
+      <% end %>
     </div>
   </div>
 </div>
