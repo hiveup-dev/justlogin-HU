@@ -34,10 +34,14 @@
             </div>
 
             <div style="flex: 1 1 20%; margin-left: 10px;">
-              <%= product_feature_form.input :is_in_summary, label: 'Summary', as: :boolean, input_html: {title: 'In Summary?'} %>
+              <label>
+                <%= product_feature_form.check_box :is_in_summary %>
+                Summary
+              </label>
+
             </div>
 
-            <div style="flex: 1 1 15%; margin-left: 10px;">
+            <div style="flex: 1 1 20%; margin-left: 10px;">
               <%= product_feature_form.link_to_remove "Remove this feature" %>
             </div>
           </div>
