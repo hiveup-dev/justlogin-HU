@@ -8,6 +8,7 @@ module Refinery
       validates :first_name, :last_name, :email, :company, :phone_number,
                 :presence => true
       validates :email, format: { with: /\A[^@\s]+@([^@\s]+\.)+[^@\W]+\z/ }
+      validates_acceptance_of :terms, accept: 'yes'
 
       # To enable admin searching, add acts_as_indexed on searchable fields, for example:
       #

@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   # We ask that you don't use the :as option here, as Refinery relies on it being the default of "refinery"
 
   post '/contact' => 'contact#create'
-  %w(glossary confirm contact complete).each do |page|
+  %w(glossary contact complete).each do |page|
     get "/#{page}" => "home##{page}"
   end
 

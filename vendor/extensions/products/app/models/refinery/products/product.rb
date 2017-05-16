@@ -28,6 +28,8 @@ module Refinery
       belongs_to :logo, :class_name => '::Refinery::Image'
       belongs_to :benefit, class_name: 'Refinery::Products::Benefit', foreign_key: 'benefit_id', inverse_of: :products
 
+      acts_as_indexed :fields => [:email, :first_name, :last_name]
+
       # To enable admin searching, add acts_as_indexed on searchable fields, for example:
       #
       #   acts_as_indexed :fields => [:title]

@@ -1,12 +1,14 @@
 <%= content_for(:page_buttons) do %>
     <ul class="pull-left navbar-justlogin">
       <li>
-        <button class="btn btn-link back-button" data-previous-step="/confirm">Previous</button>
+        <button class="btn btn-link back-button" data-previous-step="<%= previous_confirm_button %>">Previous</button>
       </li>
     </ul>
     <ul class="pull-right navbar-justlogin">
       <li>
-        <button class="btn btn-primary submit-button" data-form-target="complete-step">Save and Continue</button>
+        <button class="btn btn-primary submit-button next-button" id="selection-btn" disabled="disabled" data-form-target="complete-step">
+          Save and Continue
+        </button>
       </li>
     </ul>
 <% end %>
@@ -14,29 +16,48 @@
 <%= simple_form_for @user_submission, url: '/process/complete', method: :post, html: { id: 'complete-step' } do |f| %>
     <div class="content container">
       <div class="row">
-        <div class="col-sm-12">
-          <div>
-            <div class="row tab-header">
-              <div class="col-sm-12 text-center">
-                <h2>Contact Details</h2>
-              </div>
-            </div>
-
-            <div class="row tab-body">
-              <%= f.input :first_name, placeholder: 'First Name', wrapper_html: { class: 'with-helper col-sm-4 col-sm-offset-2 col-xs-10 col-xs-offset-1' } %>
-              <%= f.input :last_name, placeholder: 'Last Name', wrapper_html: { class: 'with-helper col-sm-4 col-sm-offset-0 col-xs-10 col-xs-offset-1' } %>
-              <%= f.input :email, placeholder: 'Email', required: false, wrapper_html: { class: 'with-helper col-sm-4 col-sm-offset-2 col-xs-10 col-xs-offset-1' } %>
-              <%= f.input :company, placeholder: 'Company', wrapper_html: { class: 'with-helper col-sm-4 col-sm-offset-0 col-xs-10 col-xs-offset-1' } %>
-              <%= f.input :phone_number, placeholder: 'Contact Number', wrapper_html: { class: 'with-helper col-sm-4 col-sm-offset-2 col-xs-10 col-xs-offset-1' } %>
-              <%= f.input :other_inquiries, as: :text, row: 3, placeholder: 'Other inquiries', wrapper_html: { class: 'col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1' } %>
-            </div>
-
+        <div class="col-sm-8 col-sm-offset-2">
+          <h3>Selected Products</h3>
+          <div class="row benefits">
+            <% @products.each do |product| %>
+                <div class="col-sm-6 selection-1-select">
+                  <h4><i class="fa fa-check" aria-hidden="true"></i> <%= product.name %></h4>
+                </div>
+            <% end %>
           </div>
-
-
-          <div class="clearfix"></div>
         </div>
 
+        <div class="col-sm-8 col-sm-offset-2">
+          <h3>Contact Details</h3>
+          <div class="row tab-body">
+            <%= f.input :first_name, placeholder: 'First Name', wrapper_html: { class: 'with-helper col-sm-4 col-sm-offset-2 col-xs-10 col-xs-offset-1' } %>
+            <%= f.input :last_name, placeholder: 'Last Name', wrapper_html: { class: 'with-helper col-sm-4 col-sm-offset-0 col-xs-10 col-xs-offset-1' } %>
+            <%= f.input :email, placeholder: 'Email', required: false, wrapper_html: { class: 'with-helper col-sm-4 col-sm-offset-2 col-xs-10 col-xs-offset-1' } %>
+            <%= f.input :company, placeholder: 'Company', wrapper_html: { class: 'with-helper col-sm-4 col-sm-offset-0 col-xs-10 col-xs-offset-1' } %>
+            <%= f.input :phone_number, placeholder: 'Contact Number', wrapper_html: { class: 'with-helper col-sm-4 col-sm-offset-2 col-xs-10 col-xs-offset-1' } %>
+            <%= f.input :other_inquiries, as: :text, row: 3, placeholder: 'Other inquiries', wrapper_html: { class: 'col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1' } %>
+          </div>
+        </div>
+
+        <div class="col-sm-8 col-sm-offset-2">
+          <div class="eligibility">
+            <h3>Eligibility</h3>
+            <p class="lead">The benefits will be for</p>
+            <ul class="lead">
+              <li>at least 3 full-time staff members</li>
+              <li>members who are between 16 and 65 years of age</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-sm-8 col-sm-offset-2 text-center">
+
+          <label class="confirm-checkbox">
+            <%= f.check_box :terms, {id: 'confirmation', class: 'input-select'}, 'yes', 'no' %>
+            <%#= f.input :terms, as: :boolean, label: false, input_html: {id: '', class: '' }, wrapper: false %>
+            <strong>Yes, I meet all the above criteria!</strong>
+          </label>
+        </div>
       </div>
     </div>
 <% end %>
