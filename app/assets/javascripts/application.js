@@ -88,11 +88,8 @@ jQuery(function () {
     });
 
     $('.more-details').on('click', function () {
-        var selectedProducts = [];
-        $("input[type='checkbox'][id^='product-']:checked").each(function (i, e) {
-            selectedProducts.push("product_ids[]=" + $(e).val());
-        });
-        window.location.href = ('/products/compare?' + selectedProducts.join('&'));
+        var thisProduct = $(event.currentTarget).data('product-id');
+        window.location.href = ('/products/compare?' + thisProduct);
     });
 
     $('.submit-button').on('click', function (event) {
