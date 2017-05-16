@@ -87,6 +87,14 @@ jQuery(function () {
         window.location.href = ('/products/compare?' + selectedProducts.join('&'));
     });
 
+    $('.more-details').on('click', function () {
+        var selectedProducts = [];
+        $() {
+            selectedProducts.push("product_ids[]=" + $(e).val());
+        });
+        window.location.href = ('/products/compare?' + selectedProducts.join('&'));
+    });
+
     $('.submit-button').on('click', function (event) {
         var submitButton = $(event.currentTarget);
         $("#" + submitButton.data('form-target')).submit();
