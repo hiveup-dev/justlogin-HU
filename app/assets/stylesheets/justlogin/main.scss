@@ -606,6 +606,7 @@ address .address-info {
   transition: all 0.2s;
 }
 
+.btn-primary[disabled]:hover
 .btn-primary:hover,
 .btn-primary:focus,
 .btn-primary:active {
@@ -619,14 +620,16 @@ address .address-info {
   color: #ffffff;
 }
 
+.compare-button[disabled]:hover,
 .compare-button:hover,
 .compare-button:focus,
-.compare-button:active, {
+.compare-button:active {
   background-color: #1bc4bf;
   color: #ffffff;
 }
 
 .btn[disabled] {
+  background-color: inherit;
   opacity: 0.5;
 }
 
