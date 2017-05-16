@@ -455,7 +455,11 @@ input[type=checkbox]:checked:after {
 
 
 .product-wrapper .product-footer {
-  text-align: center;
+  text-align: right;
+}
+
+.product-wrapper .product-footer .more-details {
+  font-size: 1.2rem;
 }
 
 /* -------------------------------------------------------- CONFIRMATION */
