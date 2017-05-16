@@ -615,12 +615,15 @@ address .address-info {
 }
 
 .compare-button {
-  background-color: #1aede7;
+  background-color: #3cd8d4;
   color: #ffffff;
 }
 
-.compare-button:hover {
-  opacity: 0.75;
+.compare-button:hover,
+.compare-button:focus,
+.compare-button:active, {
+  background-color: #1bc4bf;
+  color: #ffffff;
 }
 
 .btn[disabled] {
