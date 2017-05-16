@@ -455,7 +455,12 @@ input[type=checkbox]:checked:after {
 
 
 .product-wrapper .product-footer {
-  text-align: center;
+  text-align: right;
+}
+
+.product-wrapper .product-footer .more-details {
+  font-size: 1.2rem;
+  margin-top: 4px;
 }
 
 /* -------------------------------------------------------- CONFIRMATION */
@@ -601,13 +606,39 @@ address .address-info {
   transition: all 0.2s;
 }
 
-.btn[disabled]:hover,
+.btn-primary[disabled]:hover
 .btn-primary:hover,
 .btn-primary:focus,
 .btn-primary:active {
   background-color: #eb5f00;
   border-color: #eb5f00;
   transition: all 0.2s;
+}
+
+.compare-button {
+  background-color: #3cd8d4;
+  color: #ffffff;
+}
+
+.compare-button[disabled]:hover,
+.compare-button:hover,
+.compare-button:focus,
+.compare-button:active {
+  background-color: #1bc4bf;
+  color: #ffffff;
+}
+
+.btn[disabled] {
+  background-color: inherit;
+  opacity: 0.5;
+}
+
+.clear-selected {
+  background-color: #dddddd;
+}
+
+.clear-selected {
+  opacity: 0.75;
 }
 
 .btn-primary.active.focus,
