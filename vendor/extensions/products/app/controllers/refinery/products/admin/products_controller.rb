@@ -6,6 +6,7 @@ module Refinery
         crudify :'refinery/products/product',
                 :title_attribute => 'name'
 
+
         private
 
         # Only allow a trusted parameter "white list" through.
