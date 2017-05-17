@@ -4,7 +4,8 @@ module Refinery
       class BenefitsController < ::Refinery::AdminController
 
         crudify :'refinery/products/benefit',
-                :title_attribute => 'name'
+                :title_attribute => 'name',
+                :order => 'name'
 
         private
 

@@ -7,21 +7,22 @@ class ProcessingController < ApplicationController
 
   def step2
     session[:product_ids] = params[:product_ids]
-    redirect_to '/confirm'
+    redirect_to '/contact'
   end
 
-  def step3
-    if params[:confirmation] == 'yes'
-      redirect_to '/contact'
-    else
-      redirect_to '/confirm'
-    end
-  end
+  # def step3
+  #   if params[:confirmation] == 'yes'
+  #     redirect_to '/contact'
+  #   else
+  #     redirect_to '/confirm'
+  #   end
+  # end
 
   def complete
+    @products = Refinery::Products::Product.where(id: session[:product_ids])
     @user_submission = Refinery::Products::UserSubmission.new(user_submission_params)
     @user_submission.benefits = Refinery::Products::Benefit.where(id: session[:find_out_more])
-    @user_submission.products = Refinery::Products::Product.where(id: session[:product_ids])
+    @user_submission.products = @products
     if @user_submission.save
       reset_session
       redirect_to '/complete'
@@ -32,6 +33,6 @@ class ProcessingController < ApplicationController
 
   private
   def user_submission_params
-    params.require(:user_submission).permit([:first_name, :last_name, :email, :company, :phone_number, :other_inquiries])
+    params.require(:user_submission).permit([:first_name, :last_name, :email, :terms, :company, :phone_number, :other_inquiries])
   end
 end

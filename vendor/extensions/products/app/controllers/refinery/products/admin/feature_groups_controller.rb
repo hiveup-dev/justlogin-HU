@@ -4,7 +4,8 @@ module Refinery
       class FeatureGroupsController < ::Refinery::AdminController
 
         crudify :'refinery/products/feature_group',
-                :title_attribute => 'name'
+                :title_attribute => 'name',
+                :order => 'name'
 
         private
 

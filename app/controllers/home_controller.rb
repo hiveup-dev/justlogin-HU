@@ -6,6 +6,7 @@ class HomeController < ApplicationController
   end
 
   def contact
+    @products = Refinery::Products::Product.where(id: session[:product_ids])
     @user_submission = Refinery::Products::UserSubmission.new
   end
 end
