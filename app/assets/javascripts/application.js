@@ -70,10 +70,12 @@ jQuery(function () {
             }
 
         }
-        if ($('.compare-button').is(':disabled')) {
+        if ($(".input-select:checked").length > 4) {
             $('.compare-tooltip').addClass('show');
+            $('.compare-tooltip-arrow').addClass('show');
         } else {
             $('.compare-tooltip').removeClass('show');
+            $('.compare-tooltip-arrow').addClass('show');
         }
     }
 

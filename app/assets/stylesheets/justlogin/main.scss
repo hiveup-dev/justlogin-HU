@@ -469,6 +469,7 @@ input[type=checkbox]:checked:after {
 }
 
 .compare-tooltip {
+  display: none;
   position: absolute;
   top: 40px;
   left: 0;
@@ -481,17 +482,18 @@ input[type=checkbox]:checked:after {
   padding: 4px;
 }
 
-.compare-tooltip:before {
+.compare-tooltip-arrow {
   display: none;
   position: absolute;
-  content: '';
-  top: 35px;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  top: 0;
   left: 50%;
-  width: 10px;
-  height: 10px;
-  transform: rotate(45deg);
-  -ms-transform: rotate(45deg); /* IE 9 */
-  -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+  margin-left: -5px;
+  border-width: 0 5px 5px;
+  border-bottom-color: #555555;
 }
 
 /* -------------------------------------------------------- CONFIRMATION */
