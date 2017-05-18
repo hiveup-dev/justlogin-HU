@@ -75,7 +75,7 @@ jQuery(function () {
             $('.compare-tooltip-arrow').addClass('show');
         } else {
             $('.compare-tooltip').removeClass('show');
-            $('.compare-tooltip-arrow').addClass('show');
+            $('.compare-tooltip-arrow').removeClass('show');
         }
     }
 
