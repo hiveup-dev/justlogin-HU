@@ -482,6 +482,7 @@ input[type=checkbox]:checked:after {
 }
 
 .compare-tooltip:before {
+  display: none;
   position: absolute;
   content: '';
   top: 35px;
