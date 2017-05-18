@@ -287,6 +287,7 @@ input[type=checkbox]:checked:after {
 
 .product-wrapper {
   border: 1px solid #ccc;
+  background-color: #faf9f7;
   padding: 10px;
   position: relative;
   margin-bottom: 30px;
@@ -755,6 +756,7 @@ dl.compare-products dd {
 dl.compare-products .product-wrapper {
   margin: 5px;
   background-color: #faf9f7;
+  width: auto;
 }
 
 .comparison-details {
