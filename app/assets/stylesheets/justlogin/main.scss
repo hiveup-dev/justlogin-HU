@@ -528,16 +528,24 @@ input[type=checkbox]:checked:after {
 
 .product-confirm-wrapper {
   width: 100%;
+  margin-bottom: 10px;
+  height: 45px;
 }
 
 .product-confirm-wrapper .product-tick {
   vertical-align: middle;
   display: inline-block;
+  color: #F3A81D;
+  font-size: 18px;
+  width: 5%;
 }
 
 .product-confirm-wrapper .product-confirm-name {
   vertical-align: middle;
   display: inline-block;
+  font-size: 21px;
+  line-height: 1.1;
+  width: 80%;
 }
 
 section {
