@@ -59,12 +59,11 @@ jQuery(function () {
             if ($(".input-select:checked").length > 4) {
                 $('.compare-button').on('click', function () {
                     alert("You can select up to 4 to compare");
-                    $('.compare-button').attr("disabled", "disabled");
                     return false;
                 });
             }
 
-            if ($(".input-select:checked").length >= 2) {
+            if ($(".input-select:checked").length >= 2 && $(".input-select:checked").length < 5) {
                 $('.compare-button').removeAttr("disabled");
             } else {
                 $('.compare-button').attr("disabled", "disabled");
