@@ -56,12 +56,12 @@ jQuery(function () {
             $('.next-button').attr("disabled", "disabled");
         }
         if ($('.compare-button').length > 0) {
-            if ($(".input-select:checked").length > 4) {
-                $('.compare-button').on('click', function () {
-                    alert("You can select up to 4 to compare");
-                    return false;
-                });
-            }
+            //if ($(".input-select:checked").length > 4) {
+            //
+            //        alert("You can select up to 4 to compare");
+            //        return false;
+            //
+            //}
 
             if ($(".input-select:checked").length >= 2 && $(".input-select:checked").length < 5) {
                 $('.compare-button').removeAttr("disabled");
