@@ -63,8 +63,10 @@ jQuery(function () {
                 });
             }
 
-            if ($(".input-select:checked").length >= 2 || $(".input-select:checked").length > 4) {
+            if ($(".input-select:checked").length >= 2) {
                 $('.compare-button').removeAttr("disabled");
+            } else if ($(".input-select:checked").length > 4) {
+                $('.compare-button').attr("disabled", "disabled");
             } else {
                 $('.compare-button').attr("disabled", "disabled");
             }
