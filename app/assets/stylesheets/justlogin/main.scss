@@ -526,6 +526,20 @@ input[type=checkbox]:checked:after {
   left: -5px;
 }
 
+.product-confirm-wrapper {
+  width: 100%;
+}
+
+.product-confirm-wrapper .product-tick {
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.product-confirm-wrapper .product-confirm-name {
+  vertical-align: middle;
+  display: inline-block;
+}
+
 section {
   min-height: 600px;
   height: auto;

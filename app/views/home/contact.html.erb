@@ -16,12 +16,20 @@
 <%= simple_form_for @user_submission, url: '/process/complete', method: :post, html: { id: 'complete-step' } do |f| %>
     <div class="content container">
       <div class="row">
+        <div class="col-sm-8 col-sm-offset-2 text-center">
+          <h2>Confirmation</h2>
+        </div>
+      </div>
+      <div class="row">
         <div class="col-sm-8 col-sm-offset-2">
           <h3>Selected Products</h3>
           <div class="row benefits">
             <% @products.each do |product| %>
-                <div class="col-sm-6 selection-1-select">
-                  <h4><i class="fa fa-check" aria-hidden="true"></i> <%= product.name %></h4>
+                <div class="col-sm-6">
+                  <div class="product-confirm-wrapper">
+                    <div class="product-tick"><i class="fa fa-check" aria-hidden="true"></i></div>
+                    <div class="product-confirm-name"><%= product.name %></div>
+                  </div>
                 </div>
             <% end %>
           </div>
