@@ -497,6 +497,12 @@ input[type=checkbox]:checked:after {
 }
 
 /* -------------------------------------------------------- CONFIRMATION */
+.confirm-section {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
 .benefits {
   min-height: 140px;
   height: auto;
@@ -537,13 +543,14 @@ input[type=checkbox]:checked:after {
   display: inline-block;
   color: #F3A81D;
   font-size: 18px;
-  width: 5%;
+  width: 7%;
 }
 
 .product-confirm-wrapper .product-confirm-name {
   vertical-align: middle;
   display: inline-block;
   font-size: 21px;
+  font-weight: 300;
   line-height: 1.1;
   width: 80%;
 }
