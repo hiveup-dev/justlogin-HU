@@ -464,6 +464,10 @@ input[type=checkbox]:checked:after {
   margin-top: 4px;
 }
 
+.compare-parent {
+  position: relative;
+}
+
 .compare-tooltip {
   position: absolute;
   top: 40px;
@@ -479,6 +483,7 @@ input[type=checkbox]:checked:after {
 
 .compare-tooltip:before {
   position: absolute;
+  content: '';
   top: 35px;
   left: 50%;
   width: 10px;

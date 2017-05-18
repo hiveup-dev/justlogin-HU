@@ -69,9 +69,11 @@ jQuery(function () {
                 $('.compare-button').attr("disabled", "disabled");
             }
 
-            if ($('.compare-button').attr("disabled", "disabled")) {
-                $('.compare-tooltip').addClass('show');
-            }
+        }
+        if ($('.compare-button').is(':disabled')) {
+            $('.compare-tooltip').addClass('show');
+        } else {
+            $('.compare-tooltip').removeClass('show');
         }
     }
 
