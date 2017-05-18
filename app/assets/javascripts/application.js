@@ -69,6 +69,9 @@ jQuery(function () {
                 $('.compare-button').attr("disabled", "disabled");
             }
 
+            if ($('.compare-button').attr("disabled", "disabled")) {
+                $('.compare-tooltip').addClass('show');
+            }
         }
     }
 

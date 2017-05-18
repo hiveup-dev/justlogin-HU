@@ -464,6 +464,30 @@ input[type=checkbox]:checked:after {
   margin-top: 4px;
 }
 
+.compare-tooltip {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  background-color: #555555;
+  color: #ffffff;
+  border-radius: 3px;
+  font-size: 12px;
+  text-align: center;
+  line-height: 1.1;
+  padding: 4px;
+}
+
+.compare-tooltip:before {
+  position: absolute;
+  top: 35px;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  transform: rotate(45deg);
+  -ms-transform: rotate(45deg); /* IE 9 */
+  -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+}
+
 /* -------------------------------------------------------- CONFIRMATION */
 .benefits {
   min-height: 140px;
