@@ -12,7 +12,10 @@ set :repo_url, "https://git.heroku.com/justlogin-hiveup2.git"
 
 # Default deploy_to directory is /var/www/my_app_name
 set :deploy_to, "/var/www/justlogin"
-set :scm, :git
+
+set :rvm_type, :user                     # Defaults to: :auto
+set :rvm_ruby_version, '2.3.1'
+
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
 
@@ -43,24 +46,24 @@ set :keep_releases, 5
 
 namespace :deploy do
 
-  # desc 'Restart application'
-  # task :restart do
-  #   on roles(:app), in: :sequence, wait: 5 do
-  #     # Your restart mechanism here, for example:
-  #     # execute :touch, release_path.join('tmp/restart.txt')
-  #     # invoke 'unicorn:reload'
-  #   end
-  # end
-  #
-  # after :restart, :clear_cache do
-  #   on roles(:web), in: :groups, limit: 3, wait: 10 do
-  #     # Here we can do anything such as:
-  #     # within release_path do
-  #     #   execute :rake, 'cache:clear'
-  #     # end
-  #   end
-  # end
+  desc 'Restart application'
+  task :restart do
+    on roles(:app), in: :sequence, wait: 5 do
+      # Your restart mechanism here, for example:
+      # execute :touch, release_path.join('tmp/restart.txt')
+      invoke 'unicorn:reload'
+    end
+  end
 
-  # after 'deploy:publishing', 'deploy:restart'
-  # after :finishing, 'deploy:cleanup'
+  after :restart, :clear_cache do
+    on roles(:web), in: :groups, limit: 3, wait: 10 do
+      # Here we can do anything such as:
+      # within release_path do
+      #   execute :rake, 'cache:clear'
+      # end
+    end
+  end
+
+  after 'deploy:publishing', 'deploy:restart'
+  after :finishing, 'deploy:cleanup'
 end
