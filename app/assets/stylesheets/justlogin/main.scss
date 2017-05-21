@@ -8,7 +8,7 @@ body {
   margin: 0;
   padding: 0;
   //height: 100%;
-  height: calc(100% - 95px);
+  height: calc(100% - 110px);
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 14px;
   background-color: #faf9f7;
@@ -252,6 +252,7 @@ h4, h5, h6 {
 label.selection {
   font-weight: 400;
   cursor: pointer;
+  width: 100%;
 }
 
 
@@ -286,6 +287,7 @@ input[type=checkbox]:checked:after {
 
 .product-wrapper {
   border: 1px solid #ccc;
+  background-color: #faf9f7;
   padding: 10px;
   position: relative;
   margin-bottom: 30px;
@@ -463,7 +465,45 @@ input[type=checkbox]:checked:after {
   margin-top: 4px;
 }
 
+.compare-parent {
+  position: relative;
+}
+
+.compare-tooltip {
+  display: none;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  background-color: #555555;
+  color: #ffffff;
+  border-radius: 3px;
+  font-size: 12px;
+  text-align: center;
+  line-height: 1.1;
+  padding: 4px;
+}
+
+.compare-tooltip-arrow {
+  display: none;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  top: 35px;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 0 5px 5px;
+  border-bottom-color: #555555;
+}
+
 /* -------------------------------------------------------- CONFIRMATION */
+.confirm-section {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
 .benefits {
   min-height: 140px;
   height: auto;
@@ -491,6 +531,29 @@ input[type=checkbox]:checked:after {
 .confirm-checkbox input[type=checkbox]:after {
   top: -5px;
   left: -5px;
+}
+
+.product-confirm-wrapper {
+  width: 100%;
+  margin-bottom: 10px;
+  height: 45px;
+}
+
+.product-confirm-wrapper .product-tick {
+  vertical-align: middle;
+  display: inline-block;
+  color: #F3A81D;
+  font-size: 18px;
+  width: 7%;
+}
+
+.product-confirm-wrapper .product-confirm-name {
+  vertical-align: middle;
+  display: inline-block;
+  font-size: 21px;
+  font-weight: 300;
+  line-height: 1.1;
+  width: 80%;
 }
 
 section {
@@ -693,6 +756,7 @@ dl.compare-products dd {
 dl.compare-products .product-wrapper {
   margin: 5px;
   background-color: #faf9f7;
+  width: auto;
 }
 
 .comparison-details {
