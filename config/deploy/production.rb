@@ -1,6 +1,7 @@
 set :stage, :production
 set :branch, :master
 set :rails_env, :production
+set :unicorn_rack_env, :production
 
 # Simple Role Syntax
 # ==================
