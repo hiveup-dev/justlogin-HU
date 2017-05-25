@@ -10,7 +10,7 @@
     </div>
     <div class="field">
       <%= f.label :icon_name -%>
-      <%= f.select :icon_name, ['life', 'critical', 'hospital'] %>
+      <%= f.select :icon_name, ['life', 'critical', 'hospital'] %> #Add additional icon names here
     </div>
 
     <div class='field'>
@@ -21,15 +21,15 @@
     <div class='field'>
       <%= render '/refinery/admin/wysiwyg',
                  :f => f,
-                 :fields => [:description, :feature_summary, :feature],
+                 :fields => [:description, :feature], #feature_summary was removed from here 20170524
                  :object => "products/benefit" -%>
     </div>
-
-    <%= render '/refinery/admin/form_actions', :f => f,
+    <%= render '/refinery/admin/form_actions',
+               :f => f,
                :continue_editing => false,
                :delete_title => t('delete', :scope => 'refinery.benefits.admin.benefits.benefit'),
                :delete_confirmation => t('message', :scope => 'refinery.admin.delete', :title => @benefit.name) -%>
-<% end -%>
+    <% end -%>
 
 <% content_for :javascripts do -%>
     <script>

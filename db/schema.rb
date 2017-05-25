@@ -185,6 +185,13 @@ ActiveRecord::Schema.define(version: 20170514124017) do
     t.string   "slug"
   end
 
+  create_table "refinery_products_benefits_user_submissions", force: :cascade do |t|
+    t.integer "benefit_id"
+    t.integer "user_submission_id"
+  end
+
+  add_index "refinery_products_benefits_user_submissions", ["benefit_id", "user_submission_id"], name: "products_benefit_id_user_submission_id", using: :btree
+
   create_table "refinery_products_feature_groups", force: :cascade do |t|
     t.string   "name"
     t.integer  "position"
@@ -201,13 +208,6 @@ ActiveRecord::Schema.define(version: 20170514124017) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-
-  create_table "refinery_products_plans_user_submissions", force: :cascade do |t|
-    t.integer "plan_id"
-    t.integer "user_submission_id"
-  end
-
-  add_index "refinery_products_plans_user_submissions", ["plan_id", "user_submission_id"], name: "products_plan_id_user_submission_id", using: :btree
 
   create_table "refinery_products_product_features", force: :cascade do |t|
     t.string   "name"
@@ -248,7 +248,6 @@ ActiveRecord::Schema.define(version: 20170514124017) do
     t.integer  "position"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.text     "plan_names",      default: [], array: true
   end
 
   create_table "refinery_resource_translations", force: :cascade do |t|

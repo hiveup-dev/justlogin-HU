@@ -5,6 +5,7 @@ module Refinery
 
         crudify :'refinery/products/feature_group',
                 :title_attribute => 'name',
+                :sortable => true,
                 :order => 'name'
 
         private

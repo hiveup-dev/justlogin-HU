@@ -5,6 +5,7 @@ module Refinery
 
         crudify :'refinery/products/benefit',
                 :title_attribute => 'name',
+                :sortable => true,
                 :order => 'name'
 
         private

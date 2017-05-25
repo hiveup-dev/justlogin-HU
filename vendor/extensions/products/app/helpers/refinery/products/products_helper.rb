@@ -23,13 +23,13 @@ module Refinery
           product_with_features[feature['group_name']][feature['feature_name']] ||= {}
           product_with_features[feature['group_name']][feature['feature_name']][feature['id'].to_i] = feature['value']
         end
-        # products.each do |product|
-        #   Refinery::Products::Product.find_by_sql([sql_query, product.id]).each do |feature|
-        #     product_with_features[feature['group_name']] ||= {}
-        #     product_with_features[feature['group_name']][feature['feature_name']] ||= []
-        #     product_with_features[feature['group_name']][feature['feature_name']].push(feature['value'])
-        #   end
-        # end
+         # products.each do |product|
+         #   Refinery::Products::Product.find_by_sql([sql_query, product.id]).each do |feature|
+         #     product_with_features[feature['group_name']] ||= {}
+         #     product_with_features[feature['group_name']][feature['feature_name']] ||= []
+         #     product_with_features[feature['group_name']][feature['feature_name']].push(feature['value'])
+         #   end
+         # end
         product_with_features
       end
     end
