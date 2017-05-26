@@ -124,7 +124,7 @@ h4, h5, h6 {
 }
 
 .selection .umbrella-wrapper:hover {
-  transform: scale(1.1);
+  transform: scale(1.02);
   transition: all 0.2s;
 }
 
@@ -295,7 +295,7 @@ input[type=checkbox]:checked:after {
 }
 
 .product-wrapper:hover {
-  transform: scale(1.1);
+  transform: scale(1.02);
   transition: all 0.2s;
   z-index: 10;
 }
