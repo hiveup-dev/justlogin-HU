@@ -101,7 +101,7 @@ h4 {
 label.selection {
 	font-weight: 400;
 	display: block;
-	margin-bottom: 7px;
+	margin-bottom: 30px;
 }
 
 .confirm-checkbox {
@@ -111,7 +111,40 @@ label.selection {
 }
 
 @media only screen and (min-width: 768px) {
+	.selection {
+    strong {
+      font-size: 14px;
+    }
+    input[type=checkbox] {
+      margin-right: 4px;
+    }
+	}
   .navbar-header {
     width: 100%;
+  }
+  .product-wrapper .product-header {
+    h2 {
+      font-size: 18px;
+    }
+    h3 {
+      font-size: 10px;
+      word-wrap: break-word;
+      width:80%;
+    }
+  }
+}
+
+@media only screen and (min-width: 1183px) {
+  .selection {
+    input[type=checkbox] {
+      margin-right: 14px;
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .products-display .col-xs-6.product {
+    width: 100%;
+    margin-bottom: 30px;
   }
 }
