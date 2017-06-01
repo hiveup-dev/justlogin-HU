@@ -280,7 +280,58 @@ input[type=checkbox]:checked:after {
   border-radius: 2px;
   background: #F3A81D;
 }
-
+/* -------------------------------------------------------- Erik's crap */
+.right-inner-addon i{
+  padding: 10px 12px;
+  margin: auto;
+  pointer-events: none;
+}
+.tg{
+  border-collapse:collapse;
+  border-spacing:0;
+  margin-left: 30px;
+  border-color: #dbdbdb;
+  margin-top: 20px;
+}
+.tg td{
+  font-family: 'Arial', sans-serif;
+  font-size:14px;
+  padding:10px 5px;
+  border-style: none;
+  overflow: hidden;
+  word-break: normal;
+  vertical-align: top;
+}
+.tg th{
+  font-family: 'Arial', sans-serif;
+  font-size:14px;
+  font-weight: normal;
+  padding:10px 5px;
+  border-style: solid;
+  border-width: 1px;
+  overflow: hidden;
+  word-break: normal;
+  border-color: #dbdbdb;
+  vertical-align: top;
+}
+.tg .tg-baqh{
+  text-align: center;
+  vertical-align: top;
+}
+.tg .tg-1{
+  width: 300px;
+}
+.tg .tg-2{
+  width: 150px;
+}
+.tg .tablehead{
+  font-weight: bold;
+  border-style: none;
+  padding: 2px 5px;
+}
+.test-display{
+  margin-top: 140px;
+}
 /* -------------------------------------------------------- PRODUCTS */
 .products-display {
   margin-top: 110px;

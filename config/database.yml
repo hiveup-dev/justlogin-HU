@@ -24,7 +24,7 @@ default: &default
 common: &common
   adapter: postgresql
   username: "erik"
-  password: "secret"
+  password: "password"
 
 development:
   <<: *common #*default
