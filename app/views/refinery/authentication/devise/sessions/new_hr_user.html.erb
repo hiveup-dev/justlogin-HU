@@ -1,7 +1,5 @@
-<% content_for :header, t('.hello_please_sign_in') %>
-
-<%= form_for resource, :as => resource_name,
-                       :url => refinery.authentication_devise_user_session_path do |f| %>
+<%= form_for :authentication_devise_user, as: resource_name,
+ :url => '/login' do |f| %>
   <div class='field session_username clearfix'>
     <%= f.label :login %>
     <%= f.text_field :login, :class => 'larger widest' %>
