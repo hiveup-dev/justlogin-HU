@@ -11,11 +11,14 @@ Rails.application.routes.draw do
     get "/#{page}" => "home##{page}"
   end
 
+  devise_scope :authentication_devise_user do
+    get '/login', to:  'refinery/authentication/devise/sessions#new_hr_user', as: :login
+  end
+
   post '/process/:action', controller: :processing
 
   root 'refinery/products/benefits#index'
   mount Refinery::Core::Engine, at: Refinery::Core.mounted_path
-
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
