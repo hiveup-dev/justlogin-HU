@@ -72,6 +72,7 @@ group :development do
   gem 'spring'
   gem 'spring-commands-rspec'
   gem 'web-console', '~> 2.0'
+  gem 'letter_opener'
 end
 
 gem 'refinerycms-wymeditor', ['~> 1.0', '>= 1.0.7']
