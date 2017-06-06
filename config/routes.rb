@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   end
 
   post '/process/:action', controller: :processing
-
+  get '/main' => 'home#main'
   root 'refinery/products/benefits#index'
   mount Refinery::Core::Engine, at: Refinery::Core.mounted_path
 
