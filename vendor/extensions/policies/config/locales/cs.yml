@@ -1,0 +1,125 @@
+cs:
+  refinery:
+    plugins:
+      employees:
+        title: Employees
+      policy_features_policies:
+        title: Policy Features Policies
+      policy_features:
+        title: Policy Features
+      policy_feature_groups:
+        title: Policy Feature Groups
+      policies:
+        title: Policies
+    policies:
+      admin:
+        employees:
+          actions:
+            create_new: Přidat Employee
+            reorder: Řadit Employees
+            reorder_done: Konec řazení Employees
+          records:
+            title: Employees
+            sorry_no_results: Litujeme, ale nebyly nalezny žádné výsledky.
+            no_items_yet: Zatím nebyly vytvořeny žádné Employees. Zvolte "Přidat Employee"
+              pro přidání prvního employee.
+          employee:
+            view_live_html: Zobrazit náhled employee<br/><em>(otevře se v novém okně)</em>
+            edit: Upravit employee
+            delete: Smazat employee
+        policy_features_policies:
+          actions:
+            create_new: Přidat Policy Features Policy
+            reorder: Řadit Policy Features Policies
+            reorder_done: Konec řazení Policy Features Policies
+          records:
+            title: Policy Features Policies
+            sorry_no_results: Litujeme, ale nebyly nalezny žádné výsledky.
+            no_items_yet: Zatím nebyly vytvořeny žádné Policy Features Policies. Zvolte
+              "Přidat Policy Features Policy" pro přidání prvního policy features
+              policy.
+          policy_features_policy:
+            view_live_html: Zobrazit náhled policy features policy<br/><em>(otevře
+              se v novém okně)</em>
+            edit: Upravit policy features policy
+            delete: Smazat policy features policy
+        policy_features:
+          actions:
+            create_new: Přidat Policy Feature
+            reorder: Řadit Policy Features
+            reorder_done: Konec řazení Policy Features
+          records:
+            title: Policy Features
+            sorry_no_results: Litujeme, ale nebyly nalezny žádné výsledky.
+            no_items_yet: Zatím nebyly vytvořeny žádné Policy Features. Zvolte "Přidat
+              Policy Feature" pro přidání prvního policy feature.
+          policy_feature:
+            view_live_html: Zobrazit náhled policy feature<br/><em>(otevře se v novém
+              okně)</em>
+            edit: Upravit policy feature
+            delete: Smazat policy feature
+        policy_feature_groups:
+          actions:
+            create_new: Přidat Policy Feature Group
+            reorder: Řadit Policy Feature Groups
+            reorder_done: Konec řazení Policy Feature Groups
+          records:
+            title: Policy Feature Groups
+            sorry_no_results: Litujeme, ale nebyly nalezny žádné výsledky.
+            no_items_yet: Zatím nebyly vytvořeny žádné Policy Feature Groups. Zvolte
+              "Přidat Policy Feature Group" pro přidání prvního policy feature group.
+          policy_feature_group:
+            view_live_html: Zobrazit náhled policy feature group<br/><em>(otevře se
+              v novém okně)</em>
+            edit: Upravit policy feature group
+            delete: Smazat policy feature group
+        policies:
+          actions:
+            create_new: Přidat Policy
+            reorder: Řadit Policies
+            reorder_done: Konec řazení Policies
+          records:
+            title: Policies
+            sorry_no_results: Litujeme, ale nebyly nalezny žádné výsledky.
+            no_items_yet: Zatím nebyly vytvořeny žádné Policies. Zvolte "Přidat Policy"
+              pro přidání prvního policy.
+          policy:
+            view_live_html: Zobrazit náhled policy<br/><em>(otevře se v novém okně)</em>
+            edit: Upravit policy
+            delete: Smazat policy
+      employees:
+        show:
+          other: Další Employees
+      policy_features_policies:
+        show:
+          other: Další Policy Features Policies
+      policy_features:
+        show:
+          other: Další Policy Features
+      policy_feature_groups:
+        show:
+          other: Další Policy Feature Groups
+      policies:
+        show:
+          other: Další Policies
+  activerecord:
+    attributes:
+      refinery/policies/employee:
+        name: Name
+        user_id: User
+      refinery/policies/policy_features_policy:
+        policy_feature_id: Policy Feature
+        policy_id: Policy
+        value: Value
+        is_in_summary: Is In Summary
+      refinery/policies/policy_feature:
+        name: Name
+        policy_feature_group_id: Policy Feature Group
+      refinery/policies/policy_feature_group:
+        name: Name
+      refinery/policies/policy:
+        name: Name
+        logo_id: Logo
+        insurer: Insurer
+        premium: Premium
+        benefit_id: Benefit
