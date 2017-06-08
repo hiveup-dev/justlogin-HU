@@ -8,8 +8,18 @@ module Refinery
                 :sortable => true,
                 :order => 'name'
 
-        private
+        def populate_employee_list
+          if params[:user_id].present?
+            @employees = Refinery::Authentication::Devise::User.find(params[:user_id]).employees
+          else
+            @employees = Refinery::Policies::Employee.all
+          end
+          respond_to do |format|
+            format.json { render json: @employees }
+          end
+        end
 
+        private
         # Only allow a trusted parameter "white list" through.
         def policy_params
           params.require(:policy).permit(:name, :logo_id, :insurer, :premium, :benefit_id, :employee_id, :user_id, :position,

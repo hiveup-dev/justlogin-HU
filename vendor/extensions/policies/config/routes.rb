@@ -1,5 +1,6 @@
 Refinery::Core::Engine.routes.draw do
 
+  get 'populate_employees' => 'policies/admin/policies#populate_employee_list'
   # Frontend routes
   namespace :policies do
     resources :policies, :path => '', :only => [:index, :show]
