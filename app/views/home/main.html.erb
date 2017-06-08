@@ -10,8 +10,13 @@
         <li>
           <button class="btn btn-primary">Home</button>
         </li>
-        <li>
-          <button class="btn btn-primary">Settings</button>
+        <li class="dropdown">
+          <button id="dropbtn" onclick="dropdown()" class="btn btn-primary" style="width: 75px;">Settings</button>
+          <div id="myDropdown" class="dropdown-content">
+            <a id="11" href="/complete" target="_blank">Profile</a>
+            <a id="12" href="/complete" target="_blank">Settings</a>
+            <a id="13" href="/complete" target="_blank">Logout</a>
+          </div>
         </li>
         <li>
           <button class="btn btn-primary">FAQ</button>
@@ -23,51 +28,40 @@
 </div>
 
   <div id="product-listing">
-    <div class="container test-display">
-      <div class="row text-center">
-        <form class="right-inner-addon">
-          <i class="icon-search"></i>
-            <input type="search" style="width: 350px; margin-left: 30px;" class="form-control" placeholder="Search"/>
+    <div style="margin-top:120px ;">
+      <div>
+        <form method="get" name="search" action="main">
+          <input type="search" id="search" name="search" style="width: 350px; margin-left: 30px;" class="" placeholder="Search Employee Name"/>
+          <button>Submit</button>
         </form>
+        <% if @products.length != 0%>
+          <table class="tg">
+            <tr>
+              <th class="tg-1 tablehead">Name</th>
+              <th class="tg-1 tablehead">Product</th>
+              <th class="tg-2 tablehead">End Date</th>
+            </tr>
 
-        <table class="tg">
-          <tr>
-            <th class="tg-1 tablehead">Name</th>
-            <th class="tg-1 tablehead">Product</th>
-            <th class="tg-2 tablehead">End Date</th>
-          </tr>
-          <tr>
-            <th class="tg-1"><a href="/complete">Kalle Karlsson</a></th> <!-- link to product details -->
-            <th class="tg-1">Prudential Enhanced</th>
-            <th class="tg-2">30/06/2017</th>
-          </tr>
+            <% @products.each do |product| %>
+              <%= render partial: 'tablerow', locals: { product: product } %>
+            <% end %>
 
-        </table>
-        <%= form_tag('/process/step2', method: :post, id: 'step2') do %>
-            <div id="product-listing">
-              <div class="container products-display">
-                <div class="row">
-                  <div class="col-sm-12">
-
-                    <div class="">
-
-                      <% @products.in_groups_of(4, false) do |group_of_products| %>
-                          <div class="row">
-                            <% group_of_products.each do |product| %>
-                                <div class="col-sm-3 col-xs-6 product">
-                                  <%= render partial: 'product', locals: { product: product } %>
-                                </div>
-                            <% end %>
-                          </div>
-                      <% end %>
-                      <div class="clearfix"></div>
-                    </div>
-
-                  </div>
-                </div>
-              </div>
-            </div>
+          </table>
+        <% else %>
+          <table class="tg">
+            <tr><th class="tg-1 tablehead">No such products found...</th></tr>
+          </table>
         <% end %>
+
+        <!-- test obtaining products. HOW DOES IT WORK?! -->
+
       </div>
     </div>
   </div>
+<script>
+  var open = false;
+  function dropdown(){
+      document.getElementById("myDropdown").classList.toggle("show");
+      open = true;
+  }
+</script>
