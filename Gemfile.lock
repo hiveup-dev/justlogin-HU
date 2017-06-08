@@ -1,6 +1,9 @@
 PATH
   remote: vendor/extensions
   specs:
+    refinerycms-policies (1.0)
+      acts_as_indexed (~> 0.8.0)
+      refinerycms-core (~> 3.0.5)
     refinerycms-products (1.0)
       acts_as_indexed (~> 0.8.0)
       friendly_id (~> 5.1.0)
@@ -477,6 +480,7 @@ DEPENDENCIES
   refinerycms (~> 3.0.0)
   refinerycms-acts-as-indexed (~> 3.0.0)
   refinerycms-authentication-devise (~> 1.0.4)
+  refinerycms-policies!
   refinerycms-products!
   refinerycms-settings
   refinerycms-wymeditor (~> 1.0, >= 1.0.7)
