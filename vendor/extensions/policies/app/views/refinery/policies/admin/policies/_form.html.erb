@@ -1,13 +1,11 @@
-<%= simple_nested_form_for [refinery, :policies_admin, @policy] do |f| -%>
+<%= simple_nested_form_for @policy, url: '/admin/policies/create_many' do |f| -%>
   <%= render '/refinery/admin/error_messages',
               :object => @policy,
               :include_object_name => true %>
 
   <%= f.input :name, input_html: { class: 'larger widest' } %>
-
   <%= f.input :user_id, collection: Refinery::Authentication::Devise::User.all, input_html: { class: 'larger widest' } %>
-  <%= f.input :employee_id, collection: Refinery::Policies::Employee.all, input_html: { class: 'larger widest' } %>
-
+  <%= f.input :employee_id, collection: Refinery::Policies::Employee.all, input_html: { class: 'larger widest', multiple: true } %>
   <div class='field'>
     <%= f.label :logo -%>
     <%= render '/refinery/admin/image_picker',
@@ -16,8 +14,7 @@
                :image => @policy.logo,
                :toggle_image_display => false -%>
   </div>
-
-  <%= f.input :benefit_id, collection: Refinery::Products::Benefit.all, input_html: { class: 'larger widest' } %>
+  <%= f.association :benefit, input_html: { class: 'larger widest' }%>
   <%= f.input :insurer, input_html: { class: 'larger widest' } %>
   <%= f.input :premium, input_html: { class: 'larger widest' } %>
 
@@ -51,7 +48,7 @@
 
   <p><%= f.link_to_add "Add a feature field", :policy_feature_policies, :class => "add_feature", "data-target" => "#policy_feature_policies_list" %></p>
 
-
+  <%= f.submit url: '/admin/policies/create_many' %>
   <%= render '/refinery/admin/form_actions', :f => f,
              :continue_editing => false,
              :delete_title => t('delete', :scope => 'refinery.policies.admin.policies.policy'),
