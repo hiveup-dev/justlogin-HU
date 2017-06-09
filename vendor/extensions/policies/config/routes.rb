@@ -17,6 +17,7 @@ Refinery::Core::Engine.routes.draw do
     end
   end
 
+  post '/admin/policies/create_many' => 'policies/admin/policies#create_many'
 
   # Frontend routes
   namespace :policies do
