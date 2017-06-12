@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
 
+  before_action :authenticate_authentication_devise_user!
   def complete
     session.delete(:find_out_more)
     session.delete(:product_ids)
@@ -11,7 +12,7 @@ class HomeController < ApplicationController
   end
 
   def main
-    allproducts = Refinery::Products::Product.all.sort_by {|product| product.updated_at}
+    allproducts = current_authentication_devise_user.policies {|product| product.updated_at}
     substring = params['search']
     @products = Array.new
     if substring != nil
