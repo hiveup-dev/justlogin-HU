@@ -1,3 +1,8 @@
-<p><b>Title: </b> <%= @policy.name %></p>
+<%= link_to image_tag(@policy.logo.thumbnail(geometry: "200x200#c").url),
+                    @policy.logo.thumbnail(geometry: "900x600").url %>
+<h3>Benefit: <%= @policy.benefit.name %> </h3>
+<p><b>Source: </b> <%= @policy.benefit.source %></p>
+<%= @policy.benefit.description.html_safe %>
+<h5>Feature: <%= @policy.benefit.feature.html_safe %> </h5>
 <p><b>Insurer: </b> <%= @policy.insurer %></p>
 <p><b>Premium: </b> <%= @policy.premium %></p>
