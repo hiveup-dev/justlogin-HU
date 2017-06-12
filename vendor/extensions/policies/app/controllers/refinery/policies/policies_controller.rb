@@ -16,7 +16,11 @@ module Refinery
 
         # you can use meta fields from your model instead (e.g. browser_title)
         # by swapping @page for @policy in the line below:
-        present(@page)
+        respond_to do |format|
+          format.html # show.html.erb
+          format.js # show.js.erb
+          format.json { render json: @book}
+        end
       end
 
     protected

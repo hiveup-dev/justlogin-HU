@@ -17,7 +17,7 @@ class HomeController < ApplicationController
     @products = Array.new
     if substring != nil
     allproducts.each do |product|
-      name = product.name.downcase
+      name = product.employee.name.downcase
         if name.include? substring
           @products.push(product)
         end
