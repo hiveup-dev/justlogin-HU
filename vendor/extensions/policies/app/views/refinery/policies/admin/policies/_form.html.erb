@@ -26,6 +26,7 @@
         <div style="flex-direction: row; display: flex;align-items: baseline; justify-content: space-between;">
           <div class="field" style="flex: 2 1 30%; margin-left: 10px;">
             <%=policy_feature_form.input :policy_feature_id, collection: Refinery::Policies::PolicyFeature.order_by_name, label: false%>
+          </div>
           <div class="field" style="flex: 2 1 30%; margin-left: 10px;">
             <%= policy_feature_form.input :value , label: false, input_html: { class: 'medium widest' }%>
           </div>
@@ -49,10 +50,10 @@
   <p><%= f.link_to_add "Add a feature field", :policy_feature_policies, :class => "add_feature", "data-target" => "#policy_feature_policies_list" %></p>
 
   <%= f.submit url: '/admin/policies/create_many' %>
-  <%= render '/refinery/admin/form_actions', :f => f,
+  <!-- <%= render '/refinery/admin/form_actions', :f => f,
              :continue_editing => false,
              :delete_title => t('delete', :scope => 'refinery.policies.admin.policies.policy'),
-             :delete_confirmation => t('message', :scope => 'refinery.admin.delete', :title => @policy.name) -%>
+             :delete_confirmation => t('message', :scope => 'refinery.admin.delete', :title => @policy.name) -%> -->
 <% end -%>
 
 

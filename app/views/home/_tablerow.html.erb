@@ -1,6 +1,6 @@
 <!-- will need to edit to model -->
 <tr>
+  <th class="tg-1"><%= product.employee.name%></th>
   <th class="tg-1"><%= link_to(product.name, '/policies/' + product.id.to_s, remote: true) %></th>
-  <th class="tg-1"><%= product.insurer%></th>
   <th class="tg-2"><%= product.updated_at.strftime("%Y-%m-%d")%></th>
 </tr>
