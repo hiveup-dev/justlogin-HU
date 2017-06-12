@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
   before_action :create_hr_role
   protect_from_forgery with: :exception
 
+  # Redirect HR User to hr user dashboard after signing in otherwise go to refinery dashboard
   def after_sign_in_path_for(resource)
     if resource.has_role?(:hruser)
       '/main'
@@ -12,7 +13,14 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  # Redirect to common login page after logout
+  def after_sign_out_path_for(resource_or_scope)
+    '/login'
+  end
+
   private
+
+  # Create hr role if it doesn't exist
   def create_hr_role
     Refinery::Authentication::Devise::Role.[]('Hruser')
   end
