@@ -1,6 +1,8 @@
 es:
   refinery:
     plugins:
+      attachments:
+        title: Attachments
       policies:
         title: Policies
       employees:
@@ -13,6 +15,21 @@ es:
         title: Policy Feature Groups
     policies:
       admin:
+        attachments:
+          actions:
+            create_new: Crear nuevo attachment
+            reorder: Reordenar attachments
+            reorder_done: Reordenación de attachments completada
+          records:
+            title: Attachments
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay attachments todavía. Pulsa en "Crear nuevo Attachment"
+              para crear tu primer attachment.
+          attachment:
+            view_live_html: Ver este attachment como abierto al público <br/><em>(abre
+              en ventana nueva)</em>
+            edit: Editar este attachment
+            delete: Borrar este attachment para siempre
         policies:
           actions:
             create_new: Crear nuevo policy
@@ -88,6 +105,9 @@ es:
               <br/><em>(abre en ventana nueva)</em>
             edit: Editar este policy feature group
             delete: Borrar este policy feature group para siempre
+      attachments:
+        show:
+          other: Otros attachments
       policies:
         show:
           other: Otros policies
@@ -105,6 +125,9 @@ es:
           other: Otros policy feature groups
   activerecord:
     attributes:
+      refinery/policies/attachment:
+        file: File
+        name: Name
       refinery/policies/policy:
         file: File
         name: Name

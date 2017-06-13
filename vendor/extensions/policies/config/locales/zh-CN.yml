@@ -1,6 +1,8 @@
 zh-CN:
   refinery:
     plugins:
+      attachments:
+        title: Attachments
       policies:
         title: Policies
       employees:
@@ -13,6 +15,19 @@ zh-CN:
         title: Policy Feature Groups
     policies:
       admin:
+        attachments:
+          actions:
+            create_new: 建立新的 Attachment
+            reorder: 对 Attachments 重新排序
+            reorder_done: 对 Attachments 的重新排序结束
+          records:
+            title: Attachments
+            sorry_no_results: 对不起，未找到结果。
+            no_items_yet: 目前没有 Attachments . 点击 "Add New Attachment" 创建一个attachment.
+          attachment:
+            view_live_html: 查看 attachment 的最新内容.<br/><em>(新窗口中打开)</em>
+            edit: 编辑 attachment
+            delete: 永久删除 attachment
         policies:
           actions:
             create_new: 建立新的 Policy
@@ -81,6 +96,9 @@ zh-CN:
             view_live_html: 查看 policy feature group 的最新内容.<br/><em>(新窗口中打开)</em>
             edit: 编辑 policy feature group
             delete: 永久删除 policy feature group
+      attachments:
+        show:
+          other: 其他 Attachments
       policies:
         show:
           other: 其他 Policies
@@ -98,6 +116,9 @@ zh-CN:
           other: 其他 Policy Feature Groups
   activerecord:
     attributes:
+      refinery/policies/attachment:
+        file: File
+        name: Name
       refinery/policies/policy:
         file: File
         name: Name
