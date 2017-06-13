@@ -1,6 +1,8 @@
 nb:
   refinery:
     plugins:
+      policies:
+        title: Policies
       employees:
         title: Employees
       policy_features_policies:
@@ -9,10 +11,23 @@ nb:
         title: Policy Features
       policy_feature_groups:
         title: Policy Feature Groups
-      policies:
-        title: Policies
     policies:
       admin:
+        policies:
+          actions:
+            create_new: Lag en ny Policy
+            reorder: Endre rekkefølgen på Policies
+            reorder_done: Ferdig å endre rekkefølgen Policies
+          records:
+            title: Policies
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Policies enda. Klikk på "Lag en ny Policy"
+              for å legge til din første policy.
+          policy:
+            view_live_html: Vis hvordan denne policy ser ut offentlig <br/><em>(åpner
+              i et nytt vindu)</em>
+            edit: Rediger denne policy
+            delete: Fjern denne policy permanent
         employees:
           actions:
             create_new: Lag en ny Employee
@@ -74,21 +89,9 @@ nb:
               <br/><em>(åpner i et nytt vindu)</em>
             edit: Rediger denne policy feature group
             delete: Fjern denne policy feature group permanent
-        policies:
-          actions:
-            create_new: Lag en ny Policy
-            reorder: Endre rekkefølgen på Policies
-            reorder_done: Ferdig å endre rekkefølgen Policies
-          records:
-            title: Policies
-            sorry_no_results: Beklager! Vi fant ikke noen resultater.
-            no_items_yet: Det er ingen Policies enda. Klikk på "Lag en ny Policy"
-              for å legge til din første policy.
-          policy:
-            view_live_html: Vis hvordan denne policy ser ut offentlig <br/><em>(åpner
-              i et nytt vindu)</em>
-            edit: Rediger denne policy
-            delete: Fjern denne policy permanent
+      policies:
+        show:
+          other: Andre Policies
       employees:
         show:
           other: Andre Employees
@@ -101,11 +104,15 @@ nb:
       policy_feature_groups:
         show:
           other: Andre Policy Feature Groups
-      policies:
-        show:
-          other: Andre Policies
   activerecord:
     attributes:
+      refinery/policies/policy:
+        file: File
+        name: Name
+        logo_id: Logo
+        insurer: Insurer
+        premium: Premium
+        benefit_id: Benefit
       refinery/policies/employee:
         name: Name
         user_id: User
@@ -119,9 +126,3 @@ nb:
         policy_feature_group_id: Policy Feature Group
       refinery/policies/policy_feature_group:
         name: Name
-      refinery/policies/policy:
-        name: Name
-        logo_id: Logo
-        insurer: Insurer
-        premium: Premium
-        benefit_id: Benefit

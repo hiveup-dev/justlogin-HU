@@ -1,6 +1,8 @@
 fr:
   refinery:
     plugins:
+      policies:
+        title: Policies
       employees:
         title: Employees
       policy_features_policies:
@@ -9,10 +11,22 @@ fr:
         title: Policy Features
       policy_feature_groups:
         title: Policy Feature Groups
-      policies:
-        title: Policies
     policies:
       admin:
+        policies:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Policy
+            reorder: Réordonner les Policies
+            reorder_done: Fin de réordonnancement des Policies
+          records:
+            title: Policies
+            sorry_no_results: Désolé ! Aucun résultat.
+            no_items_yet: Il n'y a actuellement aucun(e) Policy. Cliquer sur "Créer
+              un(e) nouve(au/l/lle) Policy" pour créer votre premi(er/ère) policy.
+          policy:
+            view_live_html: Voir ce(t/tte) policy <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) policy
+            delete: Supprimer définitivement ce(t/tte) policy
         employees:
           actions:
             create_new: Créer un(e) nouve(au/l/lle) Employee
@@ -75,20 +89,9 @@ fr:
               nouvelle fenêtre)</em>
             edit: Modifier ce(t/tte) policy feature group
             delete: Supprimer définitivement ce(t/tte) policy feature group
-        policies:
-          actions:
-            create_new: Créer un(e) nouve(au/l/lle) Policy
-            reorder: Réordonner les Policies
-            reorder_done: Fin de réordonnancement des Policies
-          records:
-            title: Policies
-            sorry_no_results: Désolé ! Aucun résultat.
-            no_items_yet: Il n'y a actuellement aucun(e) Policy. Cliquer sur "Créer
-              un(e) nouve(au/l/lle) Policy" pour créer votre premi(er/ère) policy.
-          policy:
-            view_live_html: Voir ce(t/tte) policy <br/><em>(Ouvre une nouvelle fenêtre)</em>
-            edit: Modifier ce(t/tte) policy
-            delete: Supprimer définitivement ce(t/tte) policy
+      policies:
+        show:
+          other: Autres Policies
       employees:
         show:
           other: Autres Employees
@@ -101,11 +104,15 @@ fr:
       policy_feature_groups:
         show:
           other: Autres Policy Feature Groups
-      policies:
-        show:
-          other: Autres Policies
   activerecord:
     attributes:
+      refinery/policies/policy:
+        file: File
+        name: Name
+        logo_id: Logo
+        insurer: Insurer
+        premium: Premium
+        benefit_id: Benefit
       refinery/policies/employee:
         name: Name
         user_id: User
@@ -119,9 +126,3 @@ fr:
         policy_feature_group_id: Policy Feature Group
       refinery/policies/policy_feature_group:
         name: Name
-      refinery/policies/policy:
-        name: Name
-        logo_id: Logo
-        insurer: Insurer
-        premium: Premium
-        benefit_id: Benefit

@@ -28,6 +28,7 @@ module Refinery
       validates :name, :insurer, :presence => true
 
       belongs_to :logo, :class_name => '::Refinery::Image'
+      belongs_to :file, :class_name => '::Refinery::Resource'
       belongs_to :benefit, class_name: 'Refinery::Products::Benefit', foreign_key: 'benefit_id', inverse_of: :policies
 
       acts_as_indexed :fields => [ :name ]

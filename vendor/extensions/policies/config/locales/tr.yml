@@ -1,6 +1,8 @@
 tr:
   refinery:
     plugins:
+      policies:
+        title: Policies
       employees:
         title: Employees
       policy_features_policies:
@@ -9,10 +11,23 @@ tr:
         title: Policy Features
       policy_feature_groups:
         title: Policy Feature Groups
-      policies:
-        title: Policies
     policies:
       admin:
+        policies:
+          actions:
+            create_new: Yeni Ekle Policy
+            reorder: Tekrar sirala Policies
+            reorder_done: Tekrar siralama tamamlandiPolicies
+          records:
+            title: Policies
+            sorry_no_results: Uzgunum! Herhangi bir sonuc bulunamadi.
+            no_items_yet: Herhangi bir Policies yok henuz.  Tikla "Yeni Ekle Policy"
+              eklemek senin ilk policy.
+          policy:
+            view_live_html: Bunu canlu policy goruntule <br/><em>(yeni bir pencerede
+              acar)</em>
+            edit: Bunu Duzenle policy
+            delete: Bunu Sil policy sonsuza dek
         employees:
           actions:
             create_new: Yeni Ekle Employee
@@ -74,21 +89,9 @@ tr:
               bir pencerede acar)</em>
             edit: Bunu Duzenle policy feature group
             delete: Bunu Sil policy feature group sonsuza dek
-        policies:
-          actions:
-            create_new: Yeni Ekle Policy
-            reorder: Tekrar sirala Policies
-            reorder_done: Tekrar siralama tamamlandiPolicies
-          records:
-            title: Policies
-            sorry_no_results: Uzgunum! Herhangi bir sonuc bulunamadi.
-            no_items_yet: Herhangi bir Policies yok henuz.  Tikla "Yeni Ekle Policy"
-              eklemek senin ilk policy.
-          policy:
-            view_live_html: Bunu canlu policy goruntule <br/><em>(yeni bir pencerede
-              acar)</em>
-            edit: Bunu Duzenle policy
-            delete: Bunu Sil policy sonsuza dek
+      policies:
+        show:
+          other: Diger Policies
       employees:
         show:
           other: Diger Employees
@@ -101,11 +104,15 @@ tr:
       policy_feature_groups:
         show:
           other: Diger Policy Feature Groups
-      policies:
-        show:
-          other: Diger Policies
   activerecord:
     attributes:
+      refinery/policies/policy:
+        file: File
+        name: Name
+        logo_id: Logo
+        insurer: Insurer
+        premium: Premium
+        benefit_id: Benefit
       refinery/policies/employee:
         name: Name
         user_id: User
@@ -119,9 +126,3 @@ tr:
         policy_feature_group_id: Policy Feature Group
       refinery/policies/policy_feature_group:
         name: Name
-      refinery/policies/policy:
-        name: Name
-        logo_id: Logo
-        insurer: Insurer
-        premium: Premium
-        benefit_id: Benefit
