@@ -1,6 +1,8 @@
 ru:
   refinery:
     plugins:
+      attachments:
+        title: Attachments
       policies:
         title: Policies
       employees:
@@ -13,6 +15,20 @@ ru:
         title: Policy Feature Groups
     policies:
       admin:
+        attachments:
+          actions:
+            create_new: Добавить Attachment
+            reorder: Изменить порядок Attachments
+            reorder_done: Закончить изменять порядок Attachments
+          records:
+            title: Attachments
+            sorry_no_results: Извините, поиск не дал результатов.
+            no_items_yet: Записей "Attachments" не найдено. Нажмите "Добавить Attachment"
+              чтобы создать attachment.
+          attachment:
+            view_live_html: Просмотреть attachment вживую <br/><em>(в новом окне)</em>
+            edit: Редактировать attachment
+            delete: Удалить attachment навсегда
         policies:
           actions:
             create_new: Добавить Policy
@@ -85,6 +101,9 @@ ru:
               окне)</em>
             edit: Редактировать policy feature group
             delete: Удалить policy feature group навсегда
+      attachments:
+        show:
+          other: Другие Attachments
       policies:
         show:
           other: Другие Policies
@@ -102,6 +121,9 @@ ru:
           other: Другие Policy Feature Groups
   activerecord:
     attributes:
+      refinery/policies/attachment:
+        file: File
+        name: Name
       refinery/policies/policy:
         file: File
         name: Name

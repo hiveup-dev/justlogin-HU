@@ -1,6 +1,8 @@
 sk:
   refinery:
     plugins:
+      attachments:
+        title: Attachments
       policies:
         title: Policies
       employees:
@@ -13,6 +15,21 @@ sk:
         title: Policy Feature Groups
     policies:
       admin:
+        attachments:
+          actions:
+            create_new: Pridať Attachment
+            reorder: Preusporiadať Attachments
+            reorder_done: Koniec radenia Attachments
+          records:
+            title: Attachments
+            sorry_no_results: Ľutujeme, ale neboli nájdené žiadne výsledky.
+            no_items_yet: Nie sú vytvorené žiadne Attachments. Kliknite na "Pridať
+              Attachment" pre pridanie prvého attachment.
+          attachment:
+            view_live_html: Zobraziť náhľad attachment<br/><em>(otvorí sa v novom
+              okne)</em>
+            edit: Upraviť attachment
+            delete: Zmazať attachment
         policies:
           actions:
             create_new: Pridať Policy
@@ -88,6 +105,9 @@ sk:
               v novom okne)</em>
             edit: Upraviť policy feature group
             delete: Zmazať policy feature group
+      attachments:
+        show:
+          other: Daľšie Attachments
       policies:
         show:
           other: Daľšie Policies
@@ -105,6 +125,9 @@ sk:
           other: Daľšie Policy Feature Groups
   activerecord:
     attributes:
+      refinery/policies/attachment:
+        file: File
+        name: Name
       refinery/policies/policy:
         file: File
         name: Name

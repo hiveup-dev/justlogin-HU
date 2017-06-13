@@ -18,12 +18,17 @@ module Refinery
 
 
       belongs_to :employee, :foreign_key => 'employee_id'
+
+      has_and_belongs_to_many :attachments, class_name: 'Refinery::Policies::Attachment', join_table: 'attachments_policies',
+                              association_foreign_key: 'refinery_policy_attachment_id', foreign_key: 'refinery_policy_id'
+
       belongs_to :refinery_user, class_name: 'Refinery::Authentication::Devise::User', :foreign_key => 'user_id'
 
       has_many :policy_features, through: :policy_feature_policies
       has_many :summary_features, through: :policy_summary_feature_policies
 
       accepts_nested_attributes_for :policy_feature_policies, :allow_destroy => true
+      accepts_nested_attributes_for :attachments
 
       validates :name, :insurer, :presence => true
 

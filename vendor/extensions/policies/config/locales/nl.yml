@@ -1,6 +1,8 @@
 nl:
   refinery:
     plugins:
+      attachments:
+        title: Attachments
       policies:
         title: Policies
       employees:
@@ -13,6 +15,21 @@ nl:
         title: Policy Feature Groups
     policies:
       admin:
+        attachments:
+          actions:
+            create_new: Nieuwe Attachment toevoegen
+            reorder: De volgorde van de Attachments wijzigen
+            reorder_done: Klaar met het wijzingen van de van de Attachment-volgorde
+          records:
+            title: Attachments
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Attachments. Druk op 'Nieuwe Attachment
+              toevoegen' om de eerste toe te voegen.
+          attachment:
+            view_live_html: Deze attachment op de website bekijken <br/><em>(opent
+              in een nieuw venster)</em>
+            edit: Bewerk deze attachment
+            delete: Deze attachment definitief verwijderen
         policies:
           actions:
             create_new: Nieuwe Policy toevoegen
@@ -88,6 +105,9 @@ nl:
               in een nieuw venster)</em>
             edit: Bewerk deze policy feature group
             delete: Deze policy feature group definitief verwijderen
+      attachments:
+        show:
+          other: Andere Attachments
       policies:
         show:
           other: Andere Policies
@@ -105,6 +125,9 @@ nl:
           other: Andere Policy Feature Groups
   activerecord:
     attributes:
+      refinery/policies/attachment:
+        file: File
+        name: Name
       refinery/policies/policy:
         file: File
         name: Name

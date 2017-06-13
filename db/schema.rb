@@ -11,10 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170613042231) do
+ActiveRecord::Schema.define(version: 20170613062703) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "attachments_policies", force: :cascade do |t|
+    t.integer "refinery_policy_id"
+    t.integer "refinery_policy_attachment_id"
+  end
+
+  add_index "attachments_policies", ["refinery_policy_id", "refinery_policy_attachment_id"], name: "attachments_policies_index", using: :btree
 
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string   "slug",                      null: false
@@ -175,6 +182,14 @@ ActiveRecord::Schema.define(version: 20170613042231) do
   end
 
   add_index "refinery_policies", ["benefit_id"], name: "index_refinery_policies_on_benefit_id", using: :btree
+
+  create_table "refinery_policies_attachments", force: :cascade do |t|
+    t.integer  "file_id"
+    t.string   "name"
+    t.integer  "position"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "refinery_policies_employees", force: :cascade do |t|
     t.string   "name"

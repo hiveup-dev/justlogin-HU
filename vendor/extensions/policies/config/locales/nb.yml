@@ -1,6 +1,8 @@
 nb:
   refinery:
     plugins:
+      attachments:
+        title: Attachments
       policies:
         title: Policies
       employees:
@@ -13,6 +15,21 @@ nb:
         title: Policy Feature Groups
     policies:
       admin:
+        attachments:
+          actions:
+            create_new: Lag en ny Attachment
+            reorder: Endre rekkefølgen på Attachments
+            reorder_done: Ferdig å endre rekkefølgen Attachments
+          records:
+            title: Attachments
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Attachments enda. Klikk på "Lag en ny Attachment"
+              for å legge til din første attachment.
+          attachment:
+            view_live_html: Vis hvordan denne attachment ser ut offentlig <br/><em>(åpner
+              i et nytt vindu)</em>
+            edit: Rediger denne attachment
+            delete: Fjern denne attachment permanent
         policies:
           actions:
             create_new: Lag en ny Policy
@@ -89,6 +106,9 @@ nb:
               <br/><em>(åpner i et nytt vindu)</em>
             edit: Rediger denne policy feature group
             delete: Fjern denne policy feature group permanent
+      attachments:
+        show:
+          other: Andre Attachments
       policies:
         show:
           other: Andre Policies
@@ -106,6 +126,9 @@ nb:
           other: Andre Policy Feature Groups
   activerecord:
     attributes:
+      refinery/policies/attachment:
+        file: File
+        name: Name
       refinery/policies/policy:
         file: File
         name: Name

@@ -1,6 +1,8 @@
 tr:
   refinery:
     plugins:
+      attachments:
+        title: Attachments
       policies:
         title: Policies
       employees:
@@ -13,6 +15,21 @@ tr:
         title: Policy Feature Groups
     policies:
       admin:
+        attachments:
+          actions:
+            create_new: Yeni Ekle Attachment
+            reorder: Tekrar sirala Attachments
+            reorder_done: Tekrar siralama tamamlandiAttachments
+          records:
+            title: Attachments
+            sorry_no_results: Uzgunum! Herhangi bir sonuc bulunamadi.
+            no_items_yet: Herhangi bir Attachments yok henuz.  Tikla "Yeni Ekle Attachment"
+              eklemek senin ilk attachment.
+          attachment:
+            view_live_html: Bunu canlu attachment goruntule <br/><em>(yeni bir pencerede
+              acar)</em>
+            edit: Bunu Duzenle attachment
+            delete: Bunu Sil attachment sonsuza dek
         policies:
           actions:
             create_new: Yeni Ekle Policy
@@ -89,6 +106,9 @@ tr:
               bir pencerede acar)</em>
             edit: Bunu Duzenle policy feature group
             delete: Bunu Sil policy feature group sonsuza dek
+      attachments:
+        show:
+          other: Diger Attachments
       policies:
         show:
           other: Diger Policies
@@ -106,6 +126,9 @@ tr:
           other: Diger Policy Feature Groups
   activerecord:
     attributes:
+      refinery/policies/attachment:
+        file: File
+        name: Name
       refinery/policies/policy:
         file: File
         name: Name
