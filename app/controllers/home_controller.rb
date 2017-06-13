@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
 
-  before_action :authenticate_authentication_devise_user!, only: :main
+  before_action :authenticate_authentication_devise_user!
   def complete
     session.delete(:find_out_more)
     session.delete(:product_ids)
