@@ -23,7 +23,8 @@
   margin: 0;
   overflow: hidden;
   white-space: nowrap;
-  text-overflow: ellipsis;    
+  text-overflow: ellipsis;   
+  text-transform: capitalize; 
 }
 
 .dashboard-nav {
@@ -169,14 +170,15 @@
   text-align: left;
   margin-top: 50px;
   table-layout: fixed;
+  font-family: 'Fira Sans', Helvetical, Arial, sans-serif;
 }
 
 .table thead tr th {
   font-family: Avenir;
   text-transform: capitalize;
-  color: #F38820;
-  border-bottom: 2px solid #F38820;
   padding: 18px;
+  background-color: rgba(0,0,0,0.06);
+  font-family: 'Fira Sans', Helvetical, Arial, sans-serif;  
 }
 
 .table tbody {
