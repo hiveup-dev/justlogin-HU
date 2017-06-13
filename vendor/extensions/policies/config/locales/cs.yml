@@ -1,6 +1,8 @@
 cs:
   refinery:
     plugins:
+      policies:
+        title: Policies
       employees:
         title: Employees
       policy_features_policies:
@@ -9,10 +11,22 @@ cs:
         title: Policy Features
       policy_feature_groups:
         title: Policy Feature Groups
-      policies:
-        title: Policies
     policies:
       admin:
+        policies:
+          actions:
+            create_new: Přidat Policy
+            reorder: Řadit Policies
+            reorder_done: Konec řazení Policies
+          records:
+            title: Policies
+            sorry_no_results: Litujeme, ale nebyly nalezny žádné výsledky.
+            no_items_yet: Zatím nebyly vytvořeny žádné Policies. Zvolte "Přidat Policy"
+              pro přidání prvního policy.
+          policy:
+            view_live_html: Zobrazit náhled policy<br/><em>(otevře se v novém okně)</em>
+            edit: Upravit policy
+            delete: Smazat policy
         employees:
           actions:
             create_new: Přidat Employee
@@ -73,20 +87,9 @@ cs:
               v novém okně)</em>
             edit: Upravit policy feature group
             delete: Smazat policy feature group
-        policies:
-          actions:
-            create_new: Přidat Policy
-            reorder: Řadit Policies
-            reorder_done: Konec řazení Policies
-          records:
-            title: Policies
-            sorry_no_results: Litujeme, ale nebyly nalezny žádné výsledky.
-            no_items_yet: Zatím nebyly vytvořeny žádné Policies. Zvolte "Přidat Policy"
-              pro přidání prvního policy.
-          policy:
-            view_live_html: Zobrazit náhled policy<br/><em>(otevře se v novém okně)</em>
-            edit: Upravit policy
-            delete: Smazat policy
+      policies:
+        show:
+          other: Další Policies
       employees:
         show:
           other: Další Employees
@@ -99,11 +102,15 @@ cs:
       policy_feature_groups:
         show:
           other: Další Policy Feature Groups
-      policies:
-        show:
-          other: Další Policies
   activerecord:
     attributes:
+      refinery/policies/policy:
+        file: File
+        name: Name
+        logo_id: Logo
+        insurer: Insurer
+        premium: Premium
+        benefit_id: Benefit
       refinery/policies/employee:
         name: Name
         user_id: User
@@ -117,9 +124,3 @@ cs:
         policy_feature_group_id: Policy Feature Group
       refinery/policies/policy_feature_group:
         name: Name
-      refinery/policies/policy:
-        name: Name
-        logo_id: Logo
-        insurer: Insurer
-        premium: Premium
-        benefit_id: Benefit

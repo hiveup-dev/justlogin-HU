@@ -1,6 +1,8 @@
 es:
   refinery:
     plugins:
+      policies:
+        title: Policies
       employees:
         title: Employees
       policy_features_policies:
@@ -9,10 +11,23 @@ es:
         title: Policy Features
       policy_feature_groups:
         title: Policy Feature Groups
-      policies:
-        title: Policies
     policies:
       admin:
+        policies:
+          actions:
+            create_new: Crear nuevo policy
+            reorder: Reordenar policies
+            reorder_done: Reordenación de policies completada
+          records:
+            title: Policies
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay policies todavía. Pulsa en "Crear nuevo Policy" para
+              crear tu primer policy.
+          policy:
+            view_live_html: Ver este policy como abierto al público <br/><em>(abre
+              en ventana nueva)</em>
+            edit: Editar este policy
+            delete: Borrar este policy para siempre
         employees:
           actions:
             create_new: Crear nuevo employee
@@ -73,21 +88,9 @@ es:
               <br/><em>(abre en ventana nueva)</em>
             edit: Editar este policy feature group
             delete: Borrar este policy feature group para siempre
-        policies:
-          actions:
-            create_new: Crear nuevo policy
-            reorder: Reordenar policies
-            reorder_done: Reordenación de policies completada
-          records:
-            title: Policies
-            sorry_no_results: Lo siento, no hay resultados
-            no_items_yet: No hay policies todavía. Pulsa en "Crear nuevo Policy" para
-              crear tu primer policy.
-          policy:
-            view_live_html: Ver este policy como abierto al público <br/><em>(abre
-              en ventana nueva)</em>
-            edit: Editar este policy
-            delete: Borrar este policy para siempre
+      policies:
+        show:
+          other: Otros policies
       employees:
         show:
           other: Otros employees
@@ -100,11 +103,15 @@ es:
       policy_feature_groups:
         show:
           other: Otros policy feature groups
-      policies:
-        show:
-          other: Otros policies
   activerecord:
     attributes:
+      refinery/policies/policy:
+        file: File
+        name: Name
+        logo_id: Logo
+        insurer: Insurer
+        premium: Premium
+        benefit_id: Benefit
       refinery/policies/employee:
         name: Name
         user_id: User
@@ -118,9 +125,3 @@ es:
         policy_feature_group_id: Policy Feature Group
       refinery/policies/policy_feature_group:
         name: Name
-      refinery/policies/policy:
-        name: Name
-        logo_id: Logo
-        insurer: Insurer
-        premium: Premium
-        benefit_id: Benefit

@@ -1,6 +1,8 @@
 zh-CN:
   refinery:
     plugins:
+      policies:
+        title: Policies
       employees:
         title: Employees
       policy_features_policies:
@@ -9,10 +11,21 @@ zh-CN:
         title: Policy Features
       policy_feature_groups:
         title: Policy Feature Groups
-      policies:
-        title: Policies
     policies:
       admin:
+        policies:
+          actions:
+            create_new: 建立新的 Policy
+            reorder: 对 Policies 重新排序
+            reorder_done: 对 Policies 的重新排序结束
+          records:
+            title: Policies
+            sorry_no_results: 对不起，未找到结果。
+            no_items_yet: 目前没有 Policies . 点击 "Add New Policy" 创建一个policy.
+          policy:
+            view_live_html: 查看 policy 的最新内容.<br/><em>(新窗口中打开)</em>
+            edit: 编辑 policy
+            delete: 永久删除 policy
         employees:
           actions:
             create_new: 建立新的 Employee
@@ -68,19 +81,9 @@ zh-CN:
             view_live_html: 查看 policy feature group 的最新内容.<br/><em>(新窗口中打开)</em>
             edit: 编辑 policy feature group
             delete: 永久删除 policy feature group
-        policies:
-          actions:
-            create_new: 建立新的 Policy
-            reorder: 对 Policies 重新排序
-            reorder_done: 对 Policies 的重新排序结束
-          records:
-            title: Policies
-            sorry_no_results: 对不起，未找到结果。
-            no_items_yet: 目前没有 Policies . 点击 "Add New Policy" 创建一个policy.
-          policy:
-            view_live_html: 查看 policy 的最新内容.<br/><em>(新窗口中打开)</em>
-            edit: 编辑 policy
-            delete: 永久删除 policy
+      policies:
+        show:
+          other: 其他 Policies
       employees:
         show:
           other: 其他 Employees
@@ -93,11 +96,15 @@ zh-CN:
       policy_feature_groups:
         show:
           other: 其他 Policy Feature Groups
-      policies:
-        show:
-          other: 其他 Policies
   activerecord:
     attributes:
+      refinery/policies/policy:
+        file: File
+        name: Name
+        logo_id: Logo
+        insurer: Insurer
+        premium: Premium
+        benefit_id: Benefit
       refinery/policies/employee:
         name: Name
         user_id: User
@@ -111,9 +118,3 @@ zh-CN:
         policy_feature_group_id: Policy Feature Group
       refinery/policies/policy_feature_group:
         name: Name
-      refinery/policies/policy:
-        name: Name
-        logo_id: Logo
-        insurer: Insurer
-        premium: Premium
-        benefit_id: Benefit

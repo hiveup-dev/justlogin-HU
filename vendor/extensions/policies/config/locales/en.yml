@@ -1,6 +1,8 @@
 en:
   refinery:
     plugins:
+      policies:
+        title: Policies
       employees:
         title: Employees
       policy_features_policies:
@@ -9,10 +11,22 @@ en:
         title: Policy Features
       policy_feature_groups:
         title: Policy Feature Groups
-      policies:
-        title: Policies
     policies:
       admin:
+        policies:
+          actions:
+            create_new: Add New Policy
+            reorder: Reorder Policies
+            reorder_done: Done Reordering Policies
+          records:
+            title: Policies
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Policies yet. Click "Add New Policy" to add
+              your first policy.
+          policy:
+            view_live_html: View this policy live <br/><em>(opens in a new window)</em>
+            edit: Edit this policy
+            delete: Remove this policy forever
         employees:
           actions:
             create_new: Add New Employee
@@ -72,20 +86,9 @@ en:
               a new window)</em>
             edit: Edit this policy feature group
             delete: Remove this policy feature group forever
-        policies:
-          actions:
-            create_new: Add New Policy
-            reorder: Reorder Policies
-            reorder_done: Done Reordering Policies
-          records:
-            title: Policies
-            sorry_no_results: Sorry! There are no results found.
-            no_items_yet: There are no Policies yet. Click "Add New Policy" to add
-              your first policy.
-          policy:
-            view_live_html: View this policy live <br/><em>(opens in a new window)</em>
-            edit: Edit this policy
-            delete: Remove this policy forever
+      policies:
+        show:
+          other: Other Policies
       employees:
         show:
           other: Other Employees
@@ -98,11 +101,15 @@ en:
       policy_feature_groups:
         show:
           other: Other Policy Feature Groups
-      policies:
-        show:
-          other: Other Policies
   activerecord:
     attributes:
+      refinery/policies/policy:
+        file: File
+        name: Name
+        logo_id: Logo
+        insurer: Insurer
+        premium: Premium
+        benefit_id: Benefit
       refinery/policies/employee:
         name: Name
         user_id: User
@@ -116,9 +123,3 @@ en:
         policy_feature_group_id: Policy Feature Group
       refinery/policies/policy_feature_group:
         name: Name
-      refinery/policies/policy:
-        name: Name
-        logo_id: Logo
-        insurer: Insurer
-        premium: Premium
-        benefit_id: Benefit

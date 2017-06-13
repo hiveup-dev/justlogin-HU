@@ -1,6 +1,8 @@
 ru:
   refinery:
     plugins:
+      policies:
+        title: Policies
       employees:
         title: Employees
       policy_features_policies:
@@ -9,10 +11,22 @@ ru:
         title: Policy Features
       policy_feature_groups:
         title: Policy Feature Groups
-      policies:
-        title: Policies
     policies:
       admin:
+        policies:
+          actions:
+            create_new: Добавить Policy
+            reorder: Изменить порядок Policies
+            reorder_done: Закончить изменять порядок Policies
+          records:
+            title: Policies
+            sorry_no_results: Извините, поиск не дал результатов.
+            no_items_yet: Записей "Policies" не найдено. Нажмите "Добавить Policy"
+              чтобы создать policy.
+          policy:
+            view_live_html: Просмотреть policy вживую <br/><em>(в новом окне)</em>
+            edit: Редактировать policy
+            delete: Удалить policy навсегда
         employees:
           actions:
             create_new: Добавить Employee
@@ -71,20 +85,9 @@ ru:
               окне)</em>
             edit: Редактировать policy feature group
             delete: Удалить policy feature group навсегда
-        policies:
-          actions:
-            create_new: Добавить Policy
-            reorder: Изменить порядок Policies
-            reorder_done: Закончить изменять порядок Policies
-          records:
-            title: Policies
-            sorry_no_results: Извините, поиск не дал результатов.
-            no_items_yet: Записей "Policies" не найдено. Нажмите "Добавить Policy"
-              чтобы создать policy.
-          policy:
-            view_live_html: Просмотреть policy вживую <br/><em>(в новом окне)</em>
-            edit: Редактировать policy
-            delete: Удалить policy навсегда
+      policies:
+        show:
+          other: Другие Policies
       employees:
         show:
           other: Другие Employees
@@ -97,11 +100,15 @@ ru:
       policy_feature_groups:
         show:
           other: Другие Policy Feature Groups
-      policies:
-        show:
-          other: Другие Policies
   activerecord:
     attributes:
+      refinery/policies/policy:
+        file: File
+        name: Name
+        logo_id: Logo
+        insurer: Insurer
+        premium: Premium
+        benefit_id: Benefit
       refinery/policies/employee:
         name: Name
         user_id: User
@@ -115,9 +122,3 @@ ru:
         policy_feature_group_id: Policy Feature Group
       refinery/policies/policy_feature_group:
         name: Name
-      refinery/policies/policy:
-        name: Name
-        logo_id: Logo
-        insurer: Insurer
-        premium: Premium
-        benefit_id: Benefit
