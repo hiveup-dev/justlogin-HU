@@ -3,7 +3,7 @@
     <%= policy.name %>
   </span>
 
-  <span class='preview'></span>
+  <span class='preview' style="position:absolute; left:250px; right:250px;"><%= policy.employee.name %></span>
 
   <span class='actions'>
     <%= action_icon(:preview, refinery.policies_policy_path(policy), t('.view_live_html')) %>
