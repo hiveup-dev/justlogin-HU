@@ -11,63 +11,64 @@
   </div>
 </div>
 
-<div><nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container-fluid">
-    <div class ="navbar-header">
-      <ul class="pull-left navbar-justlogin">
-        <li>
-          <h1 style="margin: 0">Hi, <%= current_authentication_devise_user.username %>!</h1>
-        </li>
-      </ul>
-      <ul class="pull-right navbar-justlogin">
-        <li>
-          <button class="btn btn-primary">Home</button>
-        </li>
-        <li class="dropdown">
-          <button id="dropbtn" onclick="dropdown()" class="btn btn-primary" style="width: 75px;">Settings</button>
-          <div id="myDropdown" class="dropdown-content">
-            <a id="11" href="/complete" target="_blank">Profile</a>
-            <a id="12" href="/complete" target="_blank">Settings</a>
-            <a id="13" href="/admin/logout" target="_blank">Logout</a>
-          </div>
-        </li>
-        <li>
-          <button class="btn btn-primary">FAQ</button>
-        </li>
-      </ul>
+<div class="dashboard-navbar">
+  <div class="dashboard-company">
+    <h1>Hi, <%= current_authentication_devise_user.username %></h1>
+  </div>
+  <div class="dashboard-nav">
+    <a href="http://justlogin.hive-up.com" target="_blank">
+      <div class="home">
+        <i class="material-icons">&#xE88A;</i>
+      </div>
+    </a>
+    <div class="user">
+      <i class="material-icons">&#xE851;</i>
+      <div class="user__dropdown">
+        <ul>
+          <a id="11" href="/complete"><li>Profile</li></a>
+          <a id="12" href="/complete"><li>Settings</li></a>
+          <a id="13" href="/admin/logout"><li>Logout</li></a>
+        </ul>
+      </div>
+    </div>
+    <div class="faq">
+      <a href="">
+        <i class="material-icons">&#xE887;</i>
+      </a>
     </div>
   </div>
-</nav>
 </div>
 
-  <div id="product-listing">
-    <div style="margin-top:120px ;">
-      <div>
+<div class="wrapper" id="product-listing">
+      <div class="dashboard-search">
         <form method="get" name="search" action="main">
-          <input type="search" id="search" name="search" style="width: 350px; margin-left: 30px;" class="" placeholder="Search Employee Name"/>
-          <button>Submit</button>
+          <input type="text" id="search" name="search" placeholder="Enter employee name"/>
+          <button>Search</button>
         </form>
+      </div>
+      <div>
         <% if @products.length != 0%>
-          <table class="tg">
-            <tr>
-              <th class="tg-1 tablehead">Employee Name</th>
-              <th class="tg-1 tablehead">Product</th>
-              <th class="tg-2 tablehead">End Date</th>
-            </tr>
-
+          <table class="dashboard-table table">
+            <thead>
+              <tr class="table__head">
+                <th class="table__item__name">Employee Name</th>
+                <th class="table__item__policy">Policy Name</th>
+                <th class="table__item__expire">Expiry Date</th>
+              </tr>
+            </thead>
+            <tbody>
             <% @products.each do |product| %>
               <%= render partial: 'tablerow', locals: { product: product } %>
             <% end %>
-
+            </tbody>
           </table>
         <% else %>
-          <table class="tg">
-            <tr><th class="tg-1 tablehead">No such products found...</th></tr>
+          <table class="dashboard-table table">
+            <tr><td class="tablehead">No such products found...</td></tr>
           </table>
         <% end %>
       </div>
     </div>
-  </div>
 <script>
   var open = false;
   function dropdown(){

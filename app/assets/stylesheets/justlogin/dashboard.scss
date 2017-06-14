@@ -1,0 +1,220 @@
+.dashboard-navbar {
+  height: 60px;
+  background-color: black;
+  color: white;
+  vertical-align: middle;
+  box-shadow: 0 4px 5px 0 rgba(0,0,0,0.2);
+  width: 330px;
+}
+
+.dashboard-company {
+  height: 100%;
+  float: left;
+  width: 150px;
+  word-wrap: normal;  
+  text-align: left;
+}
+
+.dashboard-company h1 {
+  font-size: 1.5em;
+  font-family: 'Oswald';
+  vertical-align: middle;
+  font-weight: bold;
+  padding: 16px;
+  margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;   
+  text-transform: capitalize; 
+}
+
+.dashboard-nav {
+  float: right;
+  text-align: center;
+  width: 180px;
+  height: 60px;
+}
+
+.dashboard-nav .home,
+.dashboard-nav .user,
+.dashboard-nav .faq {
+  height: 100%;
+  width: 60px;
+  text-align: center;
+  float: left;
+}
+
+.dashboard-nav .home {
+  background-color: #F38820;
+}
+
+.dashboard-nav .user {
+  background-color: #FF9C3B;
+  position: relative;
+  display: inline-block;
+}
+
+.dashboard-nav .user__dropdown {
+  position: absolute;
+  z-index: 999;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  top: 60px;
+  left: -50px;
+  display: none;
+}
+
+.dashboard-nav .user:hover .user__dropdown {
+  display: block;
+}
+
+.dashboard-nav .user__dropdown ul {
+  padding: 0;
+  margin: 0;
+  width: 150px;
+}
+
+.dashboard-nav .user__dropdown ul li {
+  list-style: none;
+  padding: 15px;
+  color: grey;
+}
+
+.dashboard-nav .user__dropdown ul li:hover {
+  background-color: #eeeeee;
+  text-decoration: none;
+}
+
+.dashboard-nav .user__dropdown ul a:hover {
+  text-decoration: none;
+}
+
+.dashboard-nav .faq {
+  background-color: #A65B10;
+}
+
+.dashboard-nav .home .material-icons,
+.dashboard-nav .user .material-icons,
+.dashboard-nav .faq .material-icons {
+  font-size: 25px;
+  vertical-align: middle;
+  padding: 16px 0;
+  text-align: center;
+  color: white;
+}
+
+.dashboard-search {
+  text-align: center;
+  margin-top: 50px;  
+  position: relative;
+  width: 290px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.dashboard-search input {
+  padding: 15px;
+  width: 100%;
+  background-color:rgba(0,0,0,0.06);
+  border: 0;
+  border-radius: 5px;
+}
+
+.dashboard-search button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 0;
+  padding: 15px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  color: white;
+  background-color: black;
+}
+
+.dashboard-search input::placeholder {
+  color: #aaaaaa;
+}
+
+.dashboard-search input:focus {
+  outline: 0;
+}
+
+.dashboard-search .glyphicon{
+  position: absolute;
+  z-index: 999;
+  padding: 19px;
+  color: #aaaaaa;
+}
+
+.wrapper {
+  max-width: 994px;
+  margin: 0 auto;
+}
+
+.table {
+  width: 330px;
+  text-align: left;
+  margin-top: 50px;
+  table-layout: fixed;
+  font-family: 'Fira Sans', Helvetical, Arial, sans-serif;
+}
+
+.table thead tr th {
+  font-family: Avenir;
+  text-transform: capitalize;
+  padding: 18px;
+  background-color: rgba(0,0,0,0.06);
+  font-family: 'Fira Sans', Helvetical, Arial, sans-serif;  
+}
+
+.table tbody {
+  overflow-y: auto;
+  height: 100px;
+}
+
+.table tbody tr td {
+  padding: 18px;
+}
+
+.table__item__name {
+  width: 40%;
+}
+.table__item__policy,
+.table__item__expire {
+  width: 30%;
+  word-wrap: break-word;
+}
+
+.table__row:hover {
+  background-color: #fff7ef;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 330px) {
+  .dashboard-navbar {
+    width: 100%;
+  }
+
+  .dashboard-search {
+    width: 90%;
+  }
+
+  .table {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .dashboard-company {
+    width: 200px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .dashboard-company {
+    width: 400px;
+  }
+  .dashboard-search {
+    width: 600px;
+  }
+}
