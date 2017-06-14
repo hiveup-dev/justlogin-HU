@@ -177,12 +177,17 @@
 }
 
 .table__item__name {
-  width: 40%;
+  width: 35%;
 }
-.table__item__policy,
-.table__item__expire {
-  width: 30%;
+.table__item__policy {
+  width: 45%;
   word-wrap: break-word;
+}
+
+.table__item__expire {
+  width: 20%;
+  word-wrap: break-word;
+  text-align: right;
 }
 
 .table__row:hover {
