@@ -2,7 +2,7 @@ module Refinery
   module Policies
     module Admin
       class PoliciesController < ::Refinery::AdminController
-
+        before_action :create_attachment, only: :new
         crudify :'refinery/policies/policy',
                 :title_attribute => 'name',
                 :sortable => true,
@@ -31,13 +31,18 @@ module Refinery
           redirect_to '/admin/policies'
         end
 
+        def create_attachment
+          @attachment = Refinery::Policies::Attachment.new
+        end
+
         private
         # Only allow a trusted parameter "white list" through.
         def policy_params
           params.require(:policy).permit(:name, :logo_id, :insurer, :premium, :benefit_id, :user_id, :position,
-                                         policy_feature_policies_attributes: [:id, :policy_feature_id,
+                                         :advisor_name, :claim_id, 
+                                         {policy_feature_policies_attributes: [:id, :policy_feature_id,
                                                 :value, :is_in_summary,
-                                                :_destroy])
+                                                :_destroy]}, {:attachment_ids => []})
         end
         def multiple_employee_params
           params.require(:policy).permit(:employee_id => [])

@@ -1,6 +1,12 @@
 ru:
   refinery:
     plugins:
+      claims:
+        title: Claims
+      attachments:
+        title: Attachments
+      policies:
+        title: Policies
       employees:
         title: Employees
       policy_features_policies:
@@ -9,10 +15,50 @@ ru:
         title: Policy Features
       policy_feature_groups:
         title: Policy Feature Groups
-      policies:
-        title: Policies
     policies:
       admin:
+        claims:
+          actions:
+            create_new: Добавить Claim
+            reorder: Изменить порядок Claims
+            reorder_done: Закончить изменять порядок Claims
+          records:
+            title: Claims
+            sorry_no_results: Извините, поиск не дал результатов.
+            no_items_yet: Записей "Claims" не найдено. Нажмите "Добавить Claim" чтобы
+              создать claim.
+          claim:
+            view_live_html: Просмотреть claim вживую <br/><em>(в новом окне)</em>
+            edit: Редактировать claim
+            delete: Удалить claim навсегда
+        attachments:
+          actions:
+            create_new: Добавить Attachment
+            reorder: Изменить порядок Attachments
+            reorder_done: Закончить изменять порядок Attachments
+          records:
+            title: Attachments
+            sorry_no_results: Извините, поиск не дал результатов.
+            no_items_yet: Записей "Attachments" не найдено. Нажмите "Добавить Attachment"
+              чтобы создать attachment.
+          attachment:
+            view_live_html: Просмотреть attachment вживую <br/><em>(в новом окне)</em>
+            edit: Редактировать attachment
+            delete: Удалить attachment навсегда
+        policies:
+          actions:
+            create_new: Добавить Policy
+            reorder: Изменить порядок Policies
+            reorder_done: Закончить изменять порядок Policies
+          records:
+            title: Policies
+            sorry_no_results: Извините, поиск не дал результатов.
+            no_items_yet: Записей "Policies" не найдено. Нажмите "Добавить Policy"
+              чтобы создать policy.
+          policy:
+            view_live_html: Просмотреть policy вживую <br/><em>(в новом окне)</em>
+            edit: Редактировать policy
+            delete: Удалить policy навсегда
         employees:
           actions:
             create_new: Добавить Employee
@@ -71,20 +117,15 @@ ru:
               окне)</em>
             edit: Редактировать policy feature group
             delete: Удалить policy feature group навсегда
-        policies:
-          actions:
-            create_new: Добавить Policy
-            reorder: Изменить порядок Policies
-            reorder_done: Закончить изменять порядок Policies
-          records:
-            title: Policies
-            sorry_no_results: Извините, поиск не дал результатов.
-            no_items_yet: Записей "Policies" не найдено. Нажмите "Добавить Policy"
-              чтобы создать policy.
-          policy:
-            view_live_html: Просмотреть policy вживую <br/><em>(в новом окне)</em>
-            edit: Редактировать policy
-            delete: Удалить policy навсегда
+      claims:
+        show:
+          other: Другие Claims
+      attachments:
+        show:
+          other: Другие Attachments
+      policies:
+        show:
+          other: Другие Policies
       employees:
         show:
           other: Другие Employees
@@ -97,11 +138,21 @@ ru:
       policy_feature_groups:
         show:
           other: Другие Policy Feature Groups
-      policies:
-        show:
-          other: Другие Policies
   activerecord:
     attributes:
+      refinery/policies/claim:
+        name: Name
+        description: Description
+      refinery/policies/attachment:
+        file: File
+        name: Name
+      refinery/policies/policy:
+        file: File
+        name: Name
+        logo_id: Logo
+        insurer: Insurer
+        premium: Premium
+        benefit_id: Benefit
       refinery/policies/employee:
         name: Name
         user_id: User
@@ -115,9 +166,3 @@ ru:
         policy_feature_group_id: Policy Feature Group
       refinery/policies/policy_feature_group:
         name: Name
-      refinery/policies/policy:
-        name: Name
-        logo_id: Logo
-        insurer: Insurer
-        premium: Premium
-        benefit_id: Benefit

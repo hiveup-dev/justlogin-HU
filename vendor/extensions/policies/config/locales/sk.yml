@@ -1,6 +1,12 @@
 sk:
   refinery:
     plugins:
+      claims:
+        title: Claims
+      attachments:
+        title: Attachments
+      policies:
+        title: Policies
       employees:
         title: Employees
       policy_features_policies:
@@ -9,10 +15,51 @@ sk:
         title: Policy Features
       policy_feature_groups:
         title: Policy Feature Groups
-      policies:
-        title: Policies
     policies:
       admin:
+        claims:
+          actions:
+            create_new: Pridať Claim
+            reorder: Preusporiadať Claims
+            reorder_done: Koniec radenia Claims
+          records:
+            title: Claims
+            sorry_no_results: Ľutujeme, ale neboli nájdené žiadne výsledky.
+            no_items_yet: Nie sú vytvorené žiadne Claims. Kliknite na "Pridať Claim"
+              pre pridanie prvého claim.
+          claim:
+            view_live_html: Zobraziť náhľad claim<br/><em>(otvorí sa v novom okne)</em>
+            edit: Upraviť claim
+            delete: Zmazať claim
+        attachments:
+          actions:
+            create_new: Pridať Attachment
+            reorder: Preusporiadať Attachments
+            reorder_done: Koniec radenia Attachments
+          records:
+            title: Attachments
+            sorry_no_results: Ľutujeme, ale neboli nájdené žiadne výsledky.
+            no_items_yet: Nie sú vytvorené žiadne Attachments. Kliknite na "Pridať
+              Attachment" pre pridanie prvého attachment.
+          attachment:
+            view_live_html: Zobraziť náhľad attachment<br/><em>(otvorí sa v novom
+              okne)</em>
+            edit: Upraviť attachment
+            delete: Zmazať attachment
+        policies:
+          actions:
+            create_new: Pridať Policy
+            reorder: Preusporiadať Policies
+            reorder_done: Koniec radenia Policies
+          records:
+            title: Policies
+            sorry_no_results: Ľutujeme, ale neboli nájdené žiadne výsledky.
+            no_items_yet: Nie sú vytvorené žiadne Policies. Kliknite na "Pridať Policy"
+              pre pridanie prvého policy.
+          policy:
+            view_live_html: Zobraziť náhľad policy<br/><em>(otvorí sa v novom okne)</em>
+            edit: Upraviť policy
+            delete: Zmazať policy
         employees:
           actions:
             create_new: Pridať Employee
@@ -74,20 +121,15 @@ sk:
               v novom okne)</em>
             edit: Upraviť policy feature group
             delete: Zmazať policy feature group
-        policies:
-          actions:
-            create_new: Pridať Policy
-            reorder: Preusporiadať Policies
-            reorder_done: Koniec radenia Policies
-          records:
-            title: Policies
-            sorry_no_results: Ľutujeme, ale neboli nájdené žiadne výsledky.
-            no_items_yet: Nie sú vytvorené žiadne Policies. Kliknite na "Pridať Policy"
-              pre pridanie prvého policy.
-          policy:
-            view_live_html: Zobraziť náhľad policy<br/><em>(otvorí sa v novom okne)</em>
-            edit: Upraviť policy
-            delete: Zmazať policy
+      claims:
+        show:
+          other: Daľšie Claims
+      attachments:
+        show:
+          other: Daľšie Attachments
+      policies:
+        show:
+          other: Daľšie Policies
       employees:
         show:
           other: Daľšie Employees
@@ -100,11 +142,21 @@ sk:
       policy_feature_groups:
         show:
           other: Daľšie Policy Feature Groups
-      policies:
-        show:
-          other: Daľšie Policies
   activerecord:
     attributes:
+      refinery/policies/claim:
+        name: Name
+        description: Description
+      refinery/policies/attachment:
+        file: File
+        name: Name
+      refinery/policies/policy:
+        file: File
+        name: Name
+        logo_id: Logo
+        insurer: Insurer
+        premium: Premium
+        benefit_id: Benefit
       refinery/policies/employee:
         name: Name
         user_id: User
@@ -118,9 +170,3 @@ sk:
         policy_feature_group_id: Policy Feature Group
       refinery/policies/policy_feature_group:
         name: Name
-      refinery/policies/policy:
-        name: Name
-        logo_id: Logo
-        insurer: Insurer
-        premium: Premium
-        benefit_id: Benefit

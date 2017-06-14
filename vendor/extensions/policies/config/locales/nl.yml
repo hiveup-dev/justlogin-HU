@@ -1,6 +1,12 @@
 nl:
   refinery:
     plugins:
+      claims:
+        title: Claims
+      attachments:
+        title: Attachments
+      policies:
+        title: Policies
       employees:
         title: Employees
       policy_features_policies:
@@ -9,10 +15,53 @@ nl:
         title: Policy Features
       policy_feature_groups:
         title: Policy Feature Groups
-      policies:
-        title: Policies
     policies:
       admin:
+        claims:
+          actions:
+            create_new: Nieuwe Claim toevoegen
+            reorder: De volgorde van de Claims wijzigen
+            reorder_done: Klaar met het wijzingen van de van de Claim-volgorde
+          records:
+            title: Claims
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Claims. Druk op 'Nieuwe Claim toevoegen'
+              om de eerste toe te voegen.
+          claim:
+            view_live_html: Deze claim op de website bekijken <br/><em>(opent in een
+              nieuw venster)</em>
+            edit: Bewerk deze claim
+            delete: Deze claim definitief verwijderen
+        attachments:
+          actions:
+            create_new: Nieuwe Attachment toevoegen
+            reorder: De volgorde van de Attachments wijzigen
+            reorder_done: Klaar met het wijzingen van de van de Attachment-volgorde
+          records:
+            title: Attachments
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Attachments. Druk op 'Nieuwe Attachment
+              toevoegen' om de eerste toe te voegen.
+          attachment:
+            view_live_html: Deze attachment op de website bekijken <br/><em>(opent
+              in een nieuw venster)</em>
+            edit: Bewerk deze attachment
+            delete: Deze attachment definitief verwijderen
+        policies:
+          actions:
+            create_new: Nieuwe Policy toevoegen
+            reorder: De volgorde van de Policies wijzigen
+            reorder_done: Klaar met het wijzingen van de van de Policy-volgorde
+          records:
+            title: Policies
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Policies. Druk op 'Nieuwe Policy toevoegen'
+              om de eerste toe te voegen.
+          policy:
+            view_live_html: Deze policy op de website bekijken <br/><em>(opent in
+              een nieuw venster)</em>
+            edit: Bewerk deze policy
+            delete: Deze policy definitief verwijderen
         employees:
           actions:
             create_new: Nieuwe Employee toevoegen
@@ -73,21 +122,15 @@ nl:
               in een nieuw venster)</em>
             edit: Bewerk deze policy feature group
             delete: Deze policy feature group definitief verwijderen
-        policies:
-          actions:
-            create_new: Nieuwe Policy toevoegen
-            reorder: De volgorde van de Policies wijzigen
-            reorder_done: Klaar met het wijzingen van de van de Policy-volgorde
-          records:
-            title: Policies
-            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
-            no_items_yet: Er zijn nog geen Policies. Druk op 'Nieuwe Policy toevoegen'
-              om de eerste toe te voegen.
-          policy:
-            view_live_html: Deze policy op de website bekijken <br/><em>(opent in
-              een nieuw venster)</em>
-            edit: Bewerk deze policy
-            delete: Deze policy definitief verwijderen
+      claims:
+        show:
+          other: Andere Claims
+      attachments:
+        show:
+          other: Andere Attachments
+      policies:
+        show:
+          other: Andere Policies
       employees:
         show:
           other: Andere Employees
@@ -100,11 +143,21 @@ nl:
       policy_feature_groups:
         show:
           other: Andere Policy Feature Groups
-      policies:
-        show:
-          other: Andere Policies
   activerecord:
     attributes:
+      refinery/policies/claim:
+        name: Name
+        description: Description
+      refinery/policies/attachment:
+        file: File
+        name: Name
+      refinery/policies/policy:
+        file: File
+        name: Name
+        logo_id: Logo
+        insurer: Insurer
+        premium: Premium
+        benefit_id: Benefit
       refinery/policies/employee:
         name: Name
         user_id: User
@@ -118,9 +171,3 @@ nl:
         policy_feature_group_id: Policy Feature Group
       refinery/policies/policy_feature_group:
         name: Name
-      refinery/policies/policy:
-        name: Name
-        logo_id: Logo
-        insurer: Insurer
-        premium: Premium
-        benefit_id: Benefit

@@ -1,6 +1,12 @@
 es:
   refinery:
     plugins:
+      claims:
+        title: Claims
+      attachments:
+        title: Attachments
+      policies:
+        title: Policies
       employees:
         title: Employees
       policy_features_policies:
@@ -9,10 +15,53 @@ es:
         title: Policy Features
       policy_feature_groups:
         title: Policy Feature Groups
-      policies:
-        title: Policies
     policies:
       admin:
+        claims:
+          actions:
+            create_new: Crear nuevo claim
+            reorder: Reordenar claims
+            reorder_done: Reordenación de claims completada
+          records:
+            title: Claims
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay claims todavía. Pulsa en "Crear nuevo Claim" para
+              crear tu primer claim.
+          claim:
+            view_live_html: Ver este claim como abierto al público <br/><em>(abre
+              en ventana nueva)</em>
+            edit: Editar este claim
+            delete: Borrar este claim para siempre
+        attachments:
+          actions:
+            create_new: Crear nuevo attachment
+            reorder: Reordenar attachments
+            reorder_done: Reordenación de attachments completada
+          records:
+            title: Attachments
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay attachments todavía. Pulsa en "Crear nuevo Attachment"
+              para crear tu primer attachment.
+          attachment:
+            view_live_html: Ver este attachment como abierto al público <br/><em>(abre
+              en ventana nueva)</em>
+            edit: Editar este attachment
+            delete: Borrar este attachment para siempre
+        policies:
+          actions:
+            create_new: Crear nuevo policy
+            reorder: Reordenar policies
+            reorder_done: Reordenación de policies completada
+          records:
+            title: Policies
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay policies todavía. Pulsa en "Crear nuevo Policy" para
+              crear tu primer policy.
+          policy:
+            view_live_html: Ver este policy como abierto al público <br/><em>(abre
+              en ventana nueva)</em>
+            edit: Editar este policy
+            delete: Borrar este policy para siempre
         employees:
           actions:
             create_new: Crear nuevo employee
@@ -73,21 +122,15 @@ es:
               <br/><em>(abre en ventana nueva)</em>
             edit: Editar este policy feature group
             delete: Borrar este policy feature group para siempre
-        policies:
-          actions:
-            create_new: Crear nuevo policy
-            reorder: Reordenar policies
-            reorder_done: Reordenación de policies completada
-          records:
-            title: Policies
-            sorry_no_results: Lo siento, no hay resultados
-            no_items_yet: No hay policies todavía. Pulsa en "Crear nuevo Policy" para
-              crear tu primer policy.
-          policy:
-            view_live_html: Ver este policy como abierto al público <br/><em>(abre
-              en ventana nueva)</em>
-            edit: Editar este policy
-            delete: Borrar este policy para siempre
+      claims:
+        show:
+          other: Otros claims
+      attachments:
+        show:
+          other: Otros attachments
+      policies:
+        show:
+          other: Otros policies
       employees:
         show:
           other: Otros employees
@@ -100,11 +143,21 @@ es:
       policy_feature_groups:
         show:
           other: Otros policy feature groups
-      policies:
-        show:
-          other: Otros policies
   activerecord:
     attributes:
+      refinery/policies/claim:
+        name: Name
+        description: Description
+      refinery/policies/attachment:
+        file: File
+        name: Name
+      refinery/policies/policy:
+        file: File
+        name: Name
+        logo_id: Logo
+        insurer: Insurer
+        premium: Premium
+        benefit_id: Benefit
       refinery/policies/employee:
         name: Name
         user_id: User
@@ -118,9 +171,3 @@ es:
         policy_feature_group_id: Policy Feature Group
       refinery/policies/policy_feature_group:
         name: Name
-      refinery/policies/policy:
-        name: Name
-        logo_id: Logo
-        insurer: Insurer
-        premium: Premium
-        benefit_id: Benefit
