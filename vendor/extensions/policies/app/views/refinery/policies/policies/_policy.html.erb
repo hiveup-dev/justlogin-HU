@@ -2,6 +2,14 @@
 
   <%= link_to image_tag(@policy.logo.thumbnail(geometry: "200x200#c").url),
                     @policy.logo.thumbnail(geometry: "900x600").url %>
+
+<% end %>
+
+<br/>
+<br/>
+
+<% if @policy.claim.present? %>
+  <%= button_to('Claim!', '/policies/claims/' + @policy.claim.id.to_s, method: :get, class: 'btn btn-primary') %>
 <% end %>
 
 <h3>Benefit: <%= @policy.benefit.name %> </h3>
@@ -10,16 +18,17 @@
 <h5>Feature: <%= @policy.benefit.feature.html_safe %> </h5>
 <p><b>Insurer: </b> <%= @policy.insurer %></p>
 <p><b>Premium: </b> <%= @policy.premium %></p>
+<p><b>Advisor: </b> <%= @policy.advisor_name %></p>
 
 <% if @policy.attachments.present? %>
-<%= @policy.attachments.each do |attachment| %>
-  <% if attachment.file.present? %>
-  <p>
-    <b> Attachment :  </b><%= link_to attachment.name, attachment.file.url %>
-    (click to download
-     <%= attachment.file.file_name %> - <%= number_to_human_size(attachment.file.size) %>
-     )
-  </p>
+  <% @policy.attachments.each do |attachment| %>
+    <% if attachment.file.present? %>
+      <p>
+        <b> Attachment :  </b> <%= link_to attachment.name, attachment.file.url %>
+        (click to download -
+        <%= attachment.file.file_name %> - <%= number_to_human_size(attachment.file.size) %>
+        )
+      </p>
+    <% end %>
   <% end %>
-<% end %>
 <% end %>

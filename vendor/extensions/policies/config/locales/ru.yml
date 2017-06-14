@@ -1,6 +1,8 @@
 ru:
   refinery:
     plugins:
+      claims:
+        title: Claims
       attachments:
         title: Attachments
       policies:
@@ -15,6 +17,20 @@ ru:
         title: Policy Feature Groups
     policies:
       admin:
+        claims:
+          actions:
+            create_new: Добавить Claim
+            reorder: Изменить порядок Claims
+            reorder_done: Закончить изменять порядок Claims
+          records:
+            title: Claims
+            sorry_no_results: Извините, поиск не дал результатов.
+            no_items_yet: Записей "Claims" не найдено. Нажмите "Добавить Claim" чтобы
+              создать claim.
+          claim:
+            view_live_html: Просмотреть claim вживую <br/><em>(в новом окне)</em>
+            edit: Редактировать claim
+            delete: Удалить claim навсегда
         attachments:
           actions:
             create_new: Добавить Attachment
@@ -101,6 +117,9 @@ ru:
               окне)</em>
             edit: Редактировать policy feature group
             delete: Удалить policy feature group навсегда
+      claims:
+        show:
+          other: Другие Claims
       attachments:
         show:
           other: Другие Attachments
@@ -121,6 +140,9 @@ ru:
           other: Другие Policy Feature Groups
   activerecord:
     attributes:
+      refinery/policies/claim:
+        name: Name
+        description: Description
       refinery/policies/attachment:
         file: File
         name: Name

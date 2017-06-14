@@ -109,4 +109,21 @@ Refinery::Core::Engine.routes.draw do
     end
   end
 
+
+  # Frontend routes
+  namespace :policies do
+    resources :claims, :only => [:index, :show]
+  end
+
+  # Admin routes
+  namespace :policies, :path => '' do
+    namespace :admin, :path => "#{Refinery::Core.backend_route}/policies" do
+      resources :claims, :except => :show do
+        collection do
+          post :update_positions
+        end
+      end
+    end
+  end
+
 end

@@ -1,6 +1,8 @@
 en:
   refinery:
     plugins:
+      claims:
+        title: Claims
       attachments:
         title: Attachments
       policies:
@@ -15,6 +17,20 @@ en:
         title: Policy Feature Groups
     policies:
       admin:
+        claims:
+          actions:
+            create_new: Add New Claim
+            reorder: Reorder Claims
+            reorder_done: Done Reordering Claims
+          records:
+            title: Claims
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Claims yet. Click "Add New Claim" to add your
+              first claim.
+          claim:
+            view_live_html: View this claim live <br/><em>(opens in a new window)</em>
+            edit: Edit this claim
+            delete: Remove this claim forever
         attachments:
           actions:
             create_new: Add New Attachment
@@ -102,6 +118,9 @@ en:
               a new window)</em>
             edit: Edit this policy feature group
             delete: Remove this policy feature group forever
+      claims:
+        show:
+          other: Other Claims
       attachments:
         show:
           other: Other Attachments
@@ -122,6 +141,9 @@ en:
           other: Other Policy Feature Groups
   activerecord:
     attributes:
+      refinery/policies/claim:
+        name: Name
+        description: Description
       refinery/policies/attachment:
         file: File
         name: Name

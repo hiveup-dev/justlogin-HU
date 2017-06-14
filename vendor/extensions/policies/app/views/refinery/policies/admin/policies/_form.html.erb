@@ -16,8 +16,9 @@
   </div>
 
   <%= f.association :attachments, input_html: { class: 'larger widest', multiple: true } %>
-
   <%= f.association :benefit, input_html: { class: 'larger widest' }%>
+  <%= f.association :claim, input_html: { class: 'larger widest' }%>
+  <%= f.input :advisor_name, input_html: { class: 'larger widest' } %>
   <%= f.input :insurer, input_html: { class: 'larger widest' } %>
   <%= f.input :premium, input_html: { class: 'larger widest' } %>
 

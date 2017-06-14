@@ -1,6 +1,8 @@
 es:
   refinery:
     plugins:
+      claims:
+        title: Claims
       attachments:
         title: Attachments
       policies:
@@ -15,6 +17,21 @@ es:
         title: Policy Feature Groups
     policies:
       admin:
+        claims:
+          actions:
+            create_new: Crear nuevo claim
+            reorder: Reordenar claims
+            reorder_done: Reordenación de claims completada
+          records:
+            title: Claims
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay claims todavía. Pulsa en "Crear nuevo Claim" para
+              crear tu primer claim.
+          claim:
+            view_live_html: Ver este claim como abierto al público <br/><em>(abre
+              en ventana nueva)</em>
+            edit: Editar este claim
+            delete: Borrar este claim para siempre
         attachments:
           actions:
             create_new: Crear nuevo attachment
@@ -105,6 +122,9 @@ es:
               <br/><em>(abre en ventana nueva)</em>
             edit: Editar este policy feature group
             delete: Borrar este policy feature group para siempre
+      claims:
+        show:
+          other: Otros claims
       attachments:
         show:
           other: Otros attachments
@@ -125,6 +145,9 @@ es:
           other: Otros policy feature groups
   activerecord:
     attributes:
+      refinery/policies/claim:
+        name: Name
+        description: Description
       refinery/policies/attachment:
         file: File
         name: Name

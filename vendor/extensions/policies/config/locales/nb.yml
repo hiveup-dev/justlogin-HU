@@ -1,6 +1,8 @@
 nb:
   refinery:
     plugins:
+      claims:
+        title: Claims
       attachments:
         title: Attachments
       policies:
@@ -15,6 +17,21 @@ nb:
         title: Policy Feature Groups
     policies:
       admin:
+        claims:
+          actions:
+            create_new: Lag en ny Claim
+            reorder: Endre rekkefølgen på Claims
+            reorder_done: Ferdig å endre rekkefølgen Claims
+          records:
+            title: Claims
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Claims enda. Klikk på "Lag en ny Claim" for
+              å legge til din første claim.
+          claim:
+            view_live_html: Vis hvordan denne claim ser ut offentlig <br/><em>(åpner
+              i et nytt vindu)</em>
+            edit: Rediger denne claim
+            delete: Fjern denne claim permanent
         attachments:
           actions:
             create_new: Lag en ny Attachment
@@ -106,6 +123,9 @@ nb:
               <br/><em>(åpner i et nytt vindu)</em>
             edit: Rediger denne policy feature group
             delete: Fjern denne policy feature group permanent
+      claims:
+        show:
+          other: Andre Claims
       attachments:
         show:
           other: Andre Attachments
@@ -126,6 +146,9 @@ nb:
           other: Andre Policy Feature Groups
   activerecord:
     attributes:
+      refinery/policies/claim:
+        name: Name
+        description: Description
       refinery/policies/attachment:
         file: File
         name: Name
