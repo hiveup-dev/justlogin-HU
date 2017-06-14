@@ -2,5 +2,6 @@
 <tr class="table__row">
   <td class="tg-1 table__item__name"><%= product.employee.name%></td>
   <td class="tg-1 table__item__policy"><%= link_to(product.name, '/policies/' + product.id.to_s, remote: true) %></td>
-  <td class="tg-2 table__item__expire"><%= product.updated_at.strftime("%d %b %Y")%></td>
+  <td class="tg-2 table__item__expire"><%= product.expiry_date.try(:strftime,'%d %b %Y')%></td>
 </tr>
+  
