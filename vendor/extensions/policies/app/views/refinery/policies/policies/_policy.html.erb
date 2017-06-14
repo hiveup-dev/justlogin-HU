@@ -10,6 +10,8 @@
 
 <% if @policy.claim.present? %>
   <%= button_to('Claim!', '/policies/claims/' + @policy.claim.id.to_s, method: :get, class: 'btn btn-primary') %>
+<% else %>
+    <button class='btn btn-primary' diabled='true'> Claim! </button>
 <% end %>
 
 <h3>Benefit: <%= @policy.benefit.name %> </h3>

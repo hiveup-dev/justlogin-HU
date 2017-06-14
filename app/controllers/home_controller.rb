@@ -12,7 +12,7 @@ class HomeController < ApplicationController
   end
 
   def main
-    allproducts = current_authentication_devise_user.policies {|product| product.updated_at}
+    allproducts = current_authentication_devise_user.policies {|product| product.expiry_date}
     substring = params['search']
     @products = Array.new
     if substring != nil
