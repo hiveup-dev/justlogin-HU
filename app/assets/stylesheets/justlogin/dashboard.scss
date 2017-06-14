@@ -3,7 +3,8 @@
   background-color: black;
   color: white;
   vertical-align: middle;
-  box-shadow: 0 4px 5px 0 rgba(0,0,0,0.2)
+  box-shadow: 0 4px 5px 0 rgba(0,0,0,0.2);
+  width: 330px;
 }
 
 .dashboard-company {
@@ -106,7 +107,7 @@
   text-align: center;
   margin-top: 50px;  
   position: relative;
-  width: 90%;
+  width: 290px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -145,28 +146,13 @@
   color: #aaaaaa;
 }
 
-@media screen and (min-width: 480px) {
-  .dashboard-company {
-    width: 200px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .dashboard-company {
-    width: 400px;
-  }
-  .dashboard-search {
-    width: 600px;
-  }
-}
-
 .wrapper {
   max-width: 994px;
   margin: 0 auto;
 }
 
 .table {
-  width: 100%;
+  width: 330px;
   text-align: left;
   margin-top: 50px;
   table-layout: fixed;
@@ -202,4 +188,33 @@
 .table__row:hover {
   background-color: #fff7ef;
   cursor: pointer;
+}
+
+@media screen and (min-width: 330px) {
+  .dashboard-navbar {
+    width: 100%;
+  }
+
+  .dashboard-search {
+    width: 90%;
+  }
+
+  .table {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .dashboard-company {
+    width: 200px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .dashboard-company {
+    width: 400px;
+  }
+  .dashboard-search {
+    width: 600px;
+  }
 }
