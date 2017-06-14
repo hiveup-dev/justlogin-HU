@@ -1,6 +1,8 @@
 fr:
   refinery:
     plugins:
+      claims:
+        title: Claims
       attachments:
         title: Attachments
       policies:
@@ -15,6 +17,20 @@ fr:
         title: Policy Feature Groups
     policies:
       admin:
+        claims:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Claim
+            reorder: Réordonner les Claims
+            reorder_done: Fin de réordonnancement des Claims
+          records:
+            title: Claims
+            sorry_no_results: Désolé ! Aucun résultat.
+            no_items_yet: Il n'y a actuellement aucun(e) Claim. Cliquer sur "Créer
+              un(e) nouve(au/l/lle) Claim" pour créer votre premi(er/ère) claim.
+          claim:
+            view_live_html: Voir ce(t/tte) claim <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) claim
+            delete: Supprimer définitivement ce(t/tte) claim
         attachments:
           actions:
             create_new: Créer un(e) nouve(au/l/lle) Attachment
@@ -106,6 +122,9 @@ fr:
               nouvelle fenêtre)</em>
             edit: Modifier ce(t/tte) policy feature group
             delete: Supprimer définitivement ce(t/tte) policy feature group
+      claims:
+        show:
+          other: Autres Claims
       attachments:
         show:
           other: Autres Attachments
@@ -126,6 +145,9 @@ fr:
           other: Autres Policy Feature Groups
   activerecord:
     attributes:
+      refinery/policies/claim:
+        name: Name
+        description: Description
       refinery/policies/attachment:
         file: File
         name: Name

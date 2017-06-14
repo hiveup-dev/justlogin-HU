@@ -1,6 +1,8 @@
 tr:
   refinery:
     plugins:
+      claims:
+        title: Claims
       attachments:
         title: Attachments
       policies:
@@ -15,6 +17,21 @@ tr:
         title: Policy Feature Groups
     policies:
       admin:
+        claims:
+          actions:
+            create_new: Yeni Ekle Claim
+            reorder: Tekrar sirala Claims
+            reorder_done: Tekrar siralama tamamlandiClaims
+          records:
+            title: Claims
+            sorry_no_results: Uzgunum! Herhangi bir sonuc bulunamadi.
+            no_items_yet: Herhangi bir Claims yok henuz.  Tikla "Yeni Ekle Claim"
+              eklemek senin ilk claim.
+          claim:
+            view_live_html: Bunu canlu claim goruntule <br/><em>(yeni bir pencerede
+              acar)</em>
+            edit: Bunu Duzenle claim
+            delete: Bunu Sil claim sonsuza dek
         attachments:
           actions:
             create_new: Yeni Ekle Attachment
@@ -106,6 +123,9 @@ tr:
               bir pencerede acar)</em>
             edit: Bunu Duzenle policy feature group
             delete: Bunu Sil policy feature group sonsuza dek
+      claims:
+        show:
+          other: Diger Claims
       attachments:
         show:
           other: Diger Attachments
@@ -126,6 +146,9 @@ tr:
           other: Diger Policy Feature Groups
   activerecord:
     attributes:
+      refinery/policies/claim:
+        name: Name
+        description: Description
       refinery/policies/attachment:
         file: File
         name: Name

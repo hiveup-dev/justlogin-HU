@@ -18,6 +18,7 @@ module Refinery
 
 
       belongs_to :employee, :foreign_key => 'employee_id'
+      belongs_to :claim, :foreign_key => 'claim_id'
 
       has_and_belongs_to_many :attachments, class_name: 'Refinery::Policies::Attachment', join_table: 'attachments_policies',
                               association_foreign_key: 'refinery_policy_attachment_id', foreign_key: 'refinery_policy_id'

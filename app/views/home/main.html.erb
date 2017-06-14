@@ -4,7 +4,7 @@
     <h3 class="modal-heading">Modal header</h3>
   </div>
   <div class="modal-body">
-    <p>One fine body…</p>
+    <p>Modal body</p>
   </div>
   <div class="modal-footer">
     <a href="#" class="btn btn-primary" data-dismiss="modal">Close</a>
@@ -16,7 +16,7 @@
     <div class ="navbar-header">
       <ul class="pull-left navbar-justlogin">
         <li>
-          <h1 style="margin: 0">Welcome, <%= current_authentication_devise_user.username %>!</h1>
+          <h1 style="margin: 0">Hi, <%= current_authentication_devise_user.username %>!</h1>
         </li>
       </ul>
       <ul class="pull-right navbar-justlogin">
@@ -50,7 +50,7 @@
         <% if @products.length != 0%>
           <table class="tg">
             <tr>
-              <th class="tg-1 tablehead">Name</th>
+              <th class="tg-1 tablehead">Employee Name</th>
               <th class="tg-1 tablehead">Product</th>
               <th class="tg-2 tablehead">End Date</th>
             </tr>

@@ -1,6 +1,8 @@
 nl:
   refinery:
     plugins:
+      claims:
+        title: Claims
       attachments:
         title: Attachments
       policies:
@@ -15,6 +17,21 @@ nl:
         title: Policy Feature Groups
     policies:
       admin:
+        claims:
+          actions:
+            create_new: Nieuwe Claim toevoegen
+            reorder: De volgorde van de Claims wijzigen
+            reorder_done: Klaar met het wijzingen van de van de Claim-volgorde
+          records:
+            title: Claims
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Claims. Druk op 'Nieuwe Claim toevoegen'
+              om de eerste toe te voegen.
+          claim:
+            view_live_html: Deze claim op de website bekijken <br/><em>(opent in een
+              nieuw venster)</em>
+            edit: Bewerk deze claim
+            delete: Deze claim definitief verwijderen
         attachments:
           actions:
             create_new: Nieuwe Attachment toevoegen
@@ -105,6 +122,9 @@ nl:
               in een nieuw venster)</em>
             edit: Bewerk deze policy feature group
             delete: Deze policy feature group definitief verwijderen
+      claims:
+        show:
+          other: Andere Claims
       attachments:
         show:
           other: Andere Attachments
@@ -125,6 +145,9 @@ nl:
           other: Andere Policy Feature Groups
   activerecord:
     attributes:
+      refinery/policies/claim:
+        name: Name
+        description: Description
       refinery/policies/attachment:
         file: File
         name: Name

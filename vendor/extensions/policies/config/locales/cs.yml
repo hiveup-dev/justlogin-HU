@@ -1,6 +1,8 @@
 cs:
   refinery:
     plugins:
+      claims:
+        title: Claims
       attachments:
         title: Attachments
       policies:
@@ -15,6 +17,20 @@ cs:
         title: Policy Feature Groups
     policies:
       admin:
+        claims:
+          actions:
+            create_new: Přidat Claim
+            reorder: Řadit Claims
+            reorder_done: Konec řazení Claims
+          records:
+            title: Claims
+            sorry_no_results: Litujeme, ale nebyly nalezny žádné výsledky.
+            no_items_yet: Zatím nebyly vytvořeny žádné Claims. Zvolte "Přidat Claim"
+              pro přidání prvního claim.
+          claim:
+            view_live_html: Zobrazit náhled claim<br/><em>(otevře se v novém okně)</em>
+            edit: Upravit claim
+            delete: Smazat claim
         attachments:
           actions:
             create_new: Přidat Attachment
@@ -104,6 +120,9 @@ cs:
               v novém okně)</em>
             edit: Upravit policy feature group
             delete: Smazat policy feature group
+      claims:
+        show:
+          other: Další Claims
       attachments:
         show:
           other: Další Attachments
@@ -124,6 +143,9 @@ cs:
           other: Další Policy Feature Groups
   activerecord:
     attributes:
+      refinery/policies/claim:
+        name: Name
+        description: Description
       refinery/policies/attachment:
         file: File
         name: Name
