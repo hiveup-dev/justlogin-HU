@@ -28,7 +28,7 @@ set :pty, true
 set :ssh_options, {
   forward_agent: true,
   auth_methods: ["publickey"],
-  keys: ["~/.ssh/hiveup_DO"]
+  #keys: ["~/.ssh/hiveup_DO"]
 }
 
 # Default value for :linked_files is []
