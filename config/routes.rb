@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   devise_scope :authentication_devise_user do
     get '/login', to:  'refinery/authentication/devise/sessions#new_hr_user', as: :login
     post '/login', to: 'refinery/authentication/devise/sessions#create'
+    resources :users, :only => [:edit, :update], :controller => 'refinery/authentication/devise/users'
   end
 
   post '/process/:action', controller: :processing
