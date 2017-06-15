@@ -1,8 +1,6 @@
 <% if @policy.logo.present? %>
 
-  <%= link_to image_tag(@policy.logo.thumbnail(geometry: "200x200#c").url),
-                    @policy.logo.thumbnail(geometry: "900x600").url %>
-
+  <%= image_tag(@policy.logo.thumbnail(geometry: "200x200#c").url)%>
 <% end %>
 
 <br/>
