@@ -1,6 +1,6 @@
 <% if @policy.logo.present? %>
 
-  <%= image_tag(@policy.logo.thumbnail(geometry: "200x200#c").url)%>
+  <%= image_tag(@policy.logo.thumbnail(geometry: "200x200#c").url, :class => "policy__logo")%>
 <% end %>
 
 <br/>
@@ -13,11 +13,8 @@
 <% end %>
 
 <h3>Benefit: <%= @policy.benefit.name %> </h3>
-<p><b>Source: </b> <%= @policy.benefit.source %></p>
-<%= @policy.benefit.description.html_safe %>
-<h5>Feature: <%= @policy.benefit.feature.html_safe %> </h5>
 <p><b>Insurer: </b> <%= @policy.insurer %></p>
-<p><b>Premium: </b> <%= @policy.premium %></p>
+<p><b>Premium:</b> $<%= @policy.premium %>/year</p>
 <p><b>Advisor: </b> <%= @policy.advisor_name %></p>
 
 <% if @policy.attachments.present? %>
