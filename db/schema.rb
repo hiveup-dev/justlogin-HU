@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170614075026) do
+ActiveRecord::Schema.define(version: 20170615074132) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -73,6 +73,8 @@ ActiveRecord::Schema.define(version: 20170614075026) do
     t.datetime "updated_at"
     t.string   "slug"
     t.string   "full_name"
+    t.string   "comapany"
+    t.string   "phone"
   end
 
   add_index "refinery_authentication_devise_users", ["id"], name: "index_refinery_authentication_devise_users_on_id", using: :btree
