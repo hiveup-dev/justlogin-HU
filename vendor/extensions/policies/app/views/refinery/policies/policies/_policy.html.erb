@@ -1,10 +1,41 @@
-<% if @policy.logo.present? %>
-
-  <%= image_tag(@policy.logo.thumbnail(geometry: "200x200#c").url, :class => "policy__logo")%>
-<% end %>
-
-<br/>
-<br/>
+<table class="policy__details">
+  <tbody>
+   <tr>
+      <td class="policy__row__header">
+        Insurer
+      </td>
+      <td>
+        <% if @policy.logo.present? %>
+          <%= image_tag(@policy.logo.thumbnail(geometry: "200x200#c").url, :class => "policy__details__logo")%>
+        <% end %>
+      </td>
+    </tr>
+    <tr>
+      <td class="policy__row__header">
+        Policy Type
+      </td>
+      <td>
+        <%= @policy.benefit.name %>
+      </td>
+    </tr>
+    <tr>
+      <td class="policy__row__header">
+        Advisor
+      </td>
+      <td>
+        <%= @policy.advisor_name %>
+      </td>
+    </tr>
+    <tr>
+      <td class="policy__row__header">
+        Premiums
+      </td>
+      <td>
+        $<%= @policy.premium  %>
+      </td>
+    </tr>
+  </tbody>  
+</table>
 
 <% if @policy.claim.present? %>
   <%= button_to('Claim!', '/policies/claims/' + @policy.claim.id.to_s, method: :get, class: 'btn btn-primary') %>
@@ -29,3 +60,4 @@
     <% end %>
   <% end %>
 <% end %>
+
