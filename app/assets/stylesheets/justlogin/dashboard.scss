@@ -195,6 +195,63 @@
   cursor: pointer;
 }
 
+.dashboard-modal {
+  width: 90%;
+  height: 500px;
+  background-color: white;
+  margin: auto;
+  padding-right: 0;
+  padding-left: 0;
+  font-family: 'Fira Sans', Helvetica, Arial, sans-serif;
+}
+
+.dashboard-modal .modal-header {
+  background-color: black;
+  color: white;
+}
+
+.dashboard-modal .modal-header .close {
+  color: white;
+  opacity: 1;
+  text-shadow: none;
+  font-size: 25px;
+}
+
+.dashboard-modal .policy__row__header {
+  width: 40%;
+}
+
+.dashboard-modal table {
+  width: 100%;
+}
+
+.dashboard-modal .policy__details td {
+  padding: 10px;
+  text-align: left;
+}
+
+.dashboard-modal .policy__details__left,
+.dashboard-modal .policy__details__right, {
+  width: 50%;
+  float: left;
+}
+
+.dashboard-modal .policy__details__right {
+  text-align: right;
+}
+
+.dashboard-modal .policy__details__premiums {
+  font-size: 50px;
+}
+
+.dashboard-modal .policy__details__logo {
+  width: 80px;
+}
+
+.dashboard-modal .btn-primary.policy__details__claim__button {
+  background-color: #F38820;
+}
+
 @media screen and (min-width: 330px) {
   .dashboard-navbar {
     width: 100%;
@@ -213,6 +270,10 @@
   .dashboard-company {
     width: 200px;
   }
+
+  .dashboard-modal {
+    width: 400px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -220,6 +281,10 @@
     width: 400px;
   }
   .dashboard-search {
+    width: 600px;
+  }
+
+  .dashboard-modal {
     width: 600px;
   }
 }
