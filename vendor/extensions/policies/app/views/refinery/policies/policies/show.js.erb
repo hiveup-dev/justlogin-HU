@@ -1,6 +1,5 @@
-$modal = $('.modal'),
-$modalBody = $('.modal .modal-body'),
-$modalHeading = $('.modal .modal-heading');
-$modalHeading.html("<%= @policy.name %>");
-$modalBody.html("<%= escape_javascript(render @policy) %>");
+$modal = $('.dashboard-modal'),
+$modal.html("<%= escape_javascript(render @policy) %>");
 $modal.modal();
+
+/* remove modal body auto padding after opening */
