@@ -43,21 +43,23 @@
         </form>
       </div>
       <div>
-        <% if @products.length != 0%>
-          <table class="dashboard-table table">
-            <thead>
-              <tr class="table__head">
-                <th class="table__item__name">Employee Name</th>
-                <th class="table__item__policy">Policy Name</th>
-                <th class="table__item__expire">Expiry Date</th>
-              </tr>
-            </thead>
-            <tbody>
+        <% if @products.length != 0 %>
+          <ul class="dashboard-table table__headers">
+            <li class="table__head">
+              <p class="table__name">Employee Name</p>
+            </li>
+            <li class="table__head">
+              <p class="table__dates">Start Date - Expiry Date</p>
+            </li>
+            <li class="table__head">
+              <p class="table__premium">Premium</p>
+            </li>
+            </ul>
             <% @products.each do |product| %>
-              <%= render partial: 'tablerow', locals: { product: product } %>
+                <%= link_to '/policies/' + product.id.to_s, remote:true do %>
+                  <%= render partial: 'tablerow', locals: { product: product } %>
+                <% end %>
             <% end %>
-            </tbody>
-          </table>
         <% else %>
           <table class="dashboard-table table">
             <tr><td class="tablehead">No such products found...</td></tr>
