@@ -1,66 +1,67 @@
-<table class="policy__details">
-  <tbody>
-   <tr>
-      <td class="policy__row__header">
-        Insurer
-      </td>
-      <td>
-        <% if @policy.logo.present? %>
-          <%= image_tag(@policy.logo.thumbnail(geometry: "200x200#c").url, :class => "policy__details__logo")%>
-        <% end %>
-      </td>
-    </tr>
-    <tr>
-      <td class="policy__row__header">
-        Policy Type
-      </td>
-      <td>
-        <%= @policy.benefit.name %>
-      </td>
-    </tr>
-    <tr>
-      <td class="policy__row__header">
-        Advisor
-      </td>
-      <td>
-        <%= @policy.advisor_name %>
-      </td>
-    </tr>
-    <tr>
-      <td class="policy__row__header">
-        Premiums
-      </td>
-      <td>
-        $<%= @policy.premium  %>
-      </td>
-    </tr>
-  </tbody>  
-</table>
+<div class="policy__details">
+  <div class="policy__header">
+    <div class="policy__header__left">
+      <% if @policy.logo.present? %>
+        <%= image_tag(@policy.logo.thumbnail(geometry: "200x200#c").url, :class => "policy__logo")%>
+      <% end %>
+      <h1 class="policy__name"><%= @policy.name %></h1>
+    </div>
+    <div class="policy__header__right">
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+      <% if @policy.claim.present? %>
+        <%= button_to('Claim!', '/policies/claims/' + @policy.claim.id.to_s, method: :get, class: 'btn btn-primary policy__claim') %>
+      <% else %>
+          <button class='btn btn-primary policy__claim' disabled='true'> Make a claim </button>
+      <% end %>
+    </div>
+  </div>
 
-<% if @policy.claim.present? %>
-  <%= button_to('Claim!', '/policies/claims/' + @policy.claim.id.to_s, method: :get, class: 'btn btn-primary') %>
-<% else %>
-    <button class='btn btn-primary' diabled='true'> Claim! </button>
-<% end %>
-
-<h3>Benefit: <%= @policy.benefit.name %> </h3>
-<p><b>Source: </b> <%= @policy.benefit.source %></p>
-<%= @policy.benefit.description.html_safe %>
-<h5>Feature: <%= @policy.benefit.feature.html_safe %> </h5>
-<p><b>Insurer: </b> <%= @policy.insurer %></p>
-<p><b>Premium: </b> <%= @policy.premium %></p>
-<p><b>Advisor: </b> <%= @policy.advisor_name %></p>
-
-<% if @policy.attachments.present? %>
-  <% @policy.attachments.each do |attachment| %>
-    <% if attachment.file.present? %>
-      <p>
-        <b> Attachment :  </b> <%= link_to attachment.name, attachment.file.url %>
-        (click to download -
-        <%= attachment.file.file_name %> - <%= number_to_human_size(attachment.file.size) %>
-        )
+  <div class="policy__content">
+    <div class="policy__content__type">
+      <p class="policy__content__headers">
+        Policy Type: 
       </p>
-    <% end %>
-  <% end %>
-<% end %>
+      <h4 class="policy__content__details">
+        <%= @policy.benefit.name %>
+      </h4>
+    </div>
+    <div class="policy__content__premiums">
+      <p class="policy__content__headers">
+        Premiums (per employee):
+      </p>
+      <h4 class="policy__content__details">
+        $<%= @policy.premium %>/year
+      </h4>
+    </div>
+    <div class="policy__content__feature_group">
+      <p class="policy__content__headers">
+        Feature Groups
+      </p>
+      <h4 class="policy__content__details">
+        <%= @policy_feature_group %>
 
+      </h4>
+    </div>
+    <div class="policy__content__attachments">
+      <p class="policy__content__headers">
+        Attachments:
+      </p>
+      <div>
+        <% if @policy.attachments.present? %>
+          <% @policy.attachments.each do |attachment| %>
+            <% if attachment.file.present? %>
+              <p>
+                <b> Attachment :  </b> <%= link_to attachment.name, attachment.file.url %>
+                (click to download -
+                <%= attachment.file.file_name %> - <%= number_to_human_size(attachment.file.size) %>
+                )
+              </p>
+            <% else %>
+            <p> - </p>
+            <% end %>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

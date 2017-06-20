@@ -197,11 +197,11 @@
 
 .dashboard-modal {
   width: 90%;
-  height: 500px;
+  height: 450px;
   background-color: white;
   margin: auto;
   padding-right: 0;
-  padding-left: 0;
+  padding-left: 0 !important;
   font-family: 'Fira Sans', Helvetica, Arial, sans-serif;
 }
 
@@ -210,24 +210,61 @@
   color: white;
 }
 
-.dashboard-modal .modal-header .close {
-  color: white;
+.dashboard-modal .close {
+  color: black;
   opacity: 1;
   text-shadow: none;
   font-size: 25px;
 }
 
-.dashboard-modal .policy__row__header {
-  width: 40%;
+.dashboard-modal .policy__header {
+  background-color: white;
+  padding: 18px;
+  height: 100px;
+  box-sizing: border-box;
+  position: relative;
+  // border-bottom: 1px solid black;
 }
 
-.dashboard-modal table {
-  width: 100%;
+.dashboard-modal .policy__header * {
+  display: inline-block;
+  vertical-align: middle;
 }
 
-.dashboard-modal .policy__details td {
-  padding: 10px;
-  text-align: left;
+.dashboard-modal .policy__header img {
+  box-sizing: border-box;
+  width: 50px;
+  margin-top: -10px;
+}
+
+.dashboard-modal .policy__header__left {
+  width: 70%;
+  display: inline-block;
+}
+
+.dashboard-modal .policy__name {
+  font-size: 32px;
+  margin-left: 15px;
+  display: inline-block;
+}
+
+.dashboard-modal .policy__header__right {
+  position: absolute;
+  text-align: right;
+  display: inline-block;
+  right: 0;
+}
+
+.dashboard-modal .policy__header__right .close {
+  float: none;
+  padding: 18px;
+  margin-right: 10px;
+  margin-top: -10px;
+}
+
+.dashboard-modal .policy__header__right .policy__claim {
+  display: block;
+  margin-right: 40px;
 }
 
 .dashboard-modal .policy__details__left,
@@ -245,11 +282,34 @@
 }
 
 .dashboard-modal .policy__details__logo {
-  width: 80px;
+  width: 50px;
 }
 
 .dashboard-modal .btn-primary.policy__details__claim__button {
   background-color: #F38820;
+}
+
+.dashboard-modal .policy__content {
+  padding: 20px;
+}
+
+.dashboard-modal .policy__content__headers {
+  color: #bbbbbb;
+  text-transform: uppercase;
+  margin-top: 30px;
+}
+
+.dashboard-modal .policy__content__details {
+  letter-spacing: 1px;
+}
+
+.dashboard-modal .policy__content__type {
+  display: inline-block;
+  width: 50%;
+}
+
+.dashboard-modal .policy__content__premiums {
+  display: inline-block;
 }
 
 @media screen and (min-width: 330px) {
@@ -285,6 +345,6 @@
   }
 
   .dashboard-modal {
-    width: 600px;
+    width: 800px;
   }
 }
