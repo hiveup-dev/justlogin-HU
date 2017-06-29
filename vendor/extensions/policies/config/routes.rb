@@ -74,25 +74,7 @@ Refinery::Core::Engine.routes.draw do
       end
     end
   end
-
-
-  # Frontend routes
-  namespace :policies do
-    resources :policies, :path => '', :only => [:index, :show]
-  end
-
-  # Admin routes
-  namespace :policies, :path => '' do
-    namespace :admin, :path => Refinery::Core.backend_route do
-      resources :policies, :except => :show do
-        collection do
-          post :update_positions
-        end
-      end
-    end
-  end
-
-
+  
   # Frontend routes
   namespace :policies do
     resources :attachments, :only => [:index, :show]
@@ -125,5 +107,4 @@ Refinery::Core::Engine.routes.draw do
       end
     end
   end
-
 end

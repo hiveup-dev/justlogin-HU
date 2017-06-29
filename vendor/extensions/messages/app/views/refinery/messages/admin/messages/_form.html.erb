@@ -1,0 +1,25 @@
+<%= form_for [refinery, :messages_admin, @message] do |f| -%>
+  <%= render '/refinery/admin/error_messages',
+              :object => @message,
+              :include_object_name => true %>
+
+  <div class='field'>
+    <%= f.label :content -%>
+    <%= f.text_field :content, :class => 'larger widest' -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :time -%>
+    <%= f.text_field :time -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :user_id -%>
+    <%= f.number_field :user_id -%>
+  </div>
+
+  <%= render '/refinery/admin/form_actions', :f => f,
+             :continue_editing => false,
+             :delete_title => t('delete', :scope => 'refinery.messages.admin.messages.message'),
+             :delete_confirmation => t('message', :scope => 'refinery.admin.delete') -%>
+<% end -%>

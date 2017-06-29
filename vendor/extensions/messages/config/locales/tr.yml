@@ -1,0 +1,29 @@
+tr:
+  refinery:
+    plugins:
+      messages:
+        title: Messages
+    messages:
+      admin:
+        messages:
+          actions:
+            create_new: Yeni Ekle Message
+            reorder: Tekrar sirala Messages
+            reorder_done: Tekrar siralama tamamlandiMessages
+          records:
+            title: Messages
+            sorry_no_results: Uzgunum! Herhangi bir sonuc bulunamadi.
+            no_items_yet: Herhangi bir Messages yok henuz.  Tikla "Yeni Ekle Message" eklemek senin ilk message.
+          message:
+            view_live_html: Bunu canlu message goruntule <br/><em>(yeni bir pencerede acar)</em>
+            edit: Bunu Duzenle message
+            delete: Bunu Sil message sonsuza dek
+      messages:
+        show:
+          other: Diger Messages
+  activerecord:
+    attributes:
+      'refinery/messages/message':
+        content: Content
+        time: Time
+        user_id: User

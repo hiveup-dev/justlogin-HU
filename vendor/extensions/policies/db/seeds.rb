@@ -93,6 +93,7 @@ Refinery::I18n.frontend_locales.each do |lang|
     end
   end if defined?(Refinery::Page)
 end
+<<<<<<< HEAD
 Refinery::I18n.frontend_locales.each do |lang|
   I18n.locale = lang
 
@@ -150,3 +151,5 @@ Refinery::I18n.frontend_locales.each do |lang|
     end
   end if defined?(Refinery::Page)
 end
+=======
+>>>>>>> erik

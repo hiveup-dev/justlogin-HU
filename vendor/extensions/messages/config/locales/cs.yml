@@ -1,0 +1,29 @@
+cs:
+  refinery:
+    plugins:
+      messages:
+        title: Messages
+    messages:
+      admin:
+        messages:
+          actions:
+            create_new: Přidat Message
+            reorder: Řadit Messages
+            reorder_done: Konec řazení Messages
+          records:
+            title: Messages
+            sorry_no_results: Litujeme, ale nebyly nalezny žádné výsledky.
+            no_items_yet: Zatím nebyly vytvořeny žádné Messages. Zvolte "Přidat Message" pro přidání prvního message.
+          message:
+            view_live_html: Zobrazit náhled message<br/><em>(otevře se v novém okně)</em>
+            edit: Upravit message
+            delete: Smazat message
+      messages:
+        show:
+          other: Další Messages
+  activerecord:
+    attributes:
+      'refinery/messages/message':
+        content: Content
+        time: Time
+        user_id: User

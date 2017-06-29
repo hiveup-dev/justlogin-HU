@@ -17,7 +17,7 @@
 
     <%= f.input :benefit_id, collection: Refinery::Products::Benefit.all, input_html: { class: 'larger widest' } %>
     <%= f.input :insurer, input_html: { class: 'larger widest' } %>
-    <%= f.input :premium, input_html: { class: 'larger widest' } %>
+    <%= f.input :premium, input_html: { class: 'larger widest' }, hint: 'Note: Premium Lowest Amount' %>
     <%= f.input :special, input_html: { class: 'larger widest' } %>
     <br/>
 
