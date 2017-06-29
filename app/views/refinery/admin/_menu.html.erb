@@ -5,13 +5,10 @@
 <nav id="menu">
 <div id='cssmenu'>
 <ul>
-  <li><a id='plugin_employees' href='/admin/policies/employees'><span>Employees</span></a></li>
-  <li><a id='plugin_claims' href='/admin/policies/claims'><span>Claims</span></a></li>
-  <li><a id='plugin_benefits' href='/admin/products/benefits'><span>Benefits</span></a></li>
-   <li class='has-sub'><a href='#'><span>Policies</span></a>
+   <li class='has-sub'><a href='#'><span>Dashboard</span></a>
       <ul>
         <li>
-          <a id='plugin_policies' href='/admin/policies'><span>All Policies</span></a>
+          <a id='plugin_policies' href='/admin/policies'><span>Policies</span></a>
         </li>
          <li>
            <a id='plugin_policy_features' href='/admin/policies/policy_features'>
@@ -23,6 +20,7 @@
             <span>Policy Feature Groups</span>
            </a>
          </li>
+         <li><a id='plugin_claims' href='/admin/policies/claims'><span>Claims</span></a></li>
          <li class='last'>
            <a id='plugin_attachments' href='/admin/policies/attachments'>
               <span>Attachments</span>
@@ -30,10 +28,23 @@
          </li>
       </ul>
    </li>
-   <li class='has-sub'><a href='#'><span>Products</span></a>
+
+   <li class='has-sub'><a href='#'><span>People</span></a>
+     <ul>
+       <li><a id='plugin_refinery_authentication_devise' href='/admin/users'><span>Users</span></a></li>
+       <li><a id='plugin_employees' href='/admin/policies/employees'><span>Employees</span></a></li>
+       <li class='last'>
+         <a id='plugin_user_submissions' href='/admin/products/user_submissions'>
+           <span>User Submissions</span>
+         </a>
+       </li>
+     </ul>
+   </li>
+   
+   <li class='has-sub'><a href='#'><span>Homepage</span></a>
       <ul>
          <li>
-           <a id='plugin_products' href='/admin/products'><span>All Products</span></a>
+           <a id='plugin_products' href='/admin/products'><span>Products</span></a>
          </li>
          <li>
            <a id='plugin_product_features' href='/admin/products/product_features'>
@@ -45,16 +56,12 @@
              <span>Product Feature Groups</span>
            </a>
          </li>
-         <li class='last'>
-           <a id='plugin_user_submissions' href='/admin/products/user_submissions'>
-             <span>User Submissions</span>
-           </a>
-         </li>
+         <li><a id='plugin_benefits' href='/admin/products/benefits'><span>Benefits</span></a></li>
+         <li class='last'><a id='plugin_refinery_images' href='/admin/images'><span>Images</span></a></li>
       </ul>
    </li>
-   <li><a id='plugin_refinery_authentication_devise' href='/admin/users'><span>Users</span></a></li>
+
    <li><a id='plugin_refinery_files' href='/admin/resources'><span>Files</span></a></li>
-   <li><a id='plugin_refinery_images' href='/admin/images'><span>Images</span></a></li>
    <li><a id='plugin_refinery_pages' href='/admin/pages'><span>Pages</span></a></li>
    <li class='last'><a id='plugin_refinery_settings' href='/admin/settings'><span>Settings</span></a></li>
 </ul>
