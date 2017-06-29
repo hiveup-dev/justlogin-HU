@@ -1,0 +1,62 @@
+<!-- <nav id="menu">
+  <%= render partial: "refinery/admin/menu_item",
+             collection: current_refinery_user.active_plugins.in_menu -%>
+</nav> -->
+<nav id="menu">
+<div id='cssmenu'>
+<ul>
+  <li><a id='plugin_employees' href='/admin/policies/employees'><span>Employees</span></a></li>
+  <li><a id='plugin_claims' href='/admin/policies/claims'><span>Claims</span></a></li>
+  <li><a id='plugin_benefits' href='/admin/products/benefits'><span>Benefits</span></a></li>
+   <li class='has-sub'><a href='#'><span>Policies</span></a>
+      <ul>
+        <li>
+          <a id='plugin_policies' href='/admin/policies'><span>All Policies</span></a>
+        </li>
+         <li>
+           <a id='plugin_policy_features' href='/admin/policies/policy_features'>
+             <span>Policy Features</span>
+           </a>
+         </li>
+         <li>
+           <a id='plugin_policy_feature_groups' href='/admin/policies/policy_feature_groups'>
+            <span>Policy Feature Groups</span>
+           </a>
+         </li>
+         <li class='last'>
+           <a id='plugin_attachments' href='/admin/policies/attachments'>
+              <span>Attachments</span>
+          </a>
+         </li>
+      </ul>
+   </li>
+   <li class='has-sub'><a href='#'><span>Products</span></a>
+      <ul>
+         <li>
+           <a id='plugin_products' href='/admin/products'><span>All Products</span></a>
+         </li>
+         <li>
+           <a id='plugin_product_features' href='/admin/products/product_features'>
+             <span>Product Features</span>
+           </a>
+         </li>
+         <li>
+           <a id='plugin_feature_groups' href='/admin/products/feature_groups'>
+             <span>Product Feature Groups</span>
+           </a>
+         </li>
+         <li class='last'>
+           <a id='plugin_user_submissions' href='/admin/products/user_submissions'>
+             <span>User Submissions</span>
+           </a>
+         </li>
+      </ul>
+   </li>
+   <li><a id='plugin_refinery_authentication_devise' href='/admin/users'><span>Users</span></a></li>
+   <li><a id='plugin_refinery_files' href='/admin/resources'><span>Files</span></a></li>
+   <li><a id='plugin_refinery_images' href='/admin/images'><span>Images</span></a></li>
+   <li><a id='plugin_refinery_pages' href='/admin/pages'><span>Pages</span></a></li>
+   <li class='last'><a id='plugin_refinery_settings' href='/admin/settings'><span>Settings</span></a></li>
+</ul>
+</div>
+</nav>
