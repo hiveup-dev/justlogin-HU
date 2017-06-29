@@ -1,11 +1,8 @@
 <div class="dashboard-modal modal fade">
-<<<<<<< HEAD
-=======
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
     <h3 class="modal-heading policy__name">Modal header</h3>
   </div>
->>>>>>> add_policy
   <div class="modal-body">
     <p>Modal body</p>
   </div>
@@ -25,7 +22,8 @@
       <i class="material-icons">&#xE851;</i>
       <div class="user__dropdown">
         <ul>
-          <a id="11" href="/complete"><li>Profile</li></a>
+          <li><%= link_to 'Profile', '/users/' + current_authentication_devise_user.id.to_s + '/edit',
+            input_html: "id='11'"%></li>
           <a id="12" href="/complete"><li>Settings</li></a>
           <a id="13" href="/admin/logout"><li>Logout</li></a>
         </ul>
