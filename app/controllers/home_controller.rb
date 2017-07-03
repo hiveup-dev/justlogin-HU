@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
+  before_action :authenticate_authentication_devise_user!, :except => ["faqs","chat"]
 
-  before_action :authenticate_authentication_devise_user!
   def complete
     session.delete(:find_out_more)
     session.delete(:product_ids)
@@ -22,11 +22,18 @@ class HomeController < ApplicationController
           @products.push(product)
         end
       # want to pick out products related to current user
-
     end
     else
       @products = allproducts
     end
   end
 
+  def faqs
+    #test
+  end
+
+  def chat
+    @message = Refinery::Messages::Message.new
+    # declare objects required
+  end
 end

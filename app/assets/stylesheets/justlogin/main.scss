@@ -281,6 +281,20 @@ input[type=checkbox]:checked:after {
   background: #F3A81D;
 }
 /* -------------------------------------------------------- Erik's crap */
+.faq li{
+  padding: 10px 30px;
+  max-height: 200px;
+}
+.faq li.q{
+  background: #c2c2c2;
+  font-weight: bold;
+  border-bottom: 1px #ddd solid;
+}
+.faq li.a{
+  background: #f4f4f4;
+  margin-bottom: 6px;
+}
+
 .dropbtn {
   background-color: #4CAF50;
   color: white;
@@ -335,6 +349,7 @@ input[type=checkbox]:checked:after {
   margin: auto;
   pointer-events: none;
 }
+
 .tg{
   border-collapse:collapse;
   border-spacing:0;

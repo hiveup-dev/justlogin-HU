@@ -1,0 +1,29 @@
+it:
+  refinery:
+    plugins:
+      messages:
+        title: Messages
+    messages:
+      admin:
+        messages:
+          actions:
+            create_new: Aggiungi Nuovo Message
+            reorder: Riordina Messages
+            reorder_done: Termina il Riordino di Messages
+          records:
+            title: Messages
+            sorry_no_results: "Spiacenti! Nessun risultato trovato"
+            no_items_yet: Non ci sono ancora Messages. Clicca "Aggiungi Nuovo Message" per aggiungere il tuo primo message.
+          message:
+            view_live_html: Guarda live questo message <br/><em>(apre una nuova finestra)</em>
+            edit: Modifica questo message
+            delete: Rimuovi per sempre questo message
+      messages:
+        show:
+          other: Altri Messages
+  activerecord:
+    attributes:
+      'refinery/messages/message':
+        content: Content
+        time: Time
+        user_id: User

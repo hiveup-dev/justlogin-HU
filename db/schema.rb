@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170615074132) do
+ActiveRecord::Schema.define(version: 20170619082727) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -103,6 +103,15 @@ ActiveRecord::Schema.define(version: 20170615074132) do
     t.datetime "updated_at"
     t.string   "image_title"
     t.string   "image_alt"
+  end
+
+  create_table "refinery_messages", force: :cascade do |t|
+    t.string   "content"
+    t.datetime "time"
+    t.integer  "user_id"
+    t.integer  "position"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "refinery_page_part_translations", force: :cascade do |t|
@@ -283,16 +292,6 @@ ActiveRecord::Schema.define(version: 20170615074132) do
 
   create_table "refinery_products_feature_groups", force: :cascade do |t|
     t.string   "name"
-    t.integer  "position"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "refinery_products_plans", force: :cascade do |t|
-    t.string   "icon_name"
-    t.string   "name"
-    t.string   "description"
-    t.string   "definition"
     t.integer  "position"
     t.datetime "created_at"
     t.datetime "updated_at"
