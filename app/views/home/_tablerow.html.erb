@@ -1,5 +1,12 @@
 <!-- will need to edit to model -->
-<tr class="table__row">
-  <td class="tg-1 table__item__name"><%= product.employee.name%></td>
-  <td class="tg-1 table__item__policy"><%= link_to(product.name, '/policies/' + product.id.to_s, remote: true) %></td>
-  <td class="tg-2 table__item__expire"><%= product.expiry_date.strftime("%d %b %Y")%></td>
+<ul class="dashboard-table table__content">
+  <li class="table__details">
+      <p class="table__name"><%= product.employee.name%></p>
+  </li>
+  <li class="table__details table__dates">
+    <%= product.start_date.try(:strftime, '%d %b %Y') %> - <%= product.expiry_date.try(:strftime,'%d %b %Y')%>
+  </li>
+  <li class="table__details">
+    <p class="table__premium">$<%= product.premium %></p>
+  </li>
+</ul>

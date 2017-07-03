@@ -24,8 +24,8 @@
   margin: 0;
   overflow: hidden;
   white-space: nowrap;
-  text-overflow: ellipsis;   
-  text-transform: capitalize; 
+  text-overflow: ellipsis;
+  text-transform: capitalize;
 }
 
 .dashboard-nav {
@@ -208,6 +208,10 @@
   .dashboard-company {
     width: 200px;
   }
+
+  .dashboard-modal {
+    width: 400px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -216,5 +220,9 @@
   }
   .dashboard-search {
     width: 600px;
+  }
+
+  .dashboard-modal {
+    width: 850px;
   }
 }
