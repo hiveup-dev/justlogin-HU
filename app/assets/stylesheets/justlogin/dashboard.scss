@@ -357,6 +357,25 @@
   display: inline-block;
 }
 
+.dashboard-modal .policy__feature__list {
+  overflow: hidden;
+  padding-left: 0;
+}
+
+.dashboard-modal .policy__feature__list li {
+  list-style: none;
+  text-transform: capitalize;
+  overflow: hidden;
+}
+
+.dashboard-modal .feature__name {
+  text-align: left;
+}
+
+.dashboard-modal .glyphicon-triangle-right {
+  font-size: 13px;
+}
+
 @media screen and (min-width: 330px) {
   .dashboard-navbar {
     width: 100%;
