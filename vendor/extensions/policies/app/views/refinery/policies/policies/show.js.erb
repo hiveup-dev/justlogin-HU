@@ -1,3 +1,7 @@
 $modal = $('.dashboard-modal'),
 $modal.html("<%= escape_javascript(render @policy) %>");
 $modal.modal();
+
+$(".modal-backdrop").click(function() {
+  $modal.modal('hide');
+});
