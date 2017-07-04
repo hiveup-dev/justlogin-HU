@@ -250,7 +250,7 @@
   color: black;
   opacity: 1;
   text-shadow: none;
-  font-size: 25px;
+  font-size: 30px;
 }
 
 .dashboard-modal .policy__header {
@@ -267,14 +267,18 @@
   vertical-align: middle;
 }
 
-.dashboard-modal .policy__header img {
+.dashboard-modal .policy__header__left img {
   box-sizing: border-box;
   width: 50px;
+  height: 50px;
   margin-top: -10px;
 }
 
+.dashboard-modal .policy__header__left h1 {
+  height: 50px;
+}
+
 .dashboard-modal .policy__header__left {
-  width: 70%;
   display: inline-block;
 }
 
@@ -302,9 +306,8 @@
   margin-top: -10px;
 }
 
-.dashboard-modal .policy__header__right .policy__claim {
-  display: block;
-  margin-right: 40px;
+.dashboard-modal .policy__claim {
+  padding-left: 20px;
 }
 
 .dashboard-modal .policy__details__left,
@@ -348,7 +351,6 @@
 
 .dashboard-modal .policy__content__type {
   display: inline-block;
-  width: 50%;
 }
 
 .dashboard-modal .policy__content__premiums {
@@ -375,7 +377,7 @@
   }
 
   .dashboard-modal {
-    width: 400px;
+    width: 500px;
   }
 }
 
@@ -388,6 +390,6 @@
   }
 
   .dashboard-modal {
-    width: 850px;
+    width: 550px;
   }
 }
