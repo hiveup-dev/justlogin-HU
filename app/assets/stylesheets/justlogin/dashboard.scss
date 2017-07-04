@@ -343,10 +343,13 @@
 .dashboard-modal .policy__content__headers {
   color: #bbbbbb;
   text-transform: uppercase;
+  font-size: 12px;
 }
 
 .dashboard-modal .policy__content__details {
-  letter-spacing: 1px;
+  // letter-spacing: 1px;
+  text-transform: capitalize;
+  font-weight: 400;
 }
 
 .dashboard-modal .policy__content__type {
@@ -376,7 +379,11 @@
   font-size: 13px;
 }
 
-.panel-heading a[aria-expanded="false"] {
+.dashboard-modal .panel-heading a {
+  color: black;
+}
+
+.dashboard-modal .panel-heading a[aria-expanded="false"] {
   .accordion-heading:after {
     font-family: 'Glyphicons Halflings';  
     content: "\e080";
@@ -385,13 +392,22 @@
   }
 }
 
-.panel-heading a[aria-expanded="true"] {
+.dashboard-modal .panel-heading a[aria-expanded="true"] {
   .accordion-heading:after {
     font-family: 'Glyphicons Halflings';
     content: "\e114";
     float: right;
     color: grey;
   }
+}
+
+.dashboard-modal .panel-title {
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+.dashboard-modal .feature__details {
+  word-wrap: break-word;
 }
 
 @media screen and (min-width: 330px) {
