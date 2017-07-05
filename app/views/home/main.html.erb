@@ -8,34 +8,7 @@
   </div>
 </div>
 
-<div class="dashboard-navbar">
-  <div class="dashboard-company">
-    <h1>Hi, <%= current_authentication_devise_user.username %></h1>
-  </div>
-  <div class="dashboard-nav">
-    <a href="/" target="_blank">
-      <div class="home">
-        <i class="material-icons">&#xE88A;</i>
-      </div>
-    </a>
-    <div class="user">
-      <i class="material-icons">&#xE851;</i>
-      <div class="user__dropdown">
-        <ul>
-          <li><%= link_to 'Profile', '/users/' + current_authentication_devise_user.id.to_s + '/edit',
-            input_html: "id='11'"%></li>
-          <a id="12" href="/complete"><li>Settings</li></a>
-          <a id="13" href="/admin/logout"><li>Logout</li></a>
-        </ul>
-      </div>
-    </div>
-    <a href="">
-      <div class="faq">
-        <i class="material-icons">&#xE887;</i>
-      </div>
-    </a>
-  </div>
-</div>
+<%= render partial: '/shared/navbar' %>
 
 <div class="wrapper" id="product-listing">
   <div class="dashboard-search">
