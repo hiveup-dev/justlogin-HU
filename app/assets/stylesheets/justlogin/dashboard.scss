@@ -282,6 +282,10 @@
   display: inline-block;
 }
 
+.dashboard-modal .policy__header__left .row {
+  width: 100%;
+}
+
 .dashboard-modal .policy__name {
   font-size: 32px;
   margin-left: 15px;
@@ -308,6 +312,12 @@
 
 .dashboard-modal .policy__claim {
   padding-left: 20px;
+  margin-bottom: 10px;
+}
+
+.dashboard-modal .policy__claim a,
+.dashboard-modal .policy__claim button {
+  padding: 10px 15px;
 }
 
 .dashboard-modal .policy__details__left,
