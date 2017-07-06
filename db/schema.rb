@@ -182,7 +182,7 @@ ActiveRecord::Schema.define(version: 20170619082727) do
     t.string   "name"
     t.integer  "logo_id"
     t.string   "insurer"
-    t.decimal  "premium"
+    t.decimal  "premium" :precision => 8, :scale => 2
     t.integer  "benefit_id"
     t.integer  "position"
     t.datetime "created_at"
