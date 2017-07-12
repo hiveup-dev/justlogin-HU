@@ -39,7 +39,7 @@ module Refinery
         # Only allow a trusted parameter "white list" through.
         def policy_params
           params.require(:policy).permit(:name, :logo_id, :insurer, :premium, :benefit_id, :user_id, :position,
-                                         :advisor_name, :claim_id, :start_date, :expiry_date,
+                                         :advisor_name, :advisor_phone, :claim_id, :start_date, :expiry_date,
                                          {policy_feature_policies_attributes: [:id, :policy_feature_id,
                                                 :value, :is_in_summary,
                                                 :_destroy]}, {:attachment_ids => []})
