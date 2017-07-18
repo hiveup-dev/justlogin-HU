@@ -1,1 +1,59 @@
-<%= render 'form' %>
+<% content_for :profile_form do %>
+  <%= render partial: '/shared/navbar' %>
+
+  <%= form_for :user, :url => refinery.signup_path do |f| -%>
+  <div class="edit_profile">
+    <div class="fields">
+      <label for="profile_username" class="field_type" for="">Username</label>
+      <div class="input_container">
+        <i class="material-icons">account_circle</i>
+        <%= f.text_field :username, :class => 'larger widest profile_input', :id => 'profile_username' %>
+      </div>
+    </div>
+    <div class="fields">
+      <label for="profile_fullname" class="field_type">Full Name</label>
+      <div class="input_container">
+        <i class="material-icons">face</i>
+        <%= f.text_field :full_name, :class => 'larger widest profile_input', :id => 'profile_fullname' %>
+      </div>
+    </div>
+    <div class="fields">
+      <label for="profile_email" class="field_type">Email</label>
+      <div class="input_container">
+        <i class="material-icons">email</i>
+        <%= f.text_field :email, :class => 'larger widest profile_input', :id => 'profile_email' %>
+      </div>
+    </div>
+    <div class="fields">
+      <label for="profile_phone" class="field_type">Phone</label>
+      <div class="input_container">
+        <i class="material-icons">phone</i>
+        <%= f.text_field :phone, :class => 'larger widest profile_input', :id => 'profile_phone' %>
+      </div>
+    </div>
+    <div class="fields">
+      <label for="profile_company" class="field_type">Company</label>
+      <div class="input_container">
+        <i class="material-icons">account_balance</i>
+        <%= f.text_field :company, :class => 'larger widest profile_input', :id => 'profile_company' %>
+      </div>
+    </div>
+    <div class="fields">
+      <label for="profile_password" class="field_type">Password</label>
+      <div class="input_container">
+        <i class="material-icons">lock</i>
+        <%= f.password_field :password, :autocomplete => 'off', :class => 'larger widest profile_input', :id => 'profile_password' %>
+      </div>
+    </div>
+    <div class="fields">
+      <label for="profile_confirm_password" class="field_type">Password</label>
+      <div class="input_container">
+        <i class="material-icons">lock</i>
+        <%= f.password_field :password_confirmation, :autocomplete => 'off', :class => 'larger widest profile_input', :id => 'profile_confirm_password' %>
+
+      </div>
+    </div>
+    <%= f.submit  url: '/users/' + @user.id.to_s, method: 'PATCH' %>
+  </div>
+<% end %>
+<% end %>

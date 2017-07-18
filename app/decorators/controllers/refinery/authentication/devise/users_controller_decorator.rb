@@ -1,6 +1,6 @@
 Refinery::Authentication::Devise::UsersController.class_eval do
   before_action :set_user, only: [:edit, :update]
-
+  layout 'profile'
   def edit
   end
 
