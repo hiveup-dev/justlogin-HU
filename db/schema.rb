@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170712043334) do
+ActiveRecord::Schema.define(version: 20170717091521) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -73,7 +73,7 @@ ActiveRecord::Schema.define(version: 20170712043334) do
     t.datetime "updated_at"
     t.string   "slug"
     t.string   "full_name"
-    t.string   "comapany"
+    t.string   "company"
     t.string   "phone"
   end
 
@@ -282,14 +282,6 @@ ActiveRecord::Schema.define(version: 20170712043334) do
   end
 
   add_index "refinery_products_benefits_user_submissions", ["benefit_id", "user_submission_id"], name: "products_benefit_id_user_submission_id", using: :btree
-
-  create_table "refinery_products_employees", force: :cascade do |t|
-    t.string   "name"
-    t.integer  "user_id"
-    t.integer  "position"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
 
   create_table "refinery_products_feature_groups", force: :cascade do |t|
     t.string   "name"
