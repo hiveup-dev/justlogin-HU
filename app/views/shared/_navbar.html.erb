@@ -8,13 +8,17 @@
         <i class="material-icons">&#xE88A;</i>
       </div>
     </a>
+    <a href="/main">
+      <div class="main">
+        <i class="material-icons">&#xE8D3;</i>
+      </div>
+    </a>
     <div class="user">
       <i class="material-icons">&#xE851;</i>
       <div class="user__dropdown">
         <ul>
-          <li><%= link_to 'Profile', '/users/' + current_authentication_devise_user.id.to_s + '/edit',
+          <li><%= link_to 'Edit Profile', '/users/' + current_authentication_devise_user.id.to_s + '/edit',
             input_html: "id='11'"%></li>
-          <a id="12" href="/complete"><li>Settings</li></a>
           <a id="13" href="/admin/logout"><li>Logout</li></a>
         </ul>
       </div>

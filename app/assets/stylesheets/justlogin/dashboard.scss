@@ -10,7 +10,7 @@
 .dashboard-company {
   height: 100%;
   float: left;
-  width: 150px;
+  width: 120px;
   word-wrap: normal;  
   text-align: left;
 }
@@ -31,12 +31,13 @@
 .dashboard-nav {
   float: right;
   text-align: center;
-  width: 180px;
+  width: calc(60px * 4);
   height: 60px;
 }
 
 .dashboard-nav .home,
 .dashboard-nav .user,
+.dashboard-nav .main,
 .dashboard-nav .faq {
   height: 100%;
   width: 60px;
@@ -44,6 +45,9 @@
   float: left;
 }
 
+.dashboard-nav .main {
+  background-color: orange;
+}
 .dashboard-nav .home {
   background-color: #F38820;
 }
@@ -94,6 +98,7 @@
 }
 
 .dashboard-nav .home .material-icons,
+.dashboard-nav .main .material-icons,
 .dashboard-nav .user .material-icons,
 .dashboard-nav .faq .material-icons {
   font-size: 25px;
@@ -423,8 +428,12 @@
 /******** edit profile page *********/
 .edit_profile {
   padding: 20px;
-  margin: 30px auto;
+  margin: auto;
   width: 300px;
+}
+
+.edit_profile h2 {
+  margin-bottom: 30px;
 }
 
 .fields {
@@ -453,7 +462,6 @@
   background-color: #eee;
   height: 50px;
   text-indent: 40px;
-  border-radius: 5px;
   outline: 0;
   font-family: 'Source Sans Pro';
 }
@@ -463,8 +471,6 @@
   vertical-align: middle;
   padding: 13px 10px;
   background-color: #ccc;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
   color: rgba(0, 0, 0, 0.4);
 }
 
