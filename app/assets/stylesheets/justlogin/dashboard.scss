@@ -420,6 +420,54 @@
   word-wrap: break-word;
 }
 
+/******** edit profile page *********/
+.edit_profile {
+  padding: 20px;
+  margin: 30px auto;
+  width: 300px;
+}
+
+.fields {
+  margin-bottom: 40px;
+  font-family: 'Source Sans Pro';
+}
+
+.fields .field_type {
+  margin-bottom: 4px;
+  overflow: hidden;
+  display: inline-block;
+  color: #aaa;
+}
+
+.input_container {
+  position: relative;
+  vertical-align: middle;
+}
+
+.profile_input {
+  padding: 10px 15px;
+  width: 100%;
+  font-size: 14px;
+  display: inline-block;
+  border: 0;
+  background-color: #eee;
+  height: 50px;
+  text-indent: 40px;
+  border-radius: 5px;
+  outline: 0;
+  font-family: 'Source Sans Pro';
+}
+
+.edit_profile .material-icons {
+  position: absolute;
+  vertical-align: middle;
+  padding: 13px 10px;
+  background-color: #ccc;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  color: rgba(0, 0, 0, 0.4);
+}
+
 @media screen and (min-width: 330px) {
   .dashboard-navbar {
     width: 100%;
@@ -440,6 +488,10 @@
   }
 
   .dashboard-modal {
+    width: 500px;
+  }
+
+  .edit_profile {
     width: 500px;
   }
 }
