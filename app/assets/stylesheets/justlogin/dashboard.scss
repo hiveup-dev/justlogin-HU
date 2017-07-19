@@ -156,31 +156,6 @@
   margin: 0 auto;
 }
 
-// .table {
-//   width: 330px;
-//   text-align: left;
-//   margin-top: 50px;
-//   table-layout: fixed;
-//   font-family: 'Fira Sans', Helvetical, Arial, sans-serif;
-// }
-
-// .table thead tr th {
-//   font-family: Avenir;
-//   text-transform: capitalize;
-//   padding: 18px;
-//   background-color: rgba(0,0,0,0.06);
-//   font-family: 'Fira Sans', Helvetical, Arial, sans-serif;  
-// }
-
-// .table tbody {
-//   overflow-y: auto;
-//   height: 100px;
-// }
-
-// .table tbody tr td {
-//   padding: 18px;
-// }
-
 .dashboard-table.table__headers {
   overflow: hidden;
   background-color: rgba(0,0,0,0.06);
@@ -474,6 +449,46 @@
   color: rgba(0, 0, 0, 0.4);
 }
 
+/********* faq page **********/
+
+.faq-page {
+  width: 90%;
+  margin: 40px auto;
+  counter-reset: questions;
+
+  .panel-body {
+    width: 95%;
+    margin: auto;
+  }
+
+  h2 {
+    margin-bottom: 30px;
+  }
+
+  .panel-heading {
+    border: none;
+    background-color: transparent;
+    padding-left: 0;
+
+    .panel-title {
+      text-transform: initial;
+      font-weight: 400;
+      color: #A65B10;
+      
+      &:before {
+        content: counter(questions);
+        counter-increment: questions;
+        font-weight: bold;
+        font-size: 20px;
+        margin-right: 10px;
+        color: black;
+        width: 10px;
+      }
+    }
+  }
+}
+
+
 @media screen and (min-width: 330px) {
   .dashboard-navbar {
     width: 100%;
@@ -499,6 +514,10 @@
 
   .edit_profile {
     width: 500px;
+  }
+
+  .faq-page {
+    width: 80%;
   }
 }
 
