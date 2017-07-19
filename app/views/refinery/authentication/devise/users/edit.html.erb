@@ -1,3 +1,5 @@
+// <%= render 'form' %>
+
 <% content_for :profile_form do %>
   <%= render partial: '/shared/navbar' %>
 
@@ -5,49 +7,49 @@
   <div class="edit_profile">
     <h2>Personal Particulars</h2>
     <div class="fields">
-      <label for="profile_username" class="field_type" for="">Username</label>
+      <%= f.label :username, :class=> 'field_type' %>
       <div class="input_container">
         <i class="material-icons">account_circle</i>
-        <%= f.text_field :username, :class => 'larger widest profile_input', :id => 'profile_username' %>
+        <%= f.text_field :username, :class => 'larger widest profile_input'%>
       </div>
     </div>
     <div class="fields">
-      <label for="profile_fullname" class="field_type">Full Name</label>
+      <%= f.label :full_name, :class=> 'field_type' %>
       <div class="input_container">
         <i class="material-icons">face</i>
-        <%= f.text_field :full_name, :class => 'larger widest profile_input', :id => 'profile_fullname' %>
+        <%= f.text_field :full_name, :class => 'larger widest profile_input' %>
       </div>
     </div>
     <div class="fields">
-      <label for="profile_email" class="field_type">Email</label>
+      <%= f.label :email, :class=> 'field_type' %>
       <div class="input_container">
         <i class="material-icons">email</i>
-        <%= f.text_field :email, :class => 'larger widest profile_input', :id => 'profile_email' %>
+        <%= f.text_field :email, :class => 'larger widest profile_input' %>
       </div>
     </div>
     <div class="fields">
-      <label for="profile_phone" class="field_type">Phone</label>
+      <%= f.label :phone, :class=> 'field_type' %>
       <div class="input_container">
         <i class="material-icons">phone</i>
         <%= f.text_field :phone, :class => 'larger widest profile_input', :id => 'profile_phone' %>
       </div>
     </div>
     <div class="fields">
-      <label for="profile_company" class="field_type">Company</label>
+      <%= f.label :company, :class=> 'field_type' %>    
       <div class="input_container">
         <i class="material-icons">account_balance</i>
-        <%= f.text_field :company, :class => 'larger widest profile_input', :id => 'profile_company' %>
+        <%= f.text_field :company, :class => 'larger widest profile_input' %>
       </div>
     </div>
     <div class="fields">
-      <label for="profile_password" class="field_type">Password</label>
+      <%= f.label :password, :class=> 'field_type' %>
       <div class="input_container">
         <i class="material-icons">lock</i>
         <%= f.password_field :password, :autocomplete => 'off', :class => 'larger widest profile_input', :id => 'profile_password' %>
       </div>
     </div>
     <div class="fields">
-      <label for="profile_confirm_password" class="field_type">Confirm Password</label>
+      <%= f.label :password_confirmation, :class=> 'field_type' %>
       <div class="input_container">
         <i class="material-icons">lock</i>
         <%= f.password_field :password_confirmation, :autocomplete => 'off', :class => 'larger widest profile_input', :id => 'profile_confirm_password' %>
