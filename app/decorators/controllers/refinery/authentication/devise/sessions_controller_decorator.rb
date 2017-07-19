@@ -1,5 +1,5 @@
 Refinery::Authentication::Devise::SessionsController.class_eval do
-  layout 'dashboard'
+  layout 'login'
   def new_hr_user
     new
   end
