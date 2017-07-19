@@ -45,15 +45,16 @@
   float: left;
 }
 
-.dashboard-nav .main {
-  background-color: orange;
-}
 .dashboard-nav .home {
-  background-color: #F38820;
+  background-color: #dc8a38;
+}
+
+.dashboard-nav .main {
+  background-color: #FF9C3B
 }
 
 .dashboard-nav .user {
-  background-color: #FF9C3B;
+  background-color: #F38820;
   position: relative;
   display: inline-block;
 }
@@ -411,6 +412,12 @@
   font-weight: 900;
 }
 
+.edit_profile .btn {
+  padding: 10 40px;
+  background-color: black;
+  color: white;
+}
+
 .fields {
   margin-bottom: 40px;
   font-family: 'Source Sans Pro';
@@ -473,7 +480,7 @@
     .panel-title {
       text-transform: initial;
       font-weight: 400;
-      color: #A65B10;
+      color: #f38820;
       
       &:before {
         content: counter(questions);
