@@ -8,7 +8,7 @@ Refinery::Authentication::Devise::UsersController.class_eval do
   def update
     @user.update user_params
     @user.save
-    redirect_to '/main', notice: 'Updated successfuly!!'
+    redirect_to '/users/' + @user.id.to_s + '/edit', notice: 'Updated successfuly!!'
   end
 
   private
