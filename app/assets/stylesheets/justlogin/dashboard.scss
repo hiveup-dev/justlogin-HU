@@ -402,13 +402,13 @@
 
 /******** edit profile page *********/
 .edit_profile {
-  padding: 20px;
-  margin: auto;
-  width: 300px;
+  margin: 40px auto;
+  width: 90%;
 }
 
 .edit_profile h2 {
   margin-bottom: 30px;
+  font-weight: 900;
 }
 
 .fields {
@@ -513,7 +513,7 @@
   }
 
   .edit_profile {
-    width: 500px;
+    width: 80%;
   }
 
   .faq-page {
