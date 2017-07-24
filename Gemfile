@@ -14,7 +14,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
-
+gem 'tawk_rails'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
@@ -72,8 +72,11 @@ group :development do
   gem 'spring'
   gem 'spring-commands-rspec'
   gem 'web-console', '~> 2.0'
+  gem 'letter_opener'
 end
 
 gem 'refinerycms-wymeditor', ['~> 1.0', '>= 1.0.7']
 gem 'refinerycms-acts-as-indexed', '~> 3.0.0'
 gem 'refinerycms-products', path: 'vendor/extensions'
+gem 'refinerycms-policies', path: 'vendor/extensions'
+gem 'refinerycms-messages', path: 'vendor/extensions'

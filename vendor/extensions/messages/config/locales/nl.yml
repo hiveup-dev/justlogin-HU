@@ -1,0 +1,29 @@
+nl:
+  refinery:
+    plugins:
+      messages:
+        title: Messages
+    messages:
+      admin:
+        messages:
+          actions:
+            create_new: Nieuwe Message toevoegen
+            reorder: De volgorde van de Messages wijzigen
+            reorder_done: Klaar met het wijzingen van de van de Message-volgorde
+          records:
+            title: Messages
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Messages. Druk op 'Nieuwe Message toevoegen' om de eerste toe te voegen.
+          message:
+            view_live_html: Deze message op de website bekijken <br/><em>(opent in een nieuw venster)</em>
+            edit: Bewerk deze message
+            delete: Deze message definitief verwijderen
+      messages:
+        show:
+          other: Andere Messages
+  activerecord:
+    attributes:
+      'refinery/messages/message':
+        content: Content
+        time: Time
+        user_id: User

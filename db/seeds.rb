@@ -11,3 +11,9 @@ Refinery::Pages::Engine.load_seed
 
 # Added by Refinery CMS Products extension
 Refinery::Products::Engine.load_seed
+
+# Added by Refinery CMS Policies extension
+Refinery::Policies::Engine.load_seed
+
+# Added by Refinery CMS Messages extension
+Refinery::Messages::Engine.load_seed

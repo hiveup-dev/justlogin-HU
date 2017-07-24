@@ -19,11 +19,13 @@ class ProcessingController < ApplicationController
   # end
 
   def complete
+    puts 'test'
     @products = Refinery::Products::Product.where(id: session[:product_ids])
     @user_submission = Refinery::Products::UserSubmission.new(user_submission_params)
     @user_submission.benefits = Refinery::Products::Benefit.where(id: session[:find_out_more])
     @user_submission.products = @products
     if @user_submission.save
+      Notifier.notify_email(@user_submission).deliver_now
       reset_session
       redirect_to '/complete'
     else
