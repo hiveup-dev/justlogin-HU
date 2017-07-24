@@ -418,24 +418,24 @@
   color: white;
 }
 
-.fields {
+.edit_profile .fields {
   margin-bottom: 40px;
   font-family: 'Source Sans Pro';
 }
 
-.fields .field_type {
+.edit_profile .fields .field_type {
   margin-bottom: 4px;
   overflow: hidden;
   display: inline-block;
   color: #aaa;
 }
 
-.input_container {
+.edit_profile .input_container {
   position: relative;
   vertical-align: middle;
 }
 
-.profile_input {
+.edit_profile .profile_input {
   padding: 10px 15px;
   width: 100%;
   font-size: 14px;
@@ -454,6 +454,10 @@
   padding: 13px 10px;
   background-color: #ccc;
   color: rgba(0, 0, 0, 0.4);
+}
+
+.edit_profile .bg-danger {
+  border-color: #f1bcbc;
 }
 
 /********* faq page **********/
