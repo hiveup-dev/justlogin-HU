@@ -1,11 +1,11 @@
 # config valid only for current version of Capistrano
-lock "3.8.1"
+lock "3.8.2"
 
 set :stages, %w(staging production)
 set :default_stage, "production"
 
 set :application, "justlogin"
-set :repo_url, "https://git.heroku.com/justlogin-hiveup2.git"
+set :repo_url, "https://github.com/hiveup-dev/justlogin-HU.git"
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
