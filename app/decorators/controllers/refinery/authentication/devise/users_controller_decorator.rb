@@ -7,8 +7,16 @@ Refinery::Authentication::Devise::UsersController.class_eval do
 
   def update
     @user.update user_params
-    @user.save
-    redirect_to '/users/' + @user.id.to_s + '/edit', notice: 'Updated successfuly!!'
+    if @user.valid?
+      @user.save
+      redirect_to '/users/' + @user.id.to_s + '/edit', :flash => {:success => 'Updated successfully!'}
+    else
+      errorStr = ''
+      @user.errors.full_messages.each do |msg|
+        errorStr = errorStr + msg + "<br>"
+      end
+      redirect_to '/users/' + @user.id.to_s + '/edit', :flash => {:error => errorStr}
+    end
   end
 
   private

@@ -5,8 +5,14 @@
 
   <%= form_for @user, url: '/users/' + @user.id.to_s do |f| %>
   <div class="edit_profile">
-    <% flash.each do |name, msg| %>
-      <%= content_tag :div, msg, class: "alert alert-info" %>
+    <% if !flash[:error].blank? %> 
+      <div class="alert bg-danger">
+        <%= raw flash[:error] %>
+      </div> 
+    <% elsif !flash[:success].blank? %>
+      <div class="alert alert-info">
+        <%= raw flash[:success] %>
+      </div> 
     <% end %>
     <h2>Personal Particulars</h2>
     <div class="fields">
