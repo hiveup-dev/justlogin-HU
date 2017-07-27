@@ -1,16 +1,16 @@
 <dd data-product-column="<%=product.id%>">
   <label class="product-wrapper selection">
     <div class="product-header">
+      <div class="name">
+        <h2><%= product.insurer %></h2>
+        <h3><%= product.name %></h3>
+      </div>
       <div class="img">
         <% if product.logo %>
             <%= image_tag(product.logo.image.thumb('80x80#').url, width: 45, height: 45) %>
         <% else %>
             <img src="http://placehold.it/80x80">
         <% end %>
-      </div>
-      <div class="name">
-        <h2><%= product.insurer %></h2>
-        <h3><%= product.name %></h3>
       </div>
       <div class="clearfix"></div>
       <h2 class="premium">
@@ -20,8 +20,8 @@
       <hr>
     </div>
     <div class="product-footer">
-        <%=input_select_product(product, true)%>
-        <strong>Select</strong>
+      <%=input_select_product(product, true)%>
+      <strong>Select</strong>
     </div>
     <div class="product-close" data-product-id="<%=product.id%>"></div>
   </label>

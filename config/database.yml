@@ -23,7 +23,8 @@ default: &default
   # http://guides.rubyonrails.org/configuring.html#database-pooling
 common: &common
   adapter: postgresql
-  username: "noopurjain"
+  username: "Soldgers"
+  password: "freshmilk"
 
 development:
   <<: *common #*default

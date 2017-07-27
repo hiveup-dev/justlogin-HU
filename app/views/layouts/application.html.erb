@@ -44,13 +44,26 @@
         <div class="container-fluid">
           <div class="navbar-header">
             <a class="navbar-brand" href="/">
-              <%= image_tag("hiveup-logo.svg") %>
+              <%= image_tag("hiveup-logo.svg", :class => "logomark") %>
+              <%= image_tag("hiveup-wordmark.svg", :class => "hidden-xs wordmark") %>
             </a>
+            <ul class="pull-left navbar-justlogin">
+              <li>
+                <a href="/login" class="btn btn-link">Login</a>
+              </li>
+            </ul>
             <%= yield :page_buttons %>
           </div>
-
         </div><!-- /.container-fluid -->
       </nav>
+      <div id="loading">
+        <div class="thecube">
+          <div class="cube c1"></div>
+          <div class="cube c2"></div>
+          <div class="cube c4"></div>
+          <div class="cube c3"></div>
+        </div>
+      </div>
   <% end %>
   <%= yield %>
   <%= render partial: '/shared/footer' %>

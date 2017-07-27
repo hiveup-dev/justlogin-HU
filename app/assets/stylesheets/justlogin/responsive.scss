@@ -1,124 +1,124 @@
 @media only screen and (max-width: 768px) {
 
-p {
-	font-size: 12px;
-}
+  p {
+    font-size: 12px;
+  }
 
-a {
+  a {
 
-}
+  }
 
-strong {
-	font-weight: 600;
-}
+  strong {
+    font-weight: 600;
+  }
 
-h2 {
-	font-size: 18px;
-}
+  h2 {
+    font-size: 18px;
+  }
 
-h3 {
-	font-size: 16px;
-}
+  h3 {
+    font-size: 16px;
+  }
 
-h4 {
-	font-size: 16px;
-}
+  h4 {
+    font-size: 16px;
+  }
 
-.logo img {
-	width: 70px;
-}
+  .logo img {
+    width: 70px;
+  }
 
-.navbar-brand {
+  .navbar-brand {
     padding-right: 10px;
-}
+  }
 
-.navbar-brand > img {
+  .navbar-brand > img {
     width: 45px;
-}
+  }
 
-.navbar-justlogin li {
+  .navbar-justlogin li {
     margin: 25px 3px;
-}
+  }
 
-.navbar-default .btn-link {
-  padding: 0;
-}
+  .navbar-default .btn-link {
+    padding: 0;
+  }
 
 
-.btn {
+  .btn {
     padding: 5px 8px;
     font-size: 11px;
     line-height: 1.5;
     border-radius: 3px;
-}
+  }
 
 /* -------------------------------------------------------- SELECTION PAGE */
 
-.selection .umbrella-wrapper {
-	padding: 15px;
-	//border: 1px solid #eeeeee;
-	//background-color: #fed9ad;
-	transition: all 0.2s;
-}
+  .selection .umbrella-wrapper {
+    padding: 15px;
+    //border: 1px solid #eeeeee;
+    //background-color: #fed9ad;
+    transition: all 0.2s;
+  }
 
-.selection .umbrella-wrapper:hover {
-	transform: scale(1.05);
-	transition: all 0.2s;
-}
+  .selection .umbrella-wrapper:hover {
+    transform: scale(1.05);
+    transition: all 0.2s;
+  }
 
-.selection .umbrella-title {
-	height: 30px;
-}
+  .selection .umbrella-title {
+    height: 30px;
+  }
 
-.selection .umbrella-body {
-	min-height: 145px;
+  .selection .umbrella-body {
+    min-height: 145px;
     height: auto;
-}
+  }
 
-.selection hr {
-	border-color: #d6a779;
-}
+  .selection hr {
+    border-color: #d6a779;
+  }
 
-.tab-header {
-	margin-bottom: 15px;
-}
+  .tab-header {
+    margin-bottom: 15px;
+  }
 
-.tab-body {
-	height: auto;
-}
+  .tab-body {
+    height: auto;
+  }
 
-.tab-footer .left,
-.tab-footer .right {
-	text-align: center;
-}
+  .tab-footer .left,
+  .tab-footer .right {
+    text-align: center;
+  }
 
-.selection-1-select i,
-.selection-2-select i,
-.selection-3-select i {
-	margin-right: 15px;
-}
+  .selection-1-select i,
+  .selection-2-select i,
+  .selection-3-select i {
+    margin-right: 15px;
+  }
 
-label.selection {
-	font-weight: 400;
-	display: block;
-	margin-bottom: 30px;
-}
+  label.selection {
+    font-weight: 400;
+    display: block;
+    margin-bottom: 30px;
+  }
 
-.confirm-checkbox {
-	font-size: 12px;
-}
+  .confirm-checkbox {
+    font-size: 12px;
+  }
 
 }
 
 @media only screen and (min-width: 768px) {
-	.selection {
+  .selection {
     strong {
       font-size: 14px;
     }
     input[type=checkbox] {
       margin-right: 4px;
     }
-	}
+  }
   .navbar-header {
     width: 100%;
   }

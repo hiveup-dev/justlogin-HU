@@ -1,16 +1,16 @@
 <label class="product-wrapper selection">
   <div class="product-ribbon"><%=product.special%></div>
   <div class="product-header">
+    <div class="name">
+      <h2><%= product.insurer %></h2>
+      <h3><%= product.name %></h3>
+    </div>
     <div class="img">
       <% if product.logo %>
           <%= image_tag(product.logo.image.thumb('80x80#').url, width: 80, height: 80) %>
       <% else %>
           <img src="http://placehold.it/80x80">
       <% end %>
-    </div>
-    <div class="name">
-      <h2><%= product.insurer %></h2>
-      <h3><%= product.name %></h3>
     </div>
     <div class="clearfix"></div>
     <h2 class="premium">
@@ -30,9 +30,10 @@
     </ul>
   </div>
   <div class="product-footer">
-      <a class="pull-left more-details">More details</a>
-      <%=input_select_product(product)%>
-      <strong>Select</strong>
-      <div class="clearfix"></div>
+    <a class="pull-left more-details">More details</a>
+    <%=input_select_product(product)%>
+    <strong>Select</strong>
+    <div class="clearfix"></div>
   </div>
 </label>
+

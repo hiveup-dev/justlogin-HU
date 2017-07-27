@@ -1,16 +1,16 @@
 $(document).ready(function () {
 
     var navListItems = $('div.setup-panel div a'),
-            allWells = $('.setup-content'),
-            allNextBtn = $('.next-step');
-            allPrevBtn = $('.prev-step');
+        allWells = $('.setup-content'),
+        allNextBtn = $('.next-step');
+    allPrevBtn = $('.prev-step');
 
     allWells.hide();
 
     navListItems.click(function (e) {
         e.preventDefault();
         var $target = $($(this).attr('href')),
-                $item = $(this);
+            $item = $(this);
 
         if (!$item.hasClass('disabled')) {
             navListItems.removeClass('btn-primary').addClass('btn-default');
@@ -29,12 +29,12 @@ $(document).ready(function () {
             isValid = true;
 
         /* $(".form-group").removeClass("has-error");
-        for(var i=0; i<curInputs.length; i++){
-            if (!curInputs[i].validity.valid){
-                isValid = false;
-                $(curInputs[i]).closest(".form-group").addClass("has-error");
-            }
-        } */
+         for(var i=0; i<curInputs.length; i++){
+         if (!curInputs[i].validity.valid){
+         isValid = false;
+         $(curInputs[i]).closest(".form-group").addClass("has-error");
+         }
+         } */
 
         if (isValid)
             nextStepWizard.removeAttr('disabled').trigger('click');
@@ -45,7 +45,7 @@ $(document).ready(function () {
         var curStep = $(this).closest(".setup-content"),
             curStepBtn = curStep.attr("id"),
             prevStepWizard = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().prev().children("a");
-            prevStepWizard.removeAttr('disabled').trigger('click');
+        prevStepWizard.removeAttr('disabled').trigger('click');
 
     });
 
@@ -69,36 +69,45 @@ $(document).ready(function() {
     //     }
     // });
 
-}); 
+});
 
 /*$('input[type=checkbox]').click(function (e) {
 
-    e.stopPropagation();
+ e.stopPropagation();
 
-      //process my data here
-});*/
+ //process my data here
+ });*/
 
 
 /*
-$("div.selection").on("click",function(event) {
-    var target = $(event.target);
-    if (target.is('input:checkbox')) return;
+ $("div.selection").on("click",function(event) {
+ var target = $(event.target);
+ if (target.is('input:checkbox')) return;
 
-    var checkbox = $(this).find("input[type='checkbox']");
+ var checkbox = $(this).find("input[type='checkbox']");
 
-    if( !checkbox.prop("checked") ){
-        checkbox.prop("checked",true);
-    } else {
-        checkbox.prop("checked",false);
-    }
+ if( !checkbox.prop("checked") ){
+ checkbox.prop("checked",true);
+ } else {
+ checkbox.prop("checked",false);
+ }
+ });
+
+ $('input[type=checkbox]').click(function (e) {
+
+ e.stopPropagation();
+
+ //process my data here
+ });
+
+ */
+
+
+/*
+ $(".selection").each(function(index) {
+ $(this).delay(400*index).fadeIn(300);
+ });                   */
+
+$(window).load(function() {
+    $('#loading').hide();
 });
-
-$('input[type=checkbox]').click(function (e) {
-
-    e.stopPropagation();
-
-      //process my data here
-});
-
-*/
-
