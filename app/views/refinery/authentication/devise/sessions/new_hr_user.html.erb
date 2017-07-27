@@ -1,8 +1,8 @@
 <%= content_for :login_form do %>
 <%= form_for :authentication_devise_user, as: resource_name,
  :url => '/login' do |f| %>
- <%= image_tag("logo.png") %>
 <div class="login">
+  <%= image_tag("logo.png", :class => "logo")  %>
   <div class='field session_username clearfix login-email'>
     <i class="material-icons">mail_outline</i>
     <%= f.text_field :login, :class => 'larger widest' %>

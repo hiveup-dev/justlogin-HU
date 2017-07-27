@@ -1,9 +1,10 @@
 .dashboard-navbar {
   height: 60px;
-  background-color: black;
-  color: white;
+  background-color: #f8f8f8;
+  color: #777;
   vertical-align: middle;
-  box-shadow: 0 4px 5px 0 rgba(0,0,0,0.2);
+  // box-shadow: 0 4px 5px 0 rgba(0,0,0,0.2);
+  border-bottom: 1px solid #e7e7e7;
   width: 330px;
 }
 
@@ -46,15 +47,15 @@
 }
 
 .dashboard-nav .home {
-  background-color: #dc8a38;
+  background-color: #78a3a5;
 }
 
 .dashboard-nav .main {
-  background-color: #FF9C3B
+  background-color: #84c3c5
 }
 
 .dashboard-nav .user {
-  background-color: #F38820;
+  background-color: #43ACB0;
   position: relative;
   display: inline-block;
 }
@@ -83,6 +84,10 @@
   list-style: none;
   padding: 15px;
   color: grey;
+
+  a {
+    color: grey;
+  }
 }
 
 .dashboard-nav .user__dropdown ul li:hover {
@@ -95,7 +100,7 @@
 }
 
 .dashboard-nav .faq {
-  background-color: #A65B10;
+  background-color: #597487;
 }
 
 .dashboard-nav .home .material-icons,
@@ -120,8 +125,8 @@
 .dashboard-search input {
   padding: 15px;
   width: 100%;
-  background-color:rgba(0,0,0,0.06);
-  border: 0;
+  background-color:#eee;
+  border: 1px solid #e7e7e7;
   border-radius: 5px;
 }
 
@@ -134,7 +139,8 @@
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   color: white;
-  background-color: black;
+  background-color: #84c3c5;
+  border: 1px solid #84c3c5;
 }
 
 .dashboard-search input::placeholder {
@@ -159,7 +165,8 @@
 
 .dashboard-table.table__headers {
   overflow: hidden;
-  background-color: rgba(0,0,0,0.06);
+  background-color: rgba(0,0,0,0.02);
+  color: #597487;
   margin-top: 40px;
   margin-bottom: 0;
   padding: 20px;
@@ -195,7 +202,7 @@
 }
 
 .dashboard-table.table__content:hover {
-  background-color: #f7f5f1;
+  background-color: #f7f9f9;
   cursor: pointer;
 }
 
@@ -296,6 +303,11 @@
   margin-bottom: 10px;
 }
 
+.dashboard-modal .policy__claim .btn-primary {
+  background-color: #43ACB0;
+  border-color: #43ACB0;
+}
+
 .dashboard-modal .policy__claim a,
 .dashboard-modal .policy__claim button {
   padding: 10px 15px;
@@ -349,6 +361,10 @@
 
 .dashboard-modal .policy__content__premiums {
   display: inline-block;
+}
+
+.dashboard-modal .policy__content__attachments a {
+  color: #597487;
 }
 
 .dashboard-modal .policy__feature__list {
@@ -414,7 +430,7 @@
 
 .edit_profile .btn {
   padding: 10 40px;
-  background-color: black;
+  background-color: #43ACB0;
   color: white;
 }
 
@@ -480,7 +496,7 @@
     .panel-title {
       text-transform: initial;
       font-weight: 400;
-      color: #f38820;
+      color: #597487;
       
       &:before {
         content: counter(questions);

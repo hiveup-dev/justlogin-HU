@@ -16,7 +16,8 @@ body {
 }
 
 .login .logo {
-  width: 120px;
+  width: 200px;
+  margin-bottom: 30px;
 }
 
 .login form {
@@ -26,6 +27,10 @@ body {
 
 .login form input:focus {
   outline: none;
+}
+
+.login form input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px #f7f9f9 inset;
 }
 
 .login-email,
@@ -75,7 +80,7 @@ body {
 
 .login-forget-password a {
   text-decoration: none;
-  /*color: grey;*/
+  color: #597487;
 }
 
 .login-forget-password a:hover {
@@ -87,7 +92,7 @@ body {
   padding: 15px;
   width: 100%;
   border: 0;
-  background-color: #F3A81D;
+  background-color: #43ACB0;
   color: white;
   margin-top: 20px;
 }
