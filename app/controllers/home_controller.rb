@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
-  before_action :authenticate_authentication_devise_user!, :except => ["faqs","chat"]
+
+  before_action :authenticate_authentication_devise_user!, :except => ["faqs","chat","complete","contact"]
 
   def complete
     session.delete(:find_out_more)
