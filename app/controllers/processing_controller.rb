@@ -35,6 +35,6 @@ class ProcessingController < ApplicationController
 
   private
   def user_submission_params
-    params.require(:user_submission).permit([:first_name, :last_name, :email, :terms, :company, :phone_number, :other_inquiries])
+    params.require(:user_submission).permit([:first_name, :last_name, :email, :terms, :company, :phone_number, :other_inquiries, :promo_code])
   end
 end
