@@ -20,7 +20,7 @@ Rails.application.configure do
     # SMTP settings for gmail
     config.action_mailer.smtp_settings = {
       :address              => "smtp.gmail.com",
-      :port                 => 587,
+      :port                 => 2525,
       :domain               => 'gmail.com',
       :user_name            => 'admin@hive-up.com',
       :password             => 'Hiveup2017', #password goes here, maybe should hide in some way
