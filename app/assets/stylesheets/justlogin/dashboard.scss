@@ -38,7 +38,7 @@
 
 .dashboard-nav .home,
 .dashboard-nav .user,
-.dashboard-nav .main,
+.dashboard-nav .dashboard,
 .dashboard-nav .faq {
   height: 100%;
   width: 60px;
@@ -50,7 +50,7 @@
   background-color: #78a3a5;
 }
 
-.dashboard-nav .main {
+.dashboard-nav .dashboard {
   background-color: #84c3c5
 }
 
@@ -104,7 +104,7 @@
 }
 
 .dashboard-nav .home .material-icons,
-.dashboard-nav .main .material-icons,
+.dashboard-nav .dashboard .material-icons,
 .dashboard-nav .user .material-icons,
 .dashboard-nav .faq .material-icons {
   font-size: 25px;

@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
   # Redirect HR User to hr user dashboard after signing in otherwise go to refinery dashboard
   def after_sign_in_path_for(resource)
     if resource.has_role?(:hruser)
-      '/main'
+      '/dashboard'
     else
       '/admin/products/feature_groups'
     end
