@@ -18,6 +18,22 @@ class ProcessingController < ApplicationController
   #   end
   # end
 
+  def signup
+    fields = [:first_name, :last_name, :company, :contact_number, :email]
+    if fields.all? {|k| params.has_key? k}
+      @user_signup = Hash.new
+      @user_signup[:first_name] = params[:first_name]
+      @user_signup[:last_name] = params[:last_name]
+      @user_signup[:company] = params[:company]
+      @user_signup[:contact_number] = params[:contact_number]
+      @user_signup[:email] = params[:email]
+      Notifier.notify_signup(@user_signup).deliver_now
+      redirect_to '/complete'
+    else
+      render '/#signup'
+    end
+  end
+
   def complete
     puts 'test'
     @products = Refinery::Products::Product.where(id: session[:product_ids])
