@@ -56,9 +56,16 @@
     
   </div>
 
-  <div class="segment signup row background" id="signup-form">
+  <div class="segment signup row background" id="signup">
     <h1>Get Started Now</h1>
-    
+    <%= form_tag '/process/signup' do %>
+      <%= text_field_tag 'first_name', nil, placeholder: 'First Name' %>
+      <%= text_field_tag 'last_name', nil, placeholder: 'Last Name' %>
+      <%= text_field_tag 'company', nil, placeholder: 'Company' %>
+      <%= email_field_tag 'email', nil, placeholder: 'Email' %>
+      <%= number_field_tag 'contact_number', nil, placeholder: 'Contact Number' %>
+    <%= submit_tag 'SUBMIT' %>
+    <% end %>
     <a data-form-target="signup-form" class="button">
       SUBMIT
     </a>
