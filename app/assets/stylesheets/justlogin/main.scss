@@ -118,6 +118,153 @@ h4, h5, h6 {
   white-space: nowrap;
 }
 
+/* -------------------------------------------------------- LANDING PAGE */
+.landing {
+  &.content {
+    text-align: center;
+    padding-bottom: 0;
+    padding-top: 60px;
+  }
+
+  h1 {
+    font-family: 'Source Sans Pro', sans-serif;
+    text-transform: capitalize;
+    font-weight: bold;
+  }
+
+  h2 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 20px;
+    text-transform: none;
+  }
+
+  a {
+    &.button {
+      background-color: #43ACB0;
+      color: white;
+      padding: 12px 40px;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 18px;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  }
+
+  .row {
+    padding: 80px 0;
+    margin: 0;
+  }
+
+  .background {
+    background-color: #EFF4F5;
+  }
+
+  .highlight {
+    font-weight: bold;
+    color: #215557;
+  }
+
+  .header {
+    h1 {
+      color: #2D7375;
+    }
+    h2 {
+      width: 80%;
+      margin: 20px auto;
+    }
+  }
+
+  .segment {
+    .manage, 
+    .products {
+      display: inline-block;
+    }
+
+    .manage {
+      text-align: left;
+    }
+
+    .product {
+      text-align: right;
+    }
+
+    .desc {
+      width: 350px;
+      margin: 0 auto;
+      display: inline-block;
+      vertical-align: middle;
+
+      img {
+        display: none;
+      }
+
+      p {
+        font-size: 16px;
+      }
+
+      ul {
+        padding-left: 20px;
+        li {
+          list-style: none;
+          font-size: 18px;
+          margin-bottom: 6px;
+          
+          &:before {
+            content: '✓';
+            position: absolute;
+            margin-left: -1.3em;
+          }
+        }
+      }
+    }
+  }
+
+  .partners {
+    .logo {
+      width: 200px;
+      filter: grayscale(100%);
+
+      &:hover {
+        filter: none;
+        transition: filter 1s;
+      }
+    }
+  }
+
+  form {
+    overflow: hidden;
+    text-align: left;
+  }
+
+  @media screen and (min-width: 598px) {
+    .segment {
+      img {
+        display: inline-block;
+      }
+      .manage {
+        img {
+          margin-left: 40px;
+        }
+      }
+      .products {
+        img {
+          margin-right: 40px;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 920px) {
+    .header {
+      h2 {
+        width: 60%;
+      }
+    }
+  }
+}
+
+
 /* -------------------------------------------------------- SELECTION PAGE */
 
 .soon {

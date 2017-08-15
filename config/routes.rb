@@ -27,7 +27,8 @@ Rails.application.routes.draw do
   post '/process/:action', controller: :processing
   get '/main' => 'home#main'
   get '/faq' => 'home#faq'
-  root 'refinery/products/benefits#index'
+  get '/benefits' => 'refinery/products/benefits#index'
+  root 'home#landing'
   mount Refinery::Core::Engine, at: Refinery::Core.mounted_path
 
   # The priority is based upon order of creation: first created -> highest priority.
