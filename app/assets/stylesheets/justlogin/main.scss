@@ -138,17 +138,16 @@ h4, h5, h6 {
     text-transform: none;
   }
 
-  a {
-    &.button {
-      background-color: #43ACB0;
-      color: white;
-      padding: 12px 40px;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 18px;
-      margin-top: 20px;
-      font-weight: bold;
-    }
+  .button {
+    background-color: #43ACB0;
+    color: white;
+    padding: 12px 40px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin-top: 20px;
+    font-weight: bold;
+    border: none;
   }
 
   .row {
@@ -232,9 +231,18 @@ h4, h5, h6 {
     }
   }
 
-  form {
-    overflow: hidden;
-    text-align: left;
+  .signup {
+    form {
+      margin-top: 40px;
+      input {
+        margin: auto;
+        margin-bottom: 30px;
+      }
+
+      .button {
+        display: block;
+      }
+    }
   }
 
   @media screen and (min-width: 598px) {

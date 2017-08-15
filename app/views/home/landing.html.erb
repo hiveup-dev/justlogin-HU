@@ -58,16 +58,25 @@
 
   <div class="segment signup row background" id="signup">
     <h1>Get Started Now</h1>
-    <%= form_tag '/process/signup' do %>
-      <%= text_field_tag 'first_name', nil, placeholder: 'First Name' %>
-      <%= text_field_tag 'last_name', nil, placeholder: 'Last Name' %>
-      <%= text_field_tag 'company', nil, placeholder: 'Company' %>
-      <%= email_field_tag 'email', nil, placeholder: 'Email' %>
-      <%= number_field_tag 'contact_number', nil, placeholder: 'Contact Number' %>
-    <%= submit_tag 'SUBMIT' %>
+    <%= form_tag '/process/signup', class: 'col-sm-8 col-sm-offset-2' do %>
+      <div class="col-sm-6 col-sm-offset-0 col-xs-10 col-xs-offset-1">
+        <%= text_field_tag 'first_name', nil, placeholder: 'First Name', class: 'form-control' %>
+      </div>
+      <div class="col-sm-6 col-sm-offset-0 col-xs-10 col-xs-offset-1">
+        <%= text_field_tag 'last_name', nil, placeholder: 'Last Name', class: 'form-control' %>
+      </div>
+      <div class="col-sm-6 col-sm-offset-0 col-xs-10 col-xs-offset-1">
+        <%= text_field_tag 'company', nil, placeholder: 'Company', class: 'form-control' %>
+      </div>
+      <div class="col-sm-6 col-sm-offset-0 col-xs-10 col-xs-offset-1">
+        <%= email_field_tag 'email', nil, placeholder: 'Email', class: 'form-control' %>
+      </div>
+      <div class="col-sm-6 col-sm-offset-0 col-xs-10 col-xs-offset-1">
+        <%= number_field_tag 'contact_number', nil, placeholder: 'Contact Number', class: 'form-control' %>
+      </div>
+      <div class="col-sm-12">
+        <%= submit_tag 'SUBMIT', class: 'button' %>
+      </div>
     <% end %>
-    <a data-form-target="signup-form" class="button">
-      SUBMIT
-    </a>
   </div>
 </div>
