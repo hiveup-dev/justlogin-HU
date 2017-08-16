@@ -5,8 +5,8 @@
 
 <div class="landing content">
   <div class="segment row background">
-    <div class="header">
-      <div class="desc fadeInDown">
+    <div class="header fadeInDown">
+      <div class="desc">
         <h1>put your employee's health first</h1>
         <h2>Friendly, efficient and powerful online insurance management tool that maximises organisation and control over your employees </h2>
         <a href="#signup" class="button">START YOUR FREE TRIAL</a>
@@ -15,29 +15,27 @@
   </div>
 
   <div class="segment row">
-    <div class="manage">
+    <div class="manage fadeInLeft inline-block">
       <div class="desc">
-        <div class="fadeInLeft inline-block">
-          <h1>Delivering ease and accessibility for Business</h1>
-          <ul class="sub-desc">
-            <li>
-              Free online management tool for 6 months
-            </li>
-            <li>
-              Easy to use admin dashboard
-            </li>
-            <li>
-              Consolidated overview of each employee's policies
-            </li>
-            <li>
-              All your claim documents in one place
-            </li>
-            <li>
-              Curated network of financial advisors
-            </li>
-          </ul>
-          <a href="#signup" class="button">START NOW</a>
-        </div>
+        <h1>Delivering ease and accessibility for Business</h1>
+        <ul class="sub-desc">
+          <li>
+            Free online management tool for 6 months
+          </li>
+          <li>
+            Easy to use admin dashboard
+          </li>
+          <li>
+            Consolidated overview of each employee's policies
+          </li>
+          <li>
+            All your claim documents in one place
+          </li>
+          <li>
+            Curated network of financial advisors
+          </li>
+        </ul>
+        <a href="#signup" class="button">START NOW</a>
       </div>
       <div class="fadeInRight inline-block">
         <img src="https://image.flaticon.com/icons/svg/182/182581.svg" alt="insurance" width="200">
@@ -46,13 +44,13 @@
   </div>
 
   <div class="segment row background">
-    <div class="products">
-      <div class="fadeInLeft inline-block">
+    <div class="products fadeInLeft inline-block">
+      <div class="inline-block">
         <img src="https://image.flaticon.com/icons/svg/134/134611.svg" alt="insurance" width="200">
       </div>
       <div class="fadeInRight inline-block">
         <div class="desc">
-          <h1>Unbeatable prices with great care</h1>
+          <h1>Unbeatable prices <br>with great care</h1>
           <h2 class="sub-desc">With medical benefits starting as low as <span class="highlight">$4/month</span>, this not only eases your finances but also makes a team of excellent and healthy employees!</h2>
           <a href="/benefits" class="button">GET COVERED NOW</a>
         </div>
@@ -62,9 +60,9 @@
 
   <div class="segment partners row fadeInDown">
     <h1>Our Partners</h1>
-    <%= image_tag("justlogin.png", :class => "logo") %>
-    <%= image_tag("sage.png", :class => "logo") %>
-    <%= image_tag("talenox.png", :class => "logo") %>
+    <%= image_tag("justlogin.png", :class => "partner") %>
+    <%= image_tag("sage.png", :class => "partner") %>
+    <%= image_tag("talenox.png", :class => "partner") %>
     
   </div>
 
@@ -83,7 +81,7 @@
       <div class="col-sm-6 col-sm-offset-0 col-xs-10 col-xs-offset-1">
         <%= email_field_tag 'email', nil, placeholder: 'Email', class: 'form-control', :required => true %>
       </div>
-      <div class="col-sm-6 col-sm-offset-0 col-xs-10 col-xs-offset-1">
+      <div class="col-sm-12 col-sm-offset-0 col-xs-10 col-xs-offset-1">
         <%= number_field_tag 'contact_number', nil, placeholder: 'Contact Number', class: 'form-control', :required => true %>
       </div>
       <div class="col-sm-12">

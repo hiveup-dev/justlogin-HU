@@ -153,11 +153,12 @@ h4, h5, h6 {
     font-family: 'Source Sans Pro', sans-serif;
     text-transform: capitalize;
     font-weight: bold;
+    font-size: 24px;
   }
 
   h2 {
     font-family: 'Source Sans Pro', sans-serif;
-    font-size: 20px;
+    font-size: 16px;
     text-transform: none;
   }
 
@@ -167,7 +168,7 @@ h4, h5, h6 {
     padding: 12px 40px;
     text-decoration: none;
     display: inline-block;
-    font-size: 18px;
+    font-size: 14px;
     margin-top: 20px;
     font-weight: bold;
     border: none;
@@ -204,29 +205,36 @@ h4, h5, h6 {
       text-align: center;
 
       .desc {
-      width: 350px;
-      margin: 0 auto;
-      display: inline-block;
-      vertical-align: middle;
+        width: 300px;
+        margin: 0 auto;
+        display: inline-block;
+        vertical-align: middle;
+      }
 
-        p {
+      p {
+        font-size: 16px;
+      }
+
+      ul {
+        padding-left: 20px;
+        text-align: left;
+        margin-left: 25px;
+        li {
+          list-style: none;
           font-size: 16px;
-        }
-
-        ul {
-          padding-left: 20px;
-          li {
-            list-style: none;
-            font-size: 18px;
-            margin-bottom: 6px;
-            
-            &:before {
-              content: '✓';
-              position: absolute;
-              margin-left: -1.3em;
-            }
+          margin-bottom: 6px;
+          
+          &:before {
+            content: '✓';
+            position: absolute;
+            margin-left: -1.3em;
           }
         }
+      }
+
+      img {
+        display: none;
+        width: 150px;
       }
     }
 
@@ -235,29 +243,17 @@ h4, h5, h6 {
         line-height: 25px;
       }
     }
-
-    img {
-      display: none;
-    }
   }
 
   .partners {
-    .logo {
-      width: 200px;
+    .partner {
+      width: 150px;
       filter: grayscale(100%);
 
       &:hover {
         filter: none;
         transition: filter 1s;
       }
-
-      // &:nth-of-type(2) {
-      //   animation-delay: 0.5s;
-      // }
-
-      // &:last-of-type {
-      //   animation-delay: 1s;
-      // }
     }
   }
 
@@ -277,32 +273,86 @@ h4, h5, h6 {
     }
   }
 
-  @media screen and (min-width: 598px) {
+  @media screen and (min-width: 608px) {
     .segment {
-      img {
-        display: inline-block;
+      .manage, 
+      .products {
+        .desc {
+        width: 350px;
+        }
       }
+
       .manage {
         text-align: left;
 
         img {
+          display: inline-block;
           margin-left: 40px;
+        }
+
+        ul {
+          margin: 0;
         }
       }
       .products {
         text-align: right;
 
         img {
+          display: inline-block;
           margin-right: 40px;
         }
       }
     }
   }
 
+  @media screen and (min-width: 768px) {
+    h1 {
+      font-size: 28px;
+    }
+
+    h2 {
+      font-size: 20px;
+    }
+
+    .segment {
+      .products, 
+      .manage {
+        .desc {
+          width: 450px
+        }
+      }
+
+      .manage {
+        ul li {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+
   @media screen and (min-width: 920px) {
+    h1 {
+      font-size: 32px;
+    }
+    h2 {
+      font-size: 20px;
+    }
+    .button {
+      font-size: 18px;
+    }
+
     .header {
       h2 {
-        width: 60%;
+        width: 50%;
+      }
+    }
+
+    .segment {
+      .products,
+      .manage {
+        img {
+          width: 180px;
+        }
       }
     }
   }
