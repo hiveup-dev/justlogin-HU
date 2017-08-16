@@ -8,6 +8,6 @@ class Notifier < ApplicationMailer
 
   def notify_signup(details)
     @details = details
-    mail(to: 'ivan@hive-up.com', subject: '[Notification] New User Submission', from: 'admin@hive-up.com')
+    mail(to: 'ivan@hive-up.com', subject: '[SIGN UP] New User Sign Up', from: 'admin@hive-up.com')
   end
 end
