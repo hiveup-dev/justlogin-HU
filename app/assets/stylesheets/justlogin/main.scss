@@ -1,3 +1,20 @@
+@import './keyframes';
+
+.fadeInLeft {
+  -webkit-animation: fadeInLeft 2.3s;
+  animation: fadeInLeft 2.3s;
+}
+
+.fadeInRight {
+  -webkit-animation: fadeInRight 2.3s;
+  animation: fadeInRight 2.3s;
+}
+
+.fadeInDown {
+  -webkit-animation: fadeInDown 2.3s;
+  animation: fadeInDown 2.3s;
+}
+
 html {
   height: 100%;
   box-sizing: border-box;
@@ -53,6 +70,12 @@ h4, h5, h6 {
   text-transform: uppercase;
   font-weight: 600;
 }
+
+/**** COMMON *****/
+.inline-block {
+  display: inline-block;
+}
+/*****************/
 
 
 .logo {
@@ -178,44 +201,43 @@ h4, h5, h6 {
     .manage, 
     .products {
       display: inline-block;
-    }
+      text-align: center;
 
-    .manage {
-      text-align: left;
-    }
-
-    .products {
-      text-align: right;
-    }
-
-    .desc {
+      .desc {
       width: 350px;
       margin: 0 auto;
       display: inline-block;
       vertical-align: middle;
 
-      img {
-        display: none;
-      }
+        p {
+          font-size: 16px;
+        }
 
-      p {
-        font-size: 16px;
-      }
-
-      ul {
-        padding-left: 20px;
-        li {
-          list-style: none;
-          font-size: 18px;
-          margin-bottom: 6px;
-          
-          &:before {
-            content: '✓';
-            position: absolute;
-            margin-left: -1.3em;
+        ul {
+          padding-left: 20px;
+          li {
+            list-style: none;
+            font-size: 18px;
+            margin-bottom: 6px;
+            
+            &:before {
+              content: '✓';
+              position: absolute;
+              margin-left: -1.3em;
+            }
           }
         }
       }
+    }
+
+    .products {
+      h2 {
+        line-height: 25px;
+      }
+    }
+
+    img {
+      display: none;
     }
   }
 
@@ -228,12 +250,22 @@ h4, h5, h6 {
         filter: none;
         transition: filter 1s;
       }
+
+      // &:nth-of-type(2) {
+      //   animation-delay: 0.5s;
+      // }
+
+      // &:last-of-type {
+      //   animation-delay: 1s;
+      // }
     }
   }
 
   .signup {
     form {
-      margin-top: 40px;
+      h1 {
+        margin-bottom: 40px;
+      }
       input {
         margin: auto;
         margin-bottom: 30px;
@@ -251,11 +283,15 @@ h4, h5, h6 {
         display: inline-block;
       }
       .manage {
+        text-align: left;
+
         img {
           margin-left: 40px;
         }
       }
       .products {
+        text-align: right;
+
         img {
           margin-right: 40px;
         }
