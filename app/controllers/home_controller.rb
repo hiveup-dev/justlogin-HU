@@ -12,7 +12,7 @@ class HomeController < ApplicationController
     @user_submission = Refinery::Products::UserSubmission.new
   end
 
-  def main
+  def dashboard
     allproducts = current_authentication_devise_user.policies {|product| product.expiry_date}
     substring = params['search']
     @products = Array.new

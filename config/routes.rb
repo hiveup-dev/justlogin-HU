@@ -25,7 +25,7 @@ Rails.application.routes.draw do
   end
 
   post '/process/:action', controller: :processing
-  get '/main' => 'home#main'
+  get '/dashboard' => 'home#dashboard'
   get '/faq' => 'home#faq'
   get '/benefits' => 'refinery/products/benefits#index'
   root 'home#landing'
